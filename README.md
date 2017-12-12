@@ -161,7 +161,7 @@ El curso está abierto a cualquier estudiante que pueda acreditarlo en algún po
 
 Para una mejor experiencia de clase **el cupo es limitado**.
 
-Para pre-inscribirte por favor llena este formulario. La lista definitiva de estudiantes inscritxs la daré a conocer el 22 de enero del 2018.
+Para pre-inscribirte por favor [llena este formulario](https://es.surveymonkey.com/r/WFVNHZ8) (fecha límite 18 enero 2018, 11:45 pm). La lista definitiva de estudiantes inscritxs la daré a conocer el 19 de enero del 2018 por correo electrónico.
 
 
 
