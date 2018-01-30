@@ -1,6 +1,6 @@
 # Introducción a la bioinformática e investigación reproducible para análisis genéticos
 
-Este es el repositorio de apuntes y código del curso **Introducción a la bioinformática e investigación reproducible para análisis genéticos** semestre 2018-II, brindado por la profesora Dra. [Alicia Mastretta Yanes](www.mastrettayanes-lab.org).
+Este es el repositorio de apuntes y código del curso **Introducción a la bioinformática e investigación reproducible para análisis genéticos** semestre 2018-II, brindado por la profesora [Alicia Mastretta Yanes](www.mastrettayanes-lab.org) y la super ayuda de Gustavo I. Giles y Verónica Reyes.
 
 Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México. 
 
@@ -12,6 +12,8 @@ Martes y Jueves, 8 - 10 am del 30 de enero al 24 de mayo 2018.
 Auditorio del Instituto de Ecología, UNAM. (**No dejen que me lleve las llaves por favor**)
 
 Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber). 
+
+Chat para resolver dudas durante la clase (si lo ests viendo remotamente): [En esta sala de Gitter](https://gitter.im/BioinfinvRepro2018-II/Lobby#)
 
 
 ### Objetivos del curso
