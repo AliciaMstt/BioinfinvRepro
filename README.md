@@ -7,11 +7,12 @@ Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México
 Los materiales aquí presentados son de acceso libre. 
 
 ### Dónde y cuándo
-Martes y Jueves, 8 - 10 am
+Martes y Jueves, 8 - 10 am del 30 de enero al 24 de mayo 2018.
 
-Auditorio del Instituto de Ecología
+Auditorio del Instituto de Ecología, UNAM. (**No dejen que me lleve las llaves por favor**)
 
-Transmisión online (link por definir).
+Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber). 
+
 
 ### Objetivos del curso
 
@@ -106,18 +107,19 @@ Los **objetivos específicos son**:
 * **¿Necesito una computadora?** 
     * El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
 
-  -  Docker instalado y FUNCIONANDO (ocuparemos Docker dentro de un mes)
+  -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
 
 
 * **¿Necesito instalar algo más? Sí**
      1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
          * Mac: [TextWrangler](http://download.cnet.com/TextWrangler/3000-2351_4-10220012.html) o [Fraise](http://www.macupdate.com/app/mac/33751/fraise)
-         * GNU/Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste
+         * GNU/Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
      2. Un editor de Markdown. Listo para la Unidad 6, mejor si desde antes. Recomendaciones:    
          * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * GNU/Linux: [Remarkable](http://remarkableapp.github.io/GNU/Linux/download.html)
-     3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/). Listos para la Unidad 7.
+         * Linux: [Haroopad](http://pad.haroopress.com/)
+     3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
 
+ **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
      
 ### Este repositorio
 
@@ -153,7 +155,10 @@ Cubriremos ambas herramientas en el curso, pero en resumen:
     - Debe incluir temas vistos en las unidades 5 a 8
  
 
-### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión
+### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión. 
+
+![](truestory.png)
+
 
 # Inscripciones
 
