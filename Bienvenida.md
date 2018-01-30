@@ -43,7 +43,7 @@ El conocimiento con el que llegan:
 ![](conocimiento_total.png)
 
 
-
+**sudo make me a sanwich**
 ![](sudosanwich.PNG)
 
 La naturaleza de sus datos:
