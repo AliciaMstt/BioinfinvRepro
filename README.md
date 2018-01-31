@@ -13,7 +13,7 @@ Auditorio del Instituto de Ecología, UNAM. (**No dejen que me lleve las llaves 
 
 Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber). 
 
-Chat para resolver dudas durante la clase (si lo ests viendo remotamente): [En esta sala de Gitter](https://gitter.im/BioinfinvRepro2018-II/Lobby#)
+Sala de chat para **anuncios de la clase** y dudas si lo ests viendo remotamente: [en Gitter](https://gitter.im/BioinfinvRepro2018-II/Lobby#)
 
 
 ### Objetivos del curso
