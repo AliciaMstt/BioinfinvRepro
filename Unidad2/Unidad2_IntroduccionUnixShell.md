@@ -1,7 +1,5 @@
 # Unidad 2 Introducción a Unix Shell
 
-## 2.1. Introducción a la Consola y Línea de Comando
-
 UNIX es un *sistema operativo* (OS en inglés) es decir el conjunto de programas que controlan las funciones básicas de una compu (agendar tareas, ejecutar aplicaciones y controlar cosas como teclados y micrófonos). UNIX fue desarrollado en la década de 1960 y sigue vivo. No cualquier tecnología puede decir eso. Hay muchos systemas UNIX, los más conocidos son Sun Solaris, GNU/Linux y MacOS X, también los teléfonos Android están basados en UNIX.
 
 Los sistemas UNIX se caracterizan por tener un sistema de archivos unifocado  y un lenguaje de línea de comando (lo veremos abajo) que combinados pueden hacer operaciones muy complejas. Esto los hace muy poderosos y flexibles, por eso muchos desarrolladores eligen esta familia de OS para hacer software en ciencia. En UNIX [una palabra vale más que mil clicks](http://matt.might.net/articles/basic-unix/).
@@ -9,6 +7,8 @@ Los sistemas UNIX se caracterizan por tener un sistema de archivos unifocado  y 
 Los sistemas UNIX también pueden tener una interfaz gráfica, como en Mac, Ubuntu y Biolinux, que son una forma de Linux.  Sin embargo, además de la interfaz gráfica una también puede seguir utilizando la poderosa línea de comando. Windows está construído de otra forma por completo, y por eso es mucho más difícil traducir los programas a ese OS.
 
 Los sistemas UNIX están formados por el *kernel*, los *programas* y la *terminal*, también llamada *consola* o *shell*. El kernel determina el tiempo y memoria que podrá usar cada programa, además de que maneja el sistema de archivos y la comunicación en respuesta a llamadas al sistema. Un programa es un conjunto de comandos que el kernel puede ejecutar. Cuando un programa está siendo ejecutado ("está corriendo") se llama proceso. A través de la consola es que podemos interactuar con el kernel y decirle qué hacer.
+
+## 2.1. Introducción a la Consola y Línea de Comando
 
 Vamos a abrir la terminal. Debe ser un ícono parecido a este. En Ubuntu debe estar por default en tu dock. Si no lo encuentras tanto en Mac como en Ubuntu prueba buscar "Terminal" o "Console".
 
