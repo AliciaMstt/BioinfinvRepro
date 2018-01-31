@@ -12,7 +12,7 @@ Los sistemas UNIX están formados por el *kernel*, los *programas* y la *termina
 
 Vamos a abrir la terminal. Debe ser un ícono parecido a este. En Ubuntu debe estar por default en tu dock. Si no lo encuentras tanto en Mac como en Ubuntu prueba buscar "Terminal" o "Console".
 
-![](terminalicon.PNG)
+![](terminalicon.png)
 
 Tu terminal abierta debe verse parecida a esta:
 
