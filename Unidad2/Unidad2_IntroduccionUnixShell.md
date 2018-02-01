@@ -42,6 +42,8 @@ Por ejemplo:
 
 `echo algo` nos responde el texto "algo". También lo puedes utilizar con más de una palabra. 
 
+`echo hello world`
+
 Algo así debe verse tu terminal:
 
 ![egTerminal2](02Terminal.png)
@@ -140,7 +142,9 @@ Alicias-MacBook-Pro:Prac_Uni2 ticatla$
 
 ```
 
-Háganlo en sus sistemas.
+Háganlo en sus sistemas. Noten que `ticatla` es **mi** nombre de usuario, entonces el path absoluto tiene que llevar **su nombre de usuario**. 
+
+Para bajar el repo de la clase a sus compus vayan al [home del repo](https://github.com/AliciaMstt/BioinfinvRepro) y den click en el botón verde que dice **Clone or download**. Guarda el zip en algún lugar fácil (e.g. escritorio) y descomprímelo. Si tienes problemas haciendo esto en Linux avísame o checa [esto](https://askubuntu.com/questions/660846/how-to-zip-and-unzip-a-directory-and-its-files-in-linux).
 
 
 #### Moverse a home:
@@ -348,7 +352,7 @@ $ rm -r ../Manzanas/Prueba
 
 Es un método de ultra comprensión (más que zip) utilizado por sistemas Linux/Unix. Viene de "*tape archive*" y originalmente surgió para comprimir archivos para los discos "tape" de respaldo. 
 
-La compresión tar genera archivos "tarball", gzip y bzip. Con terminaciones como `.tar.gz`.
+La compresión tar genera archivos "tarball", gzip y bzip. Con terminaciones como `.tar.gz`. Este tipo de compresión es muy utilizada en datos genómicos.
 
 #### Crear un tar.gz
 
@@ -451,9 +455,6 @@ $ nano ejemplonano.txt
 ```
 
 ## curl
-
-
-* Quienes estén en cywing chequen cómo "instalar" curl [en este post the stacksoverflow](http://stackoverflow.com/questions/3647569/how-do-i-install-curl-on-cygwin). 
 
 `curl` Sirve para bajar archivos de internet a la computadora.
 
