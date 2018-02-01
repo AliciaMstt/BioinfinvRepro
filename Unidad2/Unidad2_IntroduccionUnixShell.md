@@ -135,18 +135,13 @@ Para esto hay varias opciones:
 Ejemplo de ruta absoluta:
 
 ```
-Alicias-MacBook-Pro:~ ticatla$ cd /Users/ticatla/Desktop/BioinfInvRepro2017-II/Unidad2/Prac_Uni2
+Alicias-MacBook-Pro:~ ticatla$ cd /Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni2
 Alicias-MacBook-Pro:Prac_Uni2 ticatla$
 
 ```
 
 Háganlo en sus sistemas.
 
-**Quienes estén en Cwying:**
-
-```
-cd /cygdrive/c/Users/NOMBREdeUSUARIO/Desktop/BioinfInvRepro2017-II
-```
 
 #### Moverse a home:
 
@@ -162,7 +157,7 @@ Ejemplo de ruta relativa:
 
 ```
 Alicias-MacBook-Pro:Prac_Uni2 ticatla$ cd ~
-Alicias-MacBook-Pro:~ ticatla$ cd Desktop/BioinfInvRepro2017-II/Unidad2/Prac_Uni2
+Alicias-MacBook-Pro:~ ticatla$ cd Desktop/BioinfInvRepro/Unidad2/Prac_Uni2
 
 Alicias-MacBook-Pro:Prac_Uni2 ticatla$ 
 ```
@@ -179,10 +174,10 @@ Ejemplo:
 ```
 
 $ pwd
-/Users/ticatlaDesktop/BioinfInvRepro2017-II/Prac_Uni2
+/Users/ticatlaDesktop/BioinfInvRepro/Prac_Uni2
 $ cd ..
 $ pwd
-/Users/ticatla/Desktop/BioinfInvRepro2017-II
+/Users/ticatla/Desktop/BioinfInvRepro
 
 
 ```
@@ -195,10 +190,10 @@ Ejemplo:
 
 ```
 $pwd
-/Users/ticatla/Desktop/BioinfInvRepro2017-II/Unidad2/Prac_Uni2/Tomates/VerdesFritos
+/Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni2/Tomates/VerdesFritos
 $ cd ../../Manzanas/
 $ pwd
-/Users/ticatla/Desktop/BioinfInvRepro2017-II/Unidad2/Prac_Uni2/Manzanas
+/Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni2/Manzanas
 
 ```
 
@@ -206,7 +201,7 @@ Es decir `../` se puede combinar con una ruta relativa. Ejemplo:
 
 ```
 $ pwd
-/Users/ticatla/Desktop/BioinfInvRepro2017-II/Prac_Uni2/Tomates/VerdesFritos
+/Users/ticatla/Desktop/BioinfInvRepro/Prac_Uni2/Tomates/VerdesFritos
 Alicias-MacBook-Pro:VerdesFritos ticatla$ cd ../../Manzanas
 Alicias-MacBook-Pro:Manzanas ticatla$ 
 ```
@@ -471,13 +466,10 @@ Ejemplo, podemos bajar el archivo de texto del README que vive en el repositorio
 
 
 ```
-$ curl -s "https://raw.githubusercontent.com/AliciaMstt/BioinfInvRepro2017-II/master/README.md"
+$ curl -s "https://raw.githubusercontent.com/AliciaMstt/BioinfInvRepro/master/README.md"
 # Introducción a la bioinformática e investigación reproducible para análisis genéticos
 
-Este es el repositorio de apuntes y código del curso **Introducción a la bioinformática e investigación reproducible para análisis genéticos** semestre 2017-II, brindado por las profesoras Dra. [Alicia Mastretta Yanes](www.mastrettayanes-lab.org) y M. en C. Azalea Guerra.
-
-El curso pertenece al Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México pero los materiales aquí presentados son de acceso libre.
-[...]
+Este es el repositorio de apuntes y código del curso **Introducción a la bioinformática e investigación reproducible para análisis genéticos** [...]
 ```
 
 O bajar sencuencias de ADN de GeneBank! ([instrucciones de cómo construir la url aquí](http://www.ncbi.nlm.nih.gov/books/NBK25499/#chapter4.EFetch))
@@ -1040,7 +1032,7 @@ La *regularexpression* puede ser tal cual el texto a buscar, pero también podem
 
 ### Usos comunes de `grep` 
 
-Empecemos por ver el archivo [tomatesverdes.fasta](../Unidad2/Prac_Uni2/Tomates/tomatesverdes.fasta). (Vive en: `BioinfInvRepro2017-II/Unidad2/Prac_Uni2/Tomates/`)
+Empecemos por ver el archivo [tomatesverdes.fasta](../Unidad2/Prac_Uni2/Tomates/tomatesverdes.fasta). (Vive en: `BioinfInvRepro/Unidad2/Prac_Uni2/Tomates/`)
 
 ```
 $ less tomatesverdes.fasta 
@@ -1294,7 +1286,7 @@ El gatón hace miau
 
 Ejercicio:
 
-Navega al directorio `BioinfInvRepro2017-II/Unidad2/Prac_Uni2`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
+Navega al directorio `BioinfInvRepro/Unidad2/Prac_Uni2`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
 
 
 ### Crear arrays y utilizarlos como una lista en un loop
