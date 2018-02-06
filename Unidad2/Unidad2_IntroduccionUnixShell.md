@@ -430,20 +430,31 @@ drwxr-xr-x ticatla/staff     0 2016-02-03 08:11 Maiz/
 
 ## Crear archivos desde la terminal
 
-Es posible crear archivos de texto directamente desde la terminal utilizando programas como **vim** y **nano**. 
+Es posible crear archivos de texto directamente desde la terminal utilizando programas como `vi` y `nano` o el comando `touch`. 
 
 
-Ejemplo. :
+Touch solo crea un archivo sin contenido. Ejemplo :
+
 ```
 $ cd Maiz
-$ nano
+$ touch prueba
+$ ls 
+nuevos_final.bed	nuevos_final.fam	prueba
+nuevos_final.bim	nuevos_final.log
+$ rm prueba
+```
+
+Con `Nano` o `Vim` podemos 
+
+```
+$ nano ejemplonano.txt
 ```
 
 Y abrirá una nueva ventana, donde pueden escribir así:
 
 ![nanoej1](nanoej1.png)
 
-Al guardar con `^O` (ctrl + O) pedirá un nombre de archivo. Yo lo guardé como "ejemplonano.txt". 
+Al guardar con `^O` (ctrl + O) pedirá un nombre de archivo. Dirá "ejemplonano.txt" porque fue el nombre que dimos al correr `nano`, pero se puede camibar. 
 
 Una vez fuera de nano podemos verlo en la Terminal y volverlo a abrir si queremos:
 
@@ -454,6 +465,10 @@ nuevos_final.bed	nuevos_final.fam
 $ nano ejemplonano.txt
 ```
 
+`vim` o `vi` funciona muy parecido. Solo que tienes que aprenderte (o revisar [en un acordeón](https://vim.rtorr.com/)) los shortcuts del teclado. Hay gente que vive solo con vim. 
+
+
+
 ## curl
 
 `curl` Sirve para bajar archivos de internet a la computadora.
@@ -463,7 +478,7 @@ Sintaxis:
     curl [opciones] [direccionURLdelarchivo]
    
 
-Ejemplo, podemos bajar el archivo de texto del README que vive en el repositorio de este clase:
+Ejemplo, podemos bajar el archivo de texto del README que vive en el repositorio de esta clase:
 
 
 ```
@@ -624,18 +639,20 @@ $ more nuevos_final.fam
 nuevos_final.fam 
 ```
 
-Dentro de `more` podemos escribir `/` y luego texto, mismo que será buscando dentro del archivo. 
+(puedes salir con `q` si no quieres escrolear (yes, esa palabra no existe en español) todo el archivo para abajo)
+
+
+### `less`
+Igual que `more` pero se desarrolló más recientemente y puede abrir archivos binarios y otras cosas raras. Juego de palabras con que *less is more*. Pum pum. Se recomienda usar `less` en la vida.
+
+Dentro de `less` (y `more`) podemos escribir `/` y luego texto, mismo que será buscando dentro del archivo. 
 
 **Ejercicio**: En el archivo que estamos viendo hay unas muestras de teocintles cuyos nombres empiezan con "teos". ¿En qué líneas del documento están?
 
 
-### `less`
-Igual que `more` pero también nos permite moverse hacia atrás (flecha arriba).
-
-
 ### `head`
 
-Muestra las primeras 10 líneas de un archivo
+Muestra las primeras líneas de un archivo (default 10).
 
 ```
 $ head nuevos_final.fam
@@ -650,6 +667,7 @@ $ head nuevos_final.fam
 9 maiz_51 0 0 0 -9
 10 maiz_82 0 0 0 -9
 ```
+
 ### `tail`
 
 Muestra las últimas líneas de un archivo.
@@ -935,6 +953,9 @@ $ cat nuevos_final.fam *log >> catejemplo.txt
 ### `|`
 Toma el stdout de un comando y lo convierte en el input de otro (*Pipes* the strout).
 
+![Mariopipe](https://i.ytimg.com/vi/uMCCxuGIGtw/hqdefault.jpg)
+
+
 Ejemplo:
 
 ```
@@ -952,7 +973,7 @@ Otro ejemplo (no se muestra el stdout pues es demasiado largo)
 cat *.fam | more 
 ```
 
-Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [http://sc.tamu.edu/help/general/unix/redirection.html]()
+Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [http://sc.tamu.edu/help/general/unix/redirection.html](http://sc.tamu.edu/help/general/unix/redirection.html)
 
 ## Regular expressions y búsqueda de patrones (`grep`)
 
