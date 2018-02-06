@@ -277,16 +277,15 @@ Es un repositorio de código que:
 ![](Octocat.png)
 
 
-## 1.5. Una *habilidad* indispensable en bioinformtica
+## 1.5. Una *habilidad* indispensable en bioinformática
 
-El objetivo de esta clase no es darte un manual completo para resolver cualquier cuestión bioinformática, sino darte las habilidades y herramientas para que llegues por tí misma a las soluciones. Para esto hay una habilidad indispensable: **buscar ayuda en internet**. La enorme mayoría de las preguntas que te hagas sobre bioinformática y programación en general, sobre todo al principio, **son las mismas dudas que tuvieron otros antes** y, casi seguro **ya están respondidas en algún lugar del internet**. Y si nadie a escrito con tu duda, puedes preguntar. 
+El objetivo de esta clase no es darte un manual completo para resolver cualquier cuestión bioinformática, sino darte las habilidades y herramientas para que llegues por tí misma a las soluciones. Para esto hay una habilidad indispensable: **buscar ayuda en internet**. La enorme mayoría de las preguntas que te hagas sobre bioinformática y programación en general, sobre todo al principio, **son las mismas dudas que tuvieron otros antes** y, casi seguro **las respuestas ya están en algún lugar del internet**. Y si nadie a escrito con tu duda, puedes preguntar. 
 
-Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resultados si haces la búsqueda correcta en internet. De hecho, a veces parte de la tarea será que *se te ocurra cómo buscar* la solución en internet. Esto no sólo está perfectamente bien y es muuuy distinto a copiarle a un compañero, es una habilidad básica del siglo XXI. 
+Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resultados si haces la búsqueda correcta en internet. De hecho, a veces parte de la tarea será que *se te ocurra cómo buscar* la solución en internet. Esto está perfectamente bien y es muuuy distinto a copiarle a un compañero. Saber buscar ayuda e información en interent es una habilidad básica del siglo XXI. 
 
-Por esto estoy 100% de acuerdo con xkcd:
+Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. Se vale tener una *Mente extendida* llamada internet:
 
 ![Extended Mind](https://imgs.xkcd.com/comics/extended_mind.png)
-
 
 
 **¿Dónde pedir ayuda?**
