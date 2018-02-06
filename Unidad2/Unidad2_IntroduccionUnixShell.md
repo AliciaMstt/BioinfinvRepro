@@ -973,7 +973,7 @@ Otro ejemplo (no se muestra el stdout pues es demasiado largo)
 cat *.fam | more 
 ```
 
-Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [http://sc.tamu.edu/help/general/unix/redirection.html](http://sc.tamu.edu/help/general/unix/redirection.html)
+Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [https://www.tutorialspoint.com/unix/unix-io-redirections.htm](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)
 
 ## Regular expressions y búsqueda de patrones (`grep`)
 
@@ -1029,7 +1029,7 @@ La *regularexpression* puede ser tal cual el texto a buscar, pero también podem
 
 ##### Cuantificadores
 
-* * Cero o más ocurrencias del caracter anterior, por ejemplo 10\*, va a aceptar las cadenas "1", "10", "100", "1000", etc
+* __*__ Cero o más ocurrencias del caracter anterior, por ejemplo 10\*, va a aceptar las cadenas "1", "10", "100", "1000", etc
 
 * **+**  Una o más ocurrencias del caracter anterior, por ejemplo 10+, va a aceptar las cadenas 10", "100", "1000", etc, pero no la cadena "1"
 
