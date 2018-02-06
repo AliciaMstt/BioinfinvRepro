@@ -285,7 +285,7 @@ Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resul
 
 Por esto estoy 100% de acuerdo con xkcd:
 
-![https://imgs.xkcd.com/comics/extended_mind.png](Extended Mind)
+![Extended Mind](https://imgs.xkcd.com/comics/extended_mind.png)
 
 
 
