@@ -1526,6 +1526,7 @@ Hacer algo con la muestra teos_9107
 **Pregunta**: Si `some_array=($(command))` sirve para crear un arreglo a partir del resultaod de un comando ¿Cómo puedes crear una **variable** a partir de un comando?
 
 **Leyendo desde un archivo**
+
 Los arrays tienen sus problemas cuando son muy grandes y  es fácil cometer errores porque nunca "los vemos", por lo tanto mucha gente prefiere mejor leer los elemntos directo de un archivo. Ejemplo:
 
 ```
