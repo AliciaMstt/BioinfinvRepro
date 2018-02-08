@@ -1166,7 +1166,7 @@ $
 
 #### `grep -E`
 
-Lee el texto entre comillas como una expresión regular  completa, es decir con operadores, cuantificadores y posicionadores.
+Lee el texto entre comillas como una expresión regular  completa, es decir con operadores, cuantificadores y posicionadores. Es útil utilizarlo junto con `-o` para mostrar solo la parte del texto encontrado que cumple con la expresión regular.
 
 ```
 $ grep -oE "\| \w+ \w+" tomatesverdes.fasta 
