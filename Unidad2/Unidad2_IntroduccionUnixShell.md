@@ -1563,25 +1563,38 @@ Puedes consultar esta y más info de for loops en [esta guía con ejemplos y var
 
 Como habíamos visto, [GitHub](http://github.com) es un repositorio de código basado en [`git`](https://git-scm.com/), el cual permite tener un historial de los cambios y está pensado para facilitar la colaboración en proyectos.
 
-Recuerda los términos más importantes en GitHub:
+Como introducción a `git` y Github primero vamos a entender los principales conceptos y el [flujo de trabajo de Github leyendo esta documentación](https://guides.github.com/introduction/flow/). Luego vamos a hacer los siguientes dos tutoriales:
 
-+ **Repositorio**: Se usa para organizar un proyecto. Puede contener imágenes, videos, datos, etc. Es recomendable incluir un README.
+* [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
 
-+ **Fork**: Se crea un fork cuando el repositorio es copiado de la cuenta de un miembro a la de otro.
+* [try Git](https://try.github.io/levels/1/challenges/1) para aprender los principales **comandos** para utilizar `git` (y Github) desde la terminal.
 
-+ **Branch**: El repositorio tiene una rama o branch principal llamada `master`, que es la "original". Se pueden crear otras ramas dentro del mismo repositorio en las cuales se pueden hacer modificaciones sin afectar el código original. 
 
-+ **Commit**: Equivale a guardar los cambios. ¡Ojo! Los cambios se guardan en la branch donde trabajas.
+Documentación extra por si quieres aprender más:
+
+* [Guias Github](https://guides.github.com/)
+* [An Intro to Git and GitHub for Beginners (Tutorial) de Meghan Nelson](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+
+Recuerda los términos más importantes:
+
++ **Repositorio**: Se usa para organizar un proyecto. Puede contener imágenes, código, etc. Es recomendable incluir un README.
+
++ **Fork**: Se crea un fork cuando el repositorio es copiado de la cuenta de un miembro de Github a la de otro.
+
++ **Branch**: El repositorio tiene una rama o branch principal llamada `master`, que es la "original". Se pueden crear otras ramas dentro del mismo repositorio en las cuales se pueden hacer modificaciones sin afectar el código original. Es el equivalente tener un archivo original `Tesis` y ponerle `Tesis_comentariosAsesora1` y `Tesis_comentariosAsesor2` a los archivos con los comentarios de tus asesores, mismos que eventualmente volverás a integrar en un archivo final (pero `git` lo hace todo más hermoso y organizado).
+
++ **Commit**: Equivale a guardar los cambios **en git** que no es lo mismo que en el archivo. ¡Ojo! Los cambios se guardan en la branch donde trabajas. Puedes acompañar el commit de un mensaje corto para especificar qué cambios hiciste. Esto es mucho mejor que tener nombres de archivos larguísimos tratando de explicar qué versión son (e.g. `Tesis_final_comentariosAMY_DP_rev22oct2017_comentariosFran_revEnero2018_FINAL_BUENO_corrected_2.doc`).
 
 + **Pull request**: Si se quieren agregar las modificaciones en la branch `master`, se envía una solicitud al propietario original.
 
 + **Merge**: Una vez que el propietario del repositorio ha revisado y aceptado los cambios, fusiona las ramas. 
 
 
-Lo anterior es posible hacerlo desde línea de comando.
+**Ejemplo** Vamos a clonar un repo.
 
 ### `git clone`
 Te permite copiar un repositorio que ya existe. Cada versión de cada archivo de la historia del proyecto es descargado cuando lo ejecutas.
+
 ```
 $ git clone https://github.com/AzaleaGuerra/EjercicioGit.git
 ```
