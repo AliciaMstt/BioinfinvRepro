@@ -1555,7 +1555,7 @@ Hacer algo con la muestra maiz_1
 ```
 
 
-### Más información de for loops**
+### Más información de for loops
 Aquí presenté la sintaxis más usada, pero hay otros métodos para escribir loops que hacen lo mismo. Y también pueden hacerse más complejos agregando "ifs". 
 Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/). 
 
@@ -1567,15 +1567,18 @@ Como introducción a `git` y Github primero vamos a entender los principales con
 
 * [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
 
-* [try Git](https://try.github.io/levels/1/challenges/1) para aprender los principales **comandos** para utilizar `git` (y Github) desde la terminal.
+* [try Git](https://try.github.io/levels/1/challenges/1) para aprender los principales comandos para utilizar `git` (y Github) desde la terminal.
+
+* [Learn Git Branching](https://learngitbranching.js.org/) para volverse chidos manejando el ramerío.
 
 
-Documentación extra por si quieres aprender más:
+**Documentación extra para aprender más:**
 
 * [Guias Github](https://guides.github.com/)
 * [An Intro to Git and GitHub for Beginners (Tutorial) de Meghan Nelson](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
+* [A successful Git branching model de VincentDriessen](http://nvie.com/posts/a-successful-git-branching-model/). Excelente.
 
-Recuerda los términos más importantes:
+**Recuerda los términos más importantes:**
 
 + **Repositorio**: Se usa para organizar un proyecto. Puede contener imágenes, código, etc. Es recomendable incluir un README.
 
