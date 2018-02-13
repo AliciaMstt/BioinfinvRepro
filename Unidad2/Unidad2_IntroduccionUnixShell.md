@@ -1700,6 +1700,8 @@ To https://github.com/AliciaMstt/Repo_chocolate.git
    72129b3..79fce15  master -> master
 ```
 
+Nota: puedes agregar la flag `-u` para establecer `origin master` (o lo que sea) como el default y solo tener que hacer `git push` en un futuro.
+
 
 #### `git pull`
 Actualiza la copia del repositorio local con respecto a la rama remota. Es decir
