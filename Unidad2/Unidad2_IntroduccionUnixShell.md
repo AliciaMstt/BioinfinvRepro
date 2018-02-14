@@ -1724,6 +1724,7 @@ Si vas a trabajar con repos de otras personas problablemente no quieras hacer un
 Voy a hacer unos cambios en el archivo `ejemplo.txt` desde el editor de texto de Github y comitearlo (sí, espanglish del chido) online. Ahora veamos los cambios:
 
 ```
+$ git fetch
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -1738,6 +1739,7 @@ Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
   (use "git pull" to update your local branch)
 nothing to commit, working tree clean
 
+$git pull
 Updating 79fce15..ad845a6
 Fast-forward
  ejemplo.txt | 1 +
@@ -1751,7 +1753,43 @@ bla bla
 
 **Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **OJO:** ponlo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
 
+**Recomendación: ignorar archivos que no queremos que git siga **
+
+Algunso archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
+
+1) Crear un archiovo `.gitignore` en el wd de tu repositorio (donde vive tu `.git` que se creó con `git init` o con `git clone`).
+
+`touch .gitignore` (nota el punto `.`)
+
+2) En ese archivo poner el nombre (o las extensiones) de los archivos que quieres ignorar. [Aquí puedes ver una lista de casos comunes proporcionada por Github](https://gist.github.com/octocat/9257657).
+
+Por ejemplo yo voy ignorar los fantasmitas Mac:
 
 
+`$ vim .gitignore`
 
+Y en el editor de vim pegué lo siguiente:
+
+```
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+```
+
+3) Si haces un `git status` notarmás que aparece `.gitignore` como untracked. Entonces debes:
+
+```
+$ git add .gitignore
+$ git commit -m "Added .gitignore file to repo"
+$ git push 
+```
+
+También puedes crear un `.gitignore` global que aplique en todos los repos de tu compu. Instrucciones [aquí](https://help.github.com/articles/ignoring-files/)
 
