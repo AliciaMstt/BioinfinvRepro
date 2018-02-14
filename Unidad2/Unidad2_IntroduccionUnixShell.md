@@ -1750,10 +1750,14 @@ bla bla
 
 ```
 
+#### `git log`
+
+Para ver el historial de commits que se han hecho en el repo. Por default te mostrará los commits en orden cronológico invertido, pero hay muchas opciones que puedes darle para buscar algo más específico. [Instrucciones aquí](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
+
 
 **Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **OJO:** ponlo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
 
-**Recomendación: ignorar archivos que no queremos que git siga **
+**Recomendación: ignorar archivos que no queremos que git siga**
 
 Algunso archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
 
