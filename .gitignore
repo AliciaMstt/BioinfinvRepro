@@ -9,4 +9,4 @@ ehthumbs.db
 Thumbs.db
 
 # Logs and outputs
-*.Rout
+.Rout
