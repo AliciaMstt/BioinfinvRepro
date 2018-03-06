@@ -85,7 +85,7 @@ Y así el de VCFtools:
 
 Bonita referencia [aquí](https://robots.thoughtbot.com/the-magic-behind-configure-make-make-install).
 
-#####`sudo`: 
+##### `sudo`: 
 
 Te vuelve el *super usuario*, es decir eres un todo poderoso administrador que puede hacer lo que sea con la línea de comando sin que la computadora te diga que no.
 
