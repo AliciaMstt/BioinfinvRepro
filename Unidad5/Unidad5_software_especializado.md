@@ -4,7 +4,7 @@ Lecturas recomendadas:
 
 * [Beaulieu-Jones, B. K., & Greene, C. S. (2017). Reproducibility of computational workflows is automated using continuous analysis. Nature Biotechnology, advance online publication. doi:10.1038/nbt.3780](https://www.nature.com/articles/nbt.3780)
 
-* [da Veiga Leprevost, F., Grüning, B. A., Alves Aflitos, S., Röst, H. L., Uszkoreit, J., Barsnes, H., … Perez-Riverol, Y. (2017). BioContainers: an open-source and community-driven framework for software standardization. Bioinformatics, 33(16), 2580–2582.](doi:10.1093/bioinformatics/btx192(https://academic.oup.com/bioinformatics/article/33/16/2580/3096437)
+* [da Veiga Leprevost, F., Grüning, B. A., Alves Aflitos, S., Röst, H. L., Uszkoreit, J., Barsnes, H., … Perez-Riverol, Y. (2017). BioContainers: an open-source and community-driven framework for software standardization. Bioinformatics, 33(16), 2580–2582.doi:10.1093/bioinformatics/btx192](https://academic.oup.com/bioinformatics/article/33/16/2580/3096437)
 
 
 ## 5.1. Utilidad del Software especializado
@@ -146,17 +146,17 @@ A veces no basta con tener los scripts, tener una versión distinta de un softwa
 
 **Figura tomada de Beaulieu-Jones et al Greene (2017)**
 
-
-![https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_(container_engine)_logo.png](https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_(container_engine)_logo.png)
-
-
 Las pipelines bioinformáticas ocupan muchos programas distintos que constantemente están renovándose. La probabilidad de que tengamos una versión de algo distinta a la que corrieron los autores originales es muy alta.
 
 Como vimos arriba, instalar un software especializado puede no ser trivial, y además al instalar un programa bioinformático es común "romper" las dependencias de otro programa o incluso tu sistema operativo. Por eso a la hora de **tener** que hacer una actualización nos dan mido los tiburones:
 
 ![https://imgs.xkcd.com/comics/success.png](https://imgs.xkcd.com/comics/success.png)
 
-Una solución a ambos problemas es utilizar un sistema de **contenedores de sofware, como Docker**. Docker permite poner dentro de un contenedor un software (o varios) junto con todo lo que necesitan para correr: su sistema de archivos, código, herramientas del sistema, librerías, etc, cualquier cosa que normalmente podamos instalarle a un sistema operativo.
+Una solución a ambos problemas es utilizar un sistema de **contenedores de sofware, como Docker**. 
+
+![https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_(container_engine)_logo.png](https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_(container_engine)_logo.png)
+
+Docker permite poner dentro de un contenedor un software (o varios) junto con todo lo que necesitan para correr: su sistema de archivos, código, herramientas del sistema, librerías, etc, cualquier cosa que normalmente podamos instalarle a un sistema operativo.
 
 Terminología básica:
 
@@ -172,8 +172,11 @@ Terminología básica:
 
 Esto nos permite que un programa corra de manera idéntica sin importar el sistema operativo original del equipo, y hace que la instalación sea independiente de la instalación de otro software.
 
+Los contenedores son **la nueva forma de hacer aplicaciones**.
 
-![docker_VMvsDocker.PNG](docker_VMvsDocker.PNG)
+![Why containers](why_containers.png)
+
+**Figura tomada de la documentación de [Kubernetes](https://kubernetes.io/)**, que es otra forma de hacer contenedores. Su documentación tiene una [muy buena intro a por qué utilizar contendores](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/#why-containers).
 
 En el siguiente link puedes encontrar las instrucciones y primeros pasos para utilizar Docker.
 
