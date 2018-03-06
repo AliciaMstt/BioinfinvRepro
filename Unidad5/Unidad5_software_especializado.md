@@ -422,16 +422,16 @@ Ya debes tener una imagen de ubuntu (si seguiste las notas anteriores), si no `d
 3) Corre la imagen de ubuntu dentro de un contenedor, pero **montando un volumen**, es decir un directorio en tu equipo que podrá ser accedido por el contenedor:
 
 ```
-docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/Unidad5/Prac_Uni5/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu /bin/bash
+docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash
 ```
 
 Desglozando el comando anterior:
 
 `-v` es la bandera para indicar que queremos que monte un volumen 
 
-`/Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/Unidad5/Prac_Uni5/DatosContenedor1` es la ruta **absoluta**. Sí, absoluta (así que cambiala por la ruta de tu equipo) ya que así es cuando se trata de montar volúmenes :(. 
+`/Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1` es la ruta **absoluta**. Sí, absoluta (así que cambiala por la ruta de tu equipo) ya que así es cuando se trata de montar volúmenes :(. 
 
-`:/DatosContenedorEjercicioClase` es el nombre del directorio como quremos que aparezca dentro de nuestro contenedor. 
+`:/DatosContenedorEjercicioClase` es el nombre del directorio como quremos que aparezca dentro de nuestro contenedor. El `:/` es para indicar que lo que sigue es el nombre.
 
 4) Explora el volumen que montaste, prueba hacer un archivo. Nota que puedes acceder a el desde tu explorador, es decir todo lo que suceda en ese directorio puedes verlo/modificarlo desde dentro y fuera del contenedor. 
 
