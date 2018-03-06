@@ -17,6 +17,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > x<-10
 > y<-6
 > cat("¡Hola mundo!", x, "+", y, "es igual a", x+y)
@@ -24,4 +26,4 @@ Type 'q()' to quit R.
 > 
 > proc.time()
    user  system elapsed 
-  0.226   0.045   0.349 
+  0.221   0.041   0.256 
