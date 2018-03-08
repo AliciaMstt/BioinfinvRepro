@@ -447,9 +447,6 @@ Prueba  eg_ddRAD_data.fastq
 ```
 
 
-
-#### 
-
 Vamos a ver un ejemplo en el contenedor de Ubuntu donde montamos el volumen en el ejemplo de funcionamiento de Docker. Esto nos permitirá trabajar todos sobre lo mismo (y no romper nada):
 
 Recuerda primero buscar el ID del contenedor (el ID será diferente en tu computadora) con `docker ps -a`. Luego:
@@ -511,6 +508,8 @@ Como verás, **[Biocontainers](http://biocontainers.pro/)** es una comunidad que
 
 La imagen base de Biocontainers se llama `biocontainers` y es un ubuntu más varias herramientas básicas de bioinformática. Checa su [dockerfile aquí](https://github.com/BioContainers/containers/blob/master/biocontainers/Dockerfile).
 
+Vamos a bajar la imagen y correr un contenedor:
+
 ```
 $ docker pull biocontainers/biocontainers
 $ docker run -it biocontainers/biocontainers /bin/bash
@@ -528,7 +527,7 @@ curl: try 'curl --help' or 'curl --manual' for more information
 
 * Pude hacer un docker pull porque el dockerfile de arriba existe en un repositorio de contenedores llamado `biocontainers`. 
 
-* La línea 100 del dockerfile dice `VOLUME ["/data", "/config"]` ¿Qué significa esto? 
+* La línea 100 del dockerfile dice `VOLUME ["/data", "/config"]` ¿Qué significa esto?
 
 **Ejercicio** ¿Cómo puedo utilizar `docker run` para que el volumen `data` corresponda a un directorio en mi computadora? 
 
@@ -541,7 +540,7 @@ $ docker pull biocontainers/fastxtools
 $ docker pull biocontainers/vcftools
 ```
 
-Yo puedo entrar a estos contenedores con `-it /bin/bash` como lo hemos hecho antes, pero también puedo solamente utilizarlo para **solo** correr el programa con un comando concreto. Por ejemplo, mostrar la ayuda:
+Yo puedo entrar a estos contenedores con `-it /bin/bash` como lo hemos hecho antes, pero también puedo utilizarlo para **solo** correr el programa con un comando concreto. Por ejemplo, mostrar la ayuda:
 
 ```
 $ docker run biocontainers/vcftools vcftools -help
@@ -584,6 +583,6 @@ Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 ```
 
 
-**Ejercicio**: ve a la página [http://biocontainers.pro/docs/101/running-example/](http://biocontainers.pro/docs/101/running-example/) y lee el ejemplo de cómo usar `blast`. Escribe un script para adoptar el ejemplo de esta página a tu computadora. Recuerda que si estás corriendo en Windows todo tendrás que hacerlo desde un contenedor de Docker, pero si estás en Linux o Mac puedes sólo correr el contenedor con el comando de blast en concreto. Guarda tu script en tu repositorio de Github para las tareas del curso y brinda el link a dicho script:
+**Ejercicio**: ve a la página [http://biocontainers.pro/docs/101/running-example/](http://biocontainers.pro/docs/101/running-example/) y lee el ejemplo de cómo usar `blast`. Escribe un script para adoptar el ejemplo de esta página a tu computadora. Guarda tu script en tu repositorio de Github para las tareas del curso y brinda el link a dicho script.
 
-Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta excelente sección de ayuda de [Biocontainers](http://biocontainers.pro/docs/101/intro/).
+Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta excelente [sección de ayuda de Biocontainers](http://biocontainers.pro/docs/101/intro/).
