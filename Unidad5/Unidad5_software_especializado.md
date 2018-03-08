@@ -490,31 +490,29 @@ COPYING  INSTALL    Makefile.in  README  aclocal.m4  config         configure   
 8) **Ejercicio** Instala FastX-Tools dentro de un contenedor
 
 
-#### Instalación a partir de una imagen de Docker
+## 5.5. Biocontainers
+
+#### Dockerfiles
 
 Recordemos que los contenedores de docker son creados a partir de una **imagen**. Dicha imagen puede ser básica, es decir el OS en su forma más simple, pero también puede incluir un software o conjunto de softwares ya instalados y listos para correr, y hasta los comandos que queremos que corra.
 
 Lo anterior se hace a través de un **dockerfile**, es decir un script que describe (e instala) el software que pondremos en una imagen y además incluye cualquier detalle de la configuración del ambiente y hasta los comandos a correr.
 
-Es decir un dockerfile nos permite construir y compartir una imagen especializada en correr el proceso que deseemos. 
+Es decir un dockerfile nos permite construir y compartir una imagen especializada en correr el proceso que deseemos.
 
-Veamos un dockerfile como [este](https://github.com/BioContainers/containers/blob/master/biocontainers/Dockerfile) que instala en una base de ubuntu varias herramientas útiles para bioinformática:
+Veamos un dockerfile como [este](https://github.com/BioContainers/containers/blob/master/fastxtools/0.0.14/Dockerfile) que instala el programa FastXTools que instalamos desde cero en el ejercico anteior.
 
-(Puedes revisar los comandos de un docker file
-en esta referencia: [Docker Explained: Using Dockerfiles to Automate Building of Images](https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images)).
 
-Este dockerfile vive en el [github de Biocontainers](https://github.com/Biocontainers/). Y además en  [DockerHub de Biocontainers](https://hub.docker.com/u/biocontainers/), por lo que podemos hacer un `pull` desde ahí.
+#### Biocontainers
 
-Vamos a utilizar ese dockerfile para crear un contenedor:
+El dockerfile del ejercicio anterior vive en el [github de Biocontainers](https://github.com/Biocontainers/). Y además en  [DockerHub de Biocontainers](https://hub.docker.com/u/biocontainers/), por lo que podemos hacer un `pull` desde ahí.
+
+Como verás, **[Biocontainers](http://biocontainers.pro/)** es una comunidad que se dedica a crear imágenes para instalar ese software que tanto necesitas. Checa sus [contenedores](https://github.com/Biocontainers/containers).
+
+La imagen base de Biocontainers se llama `biocontainers` y es un ubuntu más varias herramientas básicas de bioinformática. Checa su [dockerfile aquí](https://github.com/BioContainers/containers/blob/master/biocontainers/Dockerfile).
 
 ```
 $ docker pull biocontainers/biocontainers
-$ docker images
-REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
-ubuntu                        latest              f49eec89601e        5 weeks ago         129.5 MB
-hello-world                   latest              48b5124b2768        6 weeks ago         1.84 kB
-biocontainers/biocontainers   latest              ef3fcbf6896c        10 weeks ago        1.213 GB
-
 $ docker run -it biocontainers/biocontainers /bin/bash
 biodocker@4c1831e1f7f7:/data$
 $ curl   
@@ -534,19 +532,16 @@ curl: try 'curl --help' or 'curl --manual' for more information
 
 **Ejercicio** ¿Cómo puedo utilizar `docker run` para que el volumen `data` corresponda a un directorio en mi computadora? 
 
+#### Imagenes de sofware bioinformáico
 
-## 5.5. Biocontainers
-
-No sería genial que existieran dockerfiles así pero para instalar ese software que tanto necesitas? Exactamente eso hace **[Biocontainers](http://biocontainers.pro/)**. Checa sus [contenedores](https://github.com/Biocontainers/containers).
-
-
-Por ejemplo vamos a crear un contenedor con vcftools:
+Pero además del contendor básico biocontainers tenemos contenedores con ese sofware que siempre deseamos instalar. Por ejemplo con FastX-Tools y otro con vcftools. Vamos a hacer un `pull`:
 
 ```
+$ docker pull biocontainers/fastxtools
 $ docker pull biocontainers/vcftools
 ```
 
-Yo puedo entrar a este contenedor con `-it /bin/bash` como lo hemos hecho antes, pero también puedo solamente utilizarlo para **solo** correr `vcftools` con un comando concreto. Por ejemplo, mostrar la ayuda:
+Yo puedo entrar a estos contenedores con `-it /bin/bash` como lo hemos hecho antes, pero también puedo solamente utilizarlo para **solo** correr el programa con un comando concreto. Por ejemplo, mostrar la ayuda:
 
 ```
 $ docker run biocontainers/vcftools vcftools -help
@@ -565,11 +560,30 @@ Alternatively, a man page is available, type:
 Questions, comments, and suggestions should be emailed to:
 	vcftools-help@lists.sourceforge.net
 
-``` 
+```
 
-Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta excelente sección de ayuda de [Biocontainers](http://biocontainers.pro/docs/101/intro/).
+o en FastX-tools:
+
+```
+$ docker run biocontainers/fastxtools fastq_to_fasta -h
+usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
+Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
+
+   [-h]         = This helpful help screen.
+   [-r]         = Rename sequence identifiers to numbers.
+   [-n]         = keep sequences with unknown (N) nucleotides.
+                  Default is to discard such sequences.
+   [-v]         = Verbose - report number of sequences.
+                  If [-o] is specified,  report will be printed to STDOUT.
+                  If [-o] is not specified (and output goes to STDOUT),
+                  report will be printed to STDERR.
+   [-z]         = Compress output with GZIP.
+   [-i INFILE]  = FASTA/Q input file. default is STDIN.
+   [-o OUTFILE] = FASTA output file. default is STDOUT.
+
+```
 
 
 **Ejercicio**: ve a la página [http://biocontainers.pro/docs/101/running-example/](http://biocontainers.pro/docs/101/running-example/) y lee el ejemplo de cómo usar `blast`. Escribe un script para adoptar el ejemplo de esta página a tu computadora. Recuerda que si estás corriendo en Windows todo tendrás que hacerlo desde un contenedor de Docker, pero si estás en Linux o Mac puedes sólo correr el contenedor con el comando de blast en concreto. Guarda tu script en tu repositorio de Github para las tareas del curso y brinda el link a dicho script:
 
-
+Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta excelente sección de ayuda de [Biocontainers](http://biocontainers.pro/docs/101/intro/).
