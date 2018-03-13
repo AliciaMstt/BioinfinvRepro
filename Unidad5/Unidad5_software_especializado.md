@@ -15,7 +15,7 @@ Por ejemplo el ensamblado *de novo* de datos de GBS/RAD, puede hacerse con difer
 
 En la siguiente unidad veremos diferentes sofwares para cada tipo de datos, pero no profundizaremos en cada uno. Recuerda que ese no es el objetivo del curso y para esto hay cursos especializados. La idea es que puedas entender los artículos y el manual de cualquier software para tomar tus propias decisiones y realizar tus análisis con cualquier software.
 
-### 5.2. Documentación de software especializado
+## 5.2. Documentación de software especializado
 
 La **documentación** de un programa bioinformático (y de cualquier software) se refiere al **manual** y tutoriales asociados al programa. 
 
@@ -582,7 +582,122 @@ Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
 ```
 
-
 **Ejercicio**: ve a la página [http://biocontainers.pro/docs/101/running-example/](http://biocontainers.pro/docs/101/running-example/) y lee el ejemplo de cómo usar `blast`. Escribe un script para adoptar el ejemplo de esta página a tu computadora. Guarda tu script en tu repositorio de Github para las tareas del curso y brinda el link a dicho script.
 
+
+### Tip: borrar automáticamente un contenedor cuando acaba de correr
+
+Cada vez que utilizamos `docker run` se **crea** un contendor nuevo. Por ejemplo si corriste los `docker run` de fastxtools y vcftools de arriba:
+
+```
+$ docker ps -a
+CONTAINER ID        IMAGE                      COMMAND               CREATED             STATUS                      PORTS               NAMES
+5750fafe938a        biocontainers/vcftools     "vcftools -help"      2 seconds ago       Exited (0) 3 seconds ago                        practical_yonath
+4845c81d1dc6        biocontainers/fastxtools   "fastq_to_fasta -h"   17 seconds ago      Exited (1) 17 seconds ago                       elastic_villani
+
+```
+
+Esto ocupa espacio en disco y nos llena de contenedores a los que no volveremos a entrar. La solución: borrar un contenedor al salir. 
+
+Esto se hace con el flag `--rm` para que se borre al salir, e indicandole al contenedor que se salga al terminar de correr, agregando `-c exit` al comandos que queremos que corra. Ejemplo:
+
+```
+$ docker run --rm biocontainers/fastxtools fastq_to_fasta -h -c exit
+usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
+Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
+
+   [-h]         = This helpful help screen.
+   [-r]         = Rename sequence identifiers to numbers.
+   [-n]         = keep sequences with unknown (N) nucleotides.
+                  Default is to discard such sequences.
+   [-v]         = Verbose - report number of sequences.
+                  If [-o] is specified,  report will be printed to STDOUT.
+                  If [-o] is not specified (and output goes to STDOUT),
+                  report will be printed to STDERR.
+   [-z]         = Compress output with GZIP.
+   [-i INFILE]  = FASTA/Q input file. default is STDIN.
+   [-o OUTFILE] = FASTA output file. default is STDOUT.
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+**OJO**: el flag `-c`  en realidad sirve para pedirle que corra más de un comando dentro del mismo contenedor (unidos por ejemplo con `|`, `;`, etc) pero debes correr antes `bash` y los comandos deseados entre "". Ejemplo:
+
+```
+$ docker run --rm biocontainers/fastxtools bash -c "fastq_to_fasta -h ; echo hola mundo ; exit"
+usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
+Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
+
+   [-h]         = This helpful help screen.
+   [-r]         = Rename sequence identifiers to numbers.
+   [-n]         = keep sequences with unknown (N) nucleotides.
+                  Default is to discard such sequences.
+   [-v]         = Verbose - report number of sequences.
+                  If [-o] is specified,  report will be printed to STDOUT.
+                  If [-o] is not specified (and output goes to STDOUT),
+                  report will be printed to STDERR.
+   [-z]         = Compress output with GZIP.
+   [-i INFILE]  = FASTA/Q input file. default is STDIN.
+   [-o OUTFILE] = FASTA output file. default is STDOUT.
+
+hola mundo
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
 Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta excelente [sección de ayuda de Biocontainers](http://biocontainers.pro/docs/101/intro/).
+
+
+
+### Repaso y conceptos clave
+
+* Utilidad de docker: 
+
+1 ) Máxima reproducibilidad, al igualar OS y versiones de un software.
+
+2) No romper tu equipo/otroprograma tratando de instalar algo
+
+
+* Docker permite correr un programa en un *contenedor* a partir de una *imagen* que podemos `pull` desde un repositorio online, como Biocontainers o DockerHub.
+
+* Dentro de un contenedor está el OS, las librerías y otros requisitos que requiera un programa y el programa mismo.
+
+* Para "conectar" un contenedor de Docker con el mundo necesitas **montar un volumen**: `docker run -v [RutaABSOLUTAaldirectorioDeseado:/nombrevolumen] [imagen] [comandos a correr].` 
+
+* Formas para correr un software bioinformático usando Docker:
+
+1) **Entrando a un contenedor con todo lo que queremos**: suponiendo que en un contenedor vayas instalando todo el sofware que necesitas para un análisis dado. Los comandos base que necesitas para esto serían: 
+
+`docker pull [IMAGEN]` para bajar la imagen base donde trabajaras
+
+ `docker run -v [-v [RutaABSOLUTAaldirectorioDeseado:/nombrevolumen]] -it [IMAGEN] bash` para crear y correr el contenedor con la imagen de forma interactiva ("entrando") y con un volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos. Ejemplo: `docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash`
+ 
+  OJO: cada vez que haces `docker run` se **crea** un contenedor **distinto** a partir de la misma imagen. 
+ 
+ `docker restart IDCONTAINER` para prender de nuevo el contenedor, NO `docker pull` de nuevo.
+ 
+ `docker exec -it IDCONTAINER bash` para volver a entrar al contenedor. 
+ 
+ 
+ `docker rm` para borrar un contenedor que ya no quieras. Debes `docker stop` si está corriendo.
+ 
+ 
+ 
+ 
+ 2) **Utilizando un contenedor por proceso** (Recomendado) suponiendo que el sofware que utilizas ya vive en una imagen, por ejemplo de Biocontainers. Los comandos base que utilizarías para esto serían:
+ 
+ `docker pull [biocontainers/IMAGEN]` para bajar la imagen de cada sofware que utilizarás, por ejemplo de Biocontainers.
+ 
+ `docker run --rm -v [RutaABSOLUTAaldirectorioDeseado:/data]  [biocontainers/IMAGEN] [COMANDOS del sofware en cuestión] -c exit` para correr el contenedor de una imagen de biocontainers con los comandos específicos de un software dado, con volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos y de tal forma que el contenedor se borre automáticamente al terminar el proceso. Ejemplo:
+ 
+`docker run --rm -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1/datos:/data biocontainers/fastxtools bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v ; exit"`
+
+**RECOMENDACIONES**
+
+* En lugar de poner líneas tan largas como las de arriba párte comando por comando utilizando `\`, que es como `;` pero puedes dar enter y continuar en la línea de abajo.
+
+* Declara una variable con la ruta absoluta al inicio de tu script y luego utilizala dentro de tu línea de `docker run -v`. 
+
+**Ejercicio**: corre el ejemplo anterior (el de limpiar `human_Illumina_dataset.fastq`) utilizando una variable declarada antes de `docker run...` para ajustando la ruta absoluta a tu equipo. 
+
+
