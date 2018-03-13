@@ -599,7 +599,9 @@ CONTAINER ID        IMAGE                      COMMAND               CREATED    
 
 Esto ocupa espacio en disco y nos llena de contenedores a los que no volveremos a entrar. La solución: borrar un contenedor al salir. 
 
-Esto se hace con el flag `--rm` para que se borre al salir, e indicandole al contenedor que se salga al terminar de correr, agregando `-c exit` al comandos que queremos que corra. Ejemplo:
+Esto se hace con el flag `--rm` para que se borre al salir. Más una de estas dos opciones: 
+
+1) Indicandole al contenedor que se salga al terminar de correr, agregando `-c exit` al comandos que queremos que corra. Ejemplo:
 
 ```
 $ docker run --rm biocontainers/fastxtools fastq_to_fasta -h -c exit
@@ -621,10 +623,10 @@ $ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-**OJO**: el flag `-c`  en realidad sirve para pedirle que corra más de un comando dentro del mismo contenedor (unidos por ejemplo con `|`, `;`, etc) pero debes correr antes `bash` y los comandos deseados entre "". Ejemplo:
+2) El flag `-c`  en realidad sirve para pedirle que corra más de un comando dentro del mismo contenedor (unidos por ejemplo con `|`, `;`, etc) Si corres el contenedor con `bash` y los comandos deseados entre "" automáticamente se saldrá (sin tenerle que decir `exit`) al terminar de correr todos los comandos. Ejemplo:
 
 ```
-$ docker run --rm biocontainers/fastxtools bash -c "fastq_to_fasta -h ; echo hola mundo ; exit"
+$ docker run --rm biocontainers/fastxtools bash -c "fastq_to_fasta -h ; echo hola mundo"
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -691,6 +693,9 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
  `docker run --rm -v [RutaABSOLUTAaldirectorioDeseado:/data]  [biocontainers/IMAGEN] [COMANDOS del sofware en cuestión] -c exit` para correr el contenedor de una imagen de biocontainers con los comandos específicos de un software dado, con volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos y de tal forma que el contenedor se borre automáticamente al terminar el proceso. Ejemplo:
  
 `docker run --rm -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1/datos:/data biocontainers/fastxtools bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v ; exit"`
+
+
+(Estos datos ejemplo vienen de [Galaxy Data Libraries](https://usegalaxy.org/library/list#folders/F5bee13e9f312df25/datasets/99fa250d93e003f7) y son de libre uso)
 
 **RECOMENDACIONES**
 
