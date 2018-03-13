@@ -91,7 +91,7 @@ Ordenados de menor a mayor estos son los caracteres ASCII usados para representa
 Dependiendo del tipo y versión de plataforma de secuenciación se toman diferentes caracteres (pero sin desordenarlos):
 
 
-![ascii_fastqplataformas.PNG](ascii_fastqplataformas.PNG)
+![ascii_fastqplataformas.PNG](ascii_fastqplataformas.png)
 
 (Tomé la imágen de [aquí](http://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS)/Pre-processing#Sequence_Quality)
 )
