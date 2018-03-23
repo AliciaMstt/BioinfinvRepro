@@ -91,7 +91,7 @@ Ordenados de menor a mayor estos son los caracteres ASCII usados para representa
 Dependiendo del tipo y versión de plataforma de secuenciación se toman diferentes caracteres (pero sin desordenarlos):
 
 
-![ascii_fastqplataformas.PNG](ascii_fastqplataformas.PNG)
+![ascii_fastqplataformas.PNG](ascii_fastqplataformas.png)
 
 (Tomé la imágen de [aquí](http://en.wikibooks.org/wiki/Next_Generation_Sequencing_(NGS)/Pre-processing#Sequence_Quality)
 )
@@ -674,6 +674,8 @@ Para esta sección leeremos el artículo:
 [Mastretta-Yanes A, Arrigo N, Alvarez N et al. (2015) Restriction site-associated DNA sequencing, genotyping error estimation and de novo assembly optimization for population genetic inference. Molecular Ecology Resources, 15, 28–41.](http://onlinelibrary.wiley.com/wol1/doi/10.1111/1755-0998.12291/full)
 
 Y lo discutiremos con el apoyo de esta [presentación](./S2_1640_Mastretta-Yanes_5_noanimation.pdf) y los [Materiales Suplementarios 1](./SupportingInformation_1_diagram_corrected.pdf) del artículo.
+
+También puedes ver el [video de una plática al respecto](https://www.youtube.com/watch?v=015pC1lD6mY#t=03h21m36s).
 
 
 
