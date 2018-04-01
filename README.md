@@ -54,38 +54,38 @@ Los **objetivos específicos son**:
 | 3.1. Lógica de la ejecución de un algoritmo                                 |                |                 |
 | 3.2. Modularidad                                                            |                |                 |
 | 3.3. Cómo organizar un script                                               |                |                 |
-| **Unidad 4 Uso general de software especializado y organización de un proyecto bioinformático**  |        2       |        4        |
-| 4.1. Docker                                     |                |                 |
-| 4.2. Utilidad de software especializado  |                |                 |
-| 4.3. Instalación de software especializado                                                                |                |                 |
-| 4.4. Documentación de software especializado                                                                |                |                 |
-| 4.5. Organización de un proyecto bioinformático                                                |                |                 |
-| 4.6. Markdown                                                               |                |                 |
-| 4.7. Github para organizar tu proyecto                                      |                |                 |
-| **Unidad 5 Datos y análisis utilizados en bioinformática**                  |        3       |        7        |
-| 5.1. Datos crudos (e.g. Illumina raw reads)                                 |                |                 |
-| 5.2. Información en los archivos FASTQ                                      |                |                 |
-| 5.3. Análisis básicos de calidad y preparación de datos                     |                |                 |
-| 5.4. Datos procesados (e.g. Plink, VCF, BAM)                                |                |                 |
-| 5.5. Ensambladores de genomas y transcriptomas                              |                |                 |
-| 5.6. Ensambladores de datos RAD, GBS y símiles                              |                |                 |
-| 5.7. Mapeo a genoma de referencia                                           |                |                 |
-| 5.8. Metabarcoding y símiles                                                |                |                 |
-| 5.9. Importancia de elección de parámetros en análisis bioinformáticos      |                |                 |
-| **Unidad 6 Introducción a R con un enfoque bioinformático**                 |        4       |       9         |
-| 6.1. R y RStudio                                                                |                |                 |
-| 6.2. Funciones básicas de R más importantes para bioinformática             |                |                 |
-| 6.3. Limpieza de datos en R                                                 |                |                 |
-| 6.4. Graficar en R                                                          |                |                 |
-| 6.5. Funciones propias                                                      |                |                 |
-| **Unidad 7 Análisis de filogenias y genética de poblaciones**               |        2       |       9         |
-| 7.1. Bioconductor y paquetes bioinformáticos en R                           |                |                 |
-| 7.2. Exploración gráfica y resumen de datos genéticos                       |                |                 |
-| 7.3. Estimación de parámetros genéticos                                     |                |                 |
-| 7.4. Filogenias                                                             |                |                 |
-| **Unidad 8 Análisis bioinformáticos en pipeline**                           |        5       |        5        |
-| 8.1. Creación de “pipelines” para análisis de datos crudos a resultados     |                |                 |
-| 8.2. Almacenamiento y reproducibilidad de un proyecto bioinformático        |                |                 |
+| **Unidad 4 Organización de un proyecto bioinformático**                     |        2       |        4        |
+| 4.1. Organización del contenido                                             |                |                 |
+| 4.2. Markdown                                                               |                |                 |
+| 4.3. Github para organizar tu proyecto                                      |                |                 |
+| 4.4. Creación de "pipelines" para análisis de datos crudos a resultados     |                |                 |
+| 4.5. Correr R desde la terminal                                             |                |                 |
+| **Unidad 5 Docker y software especializado**                                |        3       |        7        |
+| 5.1. Docker                                                                 |                |                 |
+| 5.2. Utilidad de software especializado                                     |                |                 |
+| 5.3. Instalación de software especializado                                  |                |                 |
+| 5.4. Documentación de software especializado                                |                |                 |
+| **Unidad 6 Datos y análisis utilizados en bioinformática**                  |        3       |        7        |
+| 6.1. Datos crudos (e.g. Illumina raw reads)                                 |                |                 |
+| 6.2. Información en los archivos FASTQ                                      |                |                 |
+| 6.3. Análisis básicos de calidad y preparación de datos                     |                |                 |
+| 6.4. Datos procesados (e.g. Plink, VCF, BAM)                                |                |                 |
+| 6.5. Ensambladores de genomas y transcriptomas                              |                |                 |
+| 6.6. Ensambladores de datos RAD, GBS y símiles                              |                |                 |
+| 6.7. Mapeo a genoma de referencia                                           |                |                 |
+| 6.8. Metabarcoding y símiles                                                |                |                 |
+| 6.9. Importancia de elección de parámetros en análisis bioinformáticos      |                |                 |
+| **Unidad 7 Introducción a R con un enfoque bioinformático**                 |        4       |       9         |
+| 7.1. R y RStudio                                                            |                |                 |
+| 7.2. Funciones básicas de R más importantes para bioinformática             |                |                 |
+| 7.3. Limpieza de datos en R                                                 |                |                 |
+| 7.4. Graficar en R                                                          |                |                 |
+| 7.5. Funciones propias                                                      |                |                 |
+| **Unidad 8 Análisis de filogenias y genética de poblaciones**               |        2       |       9         |
+| 8.1. Bioconductor y paquetes bioinformáticos en R                           |                |                 |
+| 8.2. Exploración gráfica y resumen de datos genéticos                       |                |                 |
+| 8.3. Estimación de parámetros genéticos                                     |                |                 |
+| 8.4. Filogenias                                                             |                |                 |
 
              
 
