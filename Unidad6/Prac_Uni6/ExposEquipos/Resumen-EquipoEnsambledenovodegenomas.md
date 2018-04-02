@@ -14,7 +14,7 @@ Actualmente se han desarrollado diferentes métodos que nos brindan la ventaja d
 Figura 1. Ensamble de novo de genomas (Imagen de Nagarajan et al. Nat Rev Genet. 2013)
 
 
-## 1. ¿Cuáles son las principales variantes del método de laboratorio para generar mis datos y cuándo es más útil cada una?**
+## 1. ¿Cuáles son las principales variantes del método de laboratorio para generar mis datos y cuándo es más útil cada una?
 
 -En cualquier proyecto en el que se considere llevar a cabo la secuenciación de un genoma, es importante considerar el tamaño aproximado del mismo, pues de esto dependerá principalmente la plataforma de secuenciación a utilizar.
 
@@ -58,7 +58,7 @@ Figura 2. Representación de la cobertura en una posición del genoma (Imagen de
 
 
 
-## 2 . De novo ¿Qué limitantes y posibles fuentes de error puede presentar este método (en el laboratorio o la bioinformática)?**
+## 2 . De novo ¿Qué limitantes y posibles fuentes de error puede presentar este método (en el laboratorio o la bioinformática)?
 
 De acuerdo con Monya Baker (2012), existen algunas de las siguientes limitantes y fuentes de error en el Ensamble de novo:
 
@@ -96,7 +96,7 @@ De acuerdo con Monya Baker (2012), existen algunas de las siguientes limitantes 
 -Ser realista acerca de los recursos informáticos. El genoma puede ser demasiado grande para la memoria de la computadora.
 
 
-## 3. ¿El muestreo requiere algún diseño específico? Por ejemplo, si se quiere secuenciar un genoma de novo ¿qué individuo sería ideal? Si trabajo con trascriptomas, ¿cómo afecta el tejido, la edad, las condiciones, etc. mi muestreo?**
+## 3. ¿El muestreo requiere algún diseño específico? Por ejemplo, si se quiere secuenciar un genoma de novo ¿qué individuo sería ideal? Si trabajo con trascriptomas, ¿cómo afecta el tejido, la edad, las condiciones, etc. mi muestreo?
 
 Gene Robinson, entomóloga de la Universidad de Illinois menciona que "Se necesitan saber 2 cosas sobre el ensamblaje de novo: ¿Cuánto del genoma se estima que se incluirá en el ensamblaje? Y ¿Cuántas piezas diferentes no conectadas involucra el ensamblaje?. Esos parámetros indican qué tan fácil será realizar análisis comparativos, funcionales y evolutivos en una secuencia de genoma.
 
@@ -111,7 +111,7 @@ La selección de un individuo ideal, depende de los objetivos de nuestro estudio
 Si se utilizan tejidos, se debe considerar que las secuencias pueden contener una alta proporción de ADN mitocondrial, lo que puede causar ruido en el momento del ensamblaje, pues se pueden identificar regiones genómicas duplicadas; por lo que se recomienda eliminar estas secuencias antes de llevar a cabo el ensamblaje. Si se utilizan tejidos como la piel y el intestino, se debe considerar que estos contienen un alto grado de compuestos xenobióticos.
 
 
-## 4. Menciona al menos dos softwares principales que se utilicen para realizar la parte medular de los análisis bioinformáticos de este tipo de análisis (e.g. si es ensamblado de novo con qué se ensambla, no con qué se hace el pre-procesamiento) y cuáles son los pros y contras de cada uno.**
+## 4. Menciona al menos dos softwares principales que se utilicen para realizar la parte medular de los análisis bioinformáticos de este tipo de análisis (e.g. si es ensamblado de novo con qué se ensambla, no con qué se hace el pre-procesamiento) y cuáles son los pros y contras de cada uno.
 
 Para el ensamblado de *novo* existen tres algoritmos principales:
 
@@ -133,7 +133,7 @@ Existe una cantidad de software disponible para el ensamblaje de *novo* de los d
 Figura 4. Lista de ensambladores de novo, plataforma de secuenciación y algoritmo.
 
 
-El ensamblador de novo Velvet, está basado en la construcción de grafos de Bruijn. El ensamblador Velvet puede ensamblar cualquier tipo de lecturas, pero en realidad está diseñado para el ensamblado de lecturas cortas que van desde 25 – 50 pb. Es uno de los más utilizados en el ensamblado de genomas bacterianos secuenciados previamente con la plataforma Illumina. Además, la principal ventaja de este ensamblador es que puede eliminar errores producidos por el experimento de secuenciación y resuelve repeticiones causadas por la complejidad del genoma (Nagarajan y Pop, 2013).
+El ensamblador de *novo* **Velvet**, está basado en la construcción de grafos de Bruijn. El ensamblador Velvet puede ensamblar cualquier tipo de lecturas, pero en realidad está diseñado para el ensamblado de lecturas cortas que van desde 25 – 50 pb. Es uno de los más utilizados en el ensamblado de genomas bacterianos secuenciados previamente con la plataforma Illumina. Además, la principal ventaja de este ensamblador es que puede eliminar errores producidos por el experimento de secuenciación y resuelve repeticiones causadas por la complejidad del genoma (Nagarajan y Pop, 2013).
 
 El ensamblador Velvet está formado por dos programas independientes pero complementarios:
 
