@@ -2,7 +2,7 @@
 
 ## Instrucciones
 
-Completa el listado de abajo con tu nombre y agrega los links pertinentes a tu repositorio cada fecha de entrega. Para agregar el link deberás 1) Clonar este repositorio, 2) modificar el archivo en tu rama, 3) Hacer un `pull request`a la rama `master`.
+Busca tu nombre en el listado de abajo y agrega los links pertinentes a tu repositorio cada fecha de entrega. Para agregar el link deberás 1) Clonar este repositorio, 2) modificar el archivo en tu rama, 3) Hacer un `pull request`a la rama `master`.
 
 
 Sigue el formato:
@@ -16,5 +16,51 @@ Ejemplo:
 ## Listado:
 
 Alma Melisa Vázquez López
-Alondra Karina Terrones RamírezBrenda González CalderónCarlos Emiliano Mora CarreraDavid Xochipiltecatl GarcíaDelil Andrea Chincoya MartínezDulce Carolina Hernández RosalesErika Alejandra García HernándezErnesto SamacáGabriela Aridai Borja MartínezGuadalupe Andraca GómezIsaura Rosas ReinholdJetsi Viridiana Mancilla RojanoJorge Cruz NicolásJulia Carrasco Zanini SánchezLuz Estela Zamudio BeltránMaría ChavarriaMaría José Monteverde SuárezMariette Viladomat JassoMelania Andrea Vega AngelesMiguel Ángel Espinoza CamachoNatalia Delgado MachucaOlivia RojoTonatiuh Ramírez Reyes
-Yolitzi Saldívar Lemus
+
+Alondra Karina Terrones Ramírez
+
+Brenda González Calderón
+
+Carlos Emiliano Mora Carrera
+
+David Xochipiltecatl García
+
+Delil Andrea Chincoya Martínez
+
+Dulce Carolina Hernández Rosales
+
+Erika Alejandra García Hernández
+
+Ernesto Samacá
+
+Gabriela Aridai Borja Martínez
+
+Guadalupe Andraca Gómez
+
+Isaura Rosas Reinhold
+
+Jetsi Viridiana Mancilla Rojano
+
+Jorge Cruz Nicolás
+
+Julia Carrasco Zanini Sánchez
+
+Luz Estela Zamudio Beltrán
+
+María Chavarria
+
+María José Monteverde Suárez
+
+Mariette Viladomat Jasso
+
+Melania Andrea Vega Angeles
+
+Miguel Ángel Espinoza Camacho
+
+Natalia Delgado Machuca
+
+Olivia Rojo
+
+Tonatiuh Ramírez Reyes
+
+Yolitzi Saldívar Lemus
