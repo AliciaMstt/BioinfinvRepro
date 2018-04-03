@@ -42,6 +42,8 @@ Isaura Rosas Reinhold
 Jetsi Viridiana Mancilla Rojano
 
 Jorge Cruz Nicolás
+Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
+
 
 Julia Carrasco Zanini Sánchez
 
