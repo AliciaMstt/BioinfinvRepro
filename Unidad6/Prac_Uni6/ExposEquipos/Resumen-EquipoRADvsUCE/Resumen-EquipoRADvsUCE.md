@@ -9,8 +9,8 @@ Entre los métodos de representación reducida del genoma frecuentemente utiliza
 
 Debido a que resultan útiles para investigar la evolución de los organismos a diferentes escalas de tiempo evolutivo. 
 
-## Principales diferencias
-
+##  Principales diferencias
+ 
 ![Figura 1](Resumen-EquipoRADvsUCE-Fig1.jpg)
 
 
@@ -104,7 +104,10 @@ Baird, N.A., Etter, P.D., Atwood, T.S., Currey, M.C., Shiver, A.L., Lewis, Z.A.,
 
 Peterson, B.K., Weber, J.N., Kay, E.J., Fisher, H.S., Hoeakstra, H.E. 2012. Double digest RADseq: an inexpensive method for de Novo SNP discovery and genotyping in model and non-model species. PLsoS One: e37135.
 
-Faircloth, B.C., McCormack, J.E., Crawford, N.G., Harvey, M.G., Glenn, T.C. 2012. Ultraconserved elements anchor thousands of genetic markersspanning multiple evolutionary timescales. Systematic Biology: 61, 717-726.Smith, B.T., Harvey, M.G., Faircloth, B.C., Glenn, T.C., Brumfield, R.T. 2014. Target capture and massively parallel sequencing of ultraconserved elements (UCEs) for comparative studies at shallow evolutionary time scales. Systematic Biology: 63, 83–95.
+Faircloth, B.C., McCormack, J.E., Crawford, N.G., Harvey, M.G., Glenn, T.C. 2012. Ultraconserved elements anchor thousands of genetic markersspanning multiple evolutionary timescales. Systematic Biology: 61, 717-726.
+
+
+Smith, B.T., Harvey, M.G., Faircloth, B.C., Glenn, T.C., Brumfield, R.T. 2014. Target capture and massively parallel sequencing of ultraconserved elements (UCEs) for comparative studies at shallow evolutionary time scales. Systematic Biology: 63, 83–95.
 
 
 [Para parender más de UCEs](http://ultraconserved.org)
