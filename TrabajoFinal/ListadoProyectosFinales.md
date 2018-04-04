@@ -16,5 +16,51 @@ Ejemplo:
 ## Listado:
 
 Alma Melisa Vázquez López
-Alondra Karina Terrones RamírezBrenda González CalderónCarlos Emiliano Mora CarreraDavid Xochipiltecatl GarcíaDelil Andrea Chincoya MartínezDulce Carolina Hernández RosalesErika Alejandra García HernándezErnesto SamacáGabriela Aridai Borja MartínezGuadalupe Andraca GómezIsaura Rosas ReinholdJetsi Viridiana Mancilla RojanoJorge Cruz NicolásJulia Carrasco Zanini SánchezLuz Estela Zamudio BeltránMaría ChavarriaMaría José Monteverde SuárezMariette Viladomat JassoMelania Andrea Vega AngelesMiguel Ángel Espinoza CamachoNatalia Delgado MachucaOlivia RojoTonatiuh Ramírez Reyes
-Yolitzi Saldívar Lemus
+
+Alondra Karina Terrones Ramírez
+
+Brenda González Calderón
+
+Carlos Emiliano Mora Carrera
+
+David Xochipiltecatl García
+
+Delil Andrea Chincoya Martínez
+
+Dulce Carolina Hernández Rosales
+
+Erika Alejandra García Hernández
+
+Ernesto Samacá
+
+Gabriela Aridai Borja Martínez
+
+Guadalupe Andraca Gómez
+
+Isaura Rosas Reinhold
+
+Jetsi Viridiana Mancilla Rojano
+
+Jorge Cruz Nicolás
+
+Julia Carrasco Zanini Sánchez
+
+Luz Estela Zamudio Beltrán
+
+María Chavarria
+
+María José Monteverde Suárez
+
+Mariette Viladomat Jasso [avance 1](https://github.com/Mariette-VJ/Tareas_Curso_BioInvRepro/blob/master/ProyectoFinal_Mariette/PF_Primer_Avance_Mariette.md)
+
+Melania Andrea Vega Angeles
+
+Miguel Ángel Espinoza Camacho
+
+Natalia Delgado Machuca
+
+Olivia Rojo
+
+Tonatiuh Ramírez Reyes
+
+Yolitzi Saldívar Lemus
