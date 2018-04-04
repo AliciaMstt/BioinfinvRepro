@@ -37,7 +37,7 @@ Gabriela Aridai Borja Martínez
 
 Guadalupe Andraca Gómez
 
-Isaura Rosas Reinhold [Avance 1] https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%201
+Isaura Rosas Reinhold [Avance 1] (https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%201)
 
 Jetsi Viridiana Mancilla Rojano
 
