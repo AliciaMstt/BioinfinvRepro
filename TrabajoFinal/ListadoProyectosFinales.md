@@ -33,7 +33,7 @@ Erika Alejandra García Hernández
 
 Ernesto Samacá
 
-Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance 1.md)
+Gabriela Aridai Borja Martínez  [Avance 1] (http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance 1.md)
 
 Guadalupe Andraca Gómez
 
