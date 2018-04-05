@@ -19,7 +19,7 @@ Alma Melisa Vázquez López
 
 Alondra Karina Terrones Ramírez
 
-Brenda González Calderón
+Brenda González Calderón [avance 1](https://github.com/br3nd4/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
 Carlos Emiliano Mora Carrera
 
