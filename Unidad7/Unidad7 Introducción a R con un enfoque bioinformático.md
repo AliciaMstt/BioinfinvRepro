@@ -1,6 +1,6 @@
 # Unidad 6 Introducción a R con un enfoque bioinformático
 
-## 6.1. R y RStudio 		
+## 7.1. R y RStudio 		
 
 ### ¿Qué es R?
 * R es un lenguaje de programación y un ambiente de cómputo estadístico
@@ -89,7 +89,7 @@ La idea es que en el editor de texto vayas escribiendo los comandos y comentario
 * ? + nombre de función: ayuda sobre esa función.
 
 
-## 6.2. Funciones básicas de R más importantes para bioinformática 
+## 7.2. Funciones básicas de R más importantes para bioinformática 
 
 ### Introducción a R como lenguaje de programación
 
@@ -297,7 +297,7 @@ Por ejemplo `3*(4/3-1)-1 = 0 `. Pero para una computadora:
 Por eso en [Talentos Ocultos](http://www.popularmechanics.com/space/rockets/a24429/hidden-figures-real-story-nasa-women-computers/), [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) le gana en exactitud  a la IBM.
 
 
-## 6.3. Funciones propias:	Crear funciones y utilizarlas con `source`
+## 7.3. Funciones propias:	Crear funciones y utilizarlas con `source`
 
 
 `source` es una función que sirve para correr un script de R **dentro de otro script de R**. Esto permite modularizar un análisis y luego correr una pipeline general, así como tener por separado **funciones propias** (que podemos llamar igual que llamamos las funciones de los paquetes) y que utilizamos mucho en diversos scripts. Este tipo de funciones son las que podemos compartir en Github con otros usuarios y hasta convertirlas en un paquete. 
@@ -410,7 +410,7 @@ Nota que `source` NO corre la función en sí, sino que solo la carga al cerebro
 **Ejercicio:** Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete `vegan`. 
 
 
-## 6.4. R Markdown y R Notebook
+## 7.4. R Markdown y R Notebook
 
 [R Markdown](http://rmarkdown.rstudio.com/index.html) es un formato que te permite crear documentos o reportes, en los que al mismo tiempo guardas y ejecutas código. 
 
@@ -473,7 +473,7 @@ Es posible generar un reporte a partir de un script de R, aún cuando no tenga e
 ![alt text](RColorB.png)
 
 
-## 6.5. Manipulación y limpieza de datos en R
+## 7.5. Manipulación y limpieza de datos en R
 
 La manipulación y la limpieza da datos muchas veces es necesaria antes de poner hacer análisis en R. Aquí trataremos brevemente lo siguientes puntos en [notas aparte](Limpieza_de_datos.html):
 
@@ -483,7 +483,7 @@ La manipulación y la limpieza da datos muchas veces es necesaria antes de poner
 
 
 
-## 6.6. Graficar en R 		
+## 7.6. Graficar en R 		
 
 Los apuntes de esta sección están en [Graficar en R](Graficar_en_R.html) (código y gráficas) y [Graficar en R](Graficar en R.Rmd) (sólo código)
 
