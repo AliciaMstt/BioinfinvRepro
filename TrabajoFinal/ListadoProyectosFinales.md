@@ -29,8 +29,8 @@ Delil Andrea Chincoya Martínez
 
 Dulce Carolina Hernández Rosales
 
-Erika Alejandra García Hernández
-
+Erika Alejandra García Hernández 
+Erika Alejandra García Hernández: [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md)
 Ernesto Samacá
 
 Gabriela Aridai Borja Martínez
