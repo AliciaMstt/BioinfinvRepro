@@ -23,7 +23,7 @@ Brenda González Calderón
 
 Carlos Emiliano Mora Carrera
 
-David Xochipiltecatl García [avance 1](https://github.com/Bendxg/Tareas_Curso_BioinfInvRepro_/blob/master/avance%201.md)
+David Xochipiltecatl García: [avance 1](https://github.com/Bendxg/Tareas_Curso_BioinfInvRepro_/blob/master/avance%201.md)
 
 Delil Andrea Chincoya Martínez
 
