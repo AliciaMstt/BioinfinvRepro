@@ -47,7 +47,7 @@ Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioin
 
 Julia Carrasco Zanini Sánchez
 
-Luz Estela Zamudio Beltrán
+Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFinalBioinf2018-II/blob/master/avance%201.md)
 
 María Chavarria
 
