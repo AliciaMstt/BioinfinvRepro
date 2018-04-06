@@ -39,7 +39,8 @@ Guadalupe Andraca Gómez
 
 Isaura Rosas Reinhold
 
-Jetsi Viridiana Mancilla Rojano
+Jetsi Viridiana Mancilla Rojano: [avance 1](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/Avance1.md)
+
 
 Jorge Cruz Nicolás
 Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
