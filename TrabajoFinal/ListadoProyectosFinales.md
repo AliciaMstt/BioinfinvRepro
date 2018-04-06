@@ -51,7 +51,7 @@ Luz Estela Zamudio Beltrán
 
 María Chavarria
 
-María José Monteverde Suárez
+María José Monteverde Suárez [avance 1] (https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md)
 
 Mariette Viladomat Jasso
 
