@@ -1,4 +1,4 @@
-# Unidad 6 Introducción a R con un enfoque bioinformático
+# Unidad 7 Introducción a R con un enfoque bioinformático
 
 ## 7.1. R y RStudio 		
 
