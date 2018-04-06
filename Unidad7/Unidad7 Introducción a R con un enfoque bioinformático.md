@@ -15,7 +15,7 @@
 comunidad).
 * R se puede combinar con herramientas bioinformáticas y formatos de datos procesados (e.g. plink, vcf, etc) para realizar análisis y figuras.
 * R tiene capacidades gráficas muy sofisticadas.
-* R es popular como herramienta estadística ([la guerra del software](http://datacamp.wpengine.com/wp-content/uploads/2014/05/infograph.png)) y cada vez más también como herramienta bioinformática.
+* R es popular como herramienta estadística (la guerra del software) y cada vez más también como herramienta bioinformática.
 
 
 
