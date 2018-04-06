@@ -57,7 +57,7 @@ Mariette Viladomat Jasso
 
 Melania Andrea Vega Angeles
 
-Miguel Ángel Espinoza Camacho [avance 1](ProyectoFinalBioinf2018-II/PROYECTO_FINAL_MIGUEL ANGEL ESPINOZA CAMACHO.md)
+Miguel Ángel Espinoza Camacho [avance 1](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/PROYECTO_FINAL_MIGUEL%20ANGEL%20ESPINOZA%20CAMACHO.md)
 
 Natalia Delgado Machuca
 
