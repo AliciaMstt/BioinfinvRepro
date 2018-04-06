@@ -35,7 +35,7 @@ Ernesto Samacá
 
 Gabriela Aridai Borja Martínez
 
-Guadalupe Andraca Gómez
+Guadalupe Andraca Gómez [Avance 1] (https://github.com/LupitaAndraca/ProyectoFinalBioinfo/issues/1)
 
 Isaura Rosas Reinhold
 
