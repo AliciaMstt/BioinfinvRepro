@@ -57,7 +57,7 @@ Melania Andrea Vega Angeles
 
 Miguel Ángel Espinoza Camacho
 
-Natalia Delgado Machuca [avance 1](https://github.com/N-atalia/ProyectoFinalBioinf2018-II/blob/master/Trabajo%20Final%20.md)
+Natalia Delgado Machuca [Avance 1](https://github.com/N-atalia/ProyectoFinalBioinf2018-II/blob/master/Trabajo%20Final%20.md)
 
 Olivia Rojo
 
