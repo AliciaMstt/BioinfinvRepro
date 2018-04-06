@@ -31,7 +31,7 @@ Dulce Carolina Hernández Rosales
 
 Erika Alejandra García Hernández
 
-Ernesto Samacá
+Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
 Gabriela Aridai Borja Martínez
 
