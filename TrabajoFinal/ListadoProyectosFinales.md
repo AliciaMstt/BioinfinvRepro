@@ -20,7 +20,7 @@ Alma Melisa Vázquez López [Avance 1](https://github.com/almamelisa/ProyectoFin
 Alondra Karina Terrones Ramírez 
 Alondra Karina Terrones Ramírez: [avance 1](https://github.com/AloTerrones/ProyectoFinalBioinf2018-II/blob/master/avance1proyecto.md)
 
-Brenda González Calderón
+Brenda González Calderón: [avance 1](https://github.com/br3nd4/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
 Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
 
