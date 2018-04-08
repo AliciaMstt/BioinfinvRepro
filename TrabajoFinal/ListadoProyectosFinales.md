@@ -36,7 +36,7 @@ Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-
 
 Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md)
 
-Guadalupe Andraca Gómez
+Guadalupe Andraca Gómez [Avance 1](https://github.com/LupitaAndraca/ProyectoFinalBioinfo/blob/master/Avance1.md)
 
 Isaura Rosas Reinhold
 
