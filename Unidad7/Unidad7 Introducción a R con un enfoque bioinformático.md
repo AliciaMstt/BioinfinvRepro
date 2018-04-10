@@ -400,8 +400,6 @@ x<-give_i_line("../data/indicadores.txt", i=2)
 
 ```
 
-#### Source
-
 Si guardamos la función como un script llamado [`give_i_line.r`](Prac_Uni6/ejemplosgenerales/bingive_i_line.r) después podemos correrla desde otro script, llamándola con `source()`:
 
 ```{r} 
