@@ -36,7 +36,7 @@ Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-
 
 Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md)
 
-Guadalupe Andraca Gómez
+Guadalupe Andraca Gómez [Avance 1](https://github.com/LupitaAndraca/ProyectoFinalBioinfo/blob/master/Avance1.md)
 
 Isaura Rosas Reinhold
 
@@ -53,13 +53,13 @@ Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFi
 
 María Chavarria
 
-María José Monteverde Suárez
+María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md)
 
 Mariette Viladomat Jasso
 
 Melania Andrea Vega Angeles
 
-Miguel Ángel Espinoza Camacho
+Miguel Ángel Espinoza Camacho [avance 1](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/PROYECTO_FINAL_MIGUEL%20ANGEL%20ESPINOZA%20CAMACHO.md)
 
 Natalia Delgado Machuca
 
