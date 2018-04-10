@@ -130,10 +130,14 @@ Data frames
 
 Para una versión un poco más amplia del anterior resumen veamos estas [notas sobre los tipos de objetos de R básico](Tipos_objetos_baseR.Rmd)
 
+### Trabajar con paquetes y datos externos
+
+##### Acordeón funciones útiles al trabajar con paquetes y archivos de datos 
+
 * Funciones de sistema: `list.files`, `getwd`, `setwd`
 * Cargar una función: `source`
 * Instalar paquetes (sola una vez en cada equipo): `install.packages`.
-* Cargar un paquete previamente instalado (cada vez que corramos el script): `install.packages`.
+* Cargar un paquete previamente instalado (cada vez que corramos el script): `library`.
 * Cargar a R un archivo de texto con filas y columnas (separado por tabs o comas): `read.delim`.
 * "Pegar" texto uno detrás de otro: `paste()` y `paste0()`.
 
@@ -196,6 +200,8 @@ Escribe un script que debe estar guardado en `Prac_Uni7/maices/bin` y llamarse `
 * Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
 
 * Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
+
+
 
 ### For loops
 
