@@ -28,7 +28,7 @@ David Xochipiltecatl García
 
 Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance1_proyecto_final.md)
 
-Dulce Carolina Hernández Rosales
+Dulce Carolina Hernández Rosales:[avance 1](https://github.com/heroduca/ProyectoFinalBioinf2018-II-/blob/master/DulceHernandez:Avance%201.md)
 
 Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md)
 
