@@ -11,7 +11,7 @@
 * R funciona en casi todas las plataformas (Mac, Windows, Linux e incluso en Playstation 3).
 * R es un lenguaje de programación completo, permite desarrollo de DSLs (funciones muy específicas)
 * R promueve la investigación reproducible: no sólo de análisis sino de cómo se hicieron las figuras.
-* R está actualizado gracias a que tiene una activa comunidad. Solo en CRAN hay cerca de 8000 paquetes (funcionalidad adicional de R creadas creada por la 
+* R está actualizado gracias a que tiene una activa comunidad. Solo en CRAN hay cerca de 8000 paquetes (funcionalidad adicional de R creadas creada por la
 comunidad).
 * R se puede combinar con herramientas bioinformáticas y formatos de datos procesados (e.g. plink, vcf, etc) para realizar análisis y figuras.
 * R tiene capacidades gráficas muy sofisticadas.
@@ -22,18 +22,18 @@ comunidad).
 ### Descargar R y RStudio
 Para comenzar se debe descargar [R](https://cran.r-project.org), esta descarga incluye R básico y un editor de textos para escribir código. Después de descargar R se recomienda descargar [RStudio](https://www.rstudio.com/products/rstudio/download/) (gratis y libre).
 
-**RStudio** es un ambiente de desarrollo integrado para R: incluye una consola, un editor de texto y un conjunto de herramientas para administrar el espacio de trabajo cuando se  utiliza R. 
+**RStudio** es un ambiente de desarrollo integrado para R: incluye una consola, un editor de texto y un conjunto de herramientas para administrar el espacio de trabajo cuando se  utiliza R.
 
 
 
 
 ### ¿Cómo entender R?
-* Hay una sesión de R corriendo. La consola de R es la interfaz entre R y nosotros. 
+* Hay una sesión de R corriendo. La consola de R es la interfaz entre R y nosotros.
 * En la sesión hay objetos. Todo en R es un objeto: vectores, tablas,  funciones, etc.
 * Operamos aplicando funciones a los objetos y creando nuevos objetos.
 
 ##### La consola
-Es una ventana que nos permite comunicarnos al motor de R. Esta ventana acepta **comandos** en el lenguaje de R y brinda una respuesta (resultado) a dichos comandos. 
+Es una ventana que nos permite comunicarnos al motor de R. Esta ventana acepta **comandos** en el lenguaje de R y brinda una respuesta (resultado) a dichos comandos.
 
 Por ejemplo, le podemos pedir a R que sume 1+1 así:
 
@@ -52,14 +52,14 @@ Tu Consola debe verse más o menos así después del ejemplo anterior:
 
 Como hemos visto en otras unidades, un **script** es un archivo de nuestros análisis que es:
 
-* un archivo de texto plano 
+* un archivo de texto plano
 * permanente,
 * repetible,
 * anotado y
-* compartible 
+* compartible
 
 
-En otras palabras, un script es una recopilación por escrito de las instrucciones que queremos enviar a la consola, de modo que al tener esas instrucciones cualquiera pueda repetir el análisis tal cual se hizo. 
+En otras palabras, un script es una recopilación por escrito de las instrucciones que queremos enviar a la consola, de modo que al tener esas instrucciones cualquiera pueda repetir el análisis tal cual se hizo.
 
 Un script muy sencillo podría verse así:
 
@@ -69,9 +69,9 @@ Un script muy sencillo podría verse así:
 
 ![dondeEjemplo_script](dondeEjemplo_script.PNG)
 
-RStudio brinda además de la consola un editor de texto, que es la pantalla que se observa en el ejemplo anterior. Lo que escribas en el editor de texto puede "enviarse" a la consola con los shortcuts de abajo o con el ícono correr. 
+RStudio brinda además de la consola un editor de texto, que es la pantalla que se observa en el ejemplo anterior. Lo que escribas en el editor de texto puede "enviarse" a la consola con los shortcuts de abajo o con el ícono correr.
 
-La idea es que en el editor de texto vayas escribiendo los comandos y comentarios de tu **script** hasta que haga exactamente lo que quieras. 
+La idea es que en el editor de texto vayas escribiendo los comandos y comentarios de tu **script** hasta que haga exactamente lo que quieras.
 
 
 ### Algunos _shortcuts_ útiles en RStudio son:
@@ -89,7 +89,7 @@ La idea es que en el editor de texto vayas escribiendo los comandos y comentario
 * ? + nombre de función: ayuda sobre esa función.
 
 
-## 7.2. Funciones básicas de R más importantes para bioinformática 
+## 7.2. Funciones básicas de R más importantes para bioinformática
 
 ### Introducción a R como lenguaje de programación
 
@@ -111,11 +111,11 @@ Imprime dos veces este [Acordeón de R básico](https://www.rstudio.com/wp-conte
 Vectores:
 
 * vectores `c(5, 4, 6, 7)`, `5:9`
-* Acceso a elementos de un vector `[]` 
+* Acceso a elementos de un vector `[]`
 
-**Ejercicio:** suma el número 2 a todos los números entre 1 y 150. 
+**Ejercicio:** suma el número 2 a todos los números entre 1 y 150.
 
-**Ejercicio** ¿cuántos números son mayores a 20 
+**Ejercicio** ¿cuántos números son mayores a 20
 en el vector -13432:234?
 
 Matrices
@@ -132,7 +132,7 @@ Para una versión un poco más amplia del anterior resumen veamos estas [notas s
 
 ### Trabajar con paquetes y datos externos
 
-##### Acordeón funciones útiles al trabajar con paquetes y archivos de datos 
+##### Acordeón funciones útiles al trabajar con paquetes y archivos de datos
 
 * Funciones de sistema: `list.files`, `getwd`, `setwd`
 * Cargar una función: `source`
@@ -143,27 +143,27 @@ Para una versión un poco más amplia del anterior resumen veamos estas [notas s
 
 #### Notas sobre cargar librerías:
 
-`install.packages` sirve para instalar un paquete en nuestras máquinas, esto la baja de CRAN u otro servidor y lo instala en R, pero **no lo carga a la sesión activa**. 
+`install.packages` sirve para instalar un paquete en nuestras máquinas, esto la baja de CRAN u otro servidor y lo instala en R, pero **no lo carga a la sesión activa**.
 
 Una vez que el paquete está instalado, este NO estará cargado en el cerebro de R al menos que utilicemos `library(nombredelpaquete)`. Si tu script utiliza un paquete determinado, es recomendable que estos se carguen en las primeras líneas o al principio de la sección de código que los utilizará.
 
 Sólo carga los paquetes que realmente utilices en un script dado.
- 
+
 #### Notas sobre cargar archivos:
-`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar que variables utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué. 
+`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar que variables utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué.
 
 Además de archivos de filas y columnas, se pueden leer a R todo tipo de archivos, en algunos casos esto se hace con paquetes que crearon funciones específicas para esto. Normalmente se llaman `read.algo`. Por ejemplo la función `read.plink` del paquete snpMatrix.
 
-Cuando utilices `read.delim` o símil, asume que tu WD es donde vive tu script y **utiliza rutas relativas** para navegar hasta el archivo que deseas cargar. 
+Cuando utilices `read.delim` o símil, asume que tu WD es donde vive tu script y **utiliza rutas relativas** para navegar hasta el archivo que deseas cargar.
 
 (Para poner triste Alicia preguntar por qué es importante hacer lo anterior).
 
 #### Working directory
-Buena práctica recomendada: que tu working directory sea donde sea que viva el script en el que estás trabajando. 
+Buena práctica recomendada: que tu working directory sea donde sea que viva el script en el que estás trabajando.
 
 Para averiguar cuál es tu WD actual utiliza `getwd()`.
 
-Puedes definir tu WD manualmente con la función `setwd()`, pero OJO: realiza esto en **La Consola**, *NO en tu script*. Neto, porfas. 
+Puedes definir tu WD manualmente con la función `setwd()`, pero OJO: realiza esto en **La Consola**, *NO en tu script*. Neto, porfas.
 
 Una trampa práctica en RStudio para que tu WD sea el lugar donde vive tu script es ir al Menú:
 
@@ -172,14 +172,14 @@ Una trampa práctica en RStudio para que tu WD sea el lugar donde vive tu script
 O sease "source file" = tu script activo.
 
 Nota también que si abres RStudio clickeando su ícono, tu WD por default será el home de tu usuario. Sin embargo, si abres RStudio clickeando en un script, el WD default será donde viva dicho script.
- 
 
-**Ejercicio:** 
-Escribe un script que debe estar guardado en `Prac_Uni7/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `Prac_Uni7/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente. 
+
+**Ejercicio:**
+Escribe un script que debe estar guardado en `Prac_Uni7/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `Prac_Uni7/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
 
 (averigua cada punto con comandos de R. Recuerda comentar o tendrás 7 años de mala suerte en el lab)
 
-* ¿Qué tipo de objeto creamos al cargar la base? 
+* ¿Qué tipo de objeto creamos al cargar la base?
 
 * ¿Cómo se ven las primeras 6 líneas del archivo?
 
@@ -236,7 +236,7 @@ paste(10, "elefantes se columpiaban sobre la tela de una araña")
 ```
 
 
-**Ejercicio** 
+**Ejercicio**
 
 * Escribe un for loop para que divida 35 entre 1:10 e imprima el resultado en la consola.
 
@@ -255,7 +255,7 @@ elefantes
 
 **Ejercicio**  
 
-Abre en RStudio el script `Prac_Uni7/mantel/bin/1.IBR_testing.r`. Este script realiza un análisis de [aislamiento por resistencia](http://www.bioone.org/doi/abs/10.1554/05-321.1) con Fst calculadas con ddRAD en *Berberis alpina*. 
+Abre en RStudio el script `Prac_Uni7/mantel/bin/1.IBR_testing.r`. Este script realiza un análisis de [aislamiento por resistencia](http://www.bioone.org/doi/abs/10.1554/05-321.1) con Fst calculadas con ddRAD en *Berberis alpina*.
 
 Lee el código del script y determina:
 
@@ -268,13 +268,13 @@ Lee el código del script y determina:
 
 Las computadoras pueden almacenar una candidad finita de dígitos de un número real. En computadoras de 64 bits, este máximo es 16 (ie el hardware permite almacenar 16).
 
-Además, las computadoras utilizan el sistema binarios (0s y 1s) para representar númperos. Por ejemplo 2.125 se puede representar como `2^1 + 2^-3`. Pero algunos números no tienen una representación exacta en sistema binario. Por ejemplo los irracionales como `1/3` que tienen una expansión infitia. Para resolver esto las compus lo truncan a 16 dígitos y eso lo representan en base 2.
+Además, las computadoras utilizan el sistema binarios (0s y 1s) para representar números. Por ejemplo 2.125 se puede representar como `2^1 + 2^-3`. Pero algunos números no tienen una representación exacta en sistema binario. Por ejemplo los irracionales como `1/3` que tienen una expansión infitia. Para resolver esto las compus lo truncan a 16 dígitos y eso lo representan en base 2.
 
 Las computadoras realizan operaciones aritméticas utilizando *precisión finita* con las limitantes anteriores (16 dígitos y números que no pueden representarse en base 2). Por lo tanto las operaciones de las computadoras no son exactas.
 
 Por ejemplo:
 
-Si resolvemos manualmente `3*(4/3-1)` obtenemos 1: 
+Si resolvemos manualmente `3*(4/3-1)` obtenemos 1:
 
 ```
 3*(4/3-1)
@@ -293,7 +293,7 @@ options(digits = 7) # Volver al default
 
 La acumulación de este **error de redondeo** al realizar operaciones se puede acumular considerablemente.
 
-Por ejemplo `3*(4/3-1)-1 = 0 `. Pero para una computadora: 
+Por ejemplo `3*(4/3-1)-1 = 0 `. Pero para una computadora:
 
 ```
 > 3*(4/3-1)-1
@@ -306,7 +306,7 @@ Por eso en [Talentos Ocultos](http://www.popularmechanics.com/space/rockets/a244
 ## 7.3. Funciones propias:	Crear funciones y utilizarlas con `source`
 
 
-`source` es una función que sirve para correr un script de R **dentro de otro script de R**. Esto permite modularizar un análisis y luego correr una pipeline general, así como tener por separado **funciones propias** (que podemos llamar igual que llamamos las funciones de los paquetes) y que utilizamos mucho en diversos scripts. Este tipo de funciones son las que podemos compartir en Github con otros usuarios y hasta convertirlas en un paquete. 
+`source` es una función que sirve para correr un script de R **dentro de otro script de R**. Esto permite modularizar un análisis y luego correr una pipeline general, así como tener por separado **funciones propias** (que podemos llamar igual que llamamos las funciones de los paquetes) y que utilizamos mucho en diversos scripts. Este tipo de funciones son las que podemos compartir en Github con otros usuarios y hasta convertirlas en un paquete.
 
 Ejemplos de cómo utilizar `source`: correr el script del ejercicio anterior desde otro script con la línea.
 
@@ -325,25 +325,25 @@ statements
 return(object)
 }
 ```
-**Ojo**: el comando `return` es necesario al final de una función siempre que queramos que dicha función "devuelva" un objeto (por ejemplo una df que creemos como parte de la función). De no poner esta instrucción, la función correrá desde otro script, pero no veremos ningún resultado. 
+**Ojo**: el comando `return` es necesario al final de una función siempre que queramos que dicha función "devuelva" un objeto (por ejemplo una df que creemos como parte de la función). De no poner esta instrucción, la función correrá desde otro script, pero no veremos ningún resultado.
 
- 
+
 Ejemplo:
 
 ```{r}
 give_i_line<- function(file, i){
-  ## Arguments 
+  ## Arguments
   # file = path to desired file with the indicadores, must be tab delimited and do NOT have a header
   # i = number of line of file we want to print
-  
+
   ## Function
   # read indicadores list
   indicador<-read.delim(file, header=FALSE, quote="", stringsAsFactors=FALSE)
-  
+
   # give text of the i line of the file  
   x<-indicador[i,1]
   return(x)
-} 
+}
 
 give_i_line("../data/indicadores.txt", i=2)
 x<-give_i_line("../data/indicadores.txt", i=2)
@@ -351,23 +351,23 @@ x<-give_i_line("../data/indicadores.txt", i=2)
 ```
 
 
-Como alternativa a `return()` puedes poner el nombre del objeto (como si quisieras verlo en la terminal). 
+Como alternativa a `return()` puedes poner el nombre del objeto (como si quisieras verlo en la terminal).
 
 
 ```{r}
 give_i_line<- function(file, i){
-  ## Arguments 
+  ## Arguments
   # file = path to desired file with the indicadores, must be tab delimited and do NOT have a header
   # i = number of line of file we want to print
-  
+
   ## Function
   # read indicadores list
   indicador<-read.delim(file, header=FALSE, quote="", stringsAsFactors=FALSE)
-  
+
   # give text of the i line of the file  
   x<-indicador[i,1]
   x
-} 
+}
 
 give_i_line("../data/indicadores.txt", i=2)
 x<-give_i_line("../data/indicadores.txt", i=2)
@@ -379,20 +379,20 @@ Si quieres ver un resultado pero que este no sea guardado como un objeto, utiliz
 
 ```{r}
 give_i_line<- function(file, i){
-  ## Arguments 
+  ## Arguments
   # file = path to desired file with the indicadores, must be tab delimited and do NOT have a header
   # i = number of line of file we want to print
-  
+
   ## Function
   # read indicadores list
   indicador<-read.delim(file, header=FALSE, quote="", stringsAsFactors=FALSE)
-  
+
   print(i)
-  
+
   # give text of the i line of the file  
   x<-indicador[i,1]
   x
-} 
+}
 
 give_i_line("../data/indicadores.txt", i=2)
 x<-give_i_line("../data/indicadores.txt", i=2)
@@ -402,7 +402,7 @@ x<-give_i_line("../data/indicadores.txt", i=2)
 
 Si guardamos la función como un script llamado [`give_i_line.r`](Prac_Uni6/ejemplosgenerales/bingive_i_line.r) después podemos correrla desde otro script, llamándola con `source()`:
 
-```{r} 
+```{r}
 source("give_i_line.r")
 give_i_line("../data/indicadores.txt"), i=2)
 ```
@@ -411,12 +411,12 @@ Nota que `source` NO corre la función en sí, sino que solo la carga al cerebro
 
 **Ejercicio:** Escribe una función llamada `calc.tetha` que te permita calcular tetha dados Ne y u como argumentos. Recuerda que tetha =4Neu.
 
-**Ejercicio:** Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete `vegan`. 
+**Ejercicio:** Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete `vegan`.
 
 
 ## 7.4. R Markdown y R Notebook
 
-[R Markdown](http://rmarkdown.rstudio.com/index.html) es un formato que te permite crear documentos o reportes, en los que al mismo tiempo guardas y ejecutas código. 
+[R Markdown](http://rmarkdown.rstudio.com/index.html) es un formato que te permite crear documentos o reportes, en los que al mismo tiempo guardas y ejecutas código.
 
 ![alt text](Rmarkdown1.png)
 
@@ -426,7 +426,7 @@ Primero, instala R Markdown:
  install.packages("rmarkdown")
 ```
 
-Un archivo R Markdown es un archivo de texto plano que debe verse algo así: 
+Un archivo R Markdown es un archivo de texto plano que debe verse algo así:
 
 ![alt text](Rmarkdown_text.png)
 
@@ -439,7 +439,7 @@ El archivo tiene tres tipos de contenido:
 
 ### Archivos de salida
 
-A partir de un archivo .Rmd, es posible crear archivos de salida en una gran variedad de formatos, por ejemplo: 
+A partir de un archivo .Rmd, es posible crear archivos de salida en una gran variedad de formatos, por ejemplo:
 
 - HTML
 - Documentos interactivos
@@ -460,7 +460,7 @@ render("1-example.Rmd")
 
 ### Interfaz notebook y R Notebooks
 
-Cuando abres o creas un archivo .Rmd, la interfaz de RStudio cambia a Notebook. Ahora, puedes ejecutar el código usando las flechas y los resultados se despliegan a continuación del código. 
+Cuando abres o creas un archivo .Rmd, la interfaz de RStudio cambia a Notebook. Ahora, puedes ejecutar el código usando las flechas y los resultados se despliegan a continuación del código.
 
 ![alt text](Notebook_interface.png)
 
@@ -490,4 +490,3 @@ La manipulación y la limpieza da datos muchas veces es necesaria antes de poner
 ## 7.6. Graficar en R 		
 
 Los apuntes de esta sección están en [Graficar en R](Graficar_en_R.html) (código y gráficas) y [Graficar en R](Graficar en R.Rmd) (sólo código)
-
