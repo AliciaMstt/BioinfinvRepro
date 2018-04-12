@@ -202,6 +202,44 @@ Escribe un script que debe estar guardado en `Prac_Uni7/maices/bin` y llamarse `
 * Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
 
 
+### Notas sobre operaciones aritméticas en computadoras:
+
+Las computadoras pueden almacenar una candidad finita de dígitos de un número real. En computadoras de 64 bits, este máximo es 16 (ie el hardware permite almacenar 16).
+
+Además, las computadoras utilizan el sistema binarios (0s y 1s) para representar números. Por ejemplo 2.125 se puede representar como `2^1 + 2^-3`. Pero algunos números no tienen una representación exacta en sistema binario. Por ejemplo los irracionales como `1/3` que tienen una expansión infitia. Para resolver esto las compus lo truncan a 16 dígitos y eso lo representan en base 2.
+
+Las computadoras realizan operaciones aritméticas utilizando *precisión finita* con las limitantes anteriores (16 dígitos y números que no pueden representarse en base 2). Por lo tanto las operaciones de las computadoras no son exactas.
+
+Por ejemplo:
+
+Si resolvemos manualmente `3*(4/3-1)` obtenemos 1:
+
+```
+3*(4/3-1)
+3*(1/3)
+3/3
+1
+```
+
+Pero mira lo que pasa si lo resolvemos en R (o en cualquier otro lenguaje que haga operaciones aritméticas):
+
+```
+options(digits = 16) # esto le dice a R que nos muestre resultados sin redondear
+3*(4/3-1)
+options(digits = 7) # Volver al default
+```
+
+La acumulación de este **error de redondeo** al realizar operaciones se puede acumular considerablemente.
+
+Por ejemplo `3*(4/3-1)-1 = 0 `. Pero para una computadora:
+
+```
+> 3*(4/3-1)-1
+[1] -2.220446049250313e-16
+```
+
+Por eso en [Talentos Ocultos](http://www.popularmechanics.com/space/rockets/a24429/hidden-figures-real-story-nasa-women-computers/), [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) le gana en exactitud  a la IBM.
+
 
 ### For loops
 
@@ -262,45 +300,6 @@ Lee el código del script y determina:
 * ¿qué hacen los dos for loops del script?
 * ¿qué paquetes necesitas para correr el script?
 * ¿qué archivos necesitas para correr el script?
-
-
-### Notas sobre operaciones aritméticas en computadoras:
-
-Las computadoras pueden almacenar una candidad finita de dígitos de un número real. En computadoras de 64 bits, este máximo es 16 (ie el hardware permite almacenar 16).
-
-Además, las computadoras utilizan el sistema binarios (0s y 1s) para representar números. Por ejemplo 2.125 se puede representar como `2^1 + 2^-3`. Pero algunos números no tienen una representación exacta en sistema binario. Por ejemplo los irracionales como `1/3` que tienen una expansión infitia. Para resolver esto las compus lo truncan a 16 dígitos y eso lo representan en base 2.
-
-Las computadoras realizan operaciones aritméticas utilizando *precisión finita* con las limitantes anteriores (16 dígitos y números que no pueden representarse en base 2). Por lo tanto las operaciones de las computadoras no son exactas.
-
-Por ejemplo:
-
-Si resolvemos manualmente `3*(4/3-1)` obtenemos 1:
-
-```
-3*(4/3-1)
-3*(1/3)
-3/3
-1
-```
-
-Pero mira lo que pasa si lo resolvemos en R (o en cualquier otro lenguaje que haga operaciones aritméticas):
-
-```
-options(digits = 16) # esto le dice a R que nos muestre resultados sin redondear
-3*(4/3-1)
-options(digits = 7) # Volver al default
-```
-
-La acumulación de este **error de redondeo** al realizar operaciones se puede acumular considerablemente.
-
-Por ejemplo `3*(4/3-1)-1 = 0 `. Pero para una computadora:
-
-```
-> 3*(4/3-1)-1
-[1] -2.220446049250313e-16
-```
-
-Por eso en [Talentos Ocultos](http://www.popularmechanics.com/space/rockets/a24429/hidden-figures-real-story-nasa-women-computers/), [Katherine Johnson](https://en.wikipedia.org/wiki/Katherine_Johnson) le gana en exactitud  a la IBM.
 
 
 ## 7.3. Funciones propias:	Crear funciones y utilizarlas con `source`
