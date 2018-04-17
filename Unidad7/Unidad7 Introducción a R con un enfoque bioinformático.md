@@ -478,7 +478,7 @@ Es posible generar un reporte a partir de un script de R, aún cuando no tenga e
 
 ## 7.5. Manipulación y limpieza de datos en R
 
-La manipulación y la limpieza da datos muchas veces es necesaria antes de poner hacer análisis en R. Aquí trataremos brevemente lo siguientes puntos en [notas aparte](Limpieza_de_datos.html):
+La manipulación y la limpieza da datos muchas veces es necesaria antes de poner hacer análisis en R. Aquí trataremos brevemente lo siguientes puntos en [notas aparte](Limpieza_de_datos.Rmd):
 
 * Reestructura de datos y el principio de los datos limpios.
 
