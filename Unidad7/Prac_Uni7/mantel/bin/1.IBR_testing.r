@@ -123,3 +123,5 @@ IBRresults<-c("rster", "MTpvalue", "MTr")
 
 IBRresults
 
+## session info
+sessionInfo()

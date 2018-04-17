@@ -46,7 +46,7 @@ Si vemos los principios (cada variable forma una columna, cada observación
 forma un renglón, cada tipo de unidad observacional forma una tabla), 
 ¿las tablas anteriores cumplen los principios?
 
-¿Cuáles son las variables y cuáles las observaciones de esta pequeña base?
+¿Cuáles son las variables y Cuáles las observaciones de esta pequeña base?
 
 Entonces, siguiendo los principios de _datos limpios_
 obtenemos la siguiente estructura: 
@@ -84,7 +84,7 @@ valores, convierte los datos anchos en largos.
 
 Para otras funciones parecidas no se pierdan este acordeón: 
 
-[R Data Transformation Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/source/pdfs/data-transformation-cheatsheet.pdf)
+[R Data Wrangling Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 
 #### Los encabezados de las columanas son valores
@@ -113,7 +113,7 @@ los argumentos:
 de columnas que apilamos.  
 * value: nombre de la variable que almacenará los valores que corresponden a 
 cada *key*.  
-* ...: lo último que especificamos son las columnas que vamos a apilar, veremos
+* ...: lo últimoo que especificamos son las columnas que vamos a apilar, veremos
 que hay varias maneras de determinarlas.
 
 ```{r}
@@ -121,10 +121,11 @@ que hay varias maneras de determinarlas.
 library(tidyr) 
 library(plyr)
 library(dplyr)
+library(readr)
 pew_tidy <- gather(data = pew, income, frequency, -religion)
 # vemos las primeras líneas de nuestros datos alargados 
 head(pew_tidy) 
-# y las últimas
+# y las últimoas
 tail(pew_tidy)
 ```
 
@@ -144,7 +145,7 @@ información esta por grupo demográfico de acuerdo a sexo (m, f), y edad (0-4,
 
 
 ```{r}
-tb <- read.csv("Prac_Uni6/ejemplosgenerales/data/tb.csv")
+tb <- read.csv("Prac_Uni7/ejemplosgenerales/data/tb.csv")
 head(tb)
 colnames(tb)
 ```
@@ -186,7 +187,7 @@ columnas, veamos una base de datos de clima en Cuernavaca. ¿Cuáles son las
 variables en estos datos?
 
 ```{r}
-clima <- read.delim("Prac_Uni6/ejemplosgenerales/data/clima.txt", stringsAsFactors=FALSE)
+clima <- read.delim("Prac_Uni7/ejemplosgenerales/data/clima.txt", stringsAsFactors=FALSE)
 head(clima)
 ```
 
@@ -202,7 +203,7 @@ head(clima_long)
 Ahora creemos algunas variables adicionales.
 ```{r}
 clima_vars <- clima_long %>% 
-  mutate(day = extract_numeric(day), value = value / 10)  %>%
+  mutate(day = parse_number(day), value = value / 10)  %>%
   select(id, year, month, day, element, value) %>%
   arrange(id, year, month, day)
 head(clima_vars)
@@ -229,5 +230,5 @@ que TeM).
 * Escribir un script con las modificaciones que se hicieron a los _datos crudos_ 
 (reproducibilidad).
 * Otros aspectos importantes en la _limpieza_ de datos son: selección del tipo de
-variables (por ejemplo fechas), datos faltantes, _typos_ (e.g. *Phhaseoulus*) y detección de valores atípicos (temp= 240 °C en vez de 24.0)
+variables (por ejemplo fechas), datos faltantes, _typos_ (e.g. *Phhaseoulus*) y detección de valores atípicos (temp= 240 ºC en vez de 24.0)
 

@@ -1,0 +1,19 @@
+---
+title: "R Notebook"
+output:
+  html_notebook: default
+---
+
+
+
+```{r include = FALSE}
+library(viridis)
+```
+
+The code below demosntrates two color palettes in the viridis package. Each plots displays a contour map of a volcano in Aukland, New Zealand
+
+## Viridis colors
+
+```{r include= TRUE, echo=TRUE, message=FALSE}
+image(volcano, col=viridis(200))
+```
