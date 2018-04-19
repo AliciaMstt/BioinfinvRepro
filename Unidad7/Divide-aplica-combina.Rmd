@@ -41,7 +41,11 @@ grupo de interés y aplicar las funciones, sin embargo la aplicación de
 _for loops_ desemboca en código difícil de entender. Adicionalmente, dplyr es mucho 
 más **veloz**.
 
-Estudiaremos las siguientes funciones:
+Estudiaremos las siguientes funciones del paquete `dplyr`:
+
+```{r}
+library(dplyr)
+```
 
 * `filter`: obten un subconjunto de las filas de acuerdo a un criterio.
 * `select`: selecciona columnas de acuerdo al nombre
@@ -92,7 +96,6 @@ xor(a, b)
 #### Seleccionar
 Elegir columnas de un conjunto de datos.
 ```{r}
-library(dplyr)
 df_ej
 select(df_ej, genero)
 select(df_ej, -genero)
@@ -155,14 +158,15 @@ no_miss <- dplyr::filter(by_date, !is.na(dep))
 delays <- summarise(no_miss, mean_delay = mean(dep_delay), n = n())
 ```
 
-**Ejercicio** Reescribe el código anterior utilizando %>%
+**Ejercicio** Reescribe el código anterior utilizando `%>%`
 
 
 ```{r, include=FALSE}
-hourly_delay <- flights %>%
-  dplyr::filter(!is.na(dep_delay)) %>%
-  group_by(date_only, hour) %>%
-  summarise(delay = mean(dep_delay), n = n()) %>%
-  dplyr::filter(n > 10)
+flights_delay<-flights %>%
+              mutate(date_only=as.Date(date)) %>%
+              group_by(date_only) %>%
+              filter(!is.na(dep)) %>%
+              summarise(mean_delay = mean(dep_delay), n = n())
+
 ```
 

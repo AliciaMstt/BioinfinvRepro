@@ -445,20 +445,31 @@ head(clima_long)</code></pre>
 ## 26 MX000017004 2010     2    TMIN  d2   144
 ## 41 MX000017004 2010    11    TMAX  d2   313
 ## 42 MX000017004 2010    11    TMIN  d2   163</code></pre>
-<p>Ahora creemos algunas variables adicionales.</p>
+<p>Ahora creemos algunas variables adicionales con <code>mutate</code> y cambiemos el orden con <code>arrange</code>:</p>
+<pre class="r"><code>clima_vars &lt;- mutate(clima_long, day = parse_number(day), value = value / 10)  
+clima_vars &lt;- arrange(clima_vars, id, year, month, day)
+head(clima_vars)</code></pre>
+<pre><code>##            id year month element day value
+## 1 MX000017004 2010     1    TMAX  30  27.8
+## 2 MX000017004 2010     1    TMIN  30  14.5
+## 3 MX000017004 2010     2    TMAX   2  27.3
+## 4 MX000017004 2010     2    TMIN   2  14.4
+## 5 MX000017004 2010     2    TMAX   3  24.1
+## 6 MX000017004 2010     2    TMIN   3  14.4</code></pre>
+<p><strong>Pregunta:</strong> ¿Qué hacen las funciones <code>mutate</code> y <code>arrange</code>?</p>
+<p>Lo anterior se puede escribir más fácil utilizando el equivalente de la pipa de bash (<code>|</code> recuerda) para R, que es este: <code>%&gt;%</code>. Esto no existe en R base, sino que depende del paquete <code>magrittr</code> (parte del tidyverse) por aquello de <em>Ceci n’est pas un pipe</em>.</p>
+<p>Lo que hace <code>%&gt;%</code>es tomar lo que está a la izquierda de la pipa y volverlo el primer argumento de la siguiente función. Por lo tanto en el ejemplo de abajo pasamos <code>clima_long</code> a <code>mutate</code> como si hubieramos escrito <code>mutate(data=clima_long...)</code> y así para <code>arrange</code> también. Nota que cuando usamos <code>%&gt;%</code>no es necesario especificar <code>data=</code> dentro de la siguietne función.</p>
 <pre class="r"><code>clima_vars &lt;- clima_long %&gt;% 
   mutate(day = parse_number(day), value = value / 10)  %&gt;%
-  select(id, year, month, day, element, value) %&gt;%
   arrange(id, year, month, day)
 head(clima_vars)</code></pre>
-<pre><code>##            id year month day element value
-## 1 MX000017004 2010     1  30    TMAX  27.8
-## 2 MX000017004 2010     1  30    TMIN  14.5
-## 3 MX000017004 2010     2   2    TMAX  27.3
-## 4 MX000017004 2010     2   2    TMIN  14.4
-## 5 MX000017004 2010     2   3    TMAX  24.1
-## 6 MX000017004 2010     2   3    TMIN  14.4</code></pre>
-<p><strong>Pregunta:</strong> ¿Qué hacen las funciones <code>mutate</code> y <code>select</code>?</p>
+<pre><code>##            id year month element day value
+## 1 MX000017004 2010     1    TMAX  30  27.8
+## 2 MX000017004 2010     1    TMIN  30  14.5
+## 3 MX000017004 2010     2    TMAX   2  27.3
+## 4 MX000017004 2010     2    TMIN   2  14.4
+## 5 MX000017004 2010     2    TMAX   3  24.1
+## 6 MX000017004 2010     2    TMIN   3  14.4</code></pre>
 <p>Finalmente, la columna <em>element</em> no es una variable, sino que almacena el nombre de dos variables (Tmax y Tmin), la operación que debemos aplicar es<code>spread</code>, que es el inverso de <code>gather</code>:</p>
 <pre class="r"><code>clima_tidy &lt;- spread(clima_vars, element, value)
 head(clima_tidy)</code></pre>
@@ -469,6 +480,7 @@ head(clima_tidy)</code></pre>
 ## 4 MX000017004 2010     2  11 29.7 13.4
 ## 5 MX000017004 2010     2  23 29.9 10.7
 ## 6 MX000017004 2010     3   5 32.1 14.2</code></pre>
+<p><strong>Ejercicio</strong> utiliza <code>%&gt;%</code> para repetir el ejercicio anterior sin crear “clima_” intermedios.</p>
 </div>
 <div id="otras-consideraciones" class="section level4">
 <h4>Otras consideraciones</h4>

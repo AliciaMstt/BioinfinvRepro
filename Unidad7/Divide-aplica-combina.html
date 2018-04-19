@@ -159,7 +159,16 @@ head(flights)</code></pre>
 ## 6    428  DFW N262AA         0   45  224</code></pre>
 <p>Cuando pensamos como implementar la estrategia divide-aplica-combina es natural pensar en iteraciones, por ejemplo utilizar un ciclo <em>for</em> para recorrer cada grupo de interés y aplicar las funciones, sin embargo la aplicación de<br />
 <em>for loops</em> desemboca en código difícil de entender. Adicionalmente, dplyr es mucho más <strong>veloz</strong>.</p>
-<p>Estudiaremos las siguientes funciones:</p>
+<p>Estudiaremos las siguientes funciones del paquete <code>dplyr</code>:</p>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: 'dplyr'</code></pre>
+<pre><code>## The following objects are masked from 'package:stats':
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union</code></pre>
 <ul>
 <li><code>filter</code>: obten un subconjunto de las filas de acuerdo a un criterio.</li>
 <li><code>select</code>: selecciona columnas de acuerdo al nombre</li>
@@ -209,15 +218,6 @@ xor(a, b)</code></pre>
 <div id="seleccionar" class="section level4">
 <h4>Seleccionar</h4>
 <p>Elegir columnas de un conjunto de datos.</p>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>df_ej</code></pre>
 <pre><code>##   genero estatura
 ## 1  mujer     1.65
@@ -310,7 +310,7 @@ by_genero</code></pre>
 by_date &lt;- group_by(flights, date_only)
 no_miss &lt;- dplyr::filter(by_date, !is.na(dep))
 delays &lt;- summarise(no_miss, mean_delay = mean(dep_delay), n = n())</code></pre>
-<p><strong>Ejercicio</strong> Reescribe el código anterior utilizando %&gt;%</p>
+<p><strong>Ejercicio</strong> Reescribe el código anterior utilizando <code>%&gt;%</code></p>
 </div>
 </div>
 
