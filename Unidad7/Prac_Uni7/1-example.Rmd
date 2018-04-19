@@ -1,8 +1,23 @@
 ---
 title: "R Notebook"
 output:
+  html_document:
+    df_print: paged
   html_notebook: default
+  word_document: default
 ---
+
+Ejemplo de chunck de texto que no se imprime a pantalla
+
+```{r, echo=FALSE}
+x<-1+1
+```
+Y otro que s??, n??tese que s?? se crearon las variables del chunk anterior
+
+```{r}
+x+10
+
+```
 
 
 
