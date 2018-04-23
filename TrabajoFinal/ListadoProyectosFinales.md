@@ -51,7 +51,7 @@ Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/Proyecto
 
 Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFinalBioinf2018-II/blob/master/avance%201.md)
 
-María Chavarria
+María Chavarria [Avance 1](https://github.com/marialadelbarrio/ProyectoFinalBioinf2017-II/blob/master/Avance_1)
 
 María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md)
 
