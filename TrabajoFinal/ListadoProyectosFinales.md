@@ -63,6 +63,6 @@ Natalia Delgado Machuca
 
 Olivia Rojo
 
-Tonatiuh Ramírez Reyes: [avance 1](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance%201.md), [avance2](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance2TonatiuhRR.md)
+Tonatiuh Ramírez Reyes: [avance 1](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance%201.md), [avance2](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance2TonatiuhRR.md) 
 
 Yolitzi Saldívar Lemus
