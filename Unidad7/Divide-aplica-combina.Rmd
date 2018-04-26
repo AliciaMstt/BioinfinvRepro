@@ -31,8 +31,9 @@ En esta sección trabajaremos con las siguientes bases de datos para ejemplifcar
 las funciones de divide-aplica-combina:
 
 ```{r, warning=FALSE}
-flights <- read.csv("Prac_Uni6/data/flights.csv")
+flights <- read.csv("Prac_Uni7/ejemplosgenerales/data/flights.csv")
 head(flights)
+
 ```
 
 Cuando pensamos como implementar la estrategia divide-aplica-combina es natural pensar en iteraciones, por ejemplo utilizar un ciclo _for_ para recorrer cada 
@@ -40,7 +41,11 @@ grupo de interés y aplicar las funciones, sin embargo la aplicación de
 _for loops_ desemboca en código difícil de entender. Adicionalmente, dplyr es mucho 
 más **veloz**.
 
-Estudiaremos las siguientes funciones:
+Estudiaremos las siguientes funciones del paquete `dplyr`:
+
+```{r}
+library(dplyr)
+```
 
 * `filter`: obten un subconjunto de las filas de acuerdo a un criterio.
 * `select`: selecciona columnas de acuerdo al nombre
@@ -55,7 +60,7 @@ indican que operación se va a efectuar y el resultado es un nuevo _data frame_.
 Veamos con ejemplos.
 
 #### Filtrar
-Creamos una base de datos de juguete para mostrar el funcionamiento de cada
+Ejemplo con base de datos de juguete para mostrar el funcionamiento de cada
 instrucción:
 
 ```{r}
@@ -63,8 +68,8 @@ df_ej <- data.frame(genero= c("mujer", "hombre", "mujer", "mujer", "hombre"),
   estatura = c(1.65, 1.80, 1.70, 1.60, 1.67))
 df_ej
 
-filter(df_ej, genero == "mujer")
-filter(df_ej, estatura > 1.65 & estatura < 1.75)
+dplyr::filter(df_ej, genero == "mujer")
+dplyr::filter(df_ej, estatura > 1.65 & estatura < 1.75)
 ```
 
 Algunos operadores importantes para filtrar son:  
@@ -85,13 +90,12 @@ a & !b
 xor(a, b)
 ```
 
-**Ejercicio:** Encuentra todos los vuelos hacia SFO ó OAK.
+**Ejercicio:** Encuentra todos los vuelos hacia SFO ó OAK en `flights`
 
 
 #### Seleccionar
 Elegir columnas de un conjunto de datos.
 ```{r}
-library(dplyr)
 df_ej
 select(df_ej, genero)
 select(df_ej, -genero)
@@ -150,18 +154,19 @@ quantile(x, p), n(), sum(x), sum(x > 1), mean(x > 1), sd(x).
 ```{r}
 flights$date_only <- as.Date(flights$date)
 by_date <- group_by(flights, date_only)
-no_miss <- filter(by_date, !is.na(dep))
+no_miss <- dplyr::filter(by_date, !is.na(dep))
 delays <- summarise(no_miss, mean_delay = mean(dep_delay), n = n())
 ```
 
-**Ejercicio** Reescribe el código anterior utilizando %>%
+**Ejercicio** Reescribe el código anterior utilizando `%>%`
 
 
 ```{r, include=FALSE}
-hourly_delay <- flights %>%
-  filter(!is.na(dep_delay)) %>%
-  group_by(date_only, hour) %>%
-  summarise(delay = mean(dep_delay), n = n()) %>%
-  filter(n > 10)
+flights_delay<-flights %>%
+              mutate(date_only=as.Date(date)) %>%
+              group_by(date_only) %>%
+              filter(!is.na(dep)) %>%
+              summarise(mean_delay = mean(dep_delay), n = n())
+
 ```
 

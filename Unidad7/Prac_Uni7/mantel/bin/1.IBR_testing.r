@@ -28,8 +28,8 @@ colnames(GeoDist)<-points.info$Key
 rownames(GeoDist)<-points.info$Key
 
 ### define paths for loading data
-genfolder<-(paste0("../genetic"))
-circfolder<-(paste0("../spatial/resdist"))
+genfolder<-"../genetic"
+circfolder<-"../spatial/resdist"
 
 ### Genetic ###
 
@@ -94,7 +94,7 @@ source("DistPlot.R")
 
 
 ### Berberis
-  # Linearize as suggested by Rousset (1997) for IBD using FST/(1 − FST)
+  # Linearize as suggested by Rousset (1997) for IBD using FST/(1 ??? FST)
   B.FstLin<- B.Fst/(1-B.Fst)
   
   # run mantel test for each condition
@@ -110,7 +110,7 @@ IBRresults<-c("rster", "MTpvalue", "MTr")
     
     # Plot
     DistPlot(get(paste0("B.",i)), B.FstLin, plotnames=FALSE,
-            ylabel=expression("F"[ST]*"/(1 − "[FST]*")"), xlabel=paste("Effective distance", i))
+            ylabel=expression("F"[ST]*"/(1 ??? "[FST]*")"), xlabel=paste("Effective distance", i))
                
     # get info for df  
     MTpvalue<-round(x$pvalue, 6)
@@ -123,3 +123,5 @@ IBRresults<-c("rster", "MTpvalue", "MTr")
 
 IBRresults
 
+## session info
+sessionInfo()
