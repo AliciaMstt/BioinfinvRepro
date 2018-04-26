@@ -44,11 +44,11 @@ Independientemente de la opción, el trabajo debe incluir:
 Nota: En el caso de quienes decidan hacer un dockerfile, será necesario cumplir con el README, repositorio, resumen markdown, figuras etc de datos de chocolate como si fuera un tutorial de uso del software.
 
   
-## Fechas de entrega y avances preliminares
+## Fechas de entrega y avances
     
 Los avances preliminares del proyecto serán el 15% de la calificación.
 
-Cada avance será un archivo .md independiente que deberá estar contenido en un repostorio de tu GitHub llamado algo como "ProyectoFinalBioinf2017-II". 
+Cada avance será un archivo .md independiente que deberá estar contenido en un repostorio de tu GitHub llamado algo como "ProyectoFinalBioinf2017-II" (cambia según el semestre). 
 
 Para pasarnos el link a cada avance deberás agregar tu nombre y el link a cada uno de los avances en el archivo [ListadoProyectosFinales.md](ListadoProyectosFinales.md) de este repositorio, utilizando un `pull request`.
 
@@ -66,12 +66,23 @@ No requerimos ver datos u análisis preliminares, pero sí una especie de diario
 **Avance 3** Entrega max 17 mayo 11:55 pm    
 Contenido: Querido diario + Link a un avance del README (ponerlo en un .md separado en el mismo repo) de tu proyecto final que detalle el tipo de scripts que utilizarás y cómo estás organizando tu proyecto.
 
+### Tips de convivencia en Github
+
+**Bonitos sus nombres de usuario de Github, pero necesito sus nombres de persona para calificar**
+
+* Al hacer el pull request pon como título no solo "avance x" sino incluye tmb tu nombre.
+* Incluye tu nombre en algún lugar cerca del título de cada avance dentro del mb
+
+**Utilizaremos el sistema de _issues_ de Github para hacer comentarios a sus avances**
+
+* REVISEN sus issues, atiendan los comentarios, hagan los cambios pertinentes y avísennos por el sistema de issues que ya lo hicieron.
+
 
 ## Modo de entrega proyecto final
 
 Los avances se entregarán via links en el github como se detalló anteriormente.
 
-La entrega final debe ser un único archivo zip o tar que contenga todos los archivos, carpetas, imágenes, etc mencionados anteriormente y que deberá ser enviado por correo electrónico a Alicia **Y** Azalea. **El asunto del correo DEBE SER**: "Curso Bioinformática Trabajo Final Nombre del alumnoa". 
+La entrega final debe ser un único archivo zip o tar que contenga todos los archivos, carpetas, imágenes, etc mencionados anteriormente y que deberá ser enviado por correo electrónico a Alicia **Y** Vero et Gus. **El asunto del correo DEBE SER**: "Curso Bioinformática Trabajo Final Nombre del alumnoa". 
 
 Si el archivo excede los 20 Mb debe ser enviado via [https://www.wetransfer.com/](https://www.wetransfer.com/) o símil. El tamaño **máximo** del archivo debe ser de ~200 Mb. La liga a wetrasfer o simil deberá enviarse en un correo electrónico como se detalló anteriormente.
 
