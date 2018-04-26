@@ -47,7 +47,7 @@ Jorge Cruz Nicolás
 Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
 
 
-Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md)
+Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md), [avance 2](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_2.md)
 
 Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFinalBioinf2018-II/blob/master/avance%201.md)
 
