@@ -26,7 +26,7 @@ Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/Proyecto
 
 David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md) 
 
-Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance1_proyecto_final.md)
+Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance1_proyecto_final.md) [avance 2](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance2_Delil_Chincoya.md)
 
 Dulce Carolina Hernández Rosales:[avance 1](https://github.com/heroduca/ProyectoFinalBioinf2018-II-/blob/master/DulceHernandez:Avance%201.md)
 
