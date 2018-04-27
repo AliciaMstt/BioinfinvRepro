@@ -30,7 +30,7 @@ Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/Pro
 
 Dulce Carolina Hernández Rosales:[avance 1](https://github.com/heroduca/ProyectoFinalBioinf2018-II-/blob/master/DulceHernandez:Avance%201.md)
 
-Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md)
+Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md) [avance2] (https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/Avance%202.md)
 
 Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
