@@ -53,7 +53,7 @@ Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFi
 
 María Chavarria [Avance 1](https://github.com/marialadelbarrio/ProyectoFinalBioinf2017-II/blob/master/Avance_1)
 
-María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md)
+María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md), [avance 2](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Segundo%20avance.md)
 
 Mariette Viladomat Jasso: [avance 1](https://github.com/Mariette-VJ/Tareas_Curso_BioInvRepro/blob/master/ProyectoFinal_Mariette/PF_Primer_Avance_Mariette.md)
 
