@@ -42,10 +42,7 @@ Isaura Rosas Reinhold [Avance 1](https://github.com/IsauraRReinhold/Proyecto-tra
 
 Jetsi Viridiana Mancilla Rojano: [avance 1](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/Avance1.md), [avance 2](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/avance2.md) 
 
-
-Jorge Cruz Nicolás
-Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
-Jorge Cruz Nicolas [avance 2](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/tree/master/Avance2_Jorge)
+Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md) [avance 2](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/tree/master/Avance2_Jorge)
 
 Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md), [avance 2](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_2.md)
 
