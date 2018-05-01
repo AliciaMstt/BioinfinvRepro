@@ -22,7 +22,7 @@ Alondra Karina Terrones Ramírez: [avance 1](https://github.com/AloTerrones/Proy
 
 Brenda González Calderón: [avance 1](https://github.com/br3nd4/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
-Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
+Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md), [avance 2](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md)
 
 David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md) 
 
