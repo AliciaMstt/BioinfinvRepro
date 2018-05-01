@@ -64,4 +64,4 @@ Olivia Rojo
 
 Tonatiuh Ramírez Reyes: [avance 1](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance%201.md), [avance2](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance2TonatiuhRR.md) 
 
-Yolitzi Saldívar Lemus [avance 1](https://github.com/yolitzi/ProyectoFinalBioinf2018-II/blob/master/Avance_1.md)
+Yolitzi Saldívar Lemus [avance 1](https://github.com/yolitzi/ProyectoFinalBioinf2018-II/blob/master/Avance_1.md) [avance_2](https://github.com/yolitzi/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md)
