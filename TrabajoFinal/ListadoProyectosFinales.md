@@ -24,7 +24,7 @@ Brenda González Calderón: [avance 1](https://github.com/br3nd4/ProyectoFinalBi
 
 Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md), [avance 2](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md)
 
-David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md) 
+David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md), [Avance 2](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%202.md)
 
 Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance1_proyecto_final.md) [avance 2](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance2_Delil_Chincoya.md)
 
