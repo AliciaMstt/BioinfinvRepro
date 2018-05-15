@@ -1,0 +1,79 @@
+---
+title: "Hierfstat"
+output: html_document
+---
+
+## Estimación de heterocigosis, Fis y Fst usando Hierfstat
+
+```{r}
+
+library("hierfstat")
+
+#Ejemplo de datos
+data(gtrunchier)
+
+#cargar datos
+cocci <-read.delim("../data/cocci_silv.012", sep = "\t", header = FALSE, na.strings = -1)
+#quitar primera columna
+cocci <- cocci[,-1]
+class(cocci)
+
+#Sustituir por 
+cocci[cocci==0] <- 55
+cocci[cocci==1] <- 56
+cocci[cocci==2] <- 66
+
+#Cargar metadatos
+meta.cocci <- read.delim("../meta/cocci_wild_meta.csv", sep = ",")
+
+#Unir datos de genotipos con factor de agrupacion
+cocci <- cbind(meta.cocci$Grupo.Admix.8, cocci)
+cocci<- as.data.frame(cocci)
+
+##Estadisticos basicos de diversidad por grupo genético
+aa <-basic.stats(cocci, diploid = T)
+
+#Heterocogosis observada (Ho) por grupo genético
+Pob <- levels(meta.cocci$Grupo.Admix.8)
+Ho <-numeric(0)
+
+Ho.locus <- aa$Ho
+
+for (i in 1:4) {
+  Ho.pob <- mean(na.omit(Ho.locus[,i]))
+  Ho <-rbind(Ho, Ho.pob)
+}
+
+#Heterocigosis esperada (Hs) por grupo genético
+Hs <-numeric(0)
+
+Hs.locus <- aa$Hs
+for (i in 1:4) {
+  Hs.pob <- mean(na.omit(Hs.locus[,i]))
+  Hs <-rbind(Hs, Hs.pob)
+}
+
+#Coeficiente de endogamia por grupo genético 
+Fis <- numeric(0)
+
+Fis.locus <- aa$Fis
+Fis.locus[is.na(Fis.locus)] <- 0
+
+for (i in 1:4) {
+  Fis.pob <- mean(Fis.locus[,i], na.rm = FALSE)
+  Fis <-rbind(Fis, Fis.pob)
+}
+
+#Unir datos
+stats <- cbind(Ho, Hs, Fis)
+write.table(stats, file = "../out/Het_grupo_gen.txt", row.names = Pob, col.names = c("Ho", "He", "Fis"))
+
+```
+
+**Ejercicio:** ¿Qué función usarías para estimar Fst pareadas usando la fórmula de Weir and Cockerham (1984)
+
+```{r}
+Fst.pair <- pairwise.WCfst(cocci)
+
+```
+

@@ -1,0 +1,145 @@
+# Ejemplo análisis exploratorios genómica de poblaciones
+
+## SNPRelate
+### Cargar paquetes que se utilizarán
+```{r}
+library(SNPRelate)
+library(ape)
+library(snpStats)
+library(ggplot2)
+```
+
+
+### Cargar datos
+```{r}
+##### Para usar con SNPRelate
+## Crear datos en formato gds a partir de plink
+snpgdsBED2GDS("../data/maices/maicesArtegaetal2015.bed", 
+              "../data/maices/maicesArtegaetal2015.fam", 
+              "../data/maices/maicesArtegaetal2015.bim", 
+              out.gdsfn="../data/maices/maicesArtegaetal2015.gds", 
+              option = snpgdsOption(Z=10)) # 10 cromosomas
+
+# Ver resumen (esto no carga el archivo)
+snpgdsSummary("../data/maices/maicesArtegaetal2015.gds")
+
+# Cargar archivo para trabajar con el
+genofile <- snpgdsOpen("../data/maices/maicesArtegaetal2015.gds")
+
+# Check snp.ids
+head(read.gdsn(index.gdsn(genofile, "snp.id")))
+
+# Check sample.ids
+head(read.gdsn(index.gdsn(genofile, "sample.id")))
+
+# Obtener nombres muestras del gdsn
+sample.id <- read.gdsn(index.gdsn(genofile, "sample.id"))
+sample.id
+
+##### Metadata
+# load
+fullmat<- read.delim(file= "../data/maices/maizteocintle_SNP50k_meta_extended.txt")
+
+# check
+head(fullmat)
+nrow(fullmat)
+head(fullmat$NSiembra) # corresponde al número del ID de las muestras
+head(sample.id)
+
+```
+
+
+### Realizar PCA 
+
+```{r}
+# PCA
+pca <- snpgdsPCA(genofile, num.thread=2)
+
+# Calcular el % de variación contenido por los primeros componentes
+pc.percent <- pca$varprop*100
+head(round(pc.percent, 2))
+
+x<-round(pc.percent, 2)
+sum(x[1:4])
+sum(x[1:10])
+sum(x[1:30])
+
+
+# Poner resultados en df
+tab <- data.frame(sample.id = pca$sample.id,
+    EV1 = pca$eigenvect[,1],    # the first eigenvector
+    EV2 = pca$eigenvect[,2],    # the second eigenvector
+    stringsAsFactors = FALSE)
+head(tab)
+
+# Plot
+plot(tab$EV2, tab$EV1, 
+  xlab= paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"), # agregar % de varaición del componente al texto del eje
+  ylab= paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%"))
+
+```
+
+**Ejercicio**: repite el PCA y plot anterior pero utilizando sólo los SNPS con MAF>=0.05 (debeles seleccionarlos desde R)
+
+```{r, echo=FALSE}
+# PCA
+pca <- snpgdsPCA(genofile, num.thread=2, maf=0.05)
+
+# Calcular el % de variación contenido por los primeros componentes
+pc.percent <- pca$varprop*100
+head(round(pc.percent, 2))
+
+x<-round(pc.percent, 2)
+sum(x[1:4])
+sum(x[1:10])
+sum(x[1:30])
+
+
+# Poner resultados en df
+tab <- data.frame(sample.id = pca$sample.id,
+    EV1 = pca$eigenvect[,1],    # the first eigenvector
+    EV2 = pca$eigenvect[,2],    # the second eigenvector
+    stringsAsFactors = FALSE)
+head(tab)
+
+# Plot
+plot(tab$EV2, tab$EV1, 
+  xlab= paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"), # agregar % de varaición del componente al texto del eje
+  ylab= paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%"))
+
+```
+
+
+Colorear PCA maíces por raza:
+
+```{r}
+# obtner info raza
+pop_code <- as.vector(fullmat$Raza) 
+palette(rainbow(length(levels(fullmat$Raza))))
+
+# hacer pop_codes raza coincidan con samples
+tab <- data.frame(sample.id = pca$sample.id,
+    pop = factor(pop_code)[match(pca$sample.id, sample.id)],
+    EV1 = pca$eigenvect[,1],    # the first eigenvector
+    EV2 = pca$eigenvect[,2],    # the second eigenvector
+    stringsAsFactors = FALSE)
+head(tab)
+
+# Plot
+plot(tab$EV2, tab$EV1, pch=20, col=tab$pop, 
+  xlab= paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"), # agregar % de varaición del componente al texto del eje
+  ylab= paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%"))
+
+
+```
+
+**Ejercicio** Repite la gráfica anterior utilizando ggplot2
+
+```{r, echo=FALSE}
+
+ggplot(data = tab, aes(x=EV2, y=EV1, colour = pop)) + geom_point() +
+  ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +
+  xlab(paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"))
+
+```
+
