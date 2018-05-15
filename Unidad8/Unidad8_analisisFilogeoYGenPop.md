@@ -24,6 +24,10 @@ La mejor manera de conocer qué hace y  usar un paquete es seguir un tutorial o 
 
 Por ejemplo esta de [ggtree](https://www.bioconductor.org/packages/release/bioc/vignettes/ggtree/inst/doc/ggtree.html)  y esta de [SNPRelate](http://corearray.sourceforge.net/tutorials/SNPRelate/).
 
+Además, BioConductor desarrolló una clase de objetos, llamados `GRanges` que permite almacenar y manipular intervalos genómicos y variables definidas a lo largo de un genoma. Los `GRanges` son particularmente útiles para representar y analizar anotaciones genómicas y alineamientos y son la base de varios paquetes de Bioconductor
+
+Los `GRanges` están definidos en el paquete  [GenomicRanges](https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html). Este [tutorial](https://bioconductor.org/packages/release/bioc/vignettes/GenomicRanges/inst/doc/GenomicRangesIntroduction.pdf) explica su funcionamiento básico y lo recomiendo mucho. También está bueno el Capítulo 9 *Working with Range Data* del libro de Vince Buffalo *Bioinformatics Data Skills*.
+
 
 #### [Workflows](https://www.bioconductor.org/packages/release/BiocViews.html#___Workflow)
 
@@ -100,6 +104,10 @@ Los análisis de genómica de poblaciones van mucho más allá de R, y hay mucho
 
 # 8.4 Ejemplos de análisis básicos de genética de poblaciones
 
+Como hemos visto, puede ser que hayas generado tus genotipos mapeando a un genoma de referencia o ensamblando *de novo*. En cualquier caso, el software que hayas utilizado deberá permitirte exportar tus datos a un formato estándar de genotipos, como plink o vcf. Estos formatos son además un programa en sí mismos que te permiten hacer diversos análisis de genética de poblaciones. Pero además también te permiten leer tus datos a R a través de diversos paquetes.
+
+Veremos algunos ejemplos.
+
 ## PLINK
 
 [PLINK](https://www.cog-genomics.org/plink/1.9/) es un software de acceso libre muy usado porque permite realizar un amplio rango de análisis genómicos de forma relativamente rápida y sencilla.
@@ -138,13 +146,18 @@ plink --file ../data/cocci_silv --snps-only just-acgt -recode vcf --out
 **Ejercicio:** Estima el desequilibro de ligamiento en términos de r<sup>2</sup>. Posteriormente, quédate con aquellos SNPs cuya r<sup>2</sup> < 0.2. El archo resultante debe llamarse `/data/cocci_silv_filt.bed`
 
 
-## Hierfstat
-Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni8/bin/Hierfstat_cocci.html).
-
-
 ## SNPRelate
 
-[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. Puedes ver sus tutoriales [aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html), y seguiremos [estas notas en clase](Prac_Uni7/bin/Ejemplo_SNPRelate.html).
+[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html) y Vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni8/bin/Ejemplo_SNPRelate.html).
+
+
+
+## Hierfstat
+
+[SnpStats](https://bioconductor.org/packages/release/bioc/html/snpStats.html) es otro paquete de BioConductor muy útil, que nos permite calcular Fst y otros estadísticos de genética de poblaciones.
+
+Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni8/bin/Hierfstat_cocci.html).
+
 
 ## Admixture
 Herramienta que permite estimar la ancestría de individuos a partir de un set de datos de SNPs. Usa el mismo modelo estadístico que Structure pero es más rápido.

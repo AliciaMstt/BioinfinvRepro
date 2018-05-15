@@ -18,7 +18,7 @@ cocci <-read.delim("../data/cocci_silv.012", sep = "\t", header = FALSE, na.stri
 cocci <- cocci[,-1]
 class(cocci)
 
-#Sustituir por 
+#Sustituir por código 0, 1, 2 por dos dígitos para que Hierfstat sepa que es diploide 
 cocci[cocci==0] <- 55
 cocci[cocci==1] <- 56
 cocci[cocci==2] <- 66
@@ -70,10 +70,11 @@ write.table(stats, file = "../out/Het_grupo_gen.txt", row.names = Pob, col.names
 
 ```
 
-**Ejercicio:** ¿Qué función usarías para estimar Fst pareadas usando la fórmula de Weir and Cockerham (1984)
+**Ejercicio:** ¿Qué función usarías para estimar Fst pareadas usando la fórmula de Weir and Cockerham (1984) sobre `cocci`? El resultado debe verse así: 
 
-```{r}
+
+```{r echo=FALSE}
 Fst.pair <- pairwise.WCfst(cocci)
-
+Fst.pair
 ```
 
