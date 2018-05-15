@@ -111,17 +111,19 @@ Dentro de los análisis que pueden hacerse usando PLINK, están:
 - Matriz de identidad por descendecia (IBD) e identidad por estado (IBS)
 - Asociación genómica
 
-**Limitaciones:**
-- Análisis de variantes estructurales (excepto indels pequeños)
-- Análisis de datos crudos
-- No interfaz gráfica
 
 Los dos formatos principales de PLINK son **ped** y **bed**, pero acepta formatos comúnmente usados con **vcf**.
 
 
-**Ejercicio:** Descarga e instala [PLINK](https://www.cog-genomics.org/plink/1.9/). Echa un ojo a las funciones que puedes usar.
+**Ejercicio:** Descarga e instala [PLINK](https://www.cog-genomics.org/plink/1.9/). Alternativamente, existe una [imagen de Docker para PLINK](https://hub.docker.com/r/gelog/plink/), por lo que puedes "instalarlo" con `docker pull gelog/plink`.
 
-Para conocer si cada uno de los loci del set de datos ``cocci_silv`` se encuentra en equilibrio HW, usaríamos este comando:
+Nota que hay dos versiones v1 (1.07) y v2 (1.9). La imagen de docker de arriba viene con ambas. Los ejemplos de abajo utilizan v 1.9.
+
+Echa un ojo a las funciones que puedes usar en el [manual](https://www.cog-genomics.org/plink/1.9/general_usage).
+
+En el directorio [Prac_Uni8/data](Prac_Uni8/data) encontrarás los archivos plink del set de datos ``cocci_silv``.
+
+Para conocer si cada uno de los loci del set de datos ``cocci_silv`` se encuentra en equilibrio HW, usaríamos este comando (asume tu WD es el directorio `bin`):
 
 ``
 plink --file ../data/cocci_silv --hardy --out ../out/HW_cocci
@@ -137,7 +139,7 @@ plink --file ../data/cocci_silv --snps-only just-acgt -recode vcf --out
 
 
 ## Hierfstat
-Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni7/bin/Hierfstat_cocci.html).
+Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni8/bin/Hierfstat_cocci.html).
 
 
 ## SNPRelate
@@ -149,10 +151,12 @@ Herramienta que permite estimar la ancestría de individuos a partir de un set d
 
 [Aquí](https://www.genetics.ucla.edu/software/admixture/index.html) puedes encontrar el ejecutable y el manual.
 
-**Ejercicio:** Descarga el ejecutable y el manual de Admixture. ¿Qué tipo de archivo es el input de Admixture?
-Corre Admixture con el set de datos de cocci_silv.
+**Ejercicio:** Descarga el ejecutable y el manual de Admixture. No es necesario instalarlo, solo con que el ejecutable esté en tu WD puedes correrlo. Revisa el manual ¿Qué tipo de archivo es el input de Admixture?
+
+Veamos un ejemplo de cómo correr Admixture con el set de datos de `cocci_silv`.
 
 ```
+mkdir -p ../data/admixture
 for K in 1 2 3 4 5; \
 do ./admixture --cv ../data/cocci_silv.bed $K | tee ../data/admixture/log${K}.out;
 done
@@ -163,13 +167,13 @@ Para guardar los resultados de versosimilitud en un archivo:
 grep -h CV ../data/admixture/log*.out > ../data/admixture/coccineus_Kerror.txt
 ```
 
-Grafica en R el resultado. ¿Qué valor de K elegirías para este set de datos?
+Vamos a graficar en R el resultado. ¿Qué valor de K elegirías para este set de datos?
 
 ```
 library(ggplot2)
 
 ###Estimación de error con distintas k
-k.error<- read.delim("../data/admix_results/coccineus_Kerror.txt", header = F, sep = ":")
+k.error<- read.delim("../data/admixture/coccineus_Kerror.txt", header = F, sep = ":")
 rownames(k.error)<- c("k=1", "k=2", "k=3", "k=4", "k=5")
 
 #plot error de K
