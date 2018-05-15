@@ -5,7 +5,6 @@
 ```{r}
 library(SNPRelate)
 library(ape)
-library(snpStats)
 library(ggplot2)
 ```
 

@@ -102,7 +102,25 @@ Los análisis de genómica de poblaciones van mucho más allá de R, y hay mucho
 [Yann Burgeouis](http://www.yannbourgeois.com/) sacó el fua y creo esta Lista de Métodos de genómica de poblaciones: [methodspopgen.com](http://methodspopgen.com/). Donde recopila métodos para inferir estructura, detectar selección e inferir la historia de la población.
 
 
-# 8.4 Ejemplos de análisis básicos de genética de poblaciones
+# 8.4. ¿Qué software de todo eso me sirve?
+
+#### Ejercicios
+
+**Ejercicio 1** explora los paquetes de Bioconductor, CRAN, el número especial de MER y methodspopgen.com de acuerdo a tu tema. Escoge tres que creas te serán útiles y explóralos con mayor profundidad. Deben ser distintos a los ejemplos que veremos en la sección 8.5 más abajo.
+
+Menciona cada paquete que elegiste y describe con tus propias palabras qué hace y para qué parte de tus análisis te serviría. Sé específicx, por ejemplo no digas solo "para hacer análisis de selección" sino "para hacer análisis de selección entre las poblaciones X y Y, ya que mi hipótesis es que estas poblaciones pueden estar bajo selección ya que X está en tales condiciones y Y en tales"
+
+**Ejercicio 2**:
+
+1. Escoge uno de los paquetes del ejercicio pasado.
+2. Busca un tutorial, ayuda o vignette de ese paquete y síguelo con tus datos propios o con datos parecidos a los que tendrás que ya se encuentren publicados.
+3. Si es un paquete de R o Bioconductor utiliza knitr para crear un "notebook" de lo que realizaste.
+4. Sube el código (.R, .sh, etc) y si aplica el notebook (.html o .pdf) a tu cuenta de github. Pega el link al código o notebook en el espacio de abajo.
+
+**Ejercicio 3** hagan equipos conforme a su tipo de datos y/o tema de investigación y discutan los paquetes que encontraron. Enlisten y describan para qué utilizarían los 2 que consideren más útiles. Hagan un pull resquest (por equipo) para actualizar este .md del repositorio en la parte de abajo ("Resultados ejercicio software interesante por equipos").
+
+
+# 8.5. Ejemplos de análisis básicos de genética de poblaciones
 
 Como hemos visto, puede ser que hayas generado tus genotipos mapeando a un genoma de referencia o ensamblando *de novo*. En cualquier caso, el software que hayas utilizado deberá permitirte exportar tus datos a un formato estándar de genotipos, como plink o vcf. Estos formatos son además un programa en sí mismos que te permiten hacer diversos análisis de genética de poblaciones. Pero además también te permiten leer tus datos a R a través de diversos paquetes.
 
@@ -209,21 +227,3 @@ barplot(t(as.matrix(cocci.admix.4[,2:5])), col= mis.col, names.arg = cocci.admix
        ylab="Ancestría", border=NA, cex.axis = 1.5, axisnames = T)
 
 ```
-
-
-# 8.5. ¿Qué software de todo eso me sirve?
-
-#### Ejercicios
-
-**Ejercicio 1** explora los paquetes de Bioconductor, CRAN, el número especial de MER y methodspopgen.com de acuerdo a tu tema. Escoge tres que creas te serán útiles y explóralos con mayor profundidad. Deben ser distintos a los ejemplos que vimos en la sección anterior.
-
-Abajo menciona cada uno y describe con tus propias palabras qué hace y para qué parte de tus análisis te serviría. Sé específicx, por ejemplo no digas solo "para hacer análisis de selección" sino "para hacer análisis de selección entre las poblaciones X y Y, ya que mi hipótesis es que estas poblaciones pueden estar bajo selección ya que X está en tales condiciones y Y en tales"
-
-**Ejercicio 2**:
-
-1. Escoge uno de los paquetes del ejercicio pasado.
-2. Busca un tutorial, ayuda o vignette de ese paquete y síguelo con tus datos propios o con datos parecidos a los que tendrás que ya se encuentren publicados.
-3. Si es un paquete de R o Bioconductor utiliza knitr para crear un "notebook" de lo que realizaste.
-4. Sube el código (.R, .sh, etc) y si aplica el notebook (.html o .pdf) a tu cuenta de github. Pega el link al código o notebook en el espacio de abajo.
-
-**Ejercicio 3** hagan equipos conforme a su tipo de datos y/o tema de investigación y discutan los paquetes que encontraron. Enlisten y describan para qué utilizarían los 2 que consideren más útiles. Hagan un pull resquest (por equipo) para actualizar este .md del repositorio en la parte de abajo ("Resultados ejercicio software interesante por equipos").
