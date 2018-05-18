@@ -31,7 +31,7 @@ Dulce Carolina Hernández Rosales
 
 Erika Alejandra García Hernández
 
-Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md)
+Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md) [avance 3](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance3.md)
 
 Gabriela Aridai Borja Martínez
 
