@@ -44,7 +44,7 @@ Jetsi Viridiana Mancilla Rojano: [avance 1](https://github.com/JetsiMancilla/Pro
 
 Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md) [avance 2](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/tree/master/Avance2_Jorge)
 
-Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md), [avance 2](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_2.md)
+Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md), [avance 2](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_2.md), [avance 3](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_3.md)
 
 Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFinalBioinf2018-II/blob/master/avance%201.md)
 
