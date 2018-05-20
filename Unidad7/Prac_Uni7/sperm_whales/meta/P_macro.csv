@@ -1,0 +1,81 @@
+ID,region,Ocean,Mitogenome Haplotype,clade,No. Ns,Other_ID,Latitude,Longitude,SEX,previously published Accession No.
+7579,N.E. Pacific,Pacific,mtGen01,C,2, ,29.48333333,-147.1833333,F, 
+2514,W. Atlantic,Atlantic,mtGen02,B,1,MS-008-94,30.233333,-88.733333,F, 
+17320,N.E. Atlantic,Atlantic,mtGen03,C,1,NOR990731.2245,72.3,15.666666,M, 
+9663,S.W. Pacific,Pacific,mtGen04,C,3, ,-40.83333333,145.3,F, 
+117581,W. Atlantic,Atlantic,mtGen05,A,0,Pmac062,34.6227,-76.5544,M, 
+7581,N.E. Pacific,Pacific,mtGen06,C,1,MAC970527.04,29.483333,-147.183333,F, 
+7644,N.E. Pacific,Pacific,mtGen07,C,1,C74,37.116666,-122.416666,M, 
+116872,W. Pacific,Pacific,mtGen08,B,2,PIC130723.01B,15.35516909,145.5555419,F, 
+126049,W. Atlantic,Atlantic,mtGen09,A,2,091030_Pm2c,24.69166667,-77.48733333,M, 
+30466,N.E. Pacific,Pacific,mtGen10,C,4,DSJ021030.01,20.6,-160.916666,F, 
+70558,N.W. Pacific,Pacific,mtGen11,B,2,RU-SpWhale-20050714,46.4,150.716666,M, 
+7580,N.E. Pacific,Pacific,mtGen12,A,4,MAC970527.03,29.48333333,-147.1833333,F, 
+61439,N.E. Pacific,Pacific,mtGen13,C,5,RWB2006DEC06.01,19.633333,-156.333333,F, 
+9570,N.E. Pacific,Pacific,mtGen14,A,5,DSJ970810.01,27.116666,-111.416666,F, 
+11571,N.E. Pacific,Pacific,mtGen15,B,8,DSJ980811.05,24.533333,-109.566666,F, 
+78828,Mediterranean,Mediterranean,mtGen16,A,1,BP07-02,43.516666,7.283333,U, 
+117574,W. Atlantic,Atlantic,mtGen17,A,0,Pmac009,25.194,-80.0851,F, 
+123943,S.W. Pacific,Pacific,mtGen18,B,0,PmaNZ005,-42.618802,173.469463,M,KC312603.2
+ ,S.W. Pacific,Pacific,mtGen19,B,10,PmaNZ015,-35.989049,173.763871, ,KC312607
+16092,S.E. Pacific,Pacific,mtGen20,B,5,DSJ991106.09,-5.466666,-84.483333,F, 
+123945,S.W. Pacific,Pacific,mtGen21,C,1,PmaNZ034,-37.651568,177.858678,F,KC312610.2
+117570,W. Atlantic,Atlantic,mtGen22,B,2,Pmac002,35.7674,-75.5347,F, 
+13376,N.E. Pacific,Pacific,mtGen23,C,2, ,-0.183333333,-90.33333333, , 
+15877,N.E. Pacific,Pacific,mtGen24,C,1,DSJ990804.09,22.833333,-110.466666,F, 
+15873,N.E. Pacific,Pacific,mtGen25,A,7,DSJ990804.05,22.833333,-110.466666,F, 
+15975,N.E. Pacific,Pacific,mtGen26,C,9,DSJ990815.10,19.183333,-105.533333,F, 
+25355,N.E. Pacific,Pacific,mtGen27,B,5,DSJ010731.01,32.916666,-121.116666,F, 
+49068,N.E. Pacific,Pacific,mtGen28,A,1,MAC050820.05,6.483333,-162.4,F, 
+55207,N.E. Pacific,Pacific,mtGen29,B,6,RWB2006APR24.01,19.766666,-156.166666,F, 
+124023,W. Atlantic,Atlantic,mtGen30,A,1,05062601PM/Pmac033,27.3,-93.766666,F, 
+ ,S.W. Pacific,Pacific,mtGen31,B,10,PmaNZ032,-36.841243,174.419032, ,KC312609
+ ,W. Atlantic,Atlantic,mtGen32,C,1,Pma11GMX08,29.1714,-87.0558,U, 
+17101,Indian Ocean,Indian,mtGen33,C,2,MALDIVES000427.01,4.4318,73.5293,M, 
+ ,S.W. Pacific,Pacific,mtGen34,C,10,PmaNZ008,-39.854588,174.688226, ,KC312604
+ ,S.W. Pacific,Pacific,mtGen35,A,10,PmaNZ010,-39.054376,177.574457, ,KC312605
+ ,S.W. Pacific,Pacific,mtGen37,C,10,PmaNZ016,-36.845182,174.417935, ,KC312608
+ ,S.W. Pacific,Pacific,mtGen38,B,10,PmaNZ045,-34.81274781,173.0095131, ,KC312613
+ ,S.W. Pacific,Pacific,mtGen39,B,10,PmaNZ056,-38.050035,174.722093, ,KC312614
+ ,S.W. Pacific,Pacific,mtGen40,A,10,PmaNZ058,-39.062263,177.835932, ,KC312615
+ ,S.W. Pacific,Pacific,mtGen41,B,19,PmaNZ076,-38.573559,178.228339, ,KC312616
+ ,S.W. Pacific,Pacific,mtGen42,B,19,PmaNZ082,-35.506885,174.474826, ,KC312617
+ ,S.W. Pacific,Pacific,mtGen43,B,10,PmaNZ085,-44.00281588,168.508327, ,KC312618
+ ,N.E. Pacific,Pacific,mtGen44,B,19,PmaOR001,44.66,-124.166, ,KC312619
+2659,N.W. Pacific,Pacific,mtGen45,C,1,ZZZ0013,9.30895,123.503,M, 
+4633,N.E. Pacific,Pacific,mtGen46,A,7,MAC950923.01,27.4,-111.616666,F, 
+4978,N.W. Pacific,Pacific,mtGen47,C,0,JFA-96-01-22,38.9,141.583333,M, 
+7546,N.E. Pacific,Pacific,mtGen48,B,4,MAC970402.02,20.583333,-157.483333,F, 
+7604,N.E. Pacific,Pacific,mtGen49,A,7,MAC970531.03,26.766666,-138.583333,F, 
+9599,S.W. Pacific,Pacific,mtGen50,C,2,AUS-OB-PM-001,-42.2,145.216666,F, 
+9603,S.W. Pacific,Pacific,mtGen51,A,5,AUS-OB-PM-005,-42.2,145.216666,F, 
+9687,S.W. Pacific,Pacific,mtGen52,C,12,AUS-MW-PM-014,-40.9,144.683333,M, 
+9693,S.W. Pacific,Pacific,mtGen53,C,1,AUS-MW-PM-020,-40.9,144.683333,M, 
+9708,S.W. Pacific,Pacific,mtGen54,B,7,AUS-MW-PM-035,-40.9,144.683333,M, 
+11535,N.E. Pacific,Pacific,mtGen55,C,8,DSJ980804.07,24.15,-112.2,F, 
+12127,W. Atlantic,Atlantic,mtGen56,A,22,97PM1A,25.67,-76.97,U, 
+13371,N.E. Pacific,Pacific,mtGen57,C,5,LG2,-0.25,-90.3,F, 
+13968,N.E. Pacific,Pacific,mtGen58,B,6,LBL99-01,49,-127,F, 
+15974,N.E. Pacific,Pacific,mtGen59,B,9,DSJ990815.09,19.183333,-105.533333,F, 
+16062,S.E. Pacific,Pacific,mtGen60,C,6,DSJ991027.02,-13.65,-77.766666,F, 
+16063,S.E. Pacific,Pacific,mtGen61,C,7,DSJ991027.03,-13.65,-77.766666,F, 
+16091,S.E. Pacific,Pacific,mtGen62,B,7,DSJ991106.08,-5.466666,-84.483333,F, 
+25358,N.E. Pacific,Pacific,mtGen63,C,2,DSJ010801.03,33.35,-123.066666,F, 
+34636,S.E. Pacific,Pacific,mtGen64,C,10,CHILE-PM-C55,-24.29,-71.13,U, 
+34657,S.E. Pacific,Pacific,mtGen65,A,15,CHILE-PM-C76/5429,-21.09,-71.37,U, 
+34669,S.E. Pacific,Pacific,mtGen66,C,8,CHILE-PM-C88/5483,-22.03,-71.03,U, 
+34672,S.E. Pacific,Pacific,mtGen67,A,65,CHILE-PM-C91/5034,-22.37,-70.49,U, 
+34718,S.E. Pacific,Pacific,mtGen68,B,28,CHILE-PM-C137/5690,-22.16,-71.51,U, 
+34783,S.E. Pacific,Pacific,mtGen69,B,27,CHILE-PM-C202,-21.35,-71.28,U, 
+35382,N.W. Pacific,Pacific,mtGen70,B,3,PM03-21/07,22,114,M, 
+37723,S.W. Pacific,Pacific,mtGen71,C,5,PM030820-28,-19.166666,-174.466666,U, 
+49093,N.E. Pacific,Pacific,mtGen72,C,4,MAC050829.01,5.7,-163.916666,F, 
+51419,N.E. Pacific,Pacific,mtGen73,B,0,MAC050710.05,38.816666,-124.4,F, 
+70557,N.W. Pacific,Pacific,mtGen74,C,6,SpWRU-040720#1,48.333333,153.45,M, 
+78834,Mediterranean,Mediterranean,mtGen75,A,20,PMAC060321,43.433333,4.416666,M, 
+117573,W. Atlantic,Atlantic,mtGen76,C,3,Pmac008,36.445,-75.8178,M, 
+117576,W. Atlantic,Atlantic,mtGen77,A,1,Pmac055,40.38,-67.65,U, 
+123944,S.W. Pacific,Pacific,mtGen78,C,19,PmaNZ013,-41.733279,174.267996,M,KC312606.2
+126096,W. Atlantic,Atlantic,mtGen79,A,3,110606_Pm1b,26.482,-78.12133333,F, 
+7592,N.E. Pacific,Pacific,mtGen80,C,1, ,29.48333333,-147.1833333,M, 
+25357,N.E. Pacific,Pacific,mtGen81,C,6,DSJ010801.02,33.283333,-122.766666,F, 
