@@ -95,6 +95,6 @@ Si el archivo excede los 20 Mb debe ser enviado via [https://www.wetransfer.com/
 
 * Avance 3: 17 mayo 11:55 pm
 
-* **Entrega final: 24 de Mayo 7 am**
+* **Entrega final: 25 de Mayo 7 am**
 
 
