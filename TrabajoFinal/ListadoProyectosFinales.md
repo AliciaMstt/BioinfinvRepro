@@ -22,7 +22,7 @@ Alondra Karina Terrones Ramírez: [avance 1](https://github.com/AloTerrones/Proy
 
 Brenda González Calderón: [avance 1](https://github.com/br3nd4/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
-Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md), [avance 2](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md), [avance 3](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance3.md)
+Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md), [avance 2](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md)
 
 David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md), [Avance 2](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%202.md)
 
@@ -38,7 +38,7 @@ Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyect
 
 Guadalupe Andraca Gómez [Avance 1](https://github.com/LupitaAndraca/ProyectoFinalBioinfo/blob/master/Avance1.md)
 
-Isaura Rosas Reinhold [Avance 1](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance1.md),[Avance 2](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%202.md)
+Isaura Rosas Reinhold [Avance 1](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance1.md),[Avance 2](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%202.md),[Avance 3](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%203.md)
 
 Jetsi Viridiana Mancilla Rojano: [avance 1](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/Avance1.md), [avance 2](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/avance2.md) 
 
