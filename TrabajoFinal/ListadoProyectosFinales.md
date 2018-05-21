@@ -32,7 +32,7 @@ Dulce Carolina Hernández Rosales:[avance 1](https://github.com/heroduca/Proyect
 
 Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md) [avance2](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/Avance%202.md)
 
-Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md)
+Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md) [avance 3](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance3.md)
 
 Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md) [Avance2](https://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance2_GabrielaBorja.md)
 
