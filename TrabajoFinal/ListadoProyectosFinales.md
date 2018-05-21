@@ -15,54 +15,53 @@ Ejemplo:
 
 ## Listado:
 
-Alma Melisa Vázquez López
 
-Alondra Karina Terrones Ramírez
+Alma Melisa Vázquez López [Avance 1](https://github.com/almamelisa/ProyectoFinalBioinfo-2018-II/blob/master/Avance1_Alma_Melisa.md), [Avance 2](https://github.com/almamelisa/ProyectoFinalBioinfo-2018-II/blob/master/Avance2_Alma_Melisa.md)
 
-Brenda González Calderón
+Alondra Karina Terrones Ramírez: [avance 1](https://github.com/AloTerrones/ProyectoFinalBioinf2018-II/blob/master/avance1proyecto.md), [avance 2](https://github.com/AloTerrones/ProyectoFinalBioinf2018-II/blob/master/avance2.md)
 
-Carlos Emiliano Mora Carrera
+Brenda González Calderón: [avance 1](https://github.com/br3nd4/ProyectoFinalBioinf2018-II/blob/master/Avance1.md)
 
-David Xochipiltecatl García
+Carlos Emiliano Mora Carrera [avance 1](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance1.md), [avance 2](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md), [avance 3](https://github.com/EmilianoMora/ProyectoFinalBioinf2018-II/blob/master/avance3.md)
 
-Delil Andrea Chincoya Martínez
+David Xochipiltecatl García [avance1](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%201.md), [Avance 2](https://github.com/Bendxg/Proyecto-Final-Bioinf2017-II/blob/master/Avance%202.md)
 
-Dulce Carolina Hernández Rosales
+Delil Andrea Chincoya Martínez: [avance 1](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance1_proyecto_final.md) [avance 2](https://github.com/DelilChincoya/ProyectoFinalBioinf2017-I/blob/master/Avance2_Delil_Chincoya.md)
 
-Erika Alejandra García Hernández
+Dulce Carolina Hernández Rosales:[avance 1](https://github.com/heroduca/ProyectoFinalBioinf2018-II-/blob/master/DulceHernandez:Avance%201.md) [avance 2](https://github.com/heroduca/ProyectoFinalBioinf2018-II-/blob/master/Avance_2.md)
+
+Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/ProyectoFinalBioinf2018-II/ProyectoFinalBioinf2018-II.md) [avance2](https://github.com/EAlejandra/ProyectoFinalBioinf2017-II/blob/master/Avance%202.md)
 
 Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md) [avance 3](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance3.md)
 
-Gabriela Aridai Borja Martínez
+Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md) [Avance2](https://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance2_GabrielaBorja.md)
 
-Guadalupe Andraca Gómez
+Guadalupe Andraca Gómez [Avance 1](https://github.com/LupitaAndraca/ProyectoFinalBioinfo/blob/master/Avance1.md)
 
-Isaura Rosas Reinhold
+Isaura Rosas Reinhold [Avance 1](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance1.md),[Avance 2](https://github.com/IsauraRReinhold/Proyecto-trascriptoma_flores/blob/master/Avance%202.md)
 
-Jetsi Viridiana Mancilla Rojano
+Jetsi Viridiana Mancilla Rojano: [avance 1](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/Avance1.md), [avance 2](https://github.com/JetsiMancilla/ProyectoFinalBioinf2017-II/blob/master/avance2.md) 
 
-Jorge Cruz Nicolás
-Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md)
+Jorge Cruz Nicolás: [avance 1](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/blob/master/avance1.md) [avance 2](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/tree/master/Avance2_Jorge) [avance 3](https://github.com/jorgecruzn/ProyectoFinalBioinf2018-II/tree/master/Avance3_Jorge)
 
+Julia Carrasco Zanini Sánchez: [avance 1](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_1.md), [avance 2](https://github.com/julia1512/ProyectoFinalBioinf2017-II-JCSZ/blob/master/Avance_2.md)
 
-Julia Carrasco Zanini Sánchez
+Luz Estela Zamudio Beltrán: [avance 1](https://github.com/LuzZamudio/ProyectoFinalBioinf2018-II/blob/master/avance%201.md)
 
-Luz Estela Zamudio Beltrán
+María Chavarria [Avance 1](https://github.com/marialadelbarrio/ProyectoFinalBioinf2017-II/blob/master/Avance_1) [Avance2](https://github.com/marialadelbarrio/tareas_curso_bioinfinvrepro/blob/master/Avance2_maria.md)
 
-María Chavarria
+María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Primer%20avance.md), [avance 2](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/Segundo%20avance.md)
 
-María José Monteverde Suárez
-
-Mariette Viladomat Jasso
+Mariette Viladomat Jasso: [avance 1](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Primer_Avance_Mariette.md), [avance 2](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Segundo_Avance_Mariette.md)
 
 Melania Andrea Vega Angeles
 
-Miguel Ángel Espinoza Camacho
+Miguel Ángel Espinoza Camacho [avance 1](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/PROYECTO_FINAL_MIGUEL%20ANGEL%20ESPINOZA%20CAMACHO.md),  [avance 2](https://github.com/mike9999999/ProyectoFinalBioinf2018-II)
 
-Natalia Delgado Machuca
+Natalia Delgado Machuca [Avance 1](https://github.com/N-atalia/ProyectoFinalBioinf2018-II/blob/master/Trabajo%20Final%20.md)
 
 Olivia Rojo
 
-Tonatiuh Ramírez Reyes
+Tonatiuh Ramírez Reyes: [avance 1](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance%201.md), [avance2](https://github.com/tona30/Trabajo-final-2018-II/blob/master/avance2TonatiuhRR.md) 
 
-Yolitzi Saldívar Lemus
+Yolitzi Saldívar Lemus [avance 1](https://github.com/yolitzi/ProyectoFinalBioinf2018-II/blob/master/Avance_1.md) [avance_2](https://github.com/yolitzi/ProyectoFinalBioinf2018-II/blob/master/Avance_2.md)

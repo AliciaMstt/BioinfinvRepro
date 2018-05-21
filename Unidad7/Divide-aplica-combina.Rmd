@@ -1,0 +1,172 @@
+---
+title: "Divide-aplica-combina"
+author: "Alicia Mastretta-Yanes"
+date: "27 de abril de 2016"
+output: html_document
+---
+
+
+### Divide-aplica-combina (_split-apply-combine_)
+Muchos problemas de análisis de datos involucran la aplicación de la estrategia
+divide-aplica-combina, ([Hadley Whickam, 2011](http://www.jstatsoft.org/v40/i01/paper)) 
+esta consiste en romper un problema en pedazos (de 
+acuerdo a una variable de interés), operar sobre cada subconjunto de manera
+independiente (ej. calcular la media de cada grupo, ordenar observaciones por 
+grupo, estandarizar por grupo) y después unir los pedazos nuevamente. El 
+siguiente diagrama ejemplifiaca el paradigma de divide-aplica-combina:
+
+* **Separa** la base de datos original.  
+* **Aplica** funciones a cada subconjunto.  
+* **Combina** los resultados en una nueva base de datos.
+
+![](split-apply-combine.png) 
+
+
+Bibliografía recomendada: 
+[The Slit-Apply-Combine Strategy for Data Analysis](http://www.jstatsoft.org/v40/i01/paper), 
+Hadley Wickham 2011.
+
+
+En esta sección trabajaremos con las siguientes bases de datos para ejemplifcar
+las funciones de divide-aplica-combina:
+
+```{r, warning=FALSE}
+flights <- read.csv("Prac_Uni7/ejemplosgenerales/data/flights.csv")
+head(flights)
+
+```
+
+Cuando pensamos como implementar la estrategia divide-aplica-combina es natural pensar en iteraciones, por ejemplo utilizar un ciclo _for_ para recorrer cada 
+grupo de interés y aplicar las funciones, sin embargo la aplicación de  
+_for loops_ desemboca en código difícil de entender. Adicionalmente, dplyr es mucho 
+más **veloz**.
+
+Estudiaremos las siguientes funciones del paquete `dplyr`:
+
+```{r}
+library(dplyr)
+```
+
+* `filter`: obten un subconjunto de las filas de acuerdo a un criterio.
+* `select`: selecciona columnas de acuerdo al nombre
+* `arrange`: reordena las filas
+* `mutate`: agrega nuevas variables
+* `summarise`: reduce variables a valores (crear nuevas bases de datos)
+
+Estas funciones trabajan de manera similar, el primer argumento que reciben 
+es un _data frame_ (usualmente en formato *limpio*), los argumentos que siguen
+indican que operación se va a efectuar y el resultado es un nuevo _data frame_.
+
+Veamos con ejemplos.
+
+#### Filtrar
+Ejemplo con base de datos de juguete para mostrar el funcionamiento de cada
+instrucción:
+
+```{r}
+df_ej <- data.frame(genero= c("mujer", "hombre", "mujer", "mujer", "hombre"), 
+  estatura = c(1.65, 1.80, 1.70, 1.60, 1.67))
+df_ej
+
+dplyr::filter(df_ej, genero == "mujer")
+dplyr::filter(df_ej, estatura > 1.65 & estatura < 1.75)
+```
+
+Algunos operadores importantes para filtrar son:  
+
+```{r, eval = FALSE}
+x > 1
+x >= 1
+x < 1
+x <= 1
+x != 1
+x == 1
+x %in% ("a", "b")
+
+# Conjuntos
+a | b
+a & b
+a & !b
+xor(a, b)
+```
+
+**Ejercicio:** Encuentra todos los vuelos hacia SFO ó OAK en `flights`
+
+
+#### Seleccionar
+Elegir columnas de un conjunto de datos.
+```{r}
+df_ej
+select(df_ej, genero)
+select(df_ej, -genero)
+```
+
+```{r, eval = FALSE}
+select(df_ej, starts_with("g"))
+select(df_ej, contains("g"))
+```
+
+
+#### Arreglar (`arrange`)
+Arreglar u ordenar de acuerdo al valor de una o más variables:
+
+```{r}
+arrange(df_ej, genero)
+arrange(df_ej, desc(estatura))
+```
+
+
+#### Mutar (`mutate`)
+
+Mutar consiste en crear nuevas variables (columnas):
+```{r}
+mutate(df_ej, estatura_cm = estatura * 100) 
+mutate(df_ej, estatura_cm = estatura * 100, estatura_in = estatura_cm * 0.3937) 
+```
+
+
+#### Summarise y resúmenes por grupo
+Summarise sirve para crear nuevas bases de datos con resúmenes o agregaciones de 
+los datos originales.
+
+```{r}
+summarise(df_ej, promedio = mean(estatura))
+```
+
+Podemos hacer resúmenes por grupo, primero creamos una base de datos agrupada:
+
+```{r}
+by_genero <- group_by(df_ej, genero)
+by_genero
+```
+
+y después operamos sobre cada grupo, creando un resumen a nivel grupo y uniendo
+los subconjuntos en una base nueva:
+
+```{r}
+summarise(by_genero, promedio = mean(estatura))
+```
+
+
+* Algunas funciones útiles con `summarise` son min(x), median(x), max(x), 
+quantile(x, p), n(), sum(x), sum(x > 1), mean(x > 1), sd(x).
+
+```{r}
+flights$date_only <- as.Date(flights$date)
+by_date <- group_by(flights, date_only)
+no_miss <- dplyr::filter(by_date, !is.na(dep))
+delays <- summarise(no_miss, mean_delay = mean(dep_delay), n = n())
+```
+
+**Ejercicio** Reescribe el código anterior utilizando `%>%`
+
+
+```{r, include=FALSE}
+flights_delay<-flights %>%
+              mutate(date_only=as.Date(date)) %>%
+              group_by(date_only) %>%
+              filter(!is.na(dep)) %>%
+              summarise(mean_delay = mean(dep_delay), n = n())
+
+```
+

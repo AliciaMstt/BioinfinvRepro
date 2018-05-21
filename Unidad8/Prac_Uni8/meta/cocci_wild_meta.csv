@@ -1,0 +1,92 @@
+Especie,Poblacion,Esp-Pob,ID,Indiv,Estatus,Estatus2,Fecha_colecta,Estado,Municipio,Latitud,Longitud,Altitud,Grupo-Admix-8
+P. coccineus,Ciudad Guzman,,cguz_02,2,Silvestre,Silvestre,25-Oct-15,Jalisco,Ciudad Guzman,19.5833,-103.533,2100,Silv-Centro
+P. coccineus,Ciudad Guzman,,cguz_06,6,Silvestre,Silvestre,25-Oct-15,Jalisco,Ciudad Guzman,19.5833,-103.533,2100,Silv-Centro
+P. coccineus,Ciudad Guzman,,cguz_09,9,Silvestre,Silvestre,25-Oct-15,Jalisco,Ciudad Guzman,19.5833,-103.533,2100,Silv-Centro
+P. coccineus,Comaltepec,P. coccineus-Comaltepec,comal_10,10,Silvestre,Silvestre,26-Oct-14,Oaxaca,Comaltepec,17.55211667,-96.5254,2876,Silv-Sureste
+P. coccineus,Comaltepec,P. coccineus-Comaltepec,comal_14,14,Silvestre,Silvestre,27-Oct-14,Oaxaca,Comaltepec,17.55211667,-96.5254,2876,Silv-Sureste
+P. coccineus,Comaltepec,P. coccineus-Comaltepec,comal_16,16,Silvestre,Silvestre,28-Oct-14,Oaxaca,Comaltepec,17.55211667,-96.5254,2876,Silv-Sureste
+P. coccineus,Comaltepec,P. coccineus-Comaltepec,comal_3,3,Silvestre,Silvestre,29-Oct-14,Oaxaca,Comaltepec,17.55211667,-96.5254,2876,Silv-Sureste
+P. coccineus,EspinazoDiablo,,edia_01,1,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_02,2,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_03,3,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_04,4,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_05,5,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_06,6,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_07,7,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_08,8,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_09,9,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_10,10,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,EspinazoDiablo,,edia_11,11,Silvestre,Silvestre,25-Oct-15,Durango,Espinazo del Diablo,23.64005,-105.8248833,1422,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_01,1,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_02,2,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_03,3,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_04,4,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_05,5,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_08,8,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_09,9,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_10,10,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_11,11,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_13,13,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_15,15,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,Regocijo-S,,regs_17,17,Silvestre,Silvestre,26-Oct-15,Durango,Durango,23.68485333,-105.1249,2566,Silv-Noroeste
+P. coccineus,REPSA,P. coccineus-REPSA,rep_101,101,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_102,102,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_103,103,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_104,104,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_105,105,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_106,106,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_2,2,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_3,3,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_5,5,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_6,6,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,REPSA,P. coccineus-REPSA,rep_a,a,Silvestre,Silvestre,2015,CiudadMexico,Coyoacan,19.317204,-99.195192,2328,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_101,101,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_102,102,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_103,103,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_105,105,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_106,106,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanJoaquin,P. coccineus-San Joaquin,sanjoa_107,107,Silvestre,Silvestre,ago-15,Quer??taro,San Joaqu??n,20.9255,-99.56361667,2381,Silv-Centro
+P. coccineus,SanCristobal,,scri_01,1,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_02,2,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_03,3,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_04,4,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_05,5,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_14,14,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,SanCristobal,,scri_16,16,Silvestre,Silvestre,16/12/15,Chiapas,San Cristobal,16.69805556,-92.60277778,2229,Silv-Sureste
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_1,1,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_10,10,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_11,11,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_12,12,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_13,13,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_16,16,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_17,17,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_2,2,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_4,4,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_6,6,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_7,7,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz_8,8,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tepoztlan,P. coccineus-Tepoztl??n,tepoz-9,9,Silvestre,Silvestre,2-Sep-15,Morelos,Tepoztl??n,19.00491667,-99.13247222,1953,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_1,1,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_2,2,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_3,3,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_4,4,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_5,5,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_6,6,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_7,7,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,Tlalpan,P. coccineus-Tlalpan,tlalp_8,8,Silvestre,Silvestre,27/09/2015,CiudadMexico,Tlalpan,19.292935,-99.191807,2334,Silv-Centro
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_1,1,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_11,11,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_12,12,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_13,13,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_14,14,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_15,15,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_16,16,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_17,17,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_18,18,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_2,2,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_3,3,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_4,4,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_5,5,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_6,6,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_8,8,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus
+P. coccineus,TresMarias,P. coccineus-TresMarias,trmar_9,9,Silvestre,Silvestre,2-Sep-15,EstadoMexico,Huitzilac,19.10016667,-99.20833333,3024,Silv-striatus

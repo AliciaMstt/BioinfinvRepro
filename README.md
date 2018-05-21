@@ -80,9 +80,11 @@ Los **objetivos específicos son**:
 | **Unidad 7 Introducción a R con un enfoque bioinformático**                 |        4       |       9         |
 | 7.1. R y RStudio                                                            |                |                 |
 | 7.2. Funciones básicas de R más importantes para bioinformática             |                |                 |
-| 7.3. Limpieza de datos en R                                                 |                |                 |
-| 7.4. Graficar en R                                                          |                |                 |
-| 7.5. Funciones propias                                                      |                |                 |
+| 7.3. Funciones propias:	Crear funciones y utilizarlas con `source`                                             |                |                 |
+| 7.4. R Markdown y R Notebook                                                         |                |                 |
+| 7.5. Manipulación y limpieza de datos en R                                                      |                |                 |
+| 7.5. Manipulación y limpieza de datos en R                                                      |                |                 |
+| 7.6. Graficar en R                                                      |
 | **Unidad 8 Análisis de filogenias y genética de poblaciones**               |        2       |       9         |
 | 8.1. Bioconductor y paquetes bioinformáticos en R                           |                |                 |
 | 8.2. Exploración gráfica y resumen de datos genéticos                       |                |                 |

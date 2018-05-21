@@ -1,0 +1,34 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  word_document: default
+---
+
+Ejemplo de chunck de texto que no se imprime a pantalla
+
+```{r, echo=FALSE}
+x<-1+1
+```
+Y otro que s??, n??tese que s?? se crearon las variables del chunk anterior
+
+```{r}
+x+10
+
+```
+
+
+
+```{r include = FALSE}
+library(viridis)
+```
+
+The code below demosntrates two color palettes in the viridis package. Each plots displays a contour map of a volcano in Aukland, New Zealand
+
+## Viridis colors
+
+```{r include= TRUE, echo=TRUE, message=FALSE}
+image(volcano, col=viridis(200))
+```

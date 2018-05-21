@@ -1,0 +1,250 @@
+---
+title: "Datos limpios"
+author: "Alicia Mastretta-Yanes"
+output: html_document
+---
+
+Los **datos limpios** son datos que facilitan las tareas del análisis de datos: 
+
+* **Manipulación**: Manipulación de variables como agregar, filtrar, reordenar,
+transformar. 
+
+*  **Visualización**: Resúmenes de datos usando gráficas, análisis exploratorio, 
+o presentación de resultados. 
+
+* **Modelación**: Ajustar modelos es sencillo si los datos están en la forma 
+correcta.
+
+Los principios de **datos limpios** ([Tidy Data de Hadley Wickham](http://vita.had.co.nz/papers/tidy-data.pdf)) 
+proveen una manera estándar de organizar la información:
+
+1. Cada variable forma una columna.
+2. Cada observación forma un renglón.
+3. Cada tipo de unidad observacional forma una tabla.
+
+
+Veamos un ejemplo:
+
+La mayor parte de las bases de datos en estadística tienen forma rectangular, 
+¿cuántas variables tiene la siguiente tabla?
+
+||EspecieA|EspecieB
+----|------------|---------
+Nevado de Toluca|- |2
+Iztaccihuatl  |16|11
+La Malinche  |3 |1
+
+La tabla anterior también se puede estructurar de la siguiente manera:
+
+||Nevado de Toluca| Iztaccihuatl|La Malinche
+--|------------|-----------|----------
+EspecieA|- |    16     |   3
+EspecieB|2 |    11     |   1
+
+
+Si vemos los principios (cada variable forma una columna, cada observación 
+forma un renglón, cada tipo de unidad observacional forma una tabla), 
+¿las tablas anteriores cumplen los principios?
+
+¿Cuáles son las variables y Cuáles las observaciones de esta pequeña base?
+
+Entonces, siguiendo los principios de _datos limpios_
+obtenemos la siguiente estructura: 
+
+Localidad|Especie|Abundancia
+------------|-----|---------
+Nevado de Toluca|a    |-
+Iztaccihuatl  |a    |16
+La Malinche  |a    |3
+Nevado de Toluca|b    |2
+Iztaccihuatl  |b    |11
+La Malinche  |b    |1
+
+Una vez que identificamos los problemas de una base de datos podemos proceder a
+la limpieza.
+
+
+### Limpieza de bases de datos
+Algunos de los problemas más comunes en las bases de datos que no están 
+_limpias_ son:
+
+* Los encabezados de las columnas son valores y no nombres de variables. 
+* Más de una variable por columna. 
+* Las variables están organizadas tanto en filas como en columnas. 
+* Más de un tipo de observación en una tabla.
+* Una misma unidad observacional está almacenada en múltiples tablas. 
+
+La mayor parte de estos problemas se pueden arreglar con pocas herramientas, 
+a continuación veremos como _limpiar_ datos usando dos funciones del paquete
+*tidyr*:
+
+* **gather**: recibe múltiples columnas y las junta en pares de nombres y 
+valores, convierte los datos anchos en largos.  
+* **spread**: recibe 2 columnas y las separa, haciendo los datos más anchos.
+
+Para otras funciones parecidas no se pierdan este acordeón: 
+
+[R Data Wrangling Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+
+#### Los encabezados de las columanas son valores
+Usaremos ejemplos para entender los conceptos más facilmente.
+La primer base de datos está basada en una encuesta de [Pew Research](http://www.pewforum.org/2009/01/30/income-distribution-within-us-religious-groups/) 
+que investiga la relación entre ingreso y afiliación religiosa.
+
+¿Cuáles son las variables en estos datos?
+
+```{r}
+# leemos la base
+pew <- read.delim(file = "http://stat405.had.co.nz/data/pew.txt",
+  header = TRUE, stringsAsFactors = FALSE, check.names = F)
+pew
+```
+
+Esta base de datos tiene 3 variables: religión, ingreso y frecuencia. Para
+_limpiarla_ es necesario apilar las columnas (alargar los datos). Notemos
+que al alargar los datos desapareceran las columnas que se agrupan y dan lugar a
+dos nuveas columnas: la correspondiente a clave y la correspondiente a valor.
+Entonces, para alargar una base de datos usamos la función `gather` que recibe 
+los argumentos:
+
+* data: base de datos que vamos a reestructurar.  
+* key: nombre de la nueva variable que contiene lo que fueron los nombres
+de columnas que apilamos.  
+* value: nombre de la variable que almacenará los valores que corresponden a 
+cada *key*.  
+* ...: lo últimoo que especificamos son las columnas que vamos a apilar, veremos
+que hay varias maneras de determinarlas.
+
+```{r}
+# cargamos el paquete
+library(tidyr) 
+library(plyr)
+library(dplyr)
+library(readr)
+pew_tidy <- gather(data = pew, income, frequency, -religion)
+# vemos las primeras líneas de nuestros datos alargados 
+head(pew_tidy) 
+# y las últimoas
+tail(pew_tidy)
+```
+
+Observemos que en la tabla ancha teníamos bajo la columna *<$10k*, en el renglón
+correspondiente a *Agnostic* un valor de 27, y podemos ver que este valor en 
+la tabla larga se almacena bajo la columna frecuencia y corresponde a religión
+*Agnostic*, income *<$10k*. También es importante ver que en este ejemplo 
+especificamos las columnas a apilar identificando la que **no** vamos a alargar
+con un signo negativo: es decir apila todas las columnas menos religión.
+
+
+#### Una columna asociada a más de una variable
+La siguiente base de datos proviene de la Organización Mundial de la Salud y 
+contiene el número de casos confirmados de tuberculosis por país y año, la
+información esta por grupo demográfico de acuerdo a sexo (m, f), y edad (0-4, 
+5-14, etc). 
+
+
+```{r}
+tb <- read.csv("Prac_Uni7/ejemplosgenerales/data/tb.csv")
+head(tb)
+colnames(tb)
+```
+
+**Ejercicio** De manera similar a los ejemplos anteriores, 
+utiliza la función `gather` para apilar las columnas correspondientes a 
+sexo-edad en una nueva columna llamada "demo" y otra columna llamada "n" que contenga el número de casos confirmados.
+
+
+```{r, include=FALSE}
+tb_long <- gather(tb, demo, n, -iso2, -year, -id, na.rm = TRUE)
+head(tb_long)
+```
+
+
+Ahora separaremos las variables sexo y edad de la columna demo, para ello 
+debemos pasar a la función `separate`, esta recibe como parámetros:  
+
+* data: el nombre de la base de datos,  
+
+* col: el nombre de la variable que deseamos separar en más de una,  
+
+* into: nombre que queremos que tengan las nuevas columnas
+
+* sep= la posición de donde deseamos "cortar" (hay más opciones para especificar 
+como separar, ver `?separate`)
+
+```{r}
+tb_tidy <- separate(tb_long, demo, c("sex", "age"), 8)
+head(tb_tidy)
+table(tb_tidy$sex)
+```
+
+Nota que en este caso utilizamos sep=8 porque la m y la f son el octavo caracter en "new\_sp\_m"
+
+#### Variables almacenadas en filas y columnas
+El problema más difícil es cuando las variables están tanto en filas como en 
+columnas, veamos una base de datos de clima en Cuernavaca. ¿Cuáles son las 
+variables en estos datos?
+
+```{r}
+clima <- read.delim("Prac_Uni7/ejemplosgenerales/data/clima.txt", stringsAsFactors=FALSE)
+head(clima)
+```
+
+Estos datos tienen variables en columnas individuales (id, año, mes), en 
+múltiples columnas (día, d1-d31) y en filas (tmin, tmax). Comencemos por apilar 
+las columnas con `gather`.
+
+```{r}
+clima_long <- gather(clima, day, value, d1:d31, na.rm = TRUE)
+head(clima_long)
+```
+
+Ahora creemos algunas variables adicionales con `mutate` y cambiemos el orden con `arrange`:
+
+
+```{r}
+clima_vars <- mutate(clima_long, day = parse_number(day), value = value / 10)  
+clima_vars <- arrange(clima_vars, id, year, month, day)
+head(clima_vars)
+```
+
+**Pregunta:** ¿Qué hacen las funciones `mutate` y `arrange`?
+
+Lo anterior se puede escribir más fácil utilizando el equivalente de la pipa de bash (`|` recuerda) para R, que es este: `%>%`. Esto no existe en R base, sino que depende del paquete `magrittr` (parte del tidyverse) por aquello de *Ceci n'est pas un pipe*. 
+
+Lo que hace `%>%`es tomar lo que está a la izquierda de la pipa y volverlo el primer argumento de la siguiente función. Por lo tanto en el ejemplo de abajo pasamos `clima_long` a `mutate` como si hubieramos escrito `mutate(data=clima_long...)` y así para `arrange` también. Nota que cuando usamos `%>%`no es necesario especificar `data=` dentro de la siguietne función.
+
+
+```{r}
+clima_vars <- clima_long %>% 
+  mutate(day = parse_number(day), value = value / 10)  %>%
+  arrange(id, year, month, day)
+head(clima_vars)
+```
+
+
+Finalmente, la columna *element* no es una variable, sino que almacena el nombre 
+de dos variables (Tmax y Tmin), la operación que debemos aplicar es`spread`, que es el inverso de 
+`gather`:
+
+```{r}
+clima_tidy <- spread(clima_vars, element, value)
+head(clima_tidy)
+```
+
+**Ejercicio** utiliza `%>%` para repetir el ejercicio anterior sin crear "clima_" intermedios.
+
+
+####  Otras consideraciones
+En las buenas prácticas es importante tomar en cuenta los siguientes puntos:
+
+* Incluir un encabezado con el nombre de las variables.
+* Los nombres de las variables deben ser entendibles (e.g. TejidoMuestra es mejor
+que TeM).
+* En general los datos se deben guardar en un archivo por tabla.
+* Escribir un script con las modificaciones que se hicieron a los _datos crudos_ 
+(reproducibilidad).
+* Otros aspectos importantes en la _limpieza_ de datos son: selección del tipo de
+variables (por ejemplo fechas), datos faltantes, _typos_ (e.g. *Phhaseoulus*) y detección de valores atípicos (temp= 240 ºC en vez de 24.0)
+
