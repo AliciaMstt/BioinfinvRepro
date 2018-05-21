@@ -752,7 +752,7 @@ heatmap(as.matrix(data.prop.1), Rowv = as.dendrogram(row.clus),
         ylab = "Muestras", main = "Heatmap de Bacterias")
 ```
 y obtendremos un gráfico similar a éste
-![Heat]()
+![Heat](Prac_Uni7/HeatBact.png)
 
 
 ## Guardar imágenes:
