@@ -34,7 +34,7 @@ Erika Alejandra García Hernández [avance 1](https://github.com/EAlejandra/Proy
 
 Ernesto Samacá: [avance 1](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance1.md) [avance 2](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance2.md) [avance 3](https://github.com/esamacas/ProyectoFinalBioinf2018-II/blob/master/Avance3.md)
 
-Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md) [Avance2](https://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance2_GabrielaBorja.md)
+Gabriela Aridai Borja Martínez  [Avance 1](http://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance1.md) [Avance2](https://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance2_GabrielaBorja.md) [Avance3](https://github.com/AridaiHari/Proyecto-Final-BioInfo-2018_II/blob/master/Avance3_GabrielaBorja.md)
 
 Guadalupe Andraca Gómez [Avance 1](https://github.com/LupitaAndraca/ProyectoFinalBioinfo/blob/master/Avance1.md)
 
