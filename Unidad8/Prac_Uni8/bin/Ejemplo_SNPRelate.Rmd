@@ -1,6 +1,14 @@
 # Ejemplo análisis exploratorios genómica de poblaciones
 
 ## SNPRelate
+## Instalar (correr solo una vez, lo dejo comentado para su referencia)
+```{r}
+#source("http://bioconductor.org/biocLite.R")
+#biocLite("gdsfmt")
+#biocLite("SNPRelate")
+```
+
+
 ### Cargar paquetes que se utilizarán
 ```{r}
 library(SNPRelate)
@@ -72,9 +80,9 @@ tab <- data.frame(sample.id = pca$sample.id,
 head(tab)
 
 # Plot
-plot(tab$EV2, tab$EV1, 
-  xlab= paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"), # agregar % de varaición del componente al texto del eje
-  ylab= paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%"))
+ggplot(data = tab, aes(x=EV2, y=EV1)) + geom_point() +
+  ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +
+  xlab(paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"))
 
 ```
 
@@ -102,16 +110,30 @@ tab <- data.frame(sample.id = pca$sample.id,
 head(tab)
 
 # Plot
-plot(tab$EV2, tab$EV1, 
-  xlab= paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"), # agregar % de varaición del componente al texto del eje
-  ylab= paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%"))
+ggplot(data = tab, aes(x=EV2, y=EV1)) + geom_point() +
+  ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +
+  xlab(paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%"))
 
 ```
 
 
-Colorear PCA maíces por raza:
+**Ejercicio** Repite el PCA coloreando los maíces por raza. Pista:
 
 ```{r}
+# obtner info raza
+pop_code <- as.vector(fullmat$Raza) 
+
+# hacer pop_codes raza coincidan con samples
+tab <- data.frame(sample.id = pca$sample.id,
+    pop = factor(pop_code)[match(pca$sample.id, sample.id)],
+    EV1 = pca$eigenvect[,1],    # the first eigenvector
+    EV2 = pca$eigenvect[,2],    # the second eigenvector
+    stringsAsFactors = FALSE)
+head(tab)
+
+```
+
+```{r, echo = FALSE}
 
 ggplot(data = tab, aes(x=EV2, y=EV1, colour = pop)) + geom_point() +
   ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +

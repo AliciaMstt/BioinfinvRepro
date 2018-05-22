@@ -9,11 +9,8 @@ output: html_document
 
 library("hierfstat")
 
-#Ejemplo de datos
-data(gtrunchier)
-
 #cargar datos
-cocci <-read.delim("../data/cocci_silv.012", sep = "\t", header = FALSE, na.strings = -1)
+cocci <-read.delim("../data/ayocote/cocci_silv.012", sep = "\t", header = FALSE, na.strings = -1)
 #quitar primera columna
 cocci <- cocci[,-1]
 class(cocci)
@@ -66,7 +63,7 @@ for (i in 1:4) {
 
 #Unir datos
 stats <- cbind(Ho, Hs, Fis)
-write.table(stats, file = "../out/Het_grupo_gen.txt", row.names = Pob, col.names = c("Ho", "He", "Fis"))
+write.table(stats, file = "../data/ayocote/Het_grupo_gen.txt", row.names = Pob, col.names = c("Ho", "He", "Fis"))
 
 ```
 

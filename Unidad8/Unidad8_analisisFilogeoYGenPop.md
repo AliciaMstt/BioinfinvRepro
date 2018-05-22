@@ -124,57 +124,17 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 
 Como hemos visto, puede ser que hayas generado tus genotipos mapeando a un genoma de referencia o ensamblando *de novo*. En cualquier caso, el software que hayas utilizado deberá permitirte exportar tus datos a un formato estándar de genotipos, como plink o vcf. Estos formatos son además un programa en sí mismos que te permiten hacer diversos análisis de genética de poblaciones. Pero además también te permiten leer tus datos a R a través de diversos paquetes.
 
-Veremos algunos ejemplos.
-
-## PLINK
-
-[PLINK](https://www.cog-genomics.org/plink/1.9/) es un software de acceso libre muy usado porque permite realizar un amplio rango de análisis genómicos de forma relativamente rápida y sencilla.
-
-Dentro de los análisis que pueden hacerse usando PLINK, están:
-
-- Manejo y transformación de datos
-- Estimación de desequilibrio de ligamiento
-- Matriz de identidad por descendecia (IBD) e identidad por estado (IBS)
-- Asociación genómica
-
-
-Los dos formatos principales de PLINK son **ped** y **bed**, pero acepta formatos comúnmente usados con **vcf**.
-
-
-**Ejercicio:** Descarga e instala [PLINK](https://www.cog-genomics.org/plink/1.9/). Alternativamente, existe una [imagen de Docker para PLINK](https://hub.docker.com/r/gelog/plink/), por lo que puedes "instalarlo" con `docker pull gelog/plink`.
-
-Nota que hay dos versiones v1 (1.07) y v2 (1.9). La imagen de docker de arriba viene con ambas. Los ejemplos de abajo utilizan v 1.9.
-
-Echa un ojo a las funciones que puedes usar en el [manual](https://www.cog-genomics.org/plink/1.9/general_usage).
-
-En el directorio [Prac_Uni8/data](Prac_Uni8/data) encontrarás los archivos plink del set de datos ``cocci_silv``.
-
-Para conocer si cada uno de los loci del set de datos ``cocci_silv`` se encuentra en equilibrio HW, usaríamos este comando (asume tu WD es el directorio `bin`):
-
-``
-plink --file ../data/cocci_silv --hardy --out ../out/HW_cocci
-``
-
-Con el siguiente comando quitaré los loci que son indels y le pediré que el archivo resultante se encuentre en formato vcf.
-
-``
-plink --file ../data/cocci_silv --snps-only just-acgt -recode vcf --out
-``
-
-**Ejercicio:** Estima el desequilibro de ligamiento en términos de r<sup>2</sup>. Posteriormente, quédate con aquellos SNPs cuya r<sup>2</sup> < 0.2. El archo resultante debe llamarse `/data/cocci_silv_filt.bed`
-
+En una unidad previa ya habíamos visto [cómo se ven estos formatos](https://github.com/AliciaMstt/BioinfinvRepro/blob/master/Unidad6/Unidad_6_Datos_y_an%C3%A1lisis_utilizados_en_bioinform%C3%A1tica%20.md) y un ejemplo de vcf con datos de lobos ¿recuerdas?.
 
 ## SNPRelate
 
-[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html) y Vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni8/bin/Ejemplo_SNPRelate.html).
-
-
+[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.Rmd) y Vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni8/bin/Ejemplo_SNPRelate.html).
 
 ## Hierfstat
 
 [SnpStats](https://bioconductor.org/packages/release/bioc/html/snpStats.html) es otro paquete de BioConductor muy útil, que nos permite calcular Fst y otros estadísticos de genética de poblaciones.
 
-Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni8/bin/Hierfstat_cocci.html).
+Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni8/bin/Hierfstat_cocci.Rmd).
 
 
 ## Admixture
@@ -184,46 +144,45 @@ Herramienta que permite estimar la ancestría de individuos a partir de un set d
 
 **Ejercicio:** Descarga el ejecutable y el manual de Admixture. No es necesario instalarlo, solo con que el ejecutable esté en tu WD puedes correrlo. Revisa el manual ¿Qué tipo de archivo es el input de Admixture?
 
-Veamos un ejemplo de cómo correr Admixture con el set de datos de `cocci_silv`.
+Veamos un ejemplo de cómo correr Admixture con el set de datos de maíces.  
+
 
 ```
 mkdir -p ../data/admixture
 for K in 1 2 3 4 5; \
-do ./admixture --cv ../data/cocci_silv.bed $K | tee ../data/admixture/log${K}.out;
+do ./admixture --cv ../data/maices/maicesArtegaetal2015.bed $K | tee ../data/admixture/log${K}.out;
 done
 ```
+
+**Pregunta** ¿Qué hace el comando `tee` en el código de arriba?
+
+Nota que Admixture guarda parte del output (archivos `*.Q` y `*.P` en el WD), para moverlos a data:
+
+```
+mv {*.P,*.Q} ../data/admixture/
+```
+
+(ojo, no hay espacio después de la `,`)
+
 Para guardar los resultados de versosimilitud en un archivo:
 
 ```
-grep -h CV ../data/admixture/log*.out > ../data/admixture/coccineus_Kerror.txt
+grep -h CV ../data/admixture/log*.out > ../data/admixture/maices_Kerror.txt
 ```
 
 Vamos a graficar en R el resultado. ¿Qué valor de K elegirías para este set de datos?
 
-```
+```{r}
 library(ggplot2)
 
 ###Estimación de error con distintas k
-k.error<- read.delim("../data/admixture/coccineus_Kerror.txt", header = F, sep = ":")
+k.error<- read.delim("../data/admixture/maices_Kerror.txt", header = F, sep = ":")
 rownames(k.error)<- c("k=1", "k=2", "k=3", "k=4", "k=5")
 
 #plot error de K
 e.plot<- ggplot(data=k.error, aes(x=1:7, y=V2)) + geom_point() + geom_line()
 e.plot + xlab("k") + ylab("Error")
 
-###Datos Poblaciones
-meta<- read.delim("../meta/cocci_wild_meta.csv", sep = ",")
-pop<- meta$Poblacion
-
-###Datos admixture
-admix.4<- read.delim("../bin/cocci_silv.4.Q", sep = " ", header = F)
-cocci.admix.4 <- cbind(pop, admix.4) #Unir datos admixture con poblacion
-
-##### PLOTS #####
-mis.col <- palette(c("#edad2f", "#774ddd", "#bc0021", "#2cb25d"))
-
-##Plot admixture K=4
-barplot(t(as.matrix(cocci.admix.4[,2:5])), col= mis.col, names.arg = cocci.admix.4$pop, las=2, cex.names = .5,
-       ylab="Ancestría", border=NA, cex.axis = 1.5, axisnames = T)
-
 ```
+
+**Ejercicio** Realiza un plot del admixture con la K optima.
