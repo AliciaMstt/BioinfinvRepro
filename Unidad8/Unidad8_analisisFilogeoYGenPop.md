@@ -165,7 +165,10 @@ Maria y Emiliano usaron Stacks en sus proyectos finales. María pretende evaluar
 
 **Equipo 6**
 
-*
+* diversity es un paquete que estima parametros genetico poblacionales y estima errores asociados y otros datos (https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12067)
+
+* assignpop es un paquete para asignar individuos a poblaciones con datos genomicos y otros (https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12897)
+ 
 
 
 # 8.5. Ejemplos de análisis básicos de genética de poblaciones
