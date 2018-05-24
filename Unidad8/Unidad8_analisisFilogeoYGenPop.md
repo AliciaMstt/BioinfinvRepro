@@ -125,21 +125,27 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 (has un pull request para agregar de 1 a 3 softwares en la lista de abajo, incluye el nombre, para qué sirve en súper resumen (una o dos líneas máximo y el link a su manual o página)
 
 **Equipo 1**
+
 *
 
 **Equipo 2**
+
 *
 
 **Equipo 3**
+
 *
 
 **Equipo 4**
+
 *
 
 **Equipo 5**
+
 *
 
 **Equipo 6**
+
 *
 
 
