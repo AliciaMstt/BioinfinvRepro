@@ -155,7 +155,8 @@ Maria y Emiliano usaron Stacks en sus proyectos finales. María pretende evaluar
 
 **Equipo 5**
 
-*
+* SNPHYLO es un conducto que utiliza dos paquetes de bioconductor: gdsfmt y SNPrelate y adicionalmente muscle para el alineamiento y phylip para ML. Construye árboles de ML a partir de una reducción de SNPs informativos.  
++http://chibba.pgml.uga.edu/snphylo/
 
 **Equipo 6**
 
