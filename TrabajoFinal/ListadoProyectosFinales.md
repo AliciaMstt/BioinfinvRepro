@@ -52,7 +52,7 @@ María Chavarria [Avance 1](https://github.com/marialadelbarrio/ProyectoFinalBio
 
 María José Monteverde Suárez: [avance 1](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/bin/Primer%20avance.md), [avance 2](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/bin/Segundo%20avance.md), [avance 3](https://github.com/MajoMonteverde/ProyectoFinalBioinf2018-II/blob/master/bin/Tercer%20avance.md)
 
-Mariette Viladomat Jasso: [avance 1](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Primer_Avance_Mariette.md), [avance 2](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Segundo_Avance_Mariette.md)
+Mariette Viladomat Jasso: [avance 1](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Primer_Avance_Mariette.md), [avance 2](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Segundo_Avance_Mariette.md) y [avance 3](https://github.com/Mariette-VJ/TrabajoFinal_BioInvRepro_Mariette/blob/master/PF_Tercer_Avance_Mariette.Rmd)
 
 Melania Andrea Vega Angeles
 
