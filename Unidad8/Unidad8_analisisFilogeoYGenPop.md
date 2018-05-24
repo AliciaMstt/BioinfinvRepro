@@ -126,7 +126,7 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 
 **Equipo 1**
 
-*
+*https://github.com/MajoMonteverde/Tareas_Curso_BioinfInvRepro-1/blob/master/ejercicouni8.md
 
 **Equipo 2**
 
