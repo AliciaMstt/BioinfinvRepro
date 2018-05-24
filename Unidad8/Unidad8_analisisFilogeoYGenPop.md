@@ -134,7 +134,9 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 
 **Equipo 3**
 
-*
+1. [EdgeR paquete de Bioconductor para análisis de expresión diferencial de genes cuando tenemos replicas biológicas](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+2. [DESeq paquete de Bioconductor para análisis de expresión diferencial utilizando un modelo binomial negativo, sin réplicas biológicas](https://www.bioconductor.org/packages/release/bioc/html/DESeq.html).
+3. [RSEM paquete para estimación de isoformas y niveles de expresión de genes a partir de datos de RNA-seq ](http://deweylab.biostat.wisc.edu/rsem/README.html)
 
 **Equipo 4**
 
