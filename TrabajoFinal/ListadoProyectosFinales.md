@@ -56,7 +56,7 @@ Mariette Viladomat Jasso: [avance 1](https://github.com/Mariette-VJ/TrabajoFinal
 
 Melania Andrea Vega Angeles
 
-Miguel Ángel Espinoza Camacho [avance 1](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/PROYECTO_FINAL_MIGUEL%20ANGEL%20ESPINOZA%20CAMACHO.md),  [avance 2](https://github.com/mike9999999/ProyectoFinalBioinf2018-II)
+Miguel Ángel Espinoza Camacho [avance 1](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/PROYECTO_FINAL_MIGUEL%20ANGEL%20ESPINOZA%20CAMACHO.md),  [avance 2](https://github.com/mike9999999/ProyectoFinalBioinf2018-II), [avance 3](https://github.com/mike9999999/ProyectoFinalBioinf2018-II/blob/master/Avance%203%20Proyecto%20Final%20Miguel%20Angel%20Espinoza%20Camacho.md)
 
 Natalia Delgado Machuca [Avance 1](https://github.com/N-atalia/ProyectoFinalBioinf2018-II/blob/master/Trabajo%20Final%20.md)
 
