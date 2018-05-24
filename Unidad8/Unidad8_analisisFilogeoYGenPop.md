@@ -180,7 +180,7 @@ k.error<- read.delim("../data/admixture/maices_Kerror.txt", header = F, sep = ":
 rownames(k.error)<- c("k=1", "k=2", "k=3", "k=4", "k=5")
 
 #plot error de K
-e.plot<- ggplot(data=k.error, aes(x=1:7, y=V2)) + geom_point() + geom_line()
+e.plot<- ggplot(data=k.error, aes(x=1:5, y=V2)) + geom_point() + geom_line()
 e.plot + xlab("k") + ylab("Error")
 
 ```
