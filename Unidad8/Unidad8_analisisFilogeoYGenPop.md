@@ -124,22 +124,20 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 
 (has un pull request para agregar de 1 a 3 softwares en la lista de abajo, incluye el nombre, para qué sirve en súper resumen (una o dos líneas máximo y el link a su manual o página)
 
-**Equipo 1** Genética de poblaciones
-
-1. Stacks - análisis de genética de poblaciones. Está diseñada para utilizar datos generados a partir de métodos de NGS que utilizan enximas de restriccion (RADseq, GBS, etc.). Entre sus funciones más importantes iindentifica los loci en grupos de individuos, ya sea *de novo* o con un genoma de referencia y luego genotipifica cada locus.
-
-Maria y Emiliano usaron Stacks en sus proyectos finales. María pretende evaluar la estrucutra poblacional de *Scomperomorus concolor* (un pez) y comparrlo con otros estudios de marcadores tradicionales
-
-[Link al manual](http://catchenlab.life.illinois.edu/stacks/manual/)
-
-
-2. pcadapt - este paquete hace un escaneo del genoma para determinar si existen "snps" que se hayan fijado en las poblaciones debido a la acción de selección natural. Para esto, utiliza un método estadístico basado en un análisis de componentes principales (CPA) para determinar si existen "snps" que sean "outliers", es decir que se fijaron en diferentes poblaciones. 
-
-[Link al manual](https://github.com/bcm-uga/pcadapt)
-
-**Equipo 2**
+**Equipo 1**
 
 *
+
+**Equipo 2**
+- Sushi
+Es un paquete para visualizar datos tipo ENCODE anotados sobre el genoma de referencia. [Sushi](https://bioconductor.org/packages/release/bioc/vignettes/Sushi/inst/doc/Sushi.pdf)
+
+- LIMA
+Es un paquete que permite generar análisis estadisticos de tipo lineales para contrastes de grupos en datos de expresión. [LIMA](https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/intro.pdf)
+
+- RSAMSTOOLS
+Es un paquete que te ayuda a trabajar con archivos tipo BAM y realizas alineamientos. [RSAMSTOOLS](https://bioconductor.org/packages/release/bioc/vignettes/Rsamtools/inst/doc/Rsamtools-Overview.pdf)
+
 
 **Equipo 3**
 
@@ -153,7 +151,8 @@ Maria y Emiliano usaron Stacks en sus proyectos finales. María pretende evaluar
 
 **Equipo 5**
 
-*
+*SNPHYLO es un conducto que utiliza dos paquetes de bioconductor: gdsfmt y SNPrelate y adicionalmente muscle para el alineamiento y phylip para ML. Construye árboles de ML a partir de una reducción de SNPs informativos.  
+http://chibba.pgml.uga.edu/snphylo/
 
 **Equipo 6**
 
