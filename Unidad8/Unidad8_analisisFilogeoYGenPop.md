@@ -120,6 +120,13 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 **Ejercicio 3** hagan equipos conforme a su tipo de datos y/o tema de investigación y discutan los paquetes que encontraron. Enlisten y describan para qué utilizarían los 2 que consideren más útiles. Hagan un pull resquest (por equipo) para actualizar este .md del repositorio en la parte de abajo ("Resultados ejercicio software interesante por equipos").
 
 
+### Resultados ejercicio software interesante por equipos:
+
+(has un pull request para agregar de 1 a 3 softwares en la lista de abajo, incluye el nombre, para qué sirve en súper resumen (una o dos líneas máximo y el link a su manual o página)
+
+* 
+
+
 # 8.5. Ejemplos de análisis básicos de genética de poblaciones
 
 Como hemos visto, puede ser que hayas generado tus genotipos mapeando a un genoma de referencia o ensamblando *de novo*. En cualquier caso, el software que hayas utilizado deberá permitirte exportar tus datos a un formato estándar de genotipos, como plink o vcf. Estos formatos son además un programa en sí mismos que te permiten hacer diversos análisis de genética de poblaciones. Pero además también te permiten leer tus datos a R a través de diversos paquetes.
