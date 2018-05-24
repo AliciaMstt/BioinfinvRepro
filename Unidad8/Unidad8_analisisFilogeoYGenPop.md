@@ -129,8 +129,15 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 *
 
 **Equipo 2**
+- Sushi
+Es un paquete para visualizar datos tipo ENCODE anotados sobre el genoma de referencia. [Sushi](https://bioconductor.org/packages/release/bioc/vignettes/Sushi/inst/doc/Sushi.pdf)
 
-*
+- LIMA
+Es un paquete que permite generar análisis estadisticos de tipo lineales para contrastes de grupos en datos de expresión. [LIMA](https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/intro.pdf)
+
+- RSAMSTOOLS
+Es un paquete que te ayuda a trabajar con archivos tipo BAM y realizas alineamientos. [RSAMSTOOLS](https://bioconductor.org/packages/release/bioc/vignettes/Rsamtools/inst/doc/Rsamtools-Overview.pdf)
+
 
 **Equipo 3**
 
