@@ -120,6 +120,57 @@ Menciona cada paquete que elegiste y describe con tus propias palabras qué hace
 **Ejercicio 3** hagan equipos conforme a su tipo de datos y/o tema de investigación y discutan los paquetes que encontraron. Enlisten y describan para qué utilizarían los 2 que consideren más útiles. Hagan un pull resquest (por equipo) para actualizar este .md del repositorio en la parte de abajo ("Resultados ejercicio software interesante por equipos").
 
 
+### Resultados ejercicio software interesante por equipos:
+
+(has un pull request para agregar de 1 a 3 softwares en la lista de abajo, incluye el nombre, para qué sirve en súper resumen (una o dos líneas máximo y el link a su manual o página)
+
+**Equipo 1** Genética de poblaciones
+
+1. Stacks - análisis de genética de poblaciones. Está diseñada para utilizar datos generados a partir de métodos de NGS que utilizan enximas de restriccion (RADseq, GBS, etc.). Entre sus funciones más importantes iindentifica los loci en grupos de individuos, ya sea *de novo* o con un genoma de referencia y luego genotipifica cada locus.
+
+Maria y Emiliano usaron Stacks en sus proyectos finales. María pretende evaluar la estrucutra poblacional de *Scomperomorus concolor* (un pez) y comparrlo con otros estudios de marcadores tradicionales
+
+[Link al manual](http://catchenlab.life.illinois.edu/stacks/manual/)
+
+
+2. pcadapt - este paquete hace un escaneo del genoma para determinar si existen "snps" que se hayan fijado en las poblaciones debido a la acción de selección natural. Para esto, utiliza un método estadístico basado en un análisis de componentes principales (CPA) para determinar si existen "snps" que sean "outliers", es decir que se fijaron en diferentes poblaciones. 
+
+[Link al manual](https://github.com/bcm-uga/pcadapt)
+
+**Equipo 2**
+
+* Sushi Es un paquete para visualizar datos tipo ENCODE anotados sobre el genoma de referencia. [Sushi](https://bioconductor.org/packages/release/bioc/vignettes/Sushi/inst/doc/Sushi.pdf)
+
+* LIMA Es un paquete que permite generar análisis estadisticos de tipo lineales para contrastes de grupos en datos de expresión. [LIMA](https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/intro.pdf)
+ 
+* RSAMSTOOLS Es un paquete que te ayuda a trabajar con archivos tipo BAM y realizas alineamientos. [RSAMSTOOLS](https://bioconductor.org/packages/release/bioc/vignettes/Rsamtools/inst/doc/Rsamtools-Overview.pdf)
+
+
+**Equipo 3**
+
+1. [EdgeR paquete de Bioconductor para análisis de expresión diferencial de genes cuando tenemos replicas biológicas](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html)
+2. [DESeq paquete de Bioconductor para análisis de expresión diferencial utilizando un modelo binomial negativo, sin réplicas biológicas](https://www.bioconductor.org/packages/release/bioc/html/DESeq.html).
+3. [RSEM paquete para estimación de isoformas y niveles de expresión de genes a partir de datos de RNA-seq ](http://deweylab.biostat.wisc.edu/rsem/README.html)
+
+**Equipo 4**
+
+* **methylkit.** Es un programa de R que está en Bioconductor, y es utilizado para el análisis y anotación del DNA metilado producto de secuenciación masiva. Está diseñado principalmente para datos de RRBS (Reduced representation bisulfite sequencing), pero también funciona para whole genome bilsulfite sequencing y métodos de captura dirigida (target-capture methods). El link al programa y al manual es [éste](https://bioconductor.org/packages/release/bioc/html/methylKit.html).
+
+* **QIIME**. Es un programa para analizar secuencias de 16S rRNA. Las secuencias 16S son asignadas a unidades taxonómicas operacionales basadas en el porcentaje de similitud entre las secuencias comparadas. El link es [éste](www.qiime.org).
+
+**Equipo 5**
+
+* SNPHYLO es un conducto que utiliza dos paquetes de bioconductor: gdsfmt y SNPrelate y adicionalmente muscle para el alineamiento y phylip para ML. Construye árboles de ML a partir de una reducción de SNPs informativos.  
++http://chibba.pgml.uga.edu/snphylo/
+
+**Equipo 6**
+
+* diversity es un paquete que estima parametros genetico poblacionales y estima errores asociados y otros datos (https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12067)
+
+* assignpop es un paquete para asignar individuos a poblaciones con datos genomicos y otros (https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12897)
+ 
+
+
 # 8.5. Ejemplos de análisis básicos de genética de poblaciones
 
 Como hemos visto, puede ser que hayas generado tus genotipos mapeando a un genoma de referencia o ensamblando *de novo*. En cualquier caso, el software que hayas utilizado deberá permitirte exportar tus datos a un formato estándar de genotipos, como plink o vcf. Estos formatos son además un programa en sí mismos que te permiten hacer diversos análisis de genética de poblaciones. Pero además también te permiten leer tus datos a R a través de diversos paquetes.
@@ -180,7 +231,7 @@ k.error<- read.delim("../data/admixture/maices_Kerror.txt", header = F, sep = ":
 rownames(k.error)<- c("k=1", "k=2", "k=3", "k=4", "k=5")
 
 #plot error de K
-e.plot<- ggplot(data=k.error, aes(x=1:7, y=V2)) + geom_point() + geom_line()
+e.plot<- ggplot(data=k.error, aes(x=1:5, y=V2)) + geom_point() + geom_line()
 e.plot + xlab("k") + ylab("Error")
 
 ```
