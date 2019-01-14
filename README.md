@@ -155,12 +155,14 @@ Algunos ejemplos:
 
 * **¿Necesito instalar algo más? Sí**
      1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
-         * Mac: [TextWrangler](http://download.cnet.com/TextWrangler/3000-2351_4-10220012.html) o [Fraise](http://www.macupdate.com/app/mac/33751/fraise)
-         * GNU/Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
-     2. Un editor de Markdown. Listo para la Unidad 6, mejor si desde antes. Recomendaciones:    
+         * Mac o Linux: [Atom](https://atom.io/)
+         * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
+     2. Un editor de Markdown    
          * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * Linux: [Haroopad](http://pad.haroopress.com/)
+         * Mac o Linux: [Haroopad](http://pad.haroopress.com/)
      3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+También necesitas abrir una **cuenta de Github**
 
  **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
      
