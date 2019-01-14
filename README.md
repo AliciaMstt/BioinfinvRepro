@@ -3,11 +3,19 @@
 # Introducción a la bioinformática e investigación reproducible para análisis genéticos
 
 
-[![Join the chat at https://gitter.im/BioinfinvRepro2018-II/Lobby](https://badges.gitter.im/BioinfinvRepro2018-II/Lobby.svg)](https://gitter.im/BioinfinvRepro2018-II/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/Bioinfo_Mx-Cl/community](https://badges.gitter.im/Bioinfo_Mx-Cl.svg)](https://gitter.im/Bioinfo_Mx-Cl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Este es el repositorio de apuntes y código del curso **Introducción a la bioinformática e investigación reproducible para análisis genéticos** del **semestre 2019-II**, brindado por la profesora [Alicia Mastretta Yanes](www.mastrettayanes-lab.org).
+Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
-Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México. 
+INSTRUCTORES:
+
+**Alicia Mastretta Yanes**, PhD.,
+Catedrática CONACYT-CONABIO,
+[www.mastrettayanes-lab.org](www.mastrettayanes-lab.org
+)
+
+**Ricardo Verdugo Salgado**, PhD.,
+Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
 Los materiales aquí presentados son de acceso libre. 
 
@@ -47,6 +55,90 @@ Algunos ejemplos:
 
 
 ## Temario
+
+#### Unidad 1 Introducción a la programación
+* Código en computación
+* Cómo buscar ayuda (permanentemente)
+* Introducción a la consola y línea de comando de bash y R
+* Introducción a los Scripts
+* Funciones básicas de navegación y manejo de archivos con bash
+* Funciones básicas de exploración de archivos con bash
+* Redirección con bash
+* Loops con bash
+
+#### Unidad 2 Organización de un proyecto bioinformático
+* Documentación de scripts y del proyecto
+* Markdown
+* git
+* Manejo de proyectos e issues en Github
+* Creación de pipelines
+
+#### Unidad 3 Introducción a R con un enfoque bioinformático
+* R y RStudio
+* Funciones básicas de R más importantes para bioinformática
+* Funciones propias: crear funciones y utilizarlas con source
+* Rmarkdown y R Notebook
+* Manipulación y limpieza de datos en R
+* Graficar en R
+
+#### Unidad 4 Introducción al software especializado
+* Utilidad de software especializado
+* Documentación de software especializado
+* El problema de las versiones y OS para la reproducibilidad
+* Docker
+
+#### Unidad 5 Genética de poblaciones con software especializado
+* Formatos VCF-tools y plink
+* Paquetes de R
+* Filtrado de individuos y datos perdidos
+* PCA exploratorios
+* Análisis básicos de diversidad y diferenciación genética
+
+#### Trabajo en casa en proyectos finales y tareas
+ Se dará seguimiento online al proyecto final con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
+ 
+#### Unidad 6 Introducción a la genómica y secuenciación de siguiente generación
+* Genomas: estructura y evolución
+* Proyectos de secuenciación genómica
+* Bases de datos
+* Técnicas de secuenciación
+* Aplicación de acuerdo al problema de estudio
+* Análisis básicos de calidad y limpieza de datos crudos
+
+#### Unidad 7 Ensamblaje de genomas
+* Flujo de un proyecto de ensamblaje
+* Teoría de ensamble: grafos de De Bujin y comparativos 
+* Principales algoritmos y software (Celera, AllPaths, Soap, Velvet, etc)
+* Formatos de archivos de datos
+* Métricas
+* BLAST, modelos de genes
+* Algoritmos comparativos y estadísticos de marcación
+
+#### Unidad 8 Resecuenciación de genomas
+* Llamado de variantes
+* Predicción funcional de variantes
+* Interpretación y anotación de variantes
+
+#### Unidad 9 Ensamblaje de representación reducida de genomas
+* Metodologías de representación reducida de genomas (RAD, GBS, etc)
+* Ensamblaje de novo vs. sobre una referencia
+* Principales algoritmos y software (Stacks, pyRAD)
+* Uso de replicados para informar el ensamblaje
+* Primera inspección de los datos
+
+#### Unidad 10 Predicción estructural y funcional de Proteínas y ARNs
+* Conceptos básicos de bioinformática estructural
+* Predicción de la estructura secundaria de proteínas
+* Predicción de la estructura secundaria de ARN
+* Predicción de interacciones moleculares (docking)
+* Predicción de efectos funcionales, nociones
+ 
+#### Unidad 11 Análisis de expresión
+* Diseño experimental
+* Microarreglos
+* RNA-seq
+* Expresión diferecial
+* Clustering
 
 ## Dinámica del curso
 

@@ -263,7 +263,7 @@ grep ">" Chiropt/ranas.fasta
 
 **Observación**: una ventaja de los scripts es que nos permiten tener en un solo documento *varios* comandos que se utilizaron para hacer algo, es decir, conforme se complican los análisis necesitamos más de una línea de comando para realizarlos.
 
-Si haces los análisis de tu trabajo en la terminal sin tenerlos en un script es como platicar la introducción de tu tesis sin haberla escrito nunca. Considera el correr comandos en la terminal como una **prueba** y ya que todo funcione, pon todos los comandos juntos en **uno más scripts docuemntados** y deja que corra el análisis de principio a fin solito (veremos adelante cómo).
+Si haces los análisis de tu trabajo en la terminal sin tenerlos en un script es como platicar la introducción de tu tesis sin haberla escrito nunca. Considera el correr comandos en la terminal como una **prueba** y ya que todo funcione, pon todos los comandos juntos en **uno más scripts documentados** y deja que corra el análisis de principio a fin solito (veremos adelante cómo).
 
 
 Editores de texto recomendados:
@@ -325,7 +325,7 @@ Podemos correr este script con `bash` como antes. Sin embargo, si **hacemos el a
 
 ### Hacer ejecutable el archivo
 
-`ls -l` nos da información extendida de los archivos, incluyendo los *permisos*.
+`ls -l` nos enlista los archivos (`ls`) y la banera `-l`) nos da información extendida cada archivo, incluyendo los *permisos*.
 
 Por ejemplo: 
 
@@ -363,8 +363,6 @@ $ ./getsecsNCBI.sh
 **Ojo:** hay un `./` antes del nombre del script, esto sirve para decirle dónde está dicho script, ya que por default la Terminal busca los comandos en los directorios enlistados en tu PATH (`echo $PATH`) para saber cuales son. 
 
 **Comentario:** si tienes una serie de scripts que usas mucho, vale la pena ponerlos todos juntos en una carpeta y volver a esta carpeta parte de tu PATH. Checa el Capítulo 6 de Haddock & Dunn (2011) para cómo.
-
-
 
 
  
