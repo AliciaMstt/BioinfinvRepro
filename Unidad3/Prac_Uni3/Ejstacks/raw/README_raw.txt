@@ -1,1 +1,0 @@
-Aquí irían tus secuencias crudas antes de ser analizadas por Stacks

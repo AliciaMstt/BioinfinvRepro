@@ -1,1 +1,0 @@
-Aquí iría el output de correr populations con todas las poblaciones y sin ningún filtro de número de individuos
