@@ -155,9 +155,12 @@ Type 'q()' to quit R.
 
 > 1+1
 [1] 2
+> quit()
 ```
 
-R también tiene su propia terminal. Sin embargo, nosotros ocuparemos RStudio, que es una interfaz visual con varias funcionalidades útiles e intuitivas.
+Con `quit()` salgo de la Terminal de R y vuelvo a la Terminal de bash.
+
+R también tiene su propia terminal (lo que sale cuando abres R via su ícono). Sin embargo, nosotros ocuparemos RStudio, que es una interfaz visual que integra la terminal de R con varias funcionalidades útiles e intuitivas.
 
  
 ## Introducción a los Scripts
@@ -185,6 +188,7 @@ Para que la computadora distinga entre el código y los comentarios para humanos
 
 Por ejemplo, el texto siguiente es un estracto de un script para correr Admixture:
 
+
 ```
 #### Admixture
 
@@ -207,6 +211,9 @@ grep -h CV log*.out
 cd ../../../../bin
 
 ```
+
+El script completo está en un **archivo de texto** llamado [example_script_runadmixture.sh](./Prac_Uni1/example_script_runadmixture.sh)
+
 
 ### Cómo hacer un script
 
