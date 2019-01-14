@@ -1,14 +1,51 @@
-# Unidad 2 Introducción a Unix Shell
+# Unidad 1: Introducción a la programación
 
-UNIX es un *sistema operativo* (OS en inglés) es decir el conjunto de programas que controlan las funciones básicas de una compu (agendar tareas, ejecutar aplicaciones y controlar cosas como teclados y micrófonos). UNIX fue desarrollado en la década de 1960 y sigue vivo. No cualquier tecnología puede decir eso. Hay muchos systemas UNIX, los más conocidos son Sun Solaris, GNU/Linux y MacOS X, también los teléfonos Android están basados en UNIX.
 
-Los sistemas UNIX se caracterizan por tener un sistema de archivos unifocado  y un lenguaje de línea de comando (lo veremos abajo) que combinados pueden hacer operaciones muy complejas. Esto los hace muy poderosos y flexibles, por eso muchos desarrolladores eligen esta familia de OS para hacer software en ciencia. En UNIX [una palabra vale más que mil clicks](http://matt.might.net/articles/basic-unix/).
+## Código en computación
 
-Los sistemas UNIX también pueden tener una interfaz gráfica, como en Mac, Ubuntu y Biolinux, que son una forma de Linux.  Sin embargo, además de la interfaz gráfica una también puede seguir utilizando la poderosa línea de comando. Windows está construído de otra forma por completo, y por eso es mucho más difícil traducir los programas a ese OS.
+* Instrucciones escritas **para una computadora** en un **lenguaje de cómputo**   
+* Paso por paso hasta una solución.
+* El código puede ser muy largo y formar un programa (**software**) entero o de una sóla línea para realizar una única operación.
+* Escribir código para que lo ejecuten las computadoras y **comentado** para seres humanos.
 
-Los sistemas UNIX están formados por el *kernel*, los *programas* y la *terminal*, también llamada *consola* o *shell*. El kernel determina el tiempo y memoria que podrá usar cada programa, además de que maneja el sistema de archivos y la comunicación en respuesta a llamadas al sistema. Un programa es un conjunto de comandos que el kernel puede ejecutar. Cuando un programa está siendo ejecutado ("está corriendo") se llama proceso. A través de la consola es que podemos interactuar con el kernel y decirle qué hacer.
 
-## 2.1. Introducción a la Consola y Línea de Comando
+## Cómo buscar ayuda (permanentemente)
+
+Una *habilidad* indispensable en bioinformática
+
+El objetivo de esta clase no es darte un manual completo para resolver cualquier cuestión bioinformática, sino darte las habilidades y herramientas para que llegues por tí misma a las soluciones. Para esto hay una habilidad indispensable: **buscar ayuda en internet**. La enorme mayoría de las preguntas que te hagas sobre bioinformática y programación en general, sobre todo al principio, **son las mismas dudas que tuvieron otros antes** y, casi seguro **las respuestas ya están en algún lugar del internet**. Y si nadie a escrito con tu duda, puedes preguntar. 
+
+Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resultados si haces la búsqueda correcta en internet. De hecho, a veces parte de la tarea será que *se te ocurra cómo buscar* la solución en internet. Esto está perfectamente bien y es muuuy distinto a copiarle a un compañero. Saber buscar ayuda e información en interent es una habilidad básica del siglo XXI. 
+
+Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. Se vale tener una *Mente extendida* llamada internet:
+
+![Extended Mind](https://imgs.xkcd.com/comics/extended_mind.png)
+
+
+* Google o Duckgogo o el motor de búsqueda que uses.
+
+* [Stacksoverflow](https://stackoverflow.com/): es un foro de ayuda para programación en general, viene dividido por lenguajes. La gente hace preguntas y contesta. Es como un yahoo answers super pro, lxs programadorxs con muchas preguntas respondidas ganan puntos que son algo muy visible para un CV con ese perfil. Este foro es mejor para dudas de bash, R, python y no de programas genéticos.
+
+* [Biostars](https://www.biostars.org/) es parecido a Stacksoverflow un foro de ayuda especializado en Bioinformática. Aquí sí puedes hacer preguntas enfocadas en datos y software genético, por ejemplo cómo mover de un formato de genomas a otro.
+
+* Grupos de usuarios de un software. Por ejemplo [este de Stacks](https://groups.google.com/forum/#!forum/stacks-users). Son ideales para aclarar detalles específicos y mensajes de error de **ese** software (ie, no de dudas de cómo usar la línea de comando). La comunidad es súper chida y muchas veces lxs autores del software son quiénes responden. 
+
+
+**Tips sobre cómo pedir/buscar ayuda**
+
+* Busca en inglés
+
+* Piensa bien cuáles son las **palabras clave de tu pregunta** y cómo **generalizar** tu caso a algo que cualquiera entienda y que no sea específico a tu computadora. Por ejemplo "How to list files in a directory using the Terminal?" es mucho mejor mejor que "which files are in Manzanas" (tu y yo sabemos que Manzanas es un directorio, pero no el mundo).
+
+* Si vas a pedir ayuda en un foro, lee las reglas y tipo de preguntas atentidas por el foro antes de preguntar. 
+
+* Sigue estas recomendaciones de Stacksoverflow sobre [cómo redactar una buena pregunta](https://stackoverflow.com/help/how-to-ask)
+
+* Si recibes un mensaje de error en la Terminal, R, etc. Copia-pégalo a tu motor de búsqueda favorito.
+
+
+
+## Introducción a la consola y línea de comando de bash y R
 
 Vamos a abrir la terminal. Debe ser un ícono parecido a este. En Ubuntu debe estar por default en tu dock. Si no lo encuentras tanto en Mac como en Ubuntu prueba buscar "Terminal" o "Console".
 
@@ -71,6 +108,8 @@ hello world
 ``` 
  
 Para facilidad visual, de aquí en adelante utilizaremos la opción con el texto a partir de `$` (al menos que sea pertinente ver lo que hay antes). Este tipo de formato te lo encontrarás en diversos foros de ayuda, libros de textos y manuales.
+
+**Ojo** Se pone `$` solo para **distinguir** que lo que sigue es un comando que debes poner en la Terminal, por lo que **NO** debes copiar los comandos a tu terminal incluyendo el `$`.
  
 
 **Pregunta**: ¿Qué pasa si intentas correr el comando  `algo`?:
@@ -81,6 +120,8 @@ La terminal dirá:
 
 Que quiere decir que no existe el comando `algo`. 
 
+De igual forma si corres `$ date` (incluyendo el `$`) te dirá que no existe el comando `$`, aunque `date` sí sea un comando.
+
 
 La práctica hace al maestro. A continuación veremos algunos de los comandos básicos, pero para practicar más parte de la tarea será resolver los siguientes cursos prácticos:
 
@@ -88,8 +129,239 @@ La práctica hace al maestro. A continuación veremos algunos de los comandos b�
 
 * Adentrarse en el bosque con este [juego de bash](http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html).
 
+### La terminal de R
 
-## 2.2. Funciones básicas de navegación y manejo de archivos y directorios
+`R` es un programa que funciona con la línea de comando y por lo tanto puede correrse desde la terminal de varias formas o en su propia terminal.
+
+```{bash}
+$ R
+R version 3.2.2 (2015-08-14) -- "Fire Safety"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 1+1
+[1] 2
+```
+
+R también tiene su propia terminal. Sin embargo, nosotros ocuparemos RStudio, que es una interfaz visual con varias funcionalidades útiles e intuitivas.
+
+ 
+## Introducción a los Scripts
+
+Un **script** es un archivo de nuestros análisis que es:
+
+* un **archivo de texto plano** (¡¡NO WORD!!)
+* permanente,
+* repetible,
+* anotado,
+* compartible 
+
+En otras palabras, un script es una recopilación por escrito de las instrucciones que queremos que la computadora corra, de modo que al tener esas instrucciones cualquiera pueda repetir el análisis tal cual se hizo. 
+
+El script consta de dos tipos de texto: 
+
+**1.** El **código** (comandos) que queremos que se ejecute, en el órden que queremos que lo ejecute.
+
+Es decir lo mismo que escribiríamos en la Terminal para hacer un análisis, pero guardado en un archivo de texto que tiene todos los comandos juntos y que podemos abrir para **repetir** o **compartir** el análisis.
+
+**2.** Comentarios escritos **para un ser humano** en un **lenguaje de humanos**, dígase no solo en español, sino que nos permita entender qué hace el código, qué tipo de información requiere y cualquier otra cosa que una persona cualquiera necesite para poder utilizar el código del script de forma correcta.
+
+
+Para que la computadora distinga entre el código y los comentarios para humanos se utiliza el símbolo `#`. Todo el texto a la *derecha* del símbolo `#` será ignorado por la computadora, aunque sí "se imprima" en la Consola. 
+
+Por ejemplo, el texto siguiente es un estracto de un script para correr Admixture:
+
+```
+#### Admixture
+
+## For Juniperus
+mkdir -p ../genetic/JmINGP/out.noreplicates/popstructure
+cd ../genetic/JmINGP/out.noreplicates/popstructure
+
+# recode plink to needed formats
+cp ../batch_1.plink.* ./
+plink --file batch_1.plink --maf 0.05 --geno .2 --make-bed --out batch_1.plink --noweb --allow-no-sex
+
+# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value 
+for K in 1 2 3 4 5 6 7 8 9 10 11 12 13;
+do ../../../../bin/admixture --cv batch_1.plink.bed  $K -j4  -s 21 | tee log${K}.out; done
+
+# Check CV
+grep -h CV log*.out
+
+# back to bin
+cd ../../../../bin
+
+```
+
+### Cómo hacer un script
+
+Ya hemos visto que un script es un archivo de texto con código y comentarios. Esta es una generalidad cierta para cualquier lenguaje de programación (aunque los comentarios no son obligatorios se recomienda mucho).
+
+Sin embargo los scripts que corremos desde la Terminal Unix, es decir scripts de *Bash* o *Shell* requiren de 3 pasos para **convertirse en software**:
+
+1. Escribir los comandos a un archivo de texto (escribir el script).
+2. Indicarle al sistema operativo (computadora) que programa (lenguaje) debe utilizar para *interpretar* los comandos
+3. Darle al *archivo* los *permisos* que necesita para poder ser *ejecutado por Shell*.
+
+### Escribir el script
+
+Escribir un script es escribir en un **editor de texto** los comandos para resolver un problema, de preferencia comentando cada paso.
+
+Una buena forma de escribir un script es:
+
+1. Escribir el algoritmo, es decir los pasos que queremos hacer.
+2. Marcar dichos pasos como comentarios (recuerda el uso de `#` para indicar que el texto a su derecha es un comentario, no un comando).
+3. Escribir el código para hacer cada paso debajo del comentario correspondiente. 
+
+Ejemplo:
+
+* Algoritmo para guardar secuencias de *Chiropterotriton*
+ 
+```
+Definir secuencias a bajar desde NCBI
+Crear directorio para guardar datos
+Bajar datos al directorio deseado
+Revisar secuencias
+Fin
+```
+
+* Algoritmo + código para bajar secuencias de *Chiropterotriton*:
+
+```
+## Este script baja 3 secuencias de Chiropterotriton de NCBI
+# Crear directorio para guardar datos
+mkdir Chiropt
+
+# Bajar datos de NCBI 
+curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&id=937202862,937202860,937202858" > Chiropt/ranas.fasta
+
+# Revisar qué secuencias se bajaron
+grep ">" Chiropt/ranas.fasta
+```
+
+**Observación**: una ventaja de los scripts es que nos permiten tener en un solo documento *varios* comandos que se utilizaron para hacer algo, es decir, conforme se complican los análisis necesitamos más de una línea de comando para realizarlos.
+
+Si haces los análisis de tu trabajo en la terminal sin tenerlos en un script es como platicar la introducción de tu tesis sin haberla escrito nunca. Considera el correr comandos en la terminal como una **prueba** y ya que todo funcione, pon todos los comandos juntos en **uno más scripts docuemntados** y deja que corra el análisis de principio a fin solito (veremos adelante cómo).
+
+
+Editores de texto recomendados:
+
+* Mac y Linux (y hasta Windows): [Atom](https://atom.io/)
+* Linux: [Gedit](http://sourceforge.net/projects/gedit/)
+
+
+**NOTA IMPORTANTE**: el workingdirectory de un script siempre es el directorio donde está guardado dicho script. Entonces, es importante que si tu script va a manejar directorios (`cd` a algún lugar) lo planees todo con **rutas relativas** empezando en el directorio donde guardarás el script. ¿Dónde es un buen lugar para guardar el script? Lo veremos con detalle en otra unidad, pero en resumen el mejor lugar es en el mismo directorio que los datos, o en uno muy cercano.
+
+El ejemplo que vimos antes, abierto en un editor de texto se ve así:
+
+![egScript_noShebang.png](egScript_noShebang.png)
+
+La terminación `.sh` indica que es un archivo Shell (es decir el interpretador de la Terminal, equivalente a decir Bash, recordemos la Unidad 1). Y al darle esta terminación de archivo, o señalar el tipo de lenguaje en el menú de opciones, el editor de texto nos ayuda a leer el código coloreando los comandos, los flags, las variables y los comentarios.
+
+En este momento ya podemos correr nuestro script. Sólo hay que ir a la Terminal, `cd` al directorio donde esté nuestro script y utilizar el comando `bash`:
+
+```
+$ bash getsecsNCBI.sh 
+>gi|937202862|gb|KT820711.1| Chiropterotriton sp. SMR-2015b voucher MVZ:Herp:269665 cytochrome b (cytb) gene, partial cds; mitochondrial
+>gi|937202860|gb|KT820710.1| Chiropterotriton sp. SMR-2015a voucher IBH:28182 cytochrome b (cytb) gene, partial cds; mitochondrial
+>gi|937202858|gb|KT820709.1| Chiropterotriton sp. SMR-2015a voucher IBH:28178 cytochrome b (cytb) gene, partial cds; mitochondrial
+
+```
+
+`bash` es un comando que a su vez ejecuta comandos de un stdinput o de un archivo, en este caso nuestro script.
+
+Sin embargo este script **aún no está listo para ser un ejecutable**. La terminación `.sh` podría o podría no existir y a `bash` le daría lo mismo para correr el ejemplo anterior. Para hacer de nuestro script un ejecutable es necesario:
+
+### Indicar con qué programa *interpretar* el script: `#!`
+
+**`#!`** Se lee cómo "Shebang".
+
+Se pone en la **primera línea** de un script seguido del nombre (path) del programa (lenguaje, para bash `/bin/bash`) con el que está escrito el script, para indicarle a la computadora que debe interpretar el script en dicho lenguaje.
+
+Memotecnica: *She bangs* de Ricky Martin.
+
+**Ojo**: el shebang **no** es un comentario aunque empiece con `#`, pues en realidad el símbolo `#!` considera a los caracteres `#` y `!` juntos.
+
+
+Por ejemplo, para decir que estamos escribiendo un script de Bash que queremos correr en la Terminal la primera línea tendría que decir:
+
+```
+#!/bin/bash
+```
+Ejemplos en otros lenguajes:
+
+```
+#!/usr/bin/env python
+```
+
+Nuestro script entonces se verá así:
+
+![egScript_Shebang.png](egScript_Shebang.png)
+
+Podemos correr este script con `bash` como antes. Sin embargo, si **hacemos el archivo ejecutable** ya no será necesario ejecutarlo a través de bash, ya que será un *programa* por sí mismo.
+
+
+### Hacer ejecutable el archivo
+
+`ls -l` nos da información extendida de los archivos, incluyendo los *permisos*.
+
+Por ejemplo: 
+
+```
+$ ls -l 
+total 8
+drwxr-xr-x  3 ticatla  staff  102 13 Feb 23:09 Chiropt
+-rw-r--r--@ 1 ticatla  staff  350 13 Feb 23:05 getsecsNCBI.sh
+
+``` 
+
+Veamos cómo leerse (imagen cortesía de [aquí](https://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/AccessControls.html)):
+
+![permissions.png](permissions.png).
+
+`chmod` es el comando para cambiar estos permisos, lo cual nos permite volver un archivo ejecutable:
+
+```
+$ chmod u+x getsecsNCBI.sh
+$ ls -l
+total 8
+drwxr-xr-x  3 ticatla  staff  102 13 Feb 23:09 Chiropt
+-rwxr--r--@ 1 ticatla  staff  350 13 Feb 23:05 getsecsNCBI.sh
+```
+
+¿Notas que ahora dice -rwxr? La nueva x quiere decir que ahora el archivo es un ejecutable, para correrlo:
+
+```
+$ ./getsecsNCBI.sh
+>gi|937202862|gb|KT820711.1| Chiropterotriton sp. SMR-2015b voucher MVZ:Herp:269665 cytochrome b (cytb) gene, partial cds; mitochondrial
+>gi|937202860|gb|KT820710.1| Chiropterotriton sp. SMR-2015a voucher IBH:28182 cytochrome b (cytb) gene, partial cds; mitochondrial
+>gi|937202858|gb|KT820709.1| Chiropterotriton sp. SMR-2015a voucher IBH:28178 cytochrome b (cytb) gene, partial cds; mitochondrial
+```
+
+**Ojo:** hay un `./` antes del nombre del script, esto sirve para decirle dónde está dicho script, ya que por default la Terminal busca los comandos en los directorios enlistados en tu PATH (`echo $PATH`) para saber cuales son. 
+
+**Comentario:** si tienes una serie de scripts que usas mucho, vale la pena ponerlos todos juntos en una carpeta y volver a esta carpeta parte de tu PATH. Checa el Capítulo 6 de Haddock & Dunn (2011) para cómo.
+
+
+
+
+ 
+## Funciones básicas de navegación y manejo de archivos con bash
 
 Windows, Mac y las interfaces gráficas de Linux (como Ubuntu y Biolinux) tienen un sistema de archivos que estamos acostumbrados a explorar a través carpetas y subcarpetas que podemos ver en una ventana. Por ejemplo así:
 
@@ -427,8 +699,7 @@ drwxr-xr-x ticatla/staff     0 2016-02-03 08:11 Maiz/
 
 ![tar_xkcd.png](tar_xkcd.png)
 
-
-## Crear archivos desde la terminal
+### Crear archivos desde la terminal
 
 Es posible crear archivos de texto directamente desde la terminal utilizando programas como `vi` y `nano` o el comando `touch`. 
 
@@ -533,7 +804,7 @@ Más info:
 
 * Excelente explicación más profunda de `curl` y `wget` en el Capítulo 6 de Buffalo V (2015) Bioinformatics data skills.
 
-## Comodines o el uso de `*` `?` `[]` `{}` 
+### Comodines o el uso de `*` `?` `[]` `{}`
 
 Volvamos a ver el contenido de Maiz:
 
@@ -597,9 +868,8 @@ ejemplo_final.bed	nuevos_final.bed
 Hay más comodines, puedes explorarlos [aquí](http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm).
 
 
-
-
-## 2.3. Funciones básicas de exploración de archivos
+ 
+## Funciones básicas de exploración de archivos con bash
 
 ### `more`
 
@@ -906,78 +1176,11 @@ Es decir, básicamente es como copiar-pegar un archivo al final de otro.
 
 **Pregunta:** ¿Y si quisiéramos tener el resultado en un archivo nuevo?
 
-
-## 2.4. Redirección
-
-**Pregunta** ¿Qué son el Standar output y el Standar input?
-
-###  `>` y `>>` 
-
-Redirige el Standar output (*stdout*) a un archivo en vez de imprimirlo en pantalla.
-
-```
-$ cat nuevos_final.fam *log > catejemplo.txt
-$ ls
-catejemplo.txt		ejemplonano.txt		nuevos_final.fam
-ejemplo_final.bed	nuevos_final.bed	nuevos_final.log
-ejemplo_final.fam	nuevos_final.bim
-$ head catejemplo.txt 
-1 maiz_3 0 0 0 -9
-2 maiz_68 0 0 0 -9
-3 maiz_91 0 0 0 -9
-4 maiz_39 0 0 0 -9
-5 maiz_12 0 0 0 -9
-6 maiz_41 0 0 0 -9
-7 maiz_35 0 0 0 -9
-8 maiz_58 0 0 0 -9
-9 maiz_51 0 0 0 -9
-10 maiz_82 0 0 0 -9
-$ tail catejemplo.txt 
-Total genotyping rate in remaining individuals is 0.990151
-0 SNPs failed missingness test ( GENO > 1 )
-0 SNPs failed frequency test ( MAF < 0 )
-After frequency and genotyping pruning, there are 36931 SNPs
-After filtering, 0 cases, 0 controls and 165 missing
-After filtering, 0 males, 0 females, and 165 of unspecified sex
-Writing recoded file to [ nuevos_final.raw ] 
-
-Analysis finished: Wed May 06 12:19:30 2015
-```
-
-Nota que si el archivo catejemplo.txt ya existe será borrado por el comando anterior. Si no deseas que esto ocurra sino que el nuevo contenido se agregue al final de un archivo ya existente entonces usa  `>>`. Así:
-
-```
-$ cat nuevos_final.fam *log >> catejemplo.txt
-```
-
-### `|`
-Toma el stdout de un comando y lo convierte en el input de otro (*Pipes* the strout).
-
-![Mariopipe](https://i.ytimg.com/vi/uMCCxuGIGtw/hqdefault.jpg)
-
-
-Ejemplo:
-
-```
-$ ls
-catejemplo.txt		ejemplonano.txt		nuevos_final.fam
-ejemplo_final.bed	nuevos_final.bed	nuevos_final.log
-ejemplo_final.fam	nuevos_final.bim
-$ ls | wc -l
-       8
-```  
-
-Otro ejemplo (no se muestra el stdout pues es demasiado largo)
-
-```
-cat *.fam | more 
-```
-
 Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [https://www.tutorialspoint.com/unix/unix-io-redirections.htm](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)
 
-## Regular expressions y búsqueda de patrones (`grep`)
+### Regular expressions y búsqueda de patrones (`grep`)
 
-### ¿Qué son las expresiones regulares
+#### ¿Qué son las expresiones regulares
 Las *expresiones regulares* son una herramienta de búsqueda o búsqueda-remplazo de cadenas de texto acorde a un patrón dado. Existen en la línea de comando, pero también en otros lenguajes, como R y casi cualquier buscador de texto.
 
 Una expresión regular se puede pensar como una combinación de caracteres literales y metacaracteres. 
@@ -988,7 +1191,7 @@ Una expresión regular se puede pensar como una combinación de caracteres liter
 
 Las expresiones regulares también se conocen como *regexp*, *regex* o `grep` (global regular expression print), que es el comando que utilizaremos. Pero en realidad `grep` solo es uno de los comandos que las utiliza, es decir hay otros. 
 
-### ¿Para qué sirven? 
+#### ¿Para qué sirven? 
 
 Las principales aplicaciones de las expresiones regulares en bioinformática son:
 
@@ -1000,7 +1203,7 @@ Utilidad alternativa:
 
 ![regular_expressions_xkcd.png](regular_expressions_xkcd.png)
 
-### ¿Cómo utilizar expresiones regulares en la línea de comando?
+#### ¿Cómo utilizar expresiones regulares en la línea de comando?
 
 El comando `grep` busca dentro de uno o más archivos las líneas que contengan una expresión regular dada y copia dicha línea al stdout (o hace algo con ese output, si se lo indicamos).
 
@@ -1205,14 +1408,82 @@ Buena referencia de expresiones regulares [aquí](http://tldp.org/LDP/abs/html/x
 Y buenos ejemplos de cómo usar `grep` [aquí](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 **Nota:** `awk` y `sed` son otros comandos similares a grep que también usan expresiones regulares. No los cubriremos aquí, pero vale la pena darles un ojo. [Aquí ejemplos de cómo se utilizan para manipular archivos fasta](http://bioinformatics.cvr.ac.uk/blog/short-command-lines-for-manipulation-fastq-and-fasta-sequence-files/).
+ 
+ 
+## Redirección con bash
+
+**Pregunta** ¿Qué son el Standar output y el Standar input?
+
+###  `>` y `>>` 
+
+Redirige el Standar output (*stdout*) a un archivo en vez de imprimirlo en pantalla.
+
+```
+$ cat nuevos_final.fam *log > catejemplo.txt
+$ ls
+catejemplo.txt		ejemplonano.txt		nuevos_final.fam
+ejemplo_final.bed	nuevos_final.bed	nuevos_final.log
+ejemplo_final.fam	nuevos_final.bim
+$ head catejemplo.txt 
+1 maiz_3 0 0 0 -9
+2 maiz_68 0 0 0 -9
+3 maiz_91 0 0 0 -9
+4 maiz_39 0 0 0 -9
+5 maiz_12 0 0 0 -9
+6 maiz_41 0 0 0 -9
+7 maiz_35 0 0 0 -9
+8 maiz_58 0 0 0 -9
+9 maiz_51 0 0 0 -9
+10 maiz_82 0 0 0 -9
+$ tail catejemplo.txt 
+Total genotyping rate in remaining individuals is 0.990151
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+After frequency and genotyping pruning, there are 36931 SNPs
+After filtering, 0 cases, 0 controls and 165 missing
+After filtering, 0 males, 0 females, and 165 of unspecified sex
+Writing recoded file to [ nuevos_final.raw ] 
+
+Analysis finished: Wed May 06 12:19:30 2015
+```
+
+Nota que si el archivo catejemplo.txt ya existe será borrado por el comando anterior. Si no deseas que esto ocurra sino que el nuevo contenido se agregue al final de un archivo ya existente entonces usa  `>>`. Así:
+
+```
+$ cat nuevos_final.fam *log >> catejemplo.txt
+```
+
+### `|`
+Toma el stdout de un comando y lo convierte en el input de otro (*Pipes* the strout).
+
+![Mariopipe](https://i.ytimg.com/vi/uMCCxuGIGtw/hqdefault.jpg)
+
+
+Ejemplo:
+
+```
+$ ls
+catejemplo.txt		ejemplonano.txt		nuevos_final.fam
+ejemplo_final.bed	nuevos_final.bed	nuevos_final.log
+ejemplo_final.fam	nuevos_final.bim
+$ ls | wc -l
+       8
+```  
+
+Otro ejemplo (no se muestra el stdout pues es demasiado largo)
+
+```
+cat *.fam | more 
+```
+
+
+Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [https://www.tutorialspoint.com/unix/unix-io-redirections.htm](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)
 
 
 
-## 2.4. For loops
+## Loops con bash
 
-### For loops
-
-Los *for loops* permiten **repetir** una serie de comandos con diferentes **variables de una lista*.
+Los *for loops* permiten **repetir** una serie de comandos con diferentes *variables de una lista*.
 
 
 Sintaxis: 
@@ -1244,7 +1515,7 @@ La timina es una base nitrogenada
 **Observaciones importantes:**
 
 * Los elementos de la lista NO se separan por comas (en otros lenguajes sí).
-* Para referirnos al "elemento i" dentro de los comandos debemos usar como prefijo el símbolo $. 
+* Para referirnos al "elemento i" dentro de los comandos debemos usar como prefijo el símbolo `$`. 
 * No tienes que escribir el `>` antes de `echo` y de `done`, los pongo solo para mostrar que eso aparece en la terminal hasta que terminemos de meter los comandos que formarán parte del loop. De hecho `done` sirve para decir "ok, aquí termina el loop". En los ejemplos de abajo ya no lo pondré.
 
 Otro ejemplo:
@@ -1556,244 +1827,16 @@ Hacer algo con la muestra maiz_1
 
 
 ### Más información de for loops
+
 Aquí presenté la sintaxis más usada, pero hay otros métodos para escribir loops que hacen lo mismo. Y también pueden hacerse más complejos agregando "ifs". 
 Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/). 
 
-## 2.6. Clonar repositorios de GitHub
 
-Como habíamos visto, [GitHub](http://github.com) es un repositorio de código basado en [`git`](https://git-scm.com/), el cual permite tener un historial de los cambios y está pensado para facilitar la colaboración en proyectos.
+##### Ejercicios
 
-Como introducción a `git` y Github primero vamos a entender los principales conceptos y el [flujo de trabajo de Github leyendo esta documentación](https://guides.github.com/introduction/flow/). Luego vamos a hacer los siguientes dos tutoriales:
+1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad2/Prac_Uni2/Maiz/nuevos_final.fam`. 
 
-* [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
+2. Escribe **un script** que cree 4 directorios llamados PobA, PobB, PobC, PobD y dentro de cada uno de ellos un archivo de texto que diga "Este es un individuo de la población x" donde x debe corresponder al nombre del directorio. 
 
-* [try Git](https://try.github.io/levels/1/challenges/1) para aprender los principales comandos para utilizar `git` (y Github) desde la terminal.
-
-* [Learn Git Branching](https://learngitbranching.js.org/) para volverse chidos manejando el ramerío.
-
-Además de la versión de línea de comando que veremos aquí, hay una versión de escritorio que puedes probar. Pero si ya vas a aprender algo nuevo mejor lánzate a la terminal ;).
-
-**Documentación extra para aprender más:**
-
-* [Guias Github](https://guides.github.com/)
-* [An Intro to Git and GitHub for Beginners (Tutorial) de Meghan Nelson](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
-* [A successful Git branching model de VincentDriessen](http://nvie.com/posts/a-successful-git-branching-model/). Excelente.
-
-**Recuerda los términos más importantes:**
-
-+ **Repositorio**: Se usa para organizar un proyecto. Puede contener imágenes, código, etc. Es recomendable incluir un README.
-
-+ **Fork**: Se crea un fork cuando el repositorio es copiado de la cuenta de un miembro de Github a la de otro.
-
-+ **Branch**: El repositorio tiene una rama o branch principal llamada `master`, que es la "original". Se pueden crear otras ramas dentro del mismo repositorio en las cuales se pueden hacer modificaciones sin afectar el código original. Es el equivalente tener un archivo original `Tesis` y ponerle `Tesis_comentariosAsesora1` y `Tesis_comentariosAsesor2` a los archivos con los comentarios de tus asesores, mismos que eventualmente volverás a integrar en un archivo final (pero `git` lo hace todo más hermoso y organizado).
-
-+ **Commit**: Equivale a guardar los cambios **en git** que no es lo mismo que en el archivo. ¡Ojo! Los cambios se guardan en la branch donde trabajas. Puedes acompañar el commit de un mensaje corto para especificar qué cambios hiciste. Esto es mucho mejor que tener nombres de archivos larguísimos tratando de explicar qué versión son (e.g. `Tesis_final_comentariosAMY_DP_rev22oct2017_comentariosFran_revEnero2018_FINAL_BUENO_corrected_2.doc`).
-
-+ **push:** para enviar los commits locales al repo online.
-
-Piensa en `push` para enviar y `pull` para recibir.
-
-+ **Pull request**: Si se quieren agregar las modificaciones en la branch `master`, se envía una solicitud al propietario original. Es decir tú no haces `push`, le pides al propietario que haga `pull`.
-
-+ **Merge**: Una vez que el propietario del repositorio ha revisado y aceptado los cambios, fusiona las ramas. 
-
-
-
-### Configurando nuestro git local con Github
-
-Para poder vincular tu `git` con tu cuenta de Github necesitas cambiar **asociar tu dirección de correo electrónico principal de Github con tu git local**. Además puedes cambiar tu nombre de usuario, pero lo que realmente te vincula con Github es tu correo. 
-
-Para cambiar tu correo necesitas seguir cualquiera de estos dos métodos:
-
-1) Correr `$ git config --global --edit` 
-
-Lo cual abrirá una pantalla de `vim`. Edita tu nombre de usuario y cuenta de correo. Para poder "escribir en vim" presiona `I` (de insertar) donde quieras comenzar a escribir. Recuerda, para guardar y salir, tecla Esc y luego `:wq`.
-
-2) Correr:
-
-`$ git config --global user.email "email@example.com"`
-
-`$ git config user.name "Mi_nombre"`
-
-Donde el texto entre comillas son tus datos.
-
-Comrpueba tu dirección es la correcta con:
-
-`$ git config user.email`
-
-Debe mostrarse tu dirección correcta.
-
-
-[Referencia de lo anterior](https://help.github.com/articles/setting-your-commit-email-address-in-git/)
-
-
-### Ejemplo: vamos a clonar un repo.
-
-#### `git clone`
-Te permite copiar un repositorio que ya existe. Cada versión de cada archivo de la historia del proyecto es descargado cuando lo ejecutas. La dirección del repo que quieres clonar puedes conseguirla en el botón verde que dice "Clone or Download" en la página principal del repo en Github.
-
-**Ojo con dónde corres `git clone`, pues tu working directory será el lugar a donde "se baje" el repo que estás clonando.
-
-```
-$ git clone https://github.com/AliciaMstt/Repo_chocolate.git
-Cloning into 'Repo_chocolate'...
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (2/2), done.
-Unpacking objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-
-```
-
-Para poder hacer los siguientes comandos debemos estar en el directorio del repo. Es decir lo que acabamos de bajar. Así que `cd Repo_chocolate`.
-
-#### `git status`
-Es para saber en qué branch estas trabajando y si tienes archivos que te falte "guardar" (commit). Por ejemplo, si lo haces cuando acabas de clonar un repositorio, debe verse algo así:
-
-```
-$ git status                           []
-On branch master
-Your branch is up-to-date with 'origin/master'.
-nothing to commit, working tree clean
-```
-
-#### `git add`
-Te permite agregar un archivo que no existía en el repositorio o prepara las modificaciones a archivos existentes. Esto no lo "guarda" (commit), solo hace que "lo sigas". Si modificas un archivo es necesario que vulvas a dar `add`.
-
-```
-$ touch ejemplo.txt
-$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	ejemplo.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-$ git add ejemplo.txt
-```
-
-#### `git commit`
-Confirma y agrega los cambios a la branch en la que estas trabajando. Utiliza la flag `-m` para escribirun mensaje breve. Si no lo haces se abrirá un editor de texto donde puedes describir brevemente el cambio que hiciste. Si tu editor es Vim, puedes guardar y salir con `:wq`.
-
-```
-$ git commit -m "agregar archivo ejemplo"
-[master 79fce15] agregar archivo ejemplo
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 ejemplo.txt
-```
-
-#### `git push`
-
-Una vez que quieres integrar tus cambios a una rama, este comando te permite fusionar ramas. Debes decirle el origen (rama donde hiciste los commits) y el destino (por ejemplo master u otra rama).
-
-**Ojo** uds no podrán hacer `push` porque no son propietarios de este repo. Para ello deberían hacer primero un `pull request`. Más adelante haremos ejercicios de esto.
-
-
-```
-$ git push origin master
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 285 bytes | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/AliciaMstt/Repo_chocolate.git
-   72129b3..79fce15  master -> master
-```
-
-Nota: puedes agregar la flag `-u` para establecer `origin master` (o lo que sea) como el default y solo tener que hacer `git push` en un futuro.
-
-
-#### `git pull`
-Actualiza la copia del repositorio local con respecto a la rama remota. Es decir
-
-
-```
-$ git pull                             []
-Already up-to-date.
-```
-
-Pero ojo, antes de andar con `pull` por la vida [checa las bondades de `git fetch`:
-
-#### `git fetch`
-
-Si vas a trabajar con repos de otras personas problablemente no quieras hacer un `merge` en automático (que es lo que hace `pull` tras bambalinas) con tu repo local, sino que solo quieras jalar los cambios que hayan hecho otros. Por ejemplo los archivos que agregue a este repo sin que borre lo que tu hayas hecho en tu versión. [Para evitar posibles problemas asociados a esto se recomienda usar `fetch`]((https://help.github.com/articles/fetching-a-remote/)).
-
-[Otra referencia de fetch vs pull](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)
-
-Voy a hacer unos cambios en el archivo `ejemplo.txt` desde el editor de texto de Github y comitearlo (sí, espanglish del chido) online. Ahora veamos los cambios:
-
-```
-$ git fetch
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/AliciaMstt/Repo_chocolate
-   79fce15..ad845a6  master     -> origin/master
-$ head ejemplo.txt
-
-$ git status
-On branch master
-Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-nothing to commit, working tree clean
-
-$git pull
-Updating 79fce15..ad845a6
-Fast-forward
- ejemplo.txt | 1 +
- 1 file changed, 1 insertion(+)
-
-$ head ejemplo.txt 
-bla bla 
-
-```
-
-#### `git log`
-
-Para ver el historial de commits que se han hecho en el repo. Por default te mostrará los commits en orden cronológico invertido, pero hay muchas opciones que puedes darle para buscar algo más específico. [Instrucciones aquí](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
-
-
-**Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **OJO:** ponlo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
-
-**Recomendación: ignorar archivos que no queremos que git siga**
-
-Algunso archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
-
-1) Crear un archiovo `.gitignore` en el wd de tu repositorio (donde vive tu `.git` que se creó con `git init` o con `git clone`).
-
-`touch .gitignore` (nota el punto `.`)
-
-2) En ese archivo poner el nombre (o las extensiones) de los archivos que quieres ignorar. [Aquí puedes ver una lista de casos comunes proporcionada por Github](https://gist.github.com/octocat/9257657).
-
-Por ejemplo yo voy ignorar los fantasmitas Mac:
-
-
-`$ vim .gitignore`
-
-Y en el editor de vim pegué lo siguiente:
-
-```
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-```
-
-3) Si haces un `git status` notarmás que aparece `.gitignore` como untracked. Entonces debes:
-
-```
-$ git add .gitignore
-$ git commit -m "Added .gitignore file to repo"
-$ git push 
-```
-
-También puedes crear un `.gitignore` global que aplique en todos los repos de tu compu. Instrucciones [aquí](https://help.github.com/articles/ignoring-files/)
+3. Escribe un script que baje 5 secuencias (algún loci corto, no un genoma) de una especie que te interese y señala cuántas veces existe la secuencia "TGCA" en cada una de ellas. ¿Sabes qué hace esta secuencia?
 
