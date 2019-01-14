@@ -21,7 +21,7 @@ Los materiales aquí presentados son de acceso libre.
 
 Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber). 
 
-Sala de chat para **anuncios de la clase** y dudas si lo ests viendo remotamente: [en Gitter](https://gitter.im/BioinfinvRepro2018-II/Lobby#)
+Sala de chat para **anuncios de la clase** y dudas si lo ests viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
 
 ## Objetivos
 
@@ -177,6 +177,21 @@ Cubriremos ambas herramientas en el curso, pero en resumen:
 * Markdown es un procesador texto-a-HTML que de forma sencilla permite formatear texto `así`. Esto es útil para resaltar los los comandos y los resultados de la terminal del resto del texto en los documentos de clase (y en foros de ayuda).
 
 * GitHub es un repositorio web especializado en software (pero se puede subir cualquier texto, como este). La parte de arriba enlista los archivos y carpetas dentro del repositorio. La nota de texto a su derecha es el comentario que yo realicé al subir o modificar (*commit*) el archivo de mi computadora a GitHub. En la parte de abajo puedes leer el contenido de dichos archivos en formato html. Y si los bajas los verás en formato Markdown.
+
+
+### Mecanismo de calificación
+
+* ~ una tarea por sesión (en línea)
+* Evaluación (examen o proyecto) por sección:
+
+	* Unidades 1-4
+
+	* Unidad 5
+
+	* Unidad 6-11
+	
+	
+Porcentaje aprovación: 60 %
 
 
 ### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión. 
