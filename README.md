@@ -2,6 +2,8 @@
 
 # Introducción a la bioinformática e investigación reproducible para análisis genéticos
 
+# Introducción a la Bioinformática para Biólogo/as y Genetistas
+
 
 [![Join the chat at https://gitter.im/Bioinfo_Mx-Cl/community](https://badges.gitter.im/Bioinfo_Mx-Cl.svg)](https://gitter.im/Bioinfo_Mx-Cl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
