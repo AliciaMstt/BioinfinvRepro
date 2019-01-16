@@ -1417,7 +1417,7 @@ Y buenos ejemplos de cómo usar `grep` [aquí](http://www.thegeekstuff.com/2009/
 Por ejemplo esta línea cambia "Solanum lycopersicum" del archivo "tomates.fasta" por "jitomate"
 
 ```
-sed 's/Solanum lycopersicum/jitomate/'
+sed 's/Solanum lycopersicum/jitomate/' tomates.fasta
 ```
 
 `awk` es parecido, pero es particularmente útil para archivos con filas y columnas, pues puedes acceder específicamente a ellas.
