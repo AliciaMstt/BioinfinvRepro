@@ -108,7 +108,7 @@ Básicamente es una manera de escribir texto de manera que sea interpretado por 
 
 [Aquí una guía de MarkDown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-**Ejercicio:** abre el el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/tut.php#prep) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
+**Ejercicio:** abre el el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [4.1.3. Running process_radtags](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
 
 Es útil aprender la sintaxis de Markdown para poder documentar mejor tus proyectos, sobretodo si los subes a GitHub.
 
