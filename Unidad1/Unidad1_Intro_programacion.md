@@ -1412,7 +1412,20 @@ Buena referencia de expresiones regulares [aquí](http://tldp.org/LDP/abs/html/x
 
 Y buenos ejemplos de cómo usar `grep` [aquí](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
-**Nota:** `awk` y `sed` son otros comandos similares a grep que también usan expresiones regulares. No los cubriremos aquí, pero vale la pena darles un ojo. [Aquí ejemplos de cómo se utilizan para manipular archivos fasta](http://bioinformatics.cvr.ac.uk/blog/short-command-lines-for-manipulation-fastq-and-fasta-sequence-files/).
+**Nota:** `awk` y `sed` son otros comandos que también usan expresiones regulares. 
+
+`sed` es particularmente útil para sustituir una expresión regular (como una palabra) por otra. 
+
+Por ejemplo esta línea cambia "Solanum lycopersicum" del archivo "tomates.fasta" por "jitomate"
+
+```
+sed 's/Solanum lycopersicum/jitomate/'
+```
+
+`awk` es parecido, pero es particularmente útil para archivos con filas y columnas, pues puedes acceder específicamente a ellas.
+
+
+No los cubriremos aquí, pero vale la pena darles un ojo. Recomiendo esta [Introducción a `sed`](http://www.grymoire.com/Unix/Sed.html#uh-1)  y esta [introducción a `awk`](https://www.lifewire.com/write-awk-commands-and-scripts-2200573) así como estos [ejemplos de cómo se utilizan para manipular archivos fasta](http://bioinformatics.cvr.ac.uk/blog/short-command-lines-for-manipulation-fastq-and-fasta-sequence-files/).
  
  
 ## Redirección con bash
