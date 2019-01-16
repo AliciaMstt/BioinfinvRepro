@@ -1386,12 +1386,10 @@ $ grep -oE "\| \w+ \w+" tomatesverdes.fasta
 
 ```
 
-**Ejercico 1** Primero explora qué hace el comando `history`. ¿Cómo lo combinarías con `grep` para buscar cuál fue la línea que corrimos con `less`?
-
-**Ejercicio 2** Obtener el nombre de la especie *Physalis philadelphica* como en el ejemplo anterior, pero sin el "|" del principio.
+**Ejercicio 1** Obtener el nombre de la especie *Physalis philadelphica* como en el ejemplo anterior, pero sin el "|" del principio.
 
 
-**Ejercicio 3** Obtener el *nombre de las secuencias* de los archivos tomatesverdes.fasta y jitomares.fasta y escribirlos a un archivo llamado secsIDs. No importa cómo escribas la expresión regular, pero el chiste es lograr que toda la operación sea en una sola línea de código.
+**Ejercicio 2** Obtener el *nombre de las secuencias* de los archivos tomatesverdes.fasta y jitomares.fasta y escribirlos a un archivo llamado secsIDs. No importa cómo escribas la expresión regular, pero el chiste es lograr que toda la operación sea en una sola línea de código.
 
 El texto dentro del archivo secsIDs debe verse así
 
@@ -1436,6 +1434,8 @@ No los cubriremos aquí, pero vale la pena darles un ojo. Recomiendo esta [Intro
 
 Redirige el Standar output (*stdout*) a un archivo en vez de imprimirlo en pantalla.
 
+Estando en `BioinfinvRepro/Unidad1/Prac_Uni1/Maiz`:
+
 ```
 $ cat nuevos_final.fam *log > catejemplo.txt
 $ ls
@@ -1471,6 +1471,9 @@ Nota que si el archivo catejemplo.txt ya existe será borrado por el comando ant
 $ cat nuevos_final.fam *log >> catejemplo.txt
 ```
 
+**Ejercicio** utiliza `sed` para sustituir "Solanum lycopersicum" del archivo `Tomates/tomates.fasta` por "jitomate" y guarda el output en un nuevo archivo llamado "edited_tomates.fasta" 
+
+
 ### `|`
 Toma el stdout de un comando y lo convierte en el input de otro (*Pipes* the strout).
 
@@ -1497,6 +1500,8 @@ cat *.fam | more
 
 Más detalles y otras formas de redireccionar (que ocupan algunos programas) las puedes encontrar aquí [https://www.tutorialspoint.com/unix/unix-io-redirections.htm](https://www.tutorialspoint.com/unix/unix-io-redirections.htm)
 
+
+**Ejercico** Primero explora qué hace el comando `history`. ¿Cómo lo combinarías con `grep` para buscar cuáles líneas hemos corrido con `less`?
 
 
 ## Loops con bash
@@ -1595,9 +1600,7 @@ El gatito hace miau
 El gatón hace miau
 ```
 
-Ejercicio:
-
-Navega al directorio `BioinfInvRepro/Unidad1/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
+**Ejercicio** Navega al directorio `BioinfInvRepro/Unidad1/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
 
 
 ### Crear arrays y utilizarlos como una lista en un loop
