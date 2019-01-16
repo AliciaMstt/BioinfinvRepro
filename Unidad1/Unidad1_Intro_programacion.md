@@ -414,7 +414,7 @@ Para esto hay varias opciones:
 Ejemplo de ruta absoluta:
 
 ```
-Alicias-MacBook-Pro:~ ticatla$ cd /Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni1
+Alicias-MacBook-Pro:~ ticatla$ cd /Users/ticatla/Desktop/BioinfInvRepro/Unidad1/Prac_Uni1
 Alicias-MacBook-Pro:Prac_Uni1 ticatla$
 
 ```
@@ -438,7 +438,7 @@ Ejemplo de ruta relativa:
 
 ```
 Alicias-MacBook-Pro:Prac_Uni1 ticatla$ cd ~
-Alicias-MacBook-Pro:~ ticatla$ cd Desktop/BioinfInvRepro/Unidad2/Prac_Uni1
+Alicias-MacBook-Pro:~ ticatla$ cd Desktop/BioinfInvRepro/Unidad1/Prac_Uni1
 
 Alicias-MacBook-Pro:Prac_Uni1 ticatla$ 
 ```
@@ -471,10 +471,10 @@ Ejemplo:
 
 ```
 $pwd
-/Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni1/Tomates/VerdesFritos
+/Users/ticatla/Desktop/BioinfInvRepro/Unidad1/Prac_Uni1/Tomates/VerdesFritos
 $ cd ../../Manzanas/
 $ pwd
-/Users/ticatla/Desktop/BioinfInvRepro/Unidad2/Prac_Uni1/Manzanas
+/Users/ticatla/Desktop/BioinfInvRepro/Unidad1/Prac_Uni1/Manzanas
 
 ```
 
@@ -1262,7 +1262,7 @@ La *regularexpression* puede ser tal cual el texto a buscar, pero también podem
 
 ### Usos comunes de `grep` 
 
-Empecemos por ver el archivo [tomatesverdes.fasta](../Unidad2/Prac_Uni1/Tomates/tomatesverdes.fasta). (Vive en: `BioinfInvRepro/Unidad2/Prac_Uni1/Tomates/`)
+Empecemos por ver el archivo [tomatesverdes.fasta](../Unidad1/Prac_Uni1/Tomates/tomatesverdes.fasta). (Vive en: `BioinfInvRepro/Unidad1/Prac_Uni1/Tomates/`)
 
 ```
 $ less tomatesverdes.fasta 
@@ -1584,7 +1584,7 @@ El gatón hace miau
 
 Ejercicio:
 
-Navega al directorio `BioinfInvRepro/Unidad2/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
+Navega al directorio `BioinfInvRepro/Unidad1/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
 
 
 ### Crear arrays y utilizarlos como una lista en un loop
@@ -1839,7 +1839,7 @@ Puedes consultar esta y más info de for loops en [esta guía con ejemplos y var
 
 ##### Ejercicios
 
-1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad2/Prac_Uni1/Maiz/nuevos_final.fam`. 
+1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Prac_Uni1/Maiz/nuevos_final.fam`. 
 
 2. Escribe **un script** que cree 4 directorios llamados PobA, PobB, PobC, PobD y dentro de cada uno de ellos un archivo de texto que diga "Este es un individuo de la población x" donde x debe corresponder al nombre del directorio. 
 
