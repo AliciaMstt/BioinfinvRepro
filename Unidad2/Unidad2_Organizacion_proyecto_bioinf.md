@@ -108,13 +108,30 @@ Básicamente es una manera de escribir texto de manera que sea interpretado por 
 
 [Aquí una guía de MarkDown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-**Ejercicio:** abre el el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [4.1.3. Running process_radtags](http://catchenlab.life.illinois.edu/stacks/manual/#procrad) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
+**Ejercicio:** abre el el editor de Markdown de tu preferencia y escribe un texto en formato Markdown de manera que quede igual que los tres primeros puntos de [Preparing the environment, cleaning the data for Stacks](http://catchenlab.life.illinois.edu/stacks/tut.php#prep) (incluyendo ese subtítulo). No es necesario poner los colores, pero si quieres, cool.
 
 Es útil aprender la sintaxis de Markdown para poder documentar mejor tus proyectos, sobretodo si los subes a GitHub.
 
 ## git
 
-### Github
+[`git`](https://git-scm.com/) es un programa que sirve para llevar el control de versiones de un proyecto informático.
+
+Como introducción a `git` primero vamos a entender los principales conceptos y el [flujo de trabajo de Github leyendo esta documentación](https://guides.github.com/introduction/flow/). 
+
+Y es muy buena idea leer [An Intro to Git and GitHub for Beginners (Tutorial) de Meghan Nelson](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners).
+
+Además de la versión de línea de comando que veremos aquí, hay una versión de escritorio vinculada a Github que puedes probar. Pero si ya vas a aprender algo nuevo mejor lánzate a la terminal ;).
+
+**Documentación extra para aprender más:**
+
+
+* [Learn Git Branching](https://learngitbranching.js.org/) para volverse chidos manejando el ramerío.
+
+
+* [A successful Git branching model de VincentDriessen](http://nvie.com/posts/a-successful-git-branching-model/). Excelente.
+
+
+## Github
 Es un repositorio de código que:
 
 * Utiliza `git` para llevar un sistema de **control de versiones**,
@@ -124,23 +141,12 @@ Es un repositorio de código que:
 
 ![](Octocat.png)
 
-Como introducción a `git` y Github primero vamos a entender los principales conceptos y el [flujo de trabajo de Github leyendo esta documentación](https://guides.github.com/introduction/flow/). Luego vamos a hacer los siguientes dos tutoriales:
+Lo primero que hay que hacer es este tutorial: [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
 
-* [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
+**Ejercicio** siguiendo los pasos del tutorial anterior, genera un repositorio entro de **tu cuenta de Github** que se llame "Tareas_BioinfRepro2019_TusIniciales". 
 
-* [try Git](https://try.github.io/levels/1/challenges/1) para aprender los principales comandos para utilizar `git` (y Github) desde la terminal.
 
-* [Learn Git Branching](https://learngitbranching.js.org/) para volverse chidos manejando el ramerío.
-
-Además de la versión de línea de comando que veremos aquí, hay una versión de escritorio que puedes probar. Pero si ya vas a aprender algo nuevo mejor lánzate a la terminal ;).
-
-**Documentación extra para aprender más:**
-
-* [Guias Github](https://guides.github.com/)
-* [An Intro to Git and GitHub for Beginners (Tutorial) de Meghan Nelson](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
-* [A successful Git branching model de VincentDriessen](http://nvie.com/posts/a-successful-git-branching-model/). Excelente.
-
-**Recuerda los términos más importantes:**
+### Los términos más importantes
 
 + **Repositorio**: Se usa para organizar un proyecto. Puede contener imágenes, código, etc. Es recomendable incluir un README.
 
@@ -157,6 +163,8 @@ Piensa en `push` para enviar y `pull` para recibir.
 + **Pull request**: Si se quieren agregar las modificaciones en la branch `master`, se envía una solicitud al propietario original. Es decir tú no haces `push`, le pides al propietario que haga `pull`.
 
 + **Merge**: Una vez que el propietario del repositorio ha revisado y aceptado los cambios, fusiona las ramas. 
+
+
 
 
 
@@ -218,7 +226,7 @@ nothing to commit, working tree clean
 ```
 
 #### `git add`
-Te permite agregar un archivo que no existía en el repositorio o prepara las modificaciones a archivos existentes. Esto no lo "guarda" (commit), solo hace que "lo sigas". Si modificas un archivo es necesario que vulvas a dar `add`.
+Te permite agregar un archivo que no existía en el repositorio o prepara las modificaciones a archivos existentes. Esto no lo "guarda" (commit), solo hace que "lo sigas". Si modificas un archivo es necesario que vuelvas a dar `add`.
 
 ```
 $ touch ejemplo.txt
@@ -234,6 +242,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 $ git add ejemplo.txt
 ```
 
+
 #### `git commit`
 Confirma y agrega los cambios a la branch en la que estas trabajando. Utiliza la flag `-m` para escribirun mensaje breve. Si no lo haces se abrirá un editor de texto donde puedes describir brevemente el cambio que hiciste. Si tu editor es Vim, puedes guardar y salir con `:wq`.
 
@@ -242,6 +251,63 @@ $ git commit -m "agregar archivo ejemplo"
 [master 79fce15] agregar archivo ejemplo
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 ejemplo.txt
+```
+
+#### `git diff`
+Para ver los cambios que se hicieron a un archivo.
+
+```
+$ echo "el mundo es bello" > ejemplo.txt
+$ cat ejemplo.txt 
+el mundo es bello
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ejemplo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git diff ejemplo.txt
+diff --git a/ejemplo.txt b/ejemplo.txt
+index 8d269c1..0dc4fee 100644
+--- a/ejemplo.txt
++++ b/ejemplo.txt
+@@ -1 +1 @@
+-bla bla bla
++el mundo es bello
+```
+
+
+
+#### `git rm`
+Si quieres borrar un archivo **que ya había formado parte de un commit** no sólo de tu compu sino del sistema de versiones de git, lo mejor es NO utilizar `rm`, sino `git rm`. Ejemplo:
+
+```
+$ touch ejemplo2.txt
+$ git add ejemplo2.txt
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   ejemplo2.txt
+$ git add ejemplo2.txt
+$ git commit -m added ejemplo2
+$ git rm ejemplo2.txt
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    ejemplo2.txt
+
 ```
 
 #### `git push`
@@ -311,14 +377,26 @@ bla bla
 
 ```
 
+
+**Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **NOTAS IMPORTANTES PARA ESTE EJERCICIO:** 
+
+1) Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
+
+2) Como mi repo tiene más de una rama, necesitarás agregar a tu `git clone` lo siguiente: `--branch master --single-branch`.
+
+
+
 #### `git log`
 
 Para ver el historial de commits que se han hecho en el repo. Por default te mostrará los commits en orden cronológico invertido, pero hay muchas opciones que puedes darle para buscar algo más específico. [Instrucciones aquí](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
+#### ¿Cómo volver al pasado?
 
-**Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **OJO:** ponlo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
+Hay muchas formas. [Esta respuesta de Stacksoverflow es una buena guía](https://stackoverflow.com/questions/4114095/how-to-revert-a-git-repository-to-a-previous-commit).
 
-**Recomendación: ignorar archivos que no queremos que git siga**
+
+
+### Recomendación: ignorar archivos que no queremos que git siga**
 
 Algunso archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
 
