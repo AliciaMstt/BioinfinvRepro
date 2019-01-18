@@ -551,25 +551,26 @@ Existen tres formas de hacerlo:
 
 #### `Rscript` 
 
-Por ejemplo el script `Prac_Uni4/egR/holascript_simple.R` contiene:
+Por ejemplo el script `Unidad2/Prac_Uni2/egR/holascript_simple.R` contiene:
 
-`cat holascript_simple.R`
+`cat holascript.R`
 ```{R}
 x<-10
 y<-6
 cat("¡Hola mundo!", x, "+", y, "es igual a", x+y)
+write(x, file="aquiestax.txt")
 ```
 
 Y puede correrse así:
 
 ```
-$ Rscript holascript_simple.R
+$ Rscript holascript.R
 ¡Hola mundo! 10 + 6 es igual a 16
 ```
 
 #### `#!` a `Rscript`
 
-El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript` o `/usr/local/bin/Rscript` o lo que sea que diga `which Rscript`. Por ejemplo el script `/Practicas/Uni8/holascript.R` contiene:
+El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript` o `/usr/local/bin/Rscript` o lo que sea que diga el output de correr `which Rscript`. Por ejemplo el script `/Unidad2/PracUni2/egR/holascript_ejecutable.R` contiene:
 
 ```{R}
 #!/usr/local/bin/Rscript
@@ -582,7 +583,7 @@ cat("¡Hola mundo!", x, "+", y, "es igual a", x+y)
 Y puede correrse así (recuerda hacerlo ejecutable antes con `chmod`:
 
 ```
-$ ./holascript.R 
+$ ./holascript_ejecutable.R 
 [1] "¡Hola mundo! 10 + 6 es igual a 16"
 ```
 
@@ -593,8 +594,8 @@ Nota: si lo anterior no funciona tal vez debas cambiar la ruta a Rscript, puedes
 Una alternativa a RScript es `R CMD BATCH`. La diferencia es que el resultado de correr el script se escribe a un archivo `.Rout` (incluso si el script involucra imprimir resultados a pantalla con `cat` o `print`) que contiene el código, el resultado y datos de cuánto tardó el procesamiento. 
 
 ```
-$ R CMD BATCH holascript_simple.R 
-$ more holascript_simple.Rout
+$ R CMD BATCH holascript.R 
+$ cat holascript_simple.Rout
 
 R version 3.2.2 (2015-08-14) -- "Fire Safety"
 Copyright (C) 2015 The R Foundation for Statistical Computing
@@ -617,16 +618,14 @@ Type 'q()' to quit R.
 > x<-10
 > y<-6
 > cat("¡Hola mundo!", x, "+", y, "es igual a", x+y)
-¡Hola mundo! 10 + 6 es igual a 16> 
+¡Hola mundo! 10 + 6 es igual a 16> write(x, file="aquiestax.txt")
 > proc.time()
    user  system elapsed 
-  0.230   0.034   0.242 
+  0.297   0.080   1.278 
 
 ```
 
 Notas recomendadas: [Running R in batch mode on Linux](http://www.cureffi.org/2014/01/15/running-r-batch-mode-linux/)
 
-### Utilidad:
-
-Una aplicación de lo anterior es poder correr scripts de R y otro lenguaje directamente en un script de bash, de manera que nuestro script maestro pueda incluir todos los pasos.
+**Utilidad:** Una aplicación de lo anterior es poder correr scripts de R y otro lenguaje directamente en un script de bash, de manera que nuestro script maestro pueda incluir todos los pasos.
 
