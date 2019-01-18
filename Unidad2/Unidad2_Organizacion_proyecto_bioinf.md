@@ -470,6 +470,13 @@ cd BioinfinvRepro/
 3) Cuando les diga "actualicen el repo" (por ejemplo para poder utilizar los archivos que creé para un ejercicio), corre:
 
 ```
+git pull
+```
+
+O, un poco más complicado, pero para evitar posibles errores:
+
+
+```
 git fetch
 
 ```
