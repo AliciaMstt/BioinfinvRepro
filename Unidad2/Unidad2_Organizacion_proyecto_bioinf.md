@@ -471,6 +471,13 @@ cd BioinfinvRepro/
 
 ```
 git fetch
+
+```
+
+**y luego**
+
+```
+git merge
 ```
 
 ## Manejo de proyectos e issues en Github
