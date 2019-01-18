@@ -130,6 +130,9 @@ Además de la versión de línea de comando que veremos aquí, hay una versión 
 
 * [A successful Git branching model de VincentDriessen](http://nvie.com/posts/a-successful-git-branching-model/). Excelente.
 
+Es muy buena idea llevar un control de versiones de tus scrips en tu carpeta `bin`.
+
+Sin embargo, cuando subas tu proyecto con todo y datos como un repositorio (e.g. a Dryad) recuerda **NO** compartir la carpeta `.git`. 
 
 ## Github
 Es un repositorio de código que:
@@ -144,6 +147,7 @@ Es un repositorio de código que:
 Lo primero que hay que hacer es este tutorial: [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
 
 **Ejercicio** siguiendo los pasos del tutorial anterior, genera un repositorio entro de **tu cuenta de Github** que se llame "Tareas_BioinfRepro2019_TusIniciales". 
+
 
 
 ### Los términos más importantes
@@ -378,17 +382,28 @@ bla bla
 ```
 
 
+#### `git log`
+
+Para ver el historial de commits que se han hecho en el repo. Por default te mostrará los commits en orden cronológico invertido, pero hay muchas opciones que puedes darle para buscar algo más específico. [Instrucciones aquí](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
+
+
 **Ejercicio:** clona el repositorio de la clase y actualízalo que vez que sea necesario. **NOTAS IMPORTANTES PARA ESTE EJERCICIO:** 
 
 1) Clonalo en un lugar distinto de dónde habías bajado la carpeta del repo las clases anteriores, o cámbiale el nombre a esa carpeta vieja, o símil.
 
 2) Como mi repo tiene más de una rama, necesitarás agregar a tu `git clone` lo siguiente: `--branch master --single-branch`.
 
+#### `git` para la vida diaria en resumen:
+
+1) `git status` dentro del directorio de tu repo para ver si hay cambios.
+
+2) `git diff nombrearchivo` para ver las modificaciones que se hicieron a un archivo desde el último commit.
+
+3) `git add nombrearchivo` (para un archivo) o `git add *` (para todos los archivos) para agregar los archivos **que queremos incluir en un commit**. Como el equivalente a "adjuntarlos" en un correo que te enviarías por correo. 
+
+4) `git commit -m "mensaje corto explicando qué contiene el commit"`. Como el contenido de un correo donde te explicarías a tí mismx qué cambios hiciste que ameritan guardar la versión ("commit").
 
 
-#### `git log`
-
-Para ver el historial de commits que se han hecho en el repo. Por default te mostrará los commits en orden cronológico invertido, pero hay muchas opciones que puedes darle para buscar algo más específico. [Instrucciones aquí](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History).
 
 #### ¿Cómo volver al pasado?
 
@@ -437,13 +452,53 @@ $ git push
 También puedes crear un `.gitignore` global que aplique en todos los repos de tu compu. Instrucciones [aquí](https://help.github.com/articles/ignoring-files/)
 
 
+### Cómo actualizar el repo del curso en tu compu con `git`.
+
+1) Clona el repo (esto **solo hay que hacerlo una vez**)
+
+```
+git clone https://github.com/AliciaMstt/BioinfinvRepro.git --branch master --single-branch
+```
+
+
+2) Entra al repo
+
+```
+cd BioinfinvRepro/
+```
+
+3) Cuando les diga "actualicen el repo" (por ejemplo para poder utilizar los archivos que creé para un ejercicio), corre:
+
+```
+
+```
+
+
 ## Manejo de proyectos e issues en Github
 
 Como hemos visto GitHub te permite llevar un control de versiones, es decir, llevar un registro de los cambios que se realizan sobre un proyecto informático, particularmente sobre las modificaciones a los scripts.
 
-Es muy buena idea llevar un control de versiones de tus scrips en tu carpeta `bin`.
+Github además permite organizar proyectos con un sistema de asignación "tareas por hacer" que se pueden asignar a un usuario de forma colaborativa, o a una misma para mantener un proyecto propio sin perderse.
 
-Sin embargo, cuando subas tu proyecto con todo y datos como un repositorio (e.g. a Dryad) recuerda **NO** compartir la carpeta `.git`. 
+Puedes generar tareas ("cards") y páneles de estado (Pendientes, En Proceso, Terminadas, por ejmemplo). Lueg puedes arrastraslas de un panel a otro según vayas progresando.
+
+![](github_projec.png)
+
+
+Los proyectos solo los podemos ver si es nuestro repositorio o si estamos agregados como colaboradorxs en ellos. Para agregar a un colaborador ve la pestaña "Settings" (arriba derecha) y luego a "Collaborators" en el menú de la izquierda. Debes buscar a quien quieras agregar por su nombre de usuario en Github. El usuario debe aceptar la invitación para unirse formalmente al proyecto.
+
+![](github_add_collaborator.png)
+
+Las tareas ("cards") de un proyecto pueden quedarse como tareas simplemente, o volverse un **issue**. Los issues permiten delimitar una tarea que debe atenderse (por ejemplo un bug, una modalidad nueva deseada, etc) pero cuya solución además requiere discusión. Cada issue tiene asociado entonces una conversación. Tanto los issues como sus conversaciones asociadas son públicos, pues permiten al público saber, por ejemplo, que el problema existe y en qué va su solución.
+
+![](github_issues.png)
+
+
+**Ejercicio** Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas\_BioinfRepro2019\_TusIniciales".  
+
+**Ejercicio** Agréganos a Lorena y a mi como colaboradoras en el repositorio de tareas del curso que creaste en tu cuenta de Github.
+
+Parte de los proyectos del curso involucrarán crear proyectos de github e irlos actualizando con sus avances a lo largo del semestre.
 
 
 ## Creación de pipelines
