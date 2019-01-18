@@ -470,9 +470,8 @@ cd BioinfinvRepro/
 3) Cuando les diga "actualicen el repo" (por ejemplo para poder utilizar los archivos que creé para un ejercicio), corre:
 
 ```
-
+git fetch
 ```
-
 
 ## Manejo de proyectos e issues en Github
 
