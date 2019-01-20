@@ -1,0 +1,17 @@
+"organic matter"
+Nitrogen
+pH
+"Soil Texture"
+"Soil organisms"
+Mycorrhizal
+Invertebrates
+Insects
+"Moisture retention"
+Salinization
+Erosion
+"Water efficiency"
+Fertilizer 
+Leaching
+Herbicide
+Pesticide
+Eutrophication

@@ -1,0 +1,131 @@
+---
+title: "Ejemplos de uso de Phytools"
+output: html_document
+---
+
+Lo primero es tener cargado el paquete de phytools
+
+
+```{r, warning=FALSE}
+library(phytools)
+```
+
+
+## Ejemplo 1: Poner barras de error a una filogenia
+
+Tomado de [esta entrada del blog de phylotools](http://blog.phytools.org/2017/03/error-bars-on-divergence-times-on.html)
+
+Primero simular un árbol e intervalos de confianza cada nodo:
+
+```{r}
+tree<-pbtree(n=26,tip.label=LETTERS[26:1],scale=100)
+h<-sapply(1:tree$Nnode+Ntip(tree),nodeheight,tree=tree)
+CI<-cbind(h-runif(n=length(h),min=10,max=20),h+runif(n=length(h),
+    min=5,max=10))
+CI[CI>max(nodeHeights(tree))]<-max(nodeHeights(tree))
+CI<-max(nodeHeights(tree))-CI
+rownames(CI)<-1:tree$Nnode+Ntip(tree)
+colnames(CI)<-paste(c("lower","upper"),"(MYBP)")
+
+tree
+CI # confidence intervals
+```
+
+Y ahora el plot
+
+
+```{r}
+# básico
+plotTree(tree)
+
+# apachurrarlo un poquito para que entre un eje con "tiempo"
+plotTree(tree,xlim=c(110,-5),direction="leftwards",
+    mar=c(4.1,1.1,1.1,1.1),ftype="i")
+# lineas verticales para ver el tiempo mejor
+abline(v=seq(0,120,by=10),lty="dashed",
+    col=make.transparent("grey",0.5))
+# eje con tiempo
+axis(1,at=seq(0,120,by=20))
+
+# guardar el plot en un objetio
+obj<-get("last_plot.phylo",envir=.PlotPhyloEnv)
+
+# utilizar un loop para poner el intervalo de confianza en cada nodo
+for(i in 1:tree$Nnode+Ntip(tree))
+    lines(x=c(CI[i-Ntip(tree),1],CI[i-Ntip(tree),2]),
+        y=rep(obj$yy[i],2),lwd=11,lend=0,
+        col=make.transparent("blue",0.4))
+points(obj$xx[1:tree$Nnode+Ntip(tree)],
+    obj$yy[1:tree$Nnode+Ntip(tree)],pch=19,col="blue",
+    cex=1.8)
+```
+
+Preguntas: 
+
+* ¿Por qué contamos los nodos con `1:tree$Nnode+Ntip(tree)`? 
+* ¿Cómo sabe R qué nodo es cuál y cómo los relaciona con la el objeto `CI`?
+
+
+## Ejemplo 2: Poner color o puntos en ramas terminales de un árbol
+
+Tomado de [esta entrada del blog de phylotools](http://blog.phytools.org/2017/01/plotting-terminal-edges-of-tree.html)
+
+
+Simulemos un árbol, parecidísimo al anterior pero con información de estados de un caracter dado para cada rama terminal.
+
+```{r}
+tree<-pbtree(n=26,tip.label=LETTERS)
+tree
+
+# crear edos
+Q<-matrix(c(-2,1,1,1,-2,1,1,1,-2),3,3)
+Q
+rownames(Q)<-colnames(Q)<-letters[1:3]
+Q
+x<-as.factor(sim.history(tree,Q)$states)
+x
+```
+
+La `x` anterior la creamos para este ejemplo, pero puede ser cualquier info sobre cada una de nuestros tips del árbol. 
+
+Ahora utilizar `paintBranches` para colorear las ramas de rojo/azul dependiendo de si la punta está en edo `b` o `c` y dejemos a `a` en negro:
+
+```{r}
+## identify the tips in states b or c
+b<-names(x)[x=="b"]
+b
+
+c<-names(x)[x=="c"]
+c
+
+## paint the edges
+tt<-paintBranches(tree,edge=sapply(b,match,tree$tip.label),
+    state="b",anc.state="a")
+tt<-paintBranches(tt,edge=sapply(c,match,tree$tip.label),
+    state="c")
+
+tt
+
+# Plot
+cols<-setNames(c("black","blue","red"),c("a","b","c"))
+plot(tt,colors=cols,lwd=4,split.vertical=TRUE,ftype="i")
+
+```
+
+Alternativamente, podemos utilizar la función `dotTree` para poner bolitas de colores después de las ramas.
+
+```{r}
+cols<-setNames(c("black","blue","red"),c("a","b","c"))
+dotTree(tree,x,colors=cols)
+```
+
+**Ejercicio** Combina el árbol de los dos ejemplos anteriores para generar un árbol con intervalos de confienza por nodo y los estados `b`y `c` coloreados de verde y rosa y el `a` de negro. Incluye todo el código para simular el árbol y demás datos que sean necesarios. El resultado final debe verse parecido a la imagen de abajo. Nota que los puntos de los CI cambiaron de tamaño y color con respecto al ejemplo anterior. 
+
+![](Rplot_phytools_CIsRamasCol.png)
+
+**Ejercicio** Utiliza los datos de maíz para generar un árbol. Gráficalo utilizando la funsión `dotTree` para que aparezca un círculo 
+
+
+# Ejemplo 3:
+
+http://blog.phytools.org/2016/11/cospeciation-method-applied-to.html
