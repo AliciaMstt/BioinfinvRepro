@@ -73,7 +73,7 @@ hist(islands)
 ```
 
 **Ejercicio**
-En "Unidad6/Prac_Uni6/data/reads.txt" encontrarás un archivo con la cantidad de lecturas de las muestras de tres librerías que fueron secuenciadas en Illumina. Grafica un histograma de las lecturas de cada muestra. 
+En "Unidad3/PracUni3/data/reads.txt" encontrarás un archivo con la cantidad de lecturas de las muestras de tres librerías que fueron secuenciadas en Illumina. Grafica un histograma de las lecturas de cada muestra. 
 
 ### Barplot
 
@@ -562,7 +562,7 @@ Por ejemplo vamos leer a R y graficar el  shaphile de las regiones biogeográfic
 
 ```{r}
 # leer shapefile
-biogeo<-readShapePoly("Prac_Uni6/maices/data/rbiog4mgw/rbiog4mgw.shp")
+biogeo<-readShapePoly("PracUni3/maices/data/rbiog4mgw/rbiog4mgw.shp")
 
 # plot
 plot(biogeo)
@@ -612,28 +612,6 @@ points(fullmat$Longitud, fullmat$Latitud, pch=19, col="black", cex=0.4)
 **Ejercicio**: Baja un mapa (nivel nacional) que te interese del [GeoPortal de la CONABIO](http://www.conabio.gob.mx/informacion/gis/), ploteálo y agrega los puntos del muestro de maíz, utilizando una forma de punto diferente para los teocintles, y que los puntos estén coloreados por CategAltitud. 
 
 
-### Utilizar mapas de GoogleMaps
-
-Hay una librería para bajar mapas (estáticos) de GoogleMaps: `RgoogleMaps`
-
-Ejemplo:
-
-```{r}
-# Cargar librería
-library(RgoogleMaps)
-
-# Establecer limites deseados
-lat <- c(13,30) # definir limites en y
-lon <- c(-112,-93) #definir limites en x
-center = c(mean(lat), mean(lon))  #donde queremos centrar
-zoom <- 4  #zoom deseado (1 lo más alejado)
-
-# obtener mapa
-mygooglemap <- GetMap(center=center, zoom=zoom, maptype= "terrain")
-
-# plot
-PlotOnStaticMap(mygooglemap)
-```
 ## Heatmaps en R
 
 Los *heatmaps* son gráficos bastánte útiles para resumir de manera visual una gran cantidad de datos que queremos contrastar (e.g., Diferenciación genética entre poblaciones, Composición de comunidades biológicas, niveles de expresión en diferentes tejidos, etc.). En R, una librería bastante útil para construir heatmaps es [Heatplus](http://bioconductor.org/packages/release/bioc/html/Heatplus.html), misma que vive en Bioconductor. Para explorar las funciones básicas de esta paquetería, lleva a cabo el tutorial de [The Molecular Ecologist](http://www.molecularecologist.com/2013/08/making-heatmaps-with-r-for-microbiome-analysis/). 
