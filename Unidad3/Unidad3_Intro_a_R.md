@@ -269,33 +269,7 @@ Nota también que si abres RStudio clickeando su ícono, tu WD por default será
 
 
 **Ejercicio:**
-Escribe un script que debe estar guardado en `Prac_Uni3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
-
-(averigua cada punto con comandos de R. Recuerda comentar o tendrás 7 años de mala suerte en el lab)
-
-* ¿Qué tipo de objeto creamos al cargar la base?
-
-* ¿Cómo se ven las primeras 6 líneas del archivo?
-
-* ¿Cuántas muestras hay?
-
-* ¿De cuántos estados se tienen muestras?
-
-* ¿Cuántas muestras fueron colectadas antes de 1980?
-
-* ¿Cuántas muestras hay de cada raza?
-
-* En promedio ¿a qué altitud fueron colectadas las muestras?
-
-* ¿Y a qué altitud máxima y mínima fueron colectadas?
-
-* Crea una nueva df de datos sólo con las muestras de la raza Olotillo
-
-* Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
-
-* Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
-
-
+Carga en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y ponlo en un objeto de R llamado meta_maiz.
 
 
 ### For loops
@@ -480,6 +454,34 @@ La manipulación y la limpieza da datos muchas veces es necesaria antes de poner
 * [Reestructura de datos y el principio de los datos limpios](Limpieza_de_datos.Rmd).
 
 * [Estrategia divide-aplica-combina](Divide-aplica-combina.html).
+
+
+**Ejercicio:**
+Escribe un script que debe estar guardado en `Prac_Uni3/maices/bin` y llamarse `ExplorandoMaiz.R`, que 1) cargue en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y 2) responda lo siguiente.
+
+(averigua cada punto con comandos de R. Recuerda comentar o tendrás 7 años de mala suerte en el lab)
+
+* ¿Qué tipo de objeto creamos al cargar la base?
+
+* ¿Cómo se ven las primeras 6 líneas del archivo?
+
+* ¿Cuántas muestras hay?
+
+* ¿De cuántos estados se tienen muestras?
+
+* ¿Cuántas muestras fueron colectadas antes de 1980?
+
+* ¿Cuántas muestras hay de cada raza?
+
+* En promedio ¿a qué altitud fueron colectadas las muestras?
+
+* ¿Y a qué altitud máxima y mínima fueron colectadas?
+
+* Crea una nueva df de datos sólo con las muestras de la raza Olotillo
+
+* Crea una nueva df de datos sólo con las muestras de la raza Reventador, Jala y Ancho
+
+* Escribe la matriz anterior a un archivo llamado "submat.cvs" en /meta.
 
 
 
