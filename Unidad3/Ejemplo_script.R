@@ -15,6 +15,11 @@ x
 # sumarle 13 a x
 x+13
 
+# definir y
+y<-5
+
+# plot x,y
+plot(x,y)
 
 
 
