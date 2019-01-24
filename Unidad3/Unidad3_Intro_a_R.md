@@ -454,6 +454,8 @@ El nombre del archivo R no improta, pero es buena práctica ponerle el mismo que
 Puedes ver más acordenos parecidos en [este link](https://www.rstudio.com/resources/cheatsheets/)
 
 
+
+
 La manipulación y la limpieza da datos muchas veces es necesaria antes de poner hacer análisis en R. Aquí trataremos brevemente lo siguientes puntos en [notas aparte]:
 
 * [Reestructura de datos y el principio de los datos limpios](Limpieza_de_datos.Rmd).
