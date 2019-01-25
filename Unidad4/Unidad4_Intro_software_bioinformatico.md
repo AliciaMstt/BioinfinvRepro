@@ -716,7 +716,29 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 
 ## Trabajar en servidores remotos
 
+### Conectarse a un servidor
 
+`ssh -v -i <ruta-a-tu-llave-privada> usuario@servidor`
+
+
+### Correr scripts 
+
+
+Podemos trabajar de forma interactiva ("en vivo" igual que en nuestra compu), pero si te sales se mueren tus trabajos. Para dejar scripts correindo y podernos salir hay dos formas:
+
+* Correr scripts en el background ([REF](https://www.thegeekstuff.com/2010/12/5-ways-to-execute-linux-command/)).
+
+* Utilizar un sistema de colas, como SLURM (o el que use tu cluster).
+
+![](SLURM.png)
+
+Siempre es buena idea ver cómo anda nuestro cluster de trabajo con `htop`.
+
+### Transferir archivos
+
+El comando `scp` 
+
+Sofware como Filezilla.
 
 
 
