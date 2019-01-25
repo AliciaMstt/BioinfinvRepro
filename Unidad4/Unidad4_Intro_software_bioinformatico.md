@@ -763,9 +763,11 @@ Siempre es buena idea ver cómo anda nuestro cluster de trabajo con `htop`.
 
 ### Transferir archivos
 
-El comando `scp` 
+* El comando `scp`: 
 
-Sofware como Filezilla.
+scp ArchivoAcopiarLocal usuario@servidor:/RutaDondeCopiar
+
+* Sofware como Filezilla.
 
 
 
