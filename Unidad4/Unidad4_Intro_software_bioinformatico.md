@@ -542,7 +542,7 @@ curl: try 'curl --help' or 'curl --manual' for more information
 Pero además del contendor básico biocontainers tenemos contenedores con ese sofware que siempre deseamos instalar. Por ejemplo con FastX-Tools y otro con vcftools. Vamos a hacer un `pull`:
 
 ```
-$ docker pull biocontainers/fastxtools::0.0.14
+$ docker pull biocontainers/fastxtools:0.0.14
 $ docker pull biocontainers/vcftools:0.1.15 :0.1.15
 ```
 
@@ -716,21 +716,48 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 
 ## Trabajar en servidores remotos
 
+Muchos análisis bioinformáticos, especialmente si involucran datos genómicos, requieren de muchas horas de procesamiento o de muchos recursos computacionales (memoria RAM y espacio de disco). 
+
+Ejemplos de recursos computacionales necesarios para:
+
+* **Ensamblaje de novo genoma entero**: RAM RAM RAM (>256 GB). Tarda 1 semana a 4 meses (según sp.)
+* **Ensamblaje de novo datos GBS/RAD**: RAM (4-16 GB). Horas a días, pero se hacen varias pruebas.
+* **Mapeo a genoma referencia**: RAM (8 GB ok). Horas a días* **Análisis filogenéticos bayesianos**: proco RAM, pero pueden duarar semanas.
+* **Análisis de estructura poblacional**: poco RAM, varias horas.
+
+Invertir en estos recursos vale más la pena si se comparten entre varios usuarios, por lo que muchas veces las instituciones tienen un **cluster de super cómputo**. Un cluster es un conjunto de computadoras (procesadores) conectadas entre sí a las que nos conectamos y asignamos trabajos para que corran entre varios procesadores. Los clusters operan con algún sabor de Linux, por lo que nuestra interacción con el es vía la línea de comando.
+
+Normalmente el cluster físicamente existe en algún lugar al que no tenemos acceso físico, por lo que más bien funciona como un servidor al que nos conectamos. 
+
+
 ### Conectarse a un servidor
 
+Para conectarnos a un servidor primero tenemos que contactar a su admin y tener un nombre de usuario, contraseña y probablemente claves de seguridad. Ya que tenemos esto, desde una terminal y teniendo acceso a internet podemos conectarnos con `shh`:
+
 `ssh -v -i <ruta-a-tu-llave-privada> usuario@servidor`
+
+Al hacer esto "entraremos" al servidor y podemos crear archivos y correr scripts desde nuestra terminal.
+
+Para cerrar tu sesión debes correr el comando `exit`.
 
 
 ### Correr scripts 
 
+Podemos trabajar de forma interactiva ("en vivo" igual que en nuestra compu), pero si te sales se mueren tus trabajos. Para dejar scripts corriendo y podernos salir hay dos formas:
 
-Podemos trabajar de forma interactiva ("en vivo" igual que en nuestra compu), pero si te sales se mueren tus trabajos. Para dejar scripts correindo y podernos salir hay dos formas:
+* Correr scripts en el background ([REF](https://www.thegeekstuff.com/2010/12/5-ways-to-execute-linux-command/)). Por ejemplo con `nohup script &`.
 
-* Correr scripts en el background ([REF](https://www.thegeekstuff.com/2010/12/5-ways-to-execute-linux-command/)).
+* Utilizar un sistema de colas, como SLURM (o el que use tu cluster). Este sistema permite que varios usuarios corran sus cosas al mismo tiempo, pero pero asignando recursos (por ejemplo número de procesadores, cantidad de RAM) independientes a cada trabajo. Así, si no hay recursos disponibles en lugar de que el cluster colapse, simplemente se espera a terminar de correr un proceso antes de continuar con los otros. 
 
-* Utilizar un sistema de colas, como SLURM (o el que use tu cluster).
+Con `squeue` podemos ver cómo está la cola. Y para especificar cuántos recursos consumirá nuestro script se agregan un par de líneas iniciando con `#SBATCH` (parecen comentarios) después del *she-bang* al inicio de nuestro script. Estos detalles deben venir en el sitio de documentación del cluster que ocupes, por ejemplo el del nodo genómico de CONABIO, se ve así:
 
 ![](SLURM.png)
+
+De forma que un script ejemplo queda así:
+
+![]()
+
+Luego para correr nuestro script, se hace con el comando `sbatch myscript.sh`.
 
 Siempre es buena idea ver cómo anda nuestro cluster de trabajo con `htop`.
 
