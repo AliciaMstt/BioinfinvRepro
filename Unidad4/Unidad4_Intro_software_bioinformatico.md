@@ -288,11 +288,15 @@ docker/whalesay     latest              6b362a9f73eb        9 months ago        
       
 ```
 $ docker run -it ubuntu bash
-root@740df4e6d81e:/# 
-root@740df4e6d81e:/# ls
+root@8f36b66384cb:/# 
+root@8f36b66384cb:/# ls
 bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
 boot  etc  lib   media  opt  root  sbin  sys  usr
+root@8f36b66384cb:/# mkdir Prueba
+root@8f36b66384cb:/# ls
+Prueba 
 ```
+
 
 **Pregunta**: ¿Qué significa el `#` en vez del `$`?
 
@@ -339,21 +343,44 @@ Reading package lists... Done
 Vamos a ver qué contenedores tenemos:
 
 ```
-$ docker ps  
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                    PORTS               NAMES
-a5864268eadd        ubuntu              "bash"              46 hours ago        Up 7 minutes                            sleepy_pasteur
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS                NAMES
+8f36b66384cb        ubuntu              "bash"              5 minutes ago       Exited (0) 3 minutes ago                         eager_brattain
+3dd0d21a78b9        ubuntu              "bash"              10 minutes ago      Up 10 minutes                                    gifted_hypatia
+e3591a0c4077        ubuntu              "bash"              14 minutes ago      Exited (0) 13 minutes ago                        keen_clarke
+1dab978ee569        hello-world         "/hello"            16 minutes ago      Exited (0) 16 minutes ago           
 ```
 
-Ese es nuestro contenedor. Se encuentra corriendo (aunque no haga nada). Para volver a entrar a él utilizamos `exec` y su ID:
+Nuestro contenedor es el último. Para volver a entrar a él utilizamos primero `start` y su ID (el texto alfanumérico es el ID del container) y luego `exec`:
 
 ```
-$ docker exec -it a5864268eadd bash
-root@a5864268eadd:/#
-root@a5864268eadd:/# mkdir Prueba # hacer un directorio prueba
-root@a5864268eadd:/# ls
+$ docker start 8f36b66384cb 
+8f36b66384cb 
+```
+
+Ahora aparecerá en la lista de contenedores activos (`docker ps` SIN `-a`.
+
+```
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+8f36b66384cb        ubuntu              "bash"              8 minutes ago       Up 42 seconds                            eager_brattain
+
+```
+
+Y por lo tanto podemos volver a entrar a el con `exec`
+
+```
+$ docker exec -it 8f36b66384cb  bash
+root@8f36b66384cb:/# 
+```
+
+Nota que los cambios que hayas realizado dentro del contenedor continúan existiendo.
+
+```
+root@8f36b66384cb:/# ls
 Prueba  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
-(nota que el texto alfanumérico después de `exec` es el ID del container. 
+
 
 Si nos salimos (`exit`) y luego queremos detenerlo por completo:
 
@@ -361,34 +388,19 @@ Si nos salimos (`exit`) y luego queremos detenerlo por completo:
 $ docker stop a5864268eadd 
 ```
 
-Si enlistamos con `docker ps` los contenedores corriendo ya no tendremos ningún resultado. Sin embargo, aún podemos ver ver otros contenedores no activos (abajo son los ejemplos en mi sistema, será diferente en el tuyo dependiendo qué contenedores tengas).
+Si quieres que tu contenedor corra en el background desde un principio, puedes utilizar el flab `-d`.
 
 ```
-$ docker ps -a 
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                    PORTS               NAMES
-a5864268eadd        ubuntu              "bash"              46 hours ago        Exited (0) 32 hours ago                       sleepy_pasteur
-28500c7d3069        ubuntu              "bash"              46 hours ago        Exited (0) 46 hours ago                       elegant_yalow
-ee966523a24f        hello-world         "/hello"            46 hours ago        Exited (0) 46 hours ago                       tiny_feynman
-f09c940dfdc9        docker/whalesay     "cowsay boo"        46 hours ago        Exited (0) 46 hours ago                       big_einstein
-d44c3d46c6f9        hello-world         "/hello"            46 hours ago        Exited (0) 46 hours ago                       mad_euclid
-e5af547543fa        ubuntu              "/bin/bash"         46 hours ago        Exited (0) 46 hours ago                       determined_mccarthy
-a638c4048191        ubuntu              "/bin/bash"         46 hours ago        Exited (0) 46 hours ago                       big_ritchie
-5b4ad6c46797        hello-world         "/hello"            46 hours ago        Exited (0) 46 hours ago                       adoring_babbage
-```
-
-Si queremos volver a ejecutar un proceso en nuestro contenedor (con `exec` como hicimos arriba) primero necesitamos reiniciarlo (o sea deshacer el stop):
-
-`docker restart a5864268eadd`
-
-Y ya luego podemos volver a entrar a el:
+$ docker run -dit ubuntu bash
+e236ce647ea0c6513531f44f9880bc3b4c0005f2442dd16ca10125bd305ec31b
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                NAMES
+e236ce647ea0        ubuntu              "bash"              12 seconds ago      Up 10 seconds                            hopeful_goodall
 
 ```
-docker exec -it a5864268eadd bash
-root@a5864268eadd:/# ls
-Prueba  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-```
 
-Nota que los cambios que hayas realizado dentro del contenedor continúan existiendo.
+
+#### Borrar contenedores e imágenes
 
 Si quieres borrar contenedores o imágenes (son espacio en disco):
 
@@ -416,14 +428,14 @@ Ya debes tener una imagen de ubuntu (si seguiste las notas anteriores), si no `d
 3) Corre la imagen de ubuntu dentro de un contenedor, pero **montando un volumen**, es decir un directorio en tu equipo que podrá ser accedido por el contenedor:
 
 ```
-docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash
+docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash
 ```
 
 Desglozando el comando anterior:
 
 `-v` es la bandera para indicar que queremos que monte un volumen 
 
-`/Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1` es la ruta **absoluta**. Sí, absoluta (así que cambiala por la ruta de tu equipo) ya que así es cuando se trata de montar volúmenes :(. 
+`/Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1` es la ruta **absoluta**. Sí, absoluta (así que cambiala por la ruta de tu equipo) ya que así es cuando se trata de montar volúmenes :(. 
 
 `:/DatosContenedorEjercicioClase` es el nombre del directorio como quremos que aparezca dentro de nuestro contenedor. El `:/` es para indicar que lo que sigue es el nombre.
 
@@ -530,14 +542,14 @@ curl: try 'curl --help' or 'curl --manual' for more information
 Pero además del contendor básico biocontainers tenemos contenedores con ese sofware que siempre deseamos instalar. Por ejemplo con FastX-Tools y otro con vcftools. Vamos a hacer un `pull`:
 
 ```
-$ docker pull biocontainers/fastxtools
-$ docker pull biocontainers/vcftools
+$ docker pull biocontainers/fastxtools::0.0.14
+$ docker pull biocontainers/vcftools:0.1.15 :0.1.15
 ```
 
 Yo puedo entrar a estos contenedores con `-it /bin/bash` como lo hemos hecho antes, pero también puedo utilizarlo para **solo** correr el programa con un comando concreto. Por ejemplo, mostrar la ayuda:
 
 ```
-$ docker run biocontainers/vcftools vcftools -help
+$ docker run biocontainers/vcftools:0.1.15 vcftools -help
 
 VCFtools (0.1.14)
 © Adam Auton and Anthony Marcketta 2009
@@ -558,7 +570,7 @@ Questions, comments, and suggestions should be emailed to:
 o en FastX-tools:
 
 ```
-$ docker run biocontainers/fastxtools fastq_to_fasta -h
+$ docker run biocontainers/fastxtools:0.0.14 fastq_to_fasta -h
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -593,12 +605,12 @@ CONTAINER ID        IMAGE                      COMMAND               CREATED    
 
 Esto ocupa espacio en disco y nos llena de contenedores a los que no volveremos a entrar. La solución: borrar un contenedor al salir. 
 
-Esto se hace con el flag `--rm` para que se borre al salir. Más una de estas dos opciones: 
+Esto se hace con el flag `--rm` para que se borre al salir. **Más** una de estas dos opciones: 
 
 1) Indicandole al contenedor que se salga al terminar de correr, agregando `-c exit` al comandos que queremos que corra. Ejemplo:
 
 ```
-$ docker run --rm biocontainers/fastxtools fastq_to_fasta -h -c exit
+$ docker run --rm biocontainers/fastxtools:0.0.14 fastq_to_fasta -h -c exit
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -620,7 +632,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 2) El flag `-c`  en realidad sirve para pedirle que corra más de un comando dentro del mismo contenedor (unidos por ejemplo con `|`, `;`, etc) Si corres el contenedor con `bash` y los comandos deseados entre "" automáticamente se saldrá (sin tenerle que decir `exit`) al terminar de correr todos los comandos. Ejemplo:
 
 ```
-$ docker run --rm biocontainers/fastxtools bash -c "fastq_to_fasta -h ; echo hola mundo"
+$ docker run --rm biocontainers/fastxtools:0.0.14 bash -c "fastq_to_fasta -h ; echo hola mundo"
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -666,9 +678,9 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 
 `docker pull [IMAGEN]` para bajar la imagen base donde trabajaras
 
- `docker run -v [-v [RutaABSOLUTAaldirectorioDeseado:/nombrevolumen]] -it [IMAGEN] bash` para crear y correr el contenedor con la imagen de forma interactiva ("entrando") y con un volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos. Ejemplo: `docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash`
+ `docker run -v [-v [RutaABSOLUTAaldirectorioDeseado:/nombrevolumen]] -it [IMAGEN] bash` para crear y correr el contenedor con la imagen de forma interactiva ("entrando") y con un volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos. Ejemplo: `docker run -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1:/DatosContenedorEjercicioClase -it ubuntu bash`
  
-  OJO: cada vez que haces `docker run` se **crea** un contenedor **distinto** a partir de la misma imagen. 
+  OJO: cada vez que haces `docker run` se **crea** un contenedor **distinto** a partir de la misma imagen. Para **no llenarte de contenedores** utiliza `docker run --rm` (detalles abajo).
  
  `docker restart IDCONTAINER` para prender de nuevo el contenedor, NO `docker pull` de nuevo.
  
@@ -686,7 +698,7 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
  
  `docker run --rm -v [RutaABSOLUTAaldirectorioDeseado:/data]  [biocontainers/IMAGEN] [COMANDOS del sofware en cuestión] -c exit` para correr el contenedor de una imagen de biocontainers con los comandos específicos de un software dado, con volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos y de tal forma que el contenedor se borre automáticamente al terminar el proceso. Ejemplo:
  
-`docker run --rm -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad5/Prac_Uni5/DatosContenedor1/datos:/data biocontainers/fastxtools bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v ; exit"`
+`docker run --rm -v /Users/ticatla/hubiC/Science/Teaching/Mx/BioinfInvgRepro/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1/datos:/data biocontainers/fastxtools:0.0.14 bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v ; exit"`
 
 
 (Estos datos ejemplo vienen de [Galaxy Data Libraries](https://usegalaxy.org/library/list#folders/F5bee13e9f312df25/datasets/99fa250d93e003f7) y son de libre uso)
@@ -703,3 +715,13 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 
 
 ## Trabajar en servidores remotos
+
+
+
+
+
+
+
+
+
+
