@@ -10,7 +10,7 @@ Muchos formatos están asociados a un programa en particular, aunque los más us
 
 Otros programas tienen sus propios formatos y hay que transformarlos manualmente (bueno, con la línea de comando) para analizarlos con otro software (lo cual puede ser doloroso).
 
-Aquí nos vamos a enfocar en los formatos (y programas)[Plink](https://www.cog-genomics.org/plink2/) y [VCF ](http://www.1000genomes.org/wiki/Analysis/variant-call-format), pues son bastante estándares, varios paquetes de R los pueden leer e incluyen su propio programa para realizar algunos análisis de genética de poblaciones.
+Aquí nos vamos a enfocar en los formatos (y programas)[Plink](https://www.cog-genomics.org/plink/1.9/) y [VCF ](http://www.1000genomes.org/wiki/Analysis/variant-call-format), pues son bastante estándares, varios paquetes de R los pueden leer e incluyen su propio programa para realizar algunos análisis de genética de poblaciones.
 
 
 
@@ -55,11 +55,11 @@ Ejemplo:
 
 ## Plink
 
-También representa SNPs de hasta miles de individuos, pero con menos información de cada variante. [Ref](https://www.cog-genomics.org/plink2/)
+También representa SNPs de hasta miles de individuos, pero con menos información de cada variante. Está enfocado en el análisis de familias y los fenotipos asociados a individuos, pero es útil para manejo de datos en general y muchos otros programas lo cupan de input [Ref](https://www.cog-genomics.org/plink/1.9/)
 
-Programa asociado: [Plink](http://pngu.mgh.harvard.edu/~purcell/plink/) y [Plink2]((https://www.cog-genomics.org/plink2/))
+Programa asociado: [Plink](http://pngu.mgh.harvard.edu/~purcell/plink/) y [Plink1.9](https://www.cog-genomics.org/plink/1.9/)
 
-En realidad hay varios [tipos de formato plink](https://www.cog-genomics.org/plink2/formats), y normalmente no son uno sino **varios archivos**. 
+En realidad hay varios [tipos de formato plink](https://www.cog-genomics.org/plink/1.9/formats), y normalmente no son uno sino **varios archivos**. 
 
 La manera de manejar los formatos cambió un poco entre las versiones <1.9 y 1.9. Siguen siendo compatibles, pero aguas.
 
@@ -142,11 +142,11 @@ FID	IID	PAT	MAT	SEX	PHENOTYPE	abph1.15_G	ae1.8_A	an1.3_A	ba1.5_G	ba1.7_A	csu1138
 ```
 
 
-## Ejemplos de manejo de datos y análisis de genética de poblaciones con VCF
+## Ejemplos con VCF
 
 1) Utiliza un comando para bajar los datos en formato vcf del repositorio Schweizer RM, Robinson J, Harrigan R, Silva P, Galaverni M, Musiani M, Green RE, Novembre J, Wayne RK (2015) Data from: Targeted capture and resequencing of 1040 genes reveal environmentally driven functional variation in gray wolves. Dryad Digital Repository. [http://dx.doi.org/10.5061/dryad.8g0s3](http://datadryad.org/resource/doi:10.5061/dryad.8g0s3)
 
-El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5`. Navega ahí y luego:
+El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5/wolves`. Navega ahí y luego:
 
 ```
 wget https://datadryad.org/bitstream/handle/10255/dryad.98341/Filtered_variableSites_fixedSamples_9July2014_minDP10noMissing_ecotypesOnly_n107_GenicRegions_95CallRate.recode.vcf?sequence=1
@@ -161,7 +161,7 @@ b) ¿Cuántos MB pesa el archivo?
 2) En un contenedor con vcftools (o en tu máquina con tu propia instalación de vcf) realiza los siguientes ejercicios. Si estás usando docker recuerda cómo correr vcf en un contenedor **montando un volumen** (`-v`) y borrándolo cuando termine de correr (`--rm`):
 
 ```
-docker run --rm -v /RutaAbsolutaA/Prac_Uni5:/data biocontainers/vcftools:0.1.15 vcftools -help
+docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools -help
 ```
 
 Por facilidad, puedes poner la parte que repitiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
@@ -194,3 +194,78 @@ i) Filtra los sitios que tengan una frecuencia del alelo menor  <0.05 y crea un 
 
 j) Convierte el archivo `wolves_maf05.vcf` a formato plink. 
  
+ 
+
+## Ejemplos con plink
+
+
+En la ruta `BioinfinvRepro/Unidad5/Prac_Uni5/maices/data` encontrarás varios archivos plink. Contesta lo siguiente **asumiendo que tu WD es `maices/bin` (y no `data`).**
+
+1) Enlista los archivos que hay en `data`. 
+
+```
+$ ls ../data
+maicesArtegaetal2015.log  maicesArtegaetal2015.ped  maices_admixture.Q
+maicesArtegaetal2015.map  maicesArtegaetal2015.raw
+
+```
+
+2) ¿Qué tipos de archivos son cada uno?
+
+3) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente:
+
+a) Transforma de formato ped a formato bed (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión.
+
+```
+plink --file ../data/maicesArtegaetal2015 --make-bed --out ../data/maicesArtegaetal2015
+```
+
+b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10
+
+¿Cuántos SNPs y cuántos individuos fueron removidos por los filtros?
+
+```
+plink --file ../data/maicesArtegaetal2015 --recode --maf 0.05 --mind 0.1 --out ../data/maicesArtegaetal2015_maf05_missing10
+```
+
+c) Realiza un reporte de equilibrio de Hardy-Weinberg sobre el archivo `maicesArtegaetal2015_maf05_missing10` creado en el ejercicio anterior. El nombre del archivo de tu output debe contener maicesArtegaetal2015_maf05_missing10.
+
+```
+plink --file ../data/maicesArtegaetal2015_maf05_missing10 --hardy --out ../data/maicesArtegaetal2015_maf05_missing10
+```
+
+Observa el output y discute que es cada columna.
+
+```
+head maicesArtegaetal2015_maf05_missing10.hwe
+ CHR                     SNP     TEST   A1   A2                 GENO   O(HET)   E(HET)            P 
+   0                abph1.15  ALL(NP)    G    A             44/75/46   0.4545   0.4999       0.2753
+   0                   an1.3  ALL(NP)    A    C            11/44/109   0.2683   0.3215      0.04821
+   0                   ba1.5  ALL(NP)    G    A             51/41/73   0.2485   0.4911    2.236e-10
+   0               csu1138.4  ALL(NP)    A    G             8/41/115     0.25   0.2872       0.1027
+   0               csu1171.2  ALL(NP)    A    G             21/56/88   0.3394   0.4176        0.024
+   0                  Fea2.2  ALL(NP)    A    G             30/37/98   0.2242   0.4151     9.19e-09
+   0              MZB00125.2  ALL(NP)    A    G            10/46/108   0.2805   0.3215       0.1403
+   0                  pbf1.3  ALL(NP)    G    A            11/43/111   0.2606   0.3163      0.02714
+   0                  pbf1.5  ALL(NP)    A    G            11/43/111   0.2606   0.3163      0.02714
+```
+
+
+d) Observa el archivo `maicesArtegaetal2015.fam`. Consulta la documentación de plink para determinar que es cada columna. ¿Qué información hay y no hay en este archivo?
+
+```
+$ head ../data/maicesArtegaetal2015.fam
+1 maiz_3 0 0 0 -9
+2 maiz_68 0 0 0 -9
+3 maiz_91 0 0 0 -9
+4 maiz_39 0 0 0 -9
+5 maiz_12 0 0 0 -9
+6 maiz_41 0 0 0 -9
+7 maiz_35 0 0 0 -9
+8 maiz_58 0 0 0 -9
+9 maiz_51 0 0 0 -9
+10 maiz_82 0 0 0 -9
+```
+
+4) Utiliza la info el archivo `meta/maizteocintle_SNP50k_meta_extended.txt` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/maicesArtegaetal2015*` de tal forma que el family ID corresponda a la info de la columna `Categ.Altitud` en `maizteocintle_SNP50k_meta_extended.txt`. Pista: este ejercicio requiere varias operaciones, puedes dividarlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /bin). 
+
