@@ -167,7 +167,7 @@ docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:
 Por facilidad, puedes poner la parte que repitiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
 
 ```
-vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5:/data biocontainers/vcftools:0.1.15 vcftools"
+vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools"
 ```
 
 y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help". 
