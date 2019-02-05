@@ -146,17 +146,39 @@ FID	IID	PAT	MAT	SEX	PHENOTYPE	abph1.15_G	ae1.8_A	an1.3_A	ba1.5_G	ba1.7_A	csu1138
 
 1) Utiliza un comando para bajar los datos en formato vcf del repositorio Schweizer RM, Robinson J, Harrigan R, Silva P, Galaverni M, Musiani M, Green RE, Novembre J, Wayne RK (2015) Data from: Targeted capture and resequencing of 1040 genes reveal environmentally driven functional variation in gray wolves. Dryad Digital Repository. [http://dx.doi.org/10.5061/dryad.8g0s3](http://datadryad.org/resource/doi:10.5061/dryad.8g0s3)
 
+El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5`. Navega ahí y luego:
+
+```
+wget https://datadryad.org/bitstream/handle/10255/dryad.98341/Filtered_variableSites_fixedSamples_9July2014_minDP10noMissing_ecotypesOnly_n107_GenicRegions_95CallRate.recode.vcf?sequence=1
+```
+
+**Pregunta** ¿De dónde saqué ese link?
+
 a) Si no lo hiciste de inicio, cambia el nombre del archivo que acabas de bajar a `wolves.vcf`.
 
 b) ¿Cuántos MB pesa el archivo?
 
-2) En un contenedor con vcftools (o en tu máquina con tu propia instalación de vcf) realiza los siguientes ejercicios. Si estás usando docker recuerda cómo contar un contenedor. Aquí un ejemplo asumiendo bajaste 
+2) En un contenedor con vcftools (o en tu máquina con tu propia instalación de vcf) realiza los siguientes ejercicios. Si estás usando docker recuerda cómo correr vcf en un contenedor **montando un volumen** (`-v`) y borrándolo cuando termine de correr (`--rm`):
+
+```
+docker run --rm -v /RutaAbsolutaA/Prac_Uni5:/data biocontainers/vcftools:0.1.15 vcftools -help
+```
+
+Por facilidad, puedes poner la parte que repitiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
+
+```
+vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5:/data biocontainers/vcftools:0.1.15 vcftools"
+```
+
+y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help". 
+
+Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y responde
 
 a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
 
 b) Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo.
 
-c) ¿Cuántos sitios del archiov no tienen missing data?
+c) ¿Cuántos sitios del archivo no tienen missing data?
 
 d) Calcula la frecuencia de cada alelo para todos los individuos pero solo para los sitios sin missing data y guarda el resultado en un archivo. 
 
