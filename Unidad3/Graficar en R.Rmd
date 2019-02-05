@@ -1,0 +1,653 @@
+---
+title: "Graficar en R (bias genético)"
+output: html_document
+---
+
+R tiene una inmensa capacidad de graficar y visualizar datos de todo tipo, incluídos datos genéticos. 
+
+Las gráficas pueden hacerse desde la base de R (`base`) o con paquetes especializados en graficar, como `lattice`, o más recientemente `ggplot2` y `ggbio`. También paquetes especializados en un tipo de datos que incluyen funciones para graficar, como `ape` para árboles filogenéticos. 
+
+En esta sección veremos una introducción a graficar en R usando `graphics` que es el sistema que viene con `base` y luego nos enfocaremos en gráficas más complejas y las principales usadas en análisis genéticos. En R se puede hacer mucho más que lo que veremos aquí, recomiendo profundizar. 
+
+**Una de las mejores formas de aprender a hacer gráficas en R es buscar en internet/libro una gráfica parecida a la que queremos hacer y ver el código**. Algunas recomendaciones:
+
+* Sección IV de Adler, J. (2012) _R in a Nutshell_ O'Reilly. 
+* [R Graph Gallery](http://www.r-graph-gallery.com/)
+* [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/) 
+* [Blog de phytools](http://blog.phytools.org/)
+* [Making maps with R en The Molecular Ecologist](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+* [Documentación online de ggplot2](http://docs.ggplot2.org/current/)
+* [Documentación online de ggbio](http://www.tengfei.name/ggbio/docs/)
+
+
+## Base Graphics
+
+Estas son las principales funciones para graficar utilizando la base de R. Puedes buscar ayuda de cada una con su nombre, y además en explorar argumentos extras con `?par`
+ 
+* `plot`: generic x-y plotting
+* `barplot`: bar plots
+* `boxplot`: box-and-whisker plot
+* `hist`: histograms
+* `pie`: pie charts
+* `dotchart`: cleveland dot plots
+* `image`, `heatmap`, `contour`, `persp`: functions to generate image-like plots
+* `qqnorm`, `qqline`, `qqplot`: distribution comparison plots
+
+
+### Gráficas x,y:
+
+Dando x, y:
+```{r}
+largo<-c(10,20,11,15,16,20)
+ancho<-c(5,10,7,8,8,11)
+plot(x=largo, y=ancho)
+````
+
+Dando un objeto que tiene dos columnas, se toman automático como x,y:
+```{r}
+# ver el contenido de `cars`(una df ejemplo que viene con R)
+head(cars)
+plot(cars)
+````
+
+Si queremos especificar qué columnas serán x, y del objeto:
+```{r}
+# graficar vel vs distancia
+plot(x=cars$speed, y=cars$dist)
+````
+
+Cambiar título de ejes e íconos:
+```{r}
+# graficar vel vs distancia
+plot(x=cars$speed, y=cars$dist, xlab="Velocidad", ylab="Distancia", cex=0.5, pch=19)
+````
+
+**Ejercicio**: mira la ayuda de `par` y explica qué hacen los argumentos `cex` y `pch`.
+
+**Ejercicio**: Repite la figura anterior pero cambiando los puntos por triángulos azules. Necesitarás [esto](http://www.statmethods.net/advgraphs/images/points.png). 
+
+### Histogramas
+Ejemplo con los datos islands (viene con R)
+```{r}
+hist(islands)
+```
+
+**Ejercicio**
+En "Unidad3/PracUni3/data/reads.txt" encontrarás un archivo con la cantidad de lecturas de las muestras de tres librerías que fueron secuenciadas en Illumina. Grafica un histograma de las lecturas de cada muestra. 
+
+### Barplot
+
+Ejemplo:
+```{r}
+DNAcon<-data.frame(muestra=c("A", "B", "C"), concentracionADN=c(5,10,9))
+barplot(DNAcon$concentracionADN, names.arg=DNAcon$muestra)
+```
+
+**Ejercicio** Repite la gráfica de DNAcon pero agregando títulos a los ejes x,y
+
+Ahora cargemos un archivo real de datos:
+
+```{r}
+reads<-read.delim("PracUni3/ejemplosgenerales/data/reads.txt")
+```
+
+Hagamos una gráfica de barras y colorear acorde a info contenida en otra columna:
+
+```{r}
+head(reads)
+barplot(reads$nreads, col=reads$Library)
+```
+
+### Definir colores
+
+Los colores que R ocupa para colorear algo están definidos en `palette` y pueden cambiarse
+
+```{r}
+# Ver colores
+palette()
+
+# Cambiar colores 
+palette(c("green", "blue", "red"))
+
+# volver a graficar
+barplot(reads$nreads, col=reads$Library)
+
+```
+
+Además de manualmente, los colores se pueden definir via paletas predeterminadas:
+
+```{r}
+# Cambiar palette a 6 colores del arcoiris
+palette(rainbow(6))
+
+# volver a graficar
+barplot(reads$nreads, col=reads$Library)
+```
+
+Checa otras palettes parecidas a `rainbow` en [este link](http://www.r-bloggers.com/color-palettes-in-r/), y no te pierdas cómo nombrar muchos otros colores y utilizar otras paletas con más colores en la [R Color Reference Sheet](http://www.r-bloggers.com/r-color-reference-sheet/). Si necesitas generar muchos colores [I wanthue](http://tools.medialab.sciences-po.fr/iwanthue/) es lo que necesitas. 
+
+### Agregar una leyenda
+
+```{r}
+# Graficar
+barplot(reads$nreads, col=reads$Library)
+# Agregar leyenda
+legend(x="topleft", legend=levels(reads$Library), fill=palette()[1:3])
+
+```
+
+Nota que `legend` es una función por si misma (i.e. NO un argumento de `plot`) que requiere que antes de correrlo se haya corrido `plot`. Es decir una vez que creamos una gráfica podemos **agregar sobre de esta** una leyenda. Lo mismo puede hacerse con la función `title`.
+
+
+## ggplot2
+
+Las gráficas que hemos visto hasta ahora pueden verse un poco feas de inicio y puede tomar un rato y mucho código arreglarlas a algo hermoso. `ggplot2` es un paquete que ahorra este trabajo y que ahora es ampliamente adoptado.
+
+`ggplot2` construye gráficas "definiendo sus componentes paso a paso".
+
+Para poder usar `ggplot2` se requiere que la data.frame esté en **formato largo**, como vimos cuando revisamos la función `gather`. Además de esos apuntes puedes revisar [esto](http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/) si te quedan dudas. 
+
+
+**Términos importantes**:
+
+**Ojo: Mucho mejor que ver la ayuda de cada función es ver la [Documentación online de ggplot2](http://docs.ggplot2.org/current/) y este [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/) **
+
+* `ggplot` la función principal donde se especifican el set de datos y las variables a graficar. 
+
+* __geoms__ "objetos geométricos" (el tipo de gráfica en cierto modo): 
+  - `geom_point()`
+  - `geom_bar()`
+  - `geom_density()`
+  - `geom_line()`
+  - `geom_area()`
+  - `geom_histogram()`
+
+* __aes__ los estéticos que pondremos: forma, transparencia (alpha), color, relleno, tipo de línea, etc. 
+
+* __scales__ para especificar si los datos se graficarán de forma continua, discreta, logarítmica.
+
+* __themes__ para modificar los elementos de la gráfica no relacionados con los datos, como el tipo de letra y el color del fondo.
+
+### Ejemplos:
+
+#### Gráficas de dispersión 
+
+```{r}
+# Cargar ggplot2
+library(ggplot2)
+
+# Examinar datos pre-cargados
+head(iris)
+
+# graficar 
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width)) + geom_point()
+```
+
+**Pregunta:** ¿Qué hace el símbolo +? Nota que el código  anterior tmb puede escribirse así:
+
+```{r}
+myplot<-ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width))
+
+myplot + geom_point()
+```
+
+Los colores y formas se cambian en **aes**:
+
+```{r}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width, color= Species, shape=Species)) + geom_point()
+
+```
+
+Ya sea en el aes de la función inicial o dentro de los geoms (Nota que el tamaño no es un aes, sino un argumento de geom_point)
+
+```{r}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width)) + 
+    geom_point(aes(color= Species, shape=Species), size=3)
+
+```
+
+Si queremos quitar el fondo gris:
+
+```{r}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width)) + 
+    geom_point(aes(color= Species, shape=Species), size=3) + 
+    theme_bw()
+```
+
+
+Aveces queremos graficar en páneles separados la misma info para diferentes tratamientos o especies. Por ejemplo:
+
+```{r}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width)) + 
+  geom_point() +
+  facet_grid(Species ~ .)
+```
+
+**Ejercicio** Pon color por especie a la gráfica anterior:
+
+```{r, echo=FALSE}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width, color=Species)) + 
+  geom_point() +
+  facet_grid(Species ~ .)
+```
+
+**Ejercicio** Repite la gráfica anterior pero para que se vea así:
+
+```{r, echo=FALSE}
+p <- ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width, color=Species)) + 
+  geom_point() +
+  facet_grid(. ~ Species)
+p 
+```
+
+**Ejercicio** Repite la figura anterior pero cambiando los labels para que digan "Ancho de sépalo" y "Largo de sépalo", respectivamente. Debe verse así:
+
+```{r, echo=FALSE}
+p <- p + ylab("Ancho del sépalo") + xlab("Largo del sépalo")  
+p 
+```
+
+
+También podemos agregar el resultado de un modelo matemático, como una regresión lineal:
+
+```{r}
+ggplot(data=iris, aes(x=Sepal.Length, y= Sepal.Width, color=Species)) + 
+  geom_point() +
+  facet_grid(Species ~ .) +
+  geom_smooth(method="lm")
+```
+
+
+#### Barplot
+
+En este tipo de gráficas la altura de las barras puede significar dos cosas:
+
+* la __cuenta__ (frecuencia) de casos de cada valor de x. Si quieres graficar esto utiliza `stat="bin"` en los argumentos de `geom_bar`.   
+* el __valor__ de la columna en el set de datos. Si quieres graficar esto utiliza `stat="identity"` en los argumentos de `geom_bar`. 
+
+Ejemplo:
+```{r}
+# Cargar archivo
+reads<-read.delim("PracUni3/ejemplosgenerales/data/reads.txt")
+
+# plot
+p <- ggplot(data=reads, aes(x=sample, y=nreads, fill=Library)) + 
+  geom_bar(stat="identity") 
+p 
+
+# Rotar nombres muestras
+p <- p +  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=6))
+p
+
+```
+
+La gráfica anterior no es igual a la que hicmos con `barplot` con los mismos datos ya que `ggplot2` grafica **en el orden de los levels**, en este caso:
+
+
+```{r}
+head(levels(reads$sample))
+```
+
+Forma de solucionarlo:
+
+```{r}
+# Cambiar orden de levels:
+reads$sample<-factor(reads$sample, levels = reads$sample[order(1:length(reads$sample))])
+head(levels(reads$sample))
+
+# Graficar
+# plot
+p <- ggplot(data=reads, aes(x=sample, y=nreads, fill=Library)) + geom_bar(stat="identity") 
+p +  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=6))
+
+
+```
+
+#### Boxplot
+
+Siguiendo con los mismos datos anteriores:
+
+```{r}
+# plot
+p <- ggplot(data=reads, aes(x=Library, y=nreads, fill=Library)) + geom_boxplot()
+p
+
+# quitar leyenda
+p + guides(fill=FALSE)
+
+```
+
+### Cambiar colores en ggplot
+
+Al igual que en base, en ggplot es posible cambiar los colores manualmente o cambiando la paleta.  
+
+Recomiendo buscar más información y ejemplos en esta excelente guía [Cookbook-R colores en ggplot2](http://www.cookbook-r.com/Graphs/Colors_%28ggplot2%29/).
+
+Ejemplos:
+
+**Cambiar colores manualmente**
+
+```{r}
+# Crear paleta:
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Usar paleta en gráfica:
+p <- ggplot(data=reads, aes(x=Library, y=nreads, fill=Library)) + geom_boxplot()
+p + scale_fill_manual(values=c("red", "blue", "green"))
+
+```
+
+
+**Cambiar la paleta**
+
+```{r}
+# Crear paleta apta para daltónicos:
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Usar paleta en gráfica:
+p <- ggplot(data=reads, aes(x=Library, y=nreads, fill=Library)) + geom_boxplot()
+p + scale_fill_manual(values=cbPalette)
+
+```
+
+
+**Usar una paleta de ColorBrewer**
+
+```{r}
+p <- ggplot(data=reads, aes(x=Library, y=nreads, fill=Library)) + geom_boxplot()
+p + scale_fill_brewer(palette="Set1")
+```
+
+
+**Utilizar gradientes de colores**
+
+```{r}
+# Generar datos
+set.seed(1)
+df <- data.frame(xval=rnorm(50), yval=rnorm(50))
+
+# Plot
+ggplot(df, aes(x=xval, y=yval, colour=yval)) + geom_point()
+
+# Cambiar gradiente
+ggplot(df, aes(x=xval, y=yval, colour=yval)) + geom_point() + 
+    scale_colour_gradientn(colours=rainbow(6))
+
+```
+
+### Múltiples gráficas (=/= facets) en una gráfica:
+
+Veamos este [ejemplo de R Cookbook](http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_%28ggplot2%29/) sobre mutlipltos:
+
+Primero generamos y guardamos en objetos 4 gráficas:
+
+```{r}
+
+# This example uses the ChickWeight dataset, which comes with ggplot2
+# First plot
+p1 <- ggplot(ChickWeight, aes(x=Time, y=weight, colour=Diet, group=Chick)) +
+    geom_line() +
+    ggtitle("Growth curve for individual chicks")
+
+# Second plot
+p2 <- ggplot(ChickWeight, aes(x=Time, y=weight, colour=Diet)) +
+    geom_point(alpha=.3) +
+    geom_smooth(alpha=.2, size=1) +
+    ggtitle("Fitted growth curve per diet")
+
+# Third plot
+p3 <- ggplot(subset(ChickWeight, Time==21), aes(x=weight, colour=Diet)) +
+    geom_density() +
+    ggtitle("Final weight, by diet")
+
+# Fourth plot
+p4 <- ggplot(subset(ChickWeight, Time==21), aes(x=weight, fill=Diet)) +
+    geom_histogram(colour="black", binwidth=50) +
+    facet_grid(Diet ~ .) +
+    ggtitle("Final weight, by diet") +
+    theme(legend.position="none")        # No legend (redundant in this graph)    
+
+```
+
+Luego las graficamos juntas con la función `multiplot`, del paquete Rmisc:
+
+`
+```{r}
+library(Rmisc)
+multiplot(p1, p2, p3, p4, cols=2)
+```
+
+## Graficar árboles filogenéticos
+
+La graficación de árboles filogenéticos se hace con el paquete `ape`, con el paquete `phytools` para funcionalidad extendida y con el paquete `ggtree`. Empezaremos por `ape`.  
+
+Bibliografía recomendada:
+
+* [Phylogenetic trees in R, del blog Sensory Evolution](https://ecomorph.wordpress.com/2014/10/09/phylogenetic-trees-in-r-4/)
+* [Blog de phytools](http://blog.phytools.org/)
+* [Documentación de ggtree](https://www.bioconductor.org/packages/3.3/bioc/vignettes/ggtree/inst/doc/treeVisualization.html)
+
+Los árboles filogenéticos pueden **construirse en R**, **simularse en R** o **leerse a R**.
+
+Veamos un ejemplo con un árbol simulado:
+
+```{r}
+# Cargar librería
+library(ape)
+
+# Simular árbol
+set.seed(1) # este comando es opcional, sirve para que todas "simulemos los mismos números" y podamos repetir de forma idéntica la simulación cada vez
+tree <- rtree(n = 10, rooted=FALSE)
+
+# ¿Qué tipo de objeto es?
+class(tree)
+
+# ¿Qué contiene?
+tree
+str(tree)
+
+# Graficar el árbol
+plot.phylo(tree, edge.width=2)
+```
+
+La función `plot.phylo` puede abreviarse como `plot`. R sabe que debe usar la función `plot.phylo` y no `plot` básico (como lo usamos arriba) porque el objeto que le damos es un árbol. 
+
+Podemos modificar este árbol de manera similar a cómo lo hicimos en las gráficas anteriores. 
+
+### Cambiar el tipo de árbol
+
+**Ejercicio** Revisa la ayuda de `plot.phylo` y utiliza un argumento de dicha función para graficar el árbol simulado pero que se vea como un abanico y luego como un cladograma (así):
+
+```{r, echo=FALSE}
+# Graficar como abanico
+plot.phylo(tree, edge.width=2, type= "fan")
+
+# Graficar como cladograma
+plot.phylo(tree, edge.width=2, type= "cladogram")
+```
+
+### Enraizar el árbol
+
+```{r}
+# plot árbol sin enraizar
+plot.phylo(tree, edge.width=2)
+
+# especificar output para enraizar:
+tree<-root(tree, outgroup="t2")
+
+# plot árbol enraizado
+plot.phylo(tree, edge.width=2)
+```
+
+### Chulear el árbol
+
+**Ejercicio:** Sigue los ejemplos de [Phylogenetic trees in R, del blog Sensory Evolution](https://ecomorph.wordpress.com/2014/10/09/phylogenetic-trees-in-r-4/) para realizar los siguientes cambios al árbol anterior:
+
+* Cambia el nombre de las puntas de "t1", "t2" etc a "especie 1", "especie 2", etc y asegúrate de graficar estos nombres en las puntas de tu árbol
+* Agrega un círculo en los nombres de las puntas. El clado de las puntas t9, t6 y t 10 debe tener círculos rosas, la punta t2 gris y el resto verdes. 
+* Incremente al grosor de la línea
+* Cambia el color de la línea a verde oscuro
+
+### Leer un árbol en R y graficarlo
+
+Podemos leer árboles en formato newick o nexus a R con la función `read.tree` de `ape`:
+
+```{r}
+# cargar archivo
+maiz.tree<-read.nexus("PracUni3/maices/data/tree")
+
+# checar contenido
+maiz.tree
+
+# graficar
+plot(maiz.tree, type="unrooted", edge.width=0.1, cex=0.5)
+
+```
+
+Vamos a poner colores de acuerdo a la Categoría de Altitud en vez de nombres de muestras. 
+
+
+```{r}
+### Graficar por Categorías Altitud
+
+# leer info extra de las muestras
+fullmat<-read.delim("PracUni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt")
+
+# ¿Cuántos colores necesito?
+numcolsneeded<-length(levels(fullmat$Categ.Altitud))
+palette(rainbow(numcolsneeded)) 
+
+# graficar sin nombres de muestras
+plot(maiz.tree, type="unrooted", edge.width=0.3, show.tip=FALSE)
+
+# Agregar tip labels que correspondan a las categorías de altitud
+tiplabels(pch=20, col=fullmat$Categ.Altitud)
+# legend
+legend(x= "bottomleft", legend=levels(fullmat$Categ.Altitud), pch=19, col=1:numcolsneeded, cex=1, , bty="n")  
+```
+
+**Ejercicio**: Colorea el árbol anterior por Raza (sin incluir una leyenda porque son demasiadas)
+
+```{r, echo=FALSE}
+# Definir num de colores
+numcolsneeded<-length(levels(fullmat$Raza))
+palette(rainbow(numcolsneeded)) 
+
+# graficar
+plot(maiz.tree, type="unrooted", edge.width=0.3, show.tip=FALSE)
+
+# Agregar tip labels que correspondan a las categorías de altitud
+tiplabels(pch=20, col=fullmat$Raza)
+```
+
+#### Árboles filogenéticos 2.1
+
+Los árboles filogenéticos también pueden graficarse estilo ggplot, con el paquete de Biocounductor [ggtree](https://bioconductor.org/packages/release/bioc/html/ggtree.html), que veremos más adelante junto con otros paquetes.
+
+
+## Mapas en R
+
+En R pueden visualizarse mapas de muchas maneras y de hecho hasta hacer análisis complejos con datos raster, como simulaciones de cambio climático y modelos de distribución potencial de las especies. Aquí sólo cubriremos brevemente cómo graficar un shapefile y agregar puntos. 
+
+Carguemos uno de los principales paquetes para manipular mapas:
+
+```{r}
+library(maptools)
+```
+
+### Leer un shapefile 
+La función `readShapePoly` de dicho paquete nos permite leer un [shapefile](https://en.wikipedia.org/wiki/Shapefile) de polígonos (para puntos hay que usar otra función parecida ¿cómo crees que se llame?).
+
+Por ejemplo vamos leer a R y graficar el  shaphile de las regiones biogeográficas de México:
+
+```{r}
+# leer shapefile
+biogeo<-readShapePoly("PracUni3/maices/data/rbiog4mgw/rbiog4mgw.shp")
+
+# plot
+plot(biogeo)
+
+# colorear por bioregioón
+palette("default")
+plot(biogeo, border="grey", col=biogeo$PROVINCIA)
+
+## Cambiar colores default a algo más bonito
+#¿Cuántos colores necesito?
+levels(biogeo$PROVINCIA)
+
+# Generar paleta con colores de RColorBrewer
+# ver opciones de colores
+library(RColorBrewer)
+display.brewer.all()  
+
+# generar paleta
+palette(c(brewer.pal(9, "Set1"), brewer.pal(10, "Set3")))
+
+# plot
+plot(biogeo, border="grey", col=biogeo$PROVINCIA)
+legend("bottomleft", legend=levels(biogeo$PROVINCIA), bty="n", cex=.4, fill=palette())
+  
+```
+
+**Ejercicio**: cambia el color de las provincias "Tamaulipecas" y "Costa del Pacífico" a otro color. 
+
+### Agregar puntos a un mapa
+
+Es muy común tener las coordenadas x,y de nuestros puntos de muestreo en un archivo junto con el resto de la info de nuestras muestras. Por ejemplo en el caso de la info de maíces que hemos estado utilizando:
+
+
+```{r}
+fullmat[1:5,c("Latitud", "Longitud")]
+```
+
+Agregar esta info a un mapa **en la misma proyección y sistema de coordenadas** puede hacerse con la función `points`:
+
+```{r}
+# plot map
+plot(biogeo, border="grey", col=biogeo$PROVINCIA, lwd=0.8)
+# agregar puntos
+points(fullmat$Longitud, fullmat$Latitud, pch=19, col="black", cex=0.4)
+```
+
+**Ejercicio**: Baja un mapa (nivel nacional) que te interese del [GeoPortal de la CONABIO](http://www.conabio.gob.mx/informacion/gis/), ploteálo y agrega los puntos del muestro de maíz, utilizando una forma de punto diferente para los teocintles, y que los puntos estén coloreados por CategAltitud. 
+
+
+## Heatmaps en R
+
+Los *heatmaps* son gráficos bastánte útiles para resumir de manera visual una gran cantidad de datos que queremos contrastar (e.g., Diferenciación genética entre poblaciones, Composición de comunidades biológicas, niveles de expresión en diferentes tejidos, etc.). En R, una librería bastante útil para construir heatmaps es [Heatplus](http://bioconductor.org/packages/release/bioc/html/Heatplus.html), misma que vive en Bioconductor. Para explorar las funciones básicas de esta paquetería, lleva a cabo el tutorial de [The Molecular Ecologist](http://www.molecularecologist.com/2013/08/making-heatmaps-with-r-for-microbiome-analysis/). 
+
+Ojo, antes de empezar, necesitaremos tener las siguientes librerías instaladas
+
+```
+library(gplots)
+library(vegan)
+library(RColorBrewer)
+```
+Para instalar y llamar a Heatplus:
+```
+source("http://bioconductor.org/biocLite.R") #Hacer un source
+biocLite("Heatplus") #Compilar
+library(Heatplus) #Llamar a la librería
+```
+
+## Guardar imágenes:
+
+### Método 1:
+* "Abrir un device" con `png()`, `jpg()`, `pdf()` según el formato en que queramos guardar.
+* Hacer la gráfica
+* "Cerrar el device" con `dev.off`
+
+```{r}
+png("PracUni3/maices/out/arbol.png")
+plot(maiz.tree, type="unrooted", show.tip=FALSE)
+tiplabels(pch=20, col="green3", tip=c(1:161), cex=.5)
+tiplabels(pch=15, col="black", tip=c(162:165), cex=.5)
+dev.off()
+```
+
+Si incluyes esto cuando corras tu script remotamente (eg en un cluster), las gráficas se guardarán con los nombres que les digas y en el directorio que especifiques :)
+
+
+### Método 2: 
+
+En R studio darle "Export" o "Copy" en el panel de la imagen y seleccionar un nombre de archivo y demás características.

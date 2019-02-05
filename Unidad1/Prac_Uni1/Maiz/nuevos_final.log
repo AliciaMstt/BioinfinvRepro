@@ -1,0 +1,44 @@
+
+@----------------------------------------------------------@
+|        PLINK!       |     v1.07      |   10/Aug/2009     |
+|----------------------------------------------------------|
+|  (C) 2009 Shaun Purcell, GNU General Public License, v2  |
+|----------------------------------------------------------|
+|  For documentation, citation & bug-report instructions:  |
+|        http://pngu.mgh.harvard.edu/purcell/plink/        |
+@----------------------------------------------------------@
+
+Web-based version check ( --noweb to skip )
+Recent cached web-check found... OK, v1.07 is current
+
++++ PLINK 1.9 is now available! See above website for details +++ 
+
+Writing this text to log file [ nuevos_final.log ]
+Analysis started: Wed May 06 12:19:25 2015
+
+Options in effect:
+	--file nuevos_final
+	--out nuevos_final
+	--recodeA
+
+36931 (of 36931) markers to be included from [ nuevos_final.map ]
+Warning, found 165 individuals with ambiguous sex codes
+Writing list of these individuals to [ nuevos_final.nosex ]
+165 individuals read from [ nuevos_final.ped ] 
+0 individuals with nonmissing phenotypes
+Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
+Missing phenotype value is also -9
+0 cases, 0 controls and 165 missing
+0 males, 0 females, and 165 of unspecified sex
+Before frequency and genotyping pruning, there are 36931 SNPs
+165 founders and 0 non-founders found
+Total genotyping rate in remaining individuals is 0.990151
+0 SNPs failed missingness test ( GENO > 1 )
+0 SNPs failed frequency test ( MAF < 0 )
+After frequency and genotyping pruning, there are 36931 SNPs
+After filtering, 0 cases, 0 controls and 165 missing
+After filtering, 0 males, 0 females, and 165 of unspecified sex
+Writing recoded file to [ nuevos_final.raw ] 
+
+Analysis finished: Wed May 06 12:19:30 2015
+
