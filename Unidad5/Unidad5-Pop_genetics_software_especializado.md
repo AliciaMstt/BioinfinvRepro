@@ -321,7 +321,7 @@ Integrantes del equipo:
 
 ```
 
-3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes.
+3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes. Luego persona2 debe hacer un `pull request` y persona 1 aceptarlo para que los cambios se vean en el repositorio generado por persona 1.
 
 4) Cuando esté listo el repo, pasenos el link via Gitter para ponerlo en la sección de abajo.
 
@@ -330,10 +330,15 @@ Integrantes del equipo:
 
 (esta sección cambiará una vez tengamos los integrantes de cada equipo y sus links resultado).
 
-**Equipo 1:** (nombre y nombre)
+**Equipo 1:** (Fernando y Marco "Los no vecinos")
 
-**Equipo 2:** ()
-...
+**Equipo 2:** (Mel y Cristian "Los no nos conocemos")
+
+**Equipo 3:** (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
+
+**Equipo 4:** (Toño y Alberto "Los ya nos definimos")
+
+**Equipo 5** (Mali y Duhya "Las Protoctistas")
 
 
 
