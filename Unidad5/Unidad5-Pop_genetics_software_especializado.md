@@ -338,7 +338,11 @@ Integrantes del equipo:
 
 **Equipo 4:** (Toño y Alberto "Los ya nos definimos")
 
-**Equipo 5** (Mali y Duhya "Las Protoctistas")
+**Equipo 5:** (Mali y Duhya "Las Protoctistas")
+
+**Equipo 6:** (GabyB y Heri "Los discretos")
+
+**Equipo 7:** (Luis y GabyA "Los olvidados")
 
 
 
