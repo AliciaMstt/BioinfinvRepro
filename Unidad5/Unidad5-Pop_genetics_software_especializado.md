@@ -51,7 +51,58 @@ Ejemplo:
 20     1234567 microsat1 GTC    G,GTCT  50   PASS   NS=3;DP=9;AA=G                    GT:GQ:DP    0/1:35:4       0/2:17:2       1/1:40:
 ```
 
+### Ejemplos con VCF
 
+1) Utiliza un comando para bajar los datos en formato vcf del repositorio Schweizer RM, Robinson J, Harrigan R, Silva P, Galaverni M, Musiani M, Green RE, Novembre J, Wayne RK (2015) Data from: Targeted capture and resequencing of 1040 genes reveal environmentally driven functional variation in gray wolves. Dryad Digital Repository. [http://dx.doi.org/10.5061/dryad.8g0s3](http://datadryad.org/resource/doi:10.5061/dryad.8g0s3)
+
+El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5/wolves`. Navega ahí y luego:
+
+```
+wget https://datadryad.org/bitstream/handle/10255/dryad.98341/Filtered_variableSites_fixedSamples_9July2014_minDP10noMissing_ecotypesOnly_n107_GenicRegions_95CallRate.recode.vcf?sequence=1
+```
+
+**Pregunta** ¿De dónde saqué ese link?
+
+a) Si no lo hiciste de inicio, cambia el nombre del archivo que acabas de bajar a `wolves.vcf`.
+
+b) ¿Cuántos MB pesa el archivo?
+
+2) En un contenedor con vcftools (o en tu máquina con tu propia instalación de vcf) realiza los siguientes ejercicios. Si estás usando docker recuerda cómo correr vcf en un contenedor **montando un volumen** (`-v`) y borrándolo cuando termine de correr (`--rm`):
+
+```
+docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools -help
+```
+
+Por facilidad, puedes poner la parte que repitiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
+
+```
+vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools"
+```
+
+y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help". 
+
+Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y responde
+
+a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
+
+b) Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo.
+
+c) ¿Cuántos sitios del archivo no tienen missing data?
+
+d) Calcula la frecuencia de cada alelo para todos los individuos pero solo para los sitios sin missing data y guarda el resultado en un archivo. 
+
+e) ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
+
+f) Calcula la heterozygosidad de cada individuo.
+
+g) Calcula la diversidad nucleotídica por sitio.
+
+h) Calcula la diversidad nucleotídica por sitio solo para los sitios del cromosoma 3
+
+i) Filtra los sitios que tengan una frecuencia del alelo menor  <0.05 y crea un archivo nuevo llamado `wolves_maf05.vcf`.
+
+j) Convierte el archivo `wolves_maf05.vcf` a formato plink. 
+ 
 
 ## Plink
 
@@ -142,61 +193,7 @@ FID	IID	PAT	MAT	SEX	PHENOTYPE	abph1.15_G	ae1.8_A	an1.3_A	ba1.5_G	ba1.7_A	csu1138
 ```
 
 
-## Ejemplos con VCF
-
-1) Utiliza un comando para bajar los datos en formato vcf del repositorio Schweizer RM, Robinson J, Harrigan R, Silva P, Galaverni M, Musiani M, Green RE, Novembre J, Wayne RK (2015) Data from: Targeted capture and resequencing of 1040 genes reveal environmentally driven functional variation in gray wolves. Dryad Digital Repository. [http://dx.doi.org/10.5061/dryad.8g0s3](http://datadryad.org/resource/doi:10.5061/dryad.8g0s3)
-
-El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5/wolves`. Navega ahí y luego:
-
-```
-wget https://datadryad.org/bitstream/handle/10255/dryad.98341/Filtered_variableSites_fixedSamples_9July2014_minDP10noMissing_ecotypesOnly_n107_GenicRegions_95CallRate.recode.vcf?sequence=1
-```
-
-**Pregunta** ¿De dónde saqué ese link?
-
-a) Si no lo hiciste de inicio, cambia el nombre del archivo que acabas de bajar a `wolves.vcf`.
-
-b) ¿Cuántos MB pesa el archivo?
-
-2) En un contenedor con vcftools (o en tu máquina con tu propia instalación de vcf) realiza los siguientes ejercicios. Si estás usando docker recuerda cómo correr vcf en un contenedor **montando un volumen** (`-v`) y borrándolo cuando termine de correr (`--rm`):
-
-```
-docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools -help
-```
-
-Por facilidad, puedes poner la parte que repitiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
-
-```
-vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools"
-```
-
-y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help". 
-
-Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y responde
-
-a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
-
-b) Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo.
-
-c) ¿Cuántos sitios del archivo no tienen missing data?
-
-d) Calcula la frecuencia de cada alelo para todos los individuos pero solo para los sitios sin missing data y guarda el resultado en un archivo. 
-
-e) ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
-
-f) Calcula la heterozygosidad de cada individuo.
-
-g) Calcula la diversidad nucleotídica por sitio.
-
-h) Calcula la diversidad nucleotídica por sitio solo para los sitios del cromosoma 3
-
-i) Filtra los sitios que tengan una frecuencia del alelo menor  <0.05 y crea un archivo nuevo llamado `wolves_maf05.vcf`.
-
-j) Convierte el archivo `wolves_maf05.vcf` a formato plink. 
- 
- 
-
-## Ejemplos con plink
+### Ejemplos con plink
 
 
 En la ruta `BioinfinvRepro/Unidad5/Prac_Uni5/maices/data` encontrarás varios archivos plink. Contesta lo siguiente **asumiendo que tu WD es `maices/bin` (y no `data`).**
@@ -269,3 +266,89 @@ $ head ../data/maicesArtegaetal2015.fam
 
 4) Utiliza la info el archivo `meta/maizteocintle_SNP50k_meta_extended.txt` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/maicesArtegaetal2015*` de tal forma que el family ID corresponda a la info de la columna `Categ.Altitud` en `maizteocintle_SNP50k_meta_extended.txt`. Pista: este ejercicio requiere varias operaciones, puedes dividarlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /bin). 
 
+## Paquetes de R y otro sofware para genética de poblaciones
+
+
+Como hemos visto dentro de R los paquetes son un grupo de funciones que alguien desarrolla en torno a un tema específico. Además, fuera de R hay otros paquetes/sofwares que corren desde una terminal shell. 
+
+Aquí nos enfocaremos en las principales herramientas para **genética de poblaciones**. Para esto hay muchas herramientas bioinformáticas, algunas utilizan datos genómicos (e.g. plink, vcf, genomas enteros) y otros marcadores de secuenciación Sanger (microsatélites, secuencias fasta, etc). Siempre asegúrate que **la herramienta que escojar realmente utilice el tipo de datos que tienes**.
+
+Primero veremos dónde encontrar dichas herramientas y luego correremos algunos ejemplos.
+
+**CRAN** alberga muchos paquetes de R, algunos de ellos útiles para bioinformática, como [adegenet](http://adegenet.r-forge.r-project.org/) y [ape](https://cran.r-project.org/web/packages/ape/ape.pdf). 
+
+Puedes ver una lista de más paquetes relacionados con genética estadística en [CRAN Task Statistical Genetics](https://cran.r-project.org/web/views/Genetics.html).
+
+Otra opción para encontrar paquetes útiles es googlear "R package" + keywords de tu tema de interés.
+
+Además, recientemente Molecular Ecology Resources publicó el special issue *Population Genomics with R*, el cual incluye revisiones, paquetes nuevos y estudios de caso. Revisemos la [Tabla de Contenido](http://onlinelibrary.wiley.com/doi/10.1111/men.2017.17.issue-1/issuetoc).
+
+Recuerda que además de CRAN, **Bioconductor** también tiene sus [propios paquetes, los cuales puedes revisar aquí](https://www.bioconductor.org/packages/release/BiocViews.html#___Software)
+
+La mejor manera de conocer qué hace y  usar un paquete es seguir un tutorial o vignette. Por ejemplo esta de [ggtree](https://www.bioconductor.org/packages/release/bioc/vignettes/ggtree/inst/doc/ggtree.html) y esta de [SNPRelate](http://corearray.sourceforge.net/tutorials/SNPRelate/).
+
+
+Los análisis de genómica de poblaciones van mucho más allá de R, y hay muchos **otros programas para hacer análisis muy específicos**. [Yann Burgeouis](http://www.yannbourgeois.com/) sacó el fua y creo esta Lista de Métodos de genómica de poblaciones: [methodspopgen.com](http://methodspopgen.com/). Donde recopila métodos para inferir estructura, detectar selección e inferir la historia de la población.
+
+### ¿Qué de todo esto me sirve?
+
+**Ejercicio 1** explora los paquetes de Bioconductor, CRAN, el número especial de MER y methodspopgen.com de acuerdo a tu tema. Escoge tres que creas te serán útiles y explóralos con mayor profundidad. Deben ser **distintos** a los ejemplos que veremos más abajo (SNPRelate, Hierfstat, admixture).
+
+En tu repositorio de github de tareas del curso crea un archivo markdown llamado "Ejemplos_software util.md" y ahí menciona cada paquete que elegiste y describe con tus propias palabras qué hace y para qué parte de tus análisis te serviría. Sé específicx, por ejemplo no digas solo "para hacer análisis de selección" sino "para hacer análisis de selección entre las poblaciones X y Y, ya que mi hipótesis es que estas poblaciones pueden estar bajo selección ya que X está en tales condiciones y Y en tales"
+
+**Ejercicio 2**:
+
+1. Escoge uno de los paquetes del ejercicio pasado.
+2. Busca un tutorial, ayuda o vignette de ese paquete y síguelo con tus datos propios o con datos parecidos a los que tendrás que ya se encuentren publicados.
+3. Si es un paquete de R o Bioconductor utiliza knitr para crear un "notebook" de lo que realizaste.
+4. Sube el código (.R, .sh, etc) y si aplica el notebook (.html o .pdf) a tu repo de tareas de github. 
+
+**Ejercicio 3** hagan equipos (2 personas) conforme a su tipo de datos y/o tema de investigación y discutan paquetes que podrían serles útiles. Luego: 
+
+1) Un integrante del equipo ("persona 1") debe crear un repositorio de github llamado "BioinfRepro_EquipoX" (donde X es el  número de equipo) e invitar como colaborador/a al/la otra integrante ("persona 2") del equipo.
+
+2) Persona 1 debe crear dentro de su repositorio de tareas un archivo markdown llamado "README" y escribir (**en formato markdown** que se vea bien en Github) algo como lo siguiente:
+
+```
+# README
+
+Este repositorio contiene el resultados del ejercicio "sofware interesante" del Equipo X.
+
+Integrantes del equipo:
+* Nombre completo persona 1 
+* Nombre completo persona 2. 
+
+
+```
+
+3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes.
+
+4) Cuando esté listo el repo, pasenos el link via Gitter para ponerlo en la sección de abajo.
+
+
+### Resultados ejercicio software interesante por equipos:
+
+(esta sección cambiará una vez tengamos los integrantes de cada equipo y sus links resultado).
+
+**Equipo 1:** (nombre y nombre)
+
+**Equipo 2:** ()
+...
+
+
+
+## Algunos ejemplos de PCAs y estructura genética
+
+### SNPRelate
+
+[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.Rmd) y vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni5/bin/Ejemplo_SNPRelate.html).
+
+### Hierfstat
+
+[SnpStats](https://bioconductor.org/packages/release/bioc/html/snpStats.html) es otro paquete de BioConductor muy útil, que nos permite calcular Fst y otros estadísticos de genética de poblaciones.
+
+Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni5/bin/Hierfstat_cocci.Rmd).
+
+
+### Admixture
+Herramienta que permite estimar la ancestría de individuos a partir de un set de datos de SNPs. Usa el mismo modelo estadístico que Structure pero es más rápido. [Aquí](https://www.genetics.ucla.edu/software/admixture/index.html) puedes encontrar el ejecutable y el manual.
