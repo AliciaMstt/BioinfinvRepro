@@ -321,7 +321,7 @@ Integrantes del equipo:
 
 ```
 
-3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes. Luego persona2 debe hacer un `pull request` y persona 1 aceptarlo para que los cambios se vean en el repositorio generado por persona 1.
+3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes. Luego persona2 debe hacer el `git commit` para que los cambios se vean en el repositorio generado por persona 1.
 
 4) Cuando esté listo el repo, pasenos el link via Gitter para ponerlo en la sección de abajo.
 
