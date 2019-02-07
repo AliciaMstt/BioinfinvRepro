@@ -21,17 +21,17 @@ library(ggplot2)
 ```{r}
 ##### Para usar con SNPRelate
 ## Crear datos en formato gds a partir de plink
-snpgdsBED2GDS("../data/maices/maicesArtegaetal2015.bed", 
-              "../data/maices/maicesArtegaetal2015.fam", 
-              "../data/maices/maicesArtegaetal2015.bim", 
-              out.gdsfn="../data/maices/maicesArtegaetal2015.gds", 
+snpgdsBED2GDS("../data/maicesArtegaetal2015.bed", 
+              "../data/maicesArtegaetal2015.fam", 
+              "../data/maicesArtegaetal2015.bim", 
+              out.gdsfn="../data/maicesArtegaetal2015.gds", 
               option = snpgdsOption(Z=10)) # 10 cromosomas
 
 # Ver resumen (esto no carga el archivo)
-snpgdsSummary("../data/maices/maicesArtegaetal2015.gds")
+snpgdsSummary("../data/maicesArtegaetal2015.gds")
 
 # Cargar archivo para trabajar con el
-genofile <- snpgdsOpen("../data/maices/maicesArtegaetal2015.gds")
+genofile <- snpgdsOpen("../data/maicesArtegaetal2015.gds")
 
 # Check snp.ids
 head(read.gdsn(index.gdsn(genofile, "snp.id")))
@@ -45,7 +45,7 @@ sample.id
 
 ##### Metadata
 # load
-fullmat<- read.delim(file= "../data/maices/maizteocintle_SNP50k_meta_extended.txt")
+fullmat<- read.delim(file= "../meta/maizteocintle_SNP50k_meta_extended.txt")
 
 # check
 head(fullmat)
@@ -117,11 +117,10 @@ ggplot(data = tab, aes(x=EV2, y=EV1)) + geom_point() +
 ```
 
 
-**Ejercicio** Repite el PCA coloreando los maíces por raza. Pista:
-
+Repite el PCA coloreando los maíces por Categoría de Altitud.
 ```{r}
-# obtner info raza
-pop_code <- as.vector(fullmat$Raza) 
+# obtner info Categ.Altitud
+pop_code <- as.vector(fullmat$Categ.Altitud) 
 
 # hacer pop_codes raza coincidan con samples
 tab <- data.frame(sample.id = pca$sample.id,
@@ -131,9 +130,7 @@ tab <- data.frame(sample.id = pca$sample.id,
     stringsAsFactors = FALSE)
 head(tab)
 
-```
-
-```{r, echo = FALSE}
+# Plot
 
 ggplot(data = tab, aes(x=EV2, y=EV1, colour = pop)) + geom_point() +
   ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +
@@ -141,3 +138,30 @@ ggplot(data = tab, aes(x=EV2, y=EV1, colour = pop)) + geom_point() +
 
 ```
 
+**Ejercicio**: repite el plot anterior pero coloreando en un gradiente de colores ("green" para bajo y "brown" para alto). Pista para el gradiente de color [en este link](https://www.r-graph-gallery.com/221-continuous-color-palette-with-ggplot2/). La leyenda debe llevar debe decir "Altitude (masl)".
+
+Debe verse así:
+
+```{r, echo=FALSE}
+# obtner info Categ.Altitud
+pop_code <- as.vector(fullmat$Altitud) 
+
+# hacer pop_codes raza coincidan con samples
+tab <- data.frame(sample.id = pca$sample.id,
+    pop = as.numeric(pop_code)[match(pca$sample.id, sample.id)],
+    EV1 = pca$eigenvect[,1],    # the first eigenvector
+    EV2 = pca$eigenvect[,2],    # the second eigenvector
+    stringsAsFactors = FALSE)
+# Plot
+
+ggplot(data = tab, aes(x=EV2, y=EV1, colour = pop)) + geom_point() +
+  ylab(paste0("eigenvector 1 explaining ", round(pc.percent, 2)[1], "%")) +
+  xlab(paste0("eigenvector 2 explaining ", round(pc.percent, 2)[2], "%")) +
+  scale_color_gradient(low = "green", high = "brown") + 
+  labs(colour = "Altitude (masl)")
+
+
+
+```
+
+¿Necesitas otra pista? considera que ggplot2 solo puede hacer gradietes de variables numéricas.
