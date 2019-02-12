@@ -353,7 +353,7 @@ Integrantes del equipo:
 
 ### SNPRelate
 
-[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html) y vamos a ver un ejemplo siguiendo [estas notas en clase](/Prac_Uni5/maices/bin/Ejemplo_SNPRelate.html).
+[SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.html) y vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni5/maices/bin/Ejemplo_SNPRelate.html).
 
 
 ### Admixture
