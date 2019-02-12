@@ -332,7 +332,7 @@ Integrantes del equipo:
 
 (esta sección cambiará una vez tengamos los integrantes de cada equipo y sus links resultado).
 
-**Equipo 1:** (Fernando y Marco "Los no vecinos")
+[**Equipo 1:**](https://github.com/Themindscupltor/BioinfRepro_Equipo1) (Fernando y Marco "Los no vecinos")
 
 [**Equipo 2:**]((https://github.com/cristoichkov/BioinfRepro_Equipo2)
 ) (Mel y Cristian "Los no nos conocemos")
