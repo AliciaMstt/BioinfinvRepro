@@ -334,13 +334,12 @@ Integrantes del equipo:
 
 [**Equipo 1:**](https://github.com/Themindscupltor/BioinfRepro_Equipo1) (Fernando y Marco "Los no vecinos")
 
-[**Equipo 2:**]((https://github.com/cristoichkov/BioinfRepro_Equipo2)
-) (Mel y Cristian "Los no nos conocemos")
+[**Equipo 2:**](https://github.com/cristoichkov/BioinfRepro_Equipo2)
+ (Mel y Cristian "Los no nos conocemos")
 
-[**Equipo 3:**]((https://github.com/mjfrugone/BioinfRepro_los_nickname_y_el_adoptado)) (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
+[**Equipo 3:**](https://github.com/mjfrugone/BioinfRepro_los_nickname_y_el_adoptado) (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
 
-[**Equipo 4:**]((https://github.com/ALBERTOPP/BioinfRepro_Equipo_4)
-) (Toño y Alberto "Los ya nos definimos")
+[**Equipo 4:**](https://github.com/ALBERTOPP/BioinfRepro_Equipo_4)) (Toño y Alberto "Los ya nos definimos")
 
 [**Equipo 5:**](https://github.com/Duhyadi/BioinfRepro_Equipo5.git) (Mali y Duhya "Las Protoctistas")
 
