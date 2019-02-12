@@ -77,9 +77,10 @@ Por facilidad, puedes poner la parte que repitiremos cada vez que queramos corre
 
 ```
 vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools"
+
 ```
 
-y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help". 
+y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help"`. 
 
 Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y responde
 
@@ -119,6 +120,7 @@ La manera de manejar los formatos cambió un poco entre las versiones <1.9 y 1.9
 Consta de min 2 archivos: 
 
 `.ped` que contiene los SNPs
+
 ```
 plink.ped:
   1 1 0 0 1  0  G G  2 2  C C
@@ -332,17 +334,19 @@ Integrantes del equipo:
 
 **Equipo 1:** (Fernando y Marco "Los no vecinos")
 
-**Equipo 2:** (Mel y Cristian "Los no nos conocemos")
+[**Equipo 2:**]((https://github.com/cristoichkov/BioinfRepro_Equipo2)
+) (Mel y Cristian "Los no nos conocemos")
 
-**Equipo 3:** (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
+[**Equipo 3:**]((https://github.com/mjfrugone/BioinfRepro_los_nickname_y_el_adoptado)) (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
 
-**Equipo 4:** (Toño y Alberto "Los ya nos definimos")
+[**Equipo 4:**]((https://github.com/ALBERTOPP/BioinfRepro_Equipo_4)
+) (Toño y Alberto "Los ya nos definimos")
 
-**Equipo 5:** (Mali y Duhya "Las Protoctistas")
+[**Equipo 5:**](https://github.com/Duhyadi/BioinfRepro_Equipo5.git) (Mali y Duhya "Las Protoctistas")
 
-**Equipo 6:** (GabyB y Heri "Los discretos")
+[**Equipo 6:**](https://github.com/HeribertoVaquezCardona/BioinfRepro_Equipo6/blob/master/README.md) (GabyB y Heri "Los discretos")
 
-**Equipo 7:** (Luis y GabyA "Los olvidados")
+[**Equipo 7:**](https://github.com/laemlaem/BioinfRepro_Equipo7) (Luis y GabyA "Los olvidados")
 
 
 
@@ -352,12 +356,56 @@ Integrantes del equipo:
 
 [SNPRelate](https://bioconductor.org/packages/release/bioc/html/SNPRelate.html) es un paquete de Bioconductor muy bueno y rápido para hacer PCA, asociación genómica, análisis de parentesco y exploraciones básicas de datos genómicos. El input pueden ser datos en plink. Puedes ver el tutorial de [SNPRelate aquí](https://bioconductor.org/packages/release/bioc/vignettes/SNPRelate/inst/doc/SNPRelateTutorial.Rmd) y vamos a ver un ejemplo siguiendo [estas notas en clase](Prac_Uni5/bin/Ejemplo_SNPRelate.html).
 
-### Hierfstat
-
-[SnpStats](https://bioconductor.org/packages/release/bioc/html/snpStats.html) es otro paquete de BioConductor muy útil, que nos permite calcular Fst y otros estadísticos de genética de poblaciones.
-
-Este paquete de R te permite estimar estadísticos F con datos de genomas haploides y diploides, tomando en cuenta por la estructura de las poblaciones. Las notas de la clase están [aquí](Prac_Uni5/bin/Hierfstat_cocci.Rmd).
-
 
 ### Admixture
-Herramienta que permite estimar la ancestría de individuos a partir de un set de datos de SNPs. Usa el mismo modelo estadístico que Structure pero es más rápido. [Aquí](https://www.genetics.ucla.edu/software/admixture/index.html) puedes encontrar el ejecutable y el manual.
+Herramienta que permite estimar la ancestría de individuos a partir de un set de datos de SNPs. Usa el mismo modelo estadístico que Structure pero es más rápido. [Aquí](http://software.genetics.ucla.edu/admixture/) puedes encontrar el ejecutable y el manual. Para correrlo, solo necesitas tener el ejecutable en tu WD y correrlo con `.admixture`.
+
+Correr admixture es muy sencillo:
+
+```
+./admixture --cv ../data/maicesArtegaetal2015.bed 2
+```
+
+Pero para hacerlo más reproducible vamos a correr admixture para varias K en un script (vive en `Unidad5/Prac_Uni5/maices/bin/1-runadmixture.sh`) que además guarde el output en lugares relevantes. Primero veámoslo:
+
+
+```{bash}
+### This script runs admixture for the maize data
+
+
+## make directory to save output
+mkdir -p ../data/admixture
+
+
+## run admixture for K 1-5
+ 
+for K in 1 2 3 4 5; \
+do ./admixture --cv ../data/maicesArtegaetal2015.bed $K | tee ../data/admixture/log${K}.out;
+done
+
+## move output Q and P to output
+mv {*.P,*.Q} ../data/admixture/
+
+## save the likelihood results of each K to a single file
+
+grep -h CV ../data/admixture/log*.out > ../data/admixture/maices_Kerror.txt
+
+```
+
+Preguntas sobre este script:
+
+**1** ¿Qué hace el comando `tee`?
+
+**2** ¿Por qué es necesario poner la línea `mv {*.P,*.Q} ../data/admixture/`?
+
+Vamos a correrlo:
+
+```
+$ bash 1-runadmixture.sh 
+```
+
+Ahora vamos a graficarlo en R con el script [`2-plotadmixture.R`](Prac_Uni5/maices/bin/2-plotadmixture.R).
+
+
+
+
