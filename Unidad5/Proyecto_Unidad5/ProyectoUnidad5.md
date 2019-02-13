@@ -4,7 +4,7 @@
 ## Valor y modo de calificar
 * 70% de la calificación de la Unidad5 (sección 2 del curso)
 * Individual
-* La calificación del trabajo final toma en cuenta:
+* La calificación del proyecto de la unidad5 toma en cuenta:
 	* 10% Organización del repositorio
 	* 15% README **(debe ser en inglés)**
 	* 20% Análisis
@@ -53,25 +53,25 @@ Este será el lugar donde subirás tu proyecto.
 
 2) Agrega el link al directorio anterior en el archivo [Listado_proyecto.md](Listado_proyecto.md) de este repositorio. Necesitarás hacer un `pull request` y que yo lo acepte.
 
-**Fecha entrega: martes 19 marzo 3:30 pm**
+**Fecha entrega: martes 19 FEBRERO 3:30 pm**
 
 ### Avance 2:
 
-Define un proyecto de Github, con desglozando tu proyecto en las tareas que crees serán necesarias para cumplirlo. 
+Crea un proyecto de Github,  desglozando tu proyecto en las tareas que crees serán necesarias para cumplirlo. 
 
-**Fecha entrega: jueves 14 marzo 3:30 pm**
+**Fecha entrega: martes 29 FEBRERO 3:30 pm**
 
 ### Avance 3: 
 
 Escribe el primer borrador de README. Debe explicar qué análisis realizarás, con qué datos, y cómo estará organizado el directorio del proyecto.
 
-**Fecha entrega: martes 19 marzo 3:30 pm**
+**Fecha entrega: martes 12 de MARZO 3:30 pm**
 
 ### Avance 4:
 
 Debes haber avanzado en tu proyecto de github lo suficiente como para que lleves al menos el 50% del proyecto listo.
 
-**Fecha entrega: martes 26 marzo 3:30 pm**
+**Fecha entrega: martes 26 MARZO 3:30 pm**
 
 ### Revisar issues
 
