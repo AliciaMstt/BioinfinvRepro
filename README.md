@@ -16,6 +16,9 @@ Catedrática CONACYT-CONABIO,
 [www.mastrettayanes-lab.org](www.mastrettayanes-lab.org
 )
 
+**Lorena Malpica**
+Estudiante maestría ITAM-CONABIO
+
 **Ricardo Verdugo Salgado**, PhD.,
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
@@ -31,7 +34,13 @@ El **objetivo general es** brindar a los y las alumnas las herramientas computac
 
 Los **objetivos particulares** son:
 
-1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos 2.	Introducir a los alumnos a bash, R, git y Docker3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación 4.	Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos5.	Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas6.	Asesorar a los alumnos en la realización de sus propios proyectos bioinformáticos
+1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos 
+2.	Introducir a los alumnos a bash, R, git y Docker
+3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación 
+4.	Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos
+5.	Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas
+6.	Asesorar a los alumnos en la realización de sus propios proyectos bioinformáticos
+
 
 ### Que sí es este curso
 
