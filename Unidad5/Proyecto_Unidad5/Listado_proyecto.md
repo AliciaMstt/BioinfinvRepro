@@ -10,3 +10,4 @@ Sigue el formato:
 Ejemplo:
 
 * Azalea Guerra García: [repositirio del proyecto](https://github.com/AzaleaGuerra/TareasBioinfRerpo/ProyectoUnidad5_TUSINICIALES)
+* Duhyadi Oliva García : [repositirio del proyecto](https://github.com/Duhyadi/Tareas_BioinfRepro2019_DOG/tree/master/ProyectoUnidad5_DOG)
