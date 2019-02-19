@@ -5,7 +5,7 @@ Busca tu nombre en el listado de abajo y agrega los links pertinentes a tu repos
 
 Sigue el formato:
 
-* Nombre estudiante: [repositirio del proyecto]().
+* Heriberto Vázquez Cardona:: [ https://github.com/HeribertoVaquezCardona/Tareas_BioinfRepro2019_HVC-./tree/master/ProyectoUnidad5_HVC ]().
 
 Ejemplo:
 
