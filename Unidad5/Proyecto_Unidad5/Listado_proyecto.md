@@ -10,4 +10,24 @@ Sigue el formato:
 Ejemplo:
 
 * Azalea Guerra García: [repositirio del proyecto](https://github.com/AzaleaGuerra/TareasBioinfRerpo/ProyectoUnidad5_TUSINICIALES)
-* Fernando León García [Proyecto_Unidad5_FLG] (https://github.com/FernandoLeG/Tareas_BioinfRepro2019_FLG/tree/master/ProyectoUnidad5_FLG)
+<<<<<<< HEAD
+=======
+
+
+LISTADO:
+
+
+* Brett Oliver Butler [repositorio del proyecto](https://github.com/redgcko7/Tareas_BioinfRepro2019_BB/tree/master/ProyectoUnidad5_BOB)
+
+* Jose Antonio Urban Aragon: [repositirio del proyecto](https://github.com/tono2204/Tareas_BioinfRepro2019_JAUA/tree/master/ProyectoUnidad5_JAUA).
+
+* Rafael Cristian Cervantes Salcedo: [repositirio del proyecto](https://github.com/cristoichkov/Tareas_BioinfRepro2019_CCS/tree/master/ProyectoUnidad5_CCS)
+
+* Alberto Esteban Pérez Pedraza [Repositorio Proyecto5](https://github.com/ALBERTOPP/-Tareas_BioinfRepro2019_AEPP-/tree/master/ProyectoUnidad5_AEPP)
+
+* Duhyadi Oliva García : [repositirio del proyecto](https://github.com/Duhyadi/Tareas_BioinfRepro2019_DOG/tree/master/ProyectoUnidad5_DOG)
+
+* Melania Andrea Vega Angeles: [repositorio del proyecto](https://github.com/Melcatus/Tareas_BioinfRepro2019_MAVA/tree/master/ProyectoUnidad5_MAVA)
+
+* Fernando León García [Repositorio del proyecto] (https://github.com/FernandoLeG/Tareas_BioinfRepro2019_FLG/tree/master/ProyectoUnidad5_FLG)
+>>>>>>> e53c197612f6205bd7454efd367a9f0be75ed7a4
