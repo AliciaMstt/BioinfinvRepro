@@ -27,8 +27,10 @@ LISTADO:
 
 * Melania Andrea Vega Angeles: [repositorio del proyecto](https://github.com/Melcatus/Tareas_BioinfRepro2019_MAVA/tree/master/ProyectoUnidad5_MAVA)
 
-* María José Frugone: [repositirio del proyecto]
-https://github.com/mjfrugone/Tareas_BioinfRepro2019_MJF/tree/master/ProyectoUnidad5_MJF
+* Heriberto Vázquez Cardona: [repositorio del proyecto](https://github.com/HeribertoVaquezCardona/Tareas_BioinfRepro2019_HVC-./tree/master/ProyectoUnidad5_HVC)
+
+* María José Frugone: [repositirio del proyecto](https://github.com/mjfrugone/Tareas_BioinfRepro2019_MJF/tree/master/ProyectoUnidad5_MJF)
 
 * Gabriela Alcalá Gómez: [repositorio del proyecto](https://github.com/gabyalcala/Tareas_BioinfRepro2019_GAG/tree/master/ProyectoUnidad5_GAG)
+
 
