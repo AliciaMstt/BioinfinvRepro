@@ -59,7 +59,7 @@ Este será el lugar donde subirás tu proyecto.
 
 Crea un proyecto de Github,  desglozando tu proyecto en las tareas que crees serán necesarias para cumplirlo. 
 
-**Fecha entrega: martes 29 FEBRERO 3:30 pm**
+**Fecha entrega: martes 26 FEBRERO 3:30 pm**
 
 ### Avance 3: 
 
