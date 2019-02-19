@@ -10,9 +10,6 @@ Sigue el formato:
 Ejemplo:
 
 * Azalea Guerra García: [repositirio del proyecto](https://github.com/AzaleaGuerra/TareasBioinfRerpo/ProyectoUnidad5_TUSINICIALES)
-<<<<<<< HEAD
-=======
-
 
 LISTADO:
 
@@ -29,5 +26,13 @@ LISTADO:
 
 * Melania Andrea Vega Angeles: [repositorio del proyecto](https://github.com/Melcatus/Tareas_BioinfRepro2019_MAVA/tree/master/ProyectoUnidad5_MAVA)
 
-* Fernando León García [Repositorio del proyecto] (https://github.com/FernandoLeG/Tareas_BioinfRepro2019_FLG/tree/master/ProyectoUnidad5_FLG)
->>>>>>> e53c197612f6205bd7454efd367a9f0be75ed7a4
+* Fernando León García [Repositorio del proyecto](https://github.com/FernandoLeG/Tareas_BioinfRepro2019_FLG/tree/master/ProyectoUnidad5_FLG)
+
+* Heriberto Vázquez Cardona: [repositorio del proyecto](https://github.com/HeribertoVaquezCardona/Tareas_BioinfRepro2019_HVC-./tree/master/ProyectoUnidad5_HVC)
+
+* María José Frugone: [repositirio del proyecto](https://github.com/mjfrugone/Tareas_BioinfRepro2019_MJF/tree/master/ProyectoUnidad5_MJF)
+
+* Gabriela Alcalá Gómez: [repositorio del proyecto](https://github.com/gabyalcala/Tareas_BioinfRepro2019_GAG/tree/master/ProyectoUnidad5_GAG)
+
+
+
