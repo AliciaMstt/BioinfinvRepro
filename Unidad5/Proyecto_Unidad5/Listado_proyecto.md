@@ -34,5 +34,7 @@ LISTADO:
 
 * Gabriela Alcalá Gómez: [repositorio del proyecto](https://github.com/gabyalcala/Tareas_BioinfRepro2019_GAG/tree/master/ProyectoUnidad5_GAG)
 
+* Luis Arturo Escobedo Morales: [repositorio del proyecto](https://github.com/laemlaem/ProyectoUnidad5_LAEM)
+
 
 
