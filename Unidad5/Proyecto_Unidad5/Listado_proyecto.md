@@ -36,5 +36,5 @@ LISTADO:
 
 * Luis Arturo Escobedo Morales: [repositorio del proyecto](https://github.com/laemlaem/ProyectoUnidad5_LAEM)
 
-* Marco Antonio A. Garduño Sánchez [repositorio del proyecto] (https://github.com/Themindscupltor/ProyectoUnidad5MarcoG)
+* Marco Antonio A. Garduño Sánchez [repositorio del proyecto](https://github.com/Themindscupltor/ProyectoUnidad5MarcoG)
 
