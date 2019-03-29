@@ -722,7 +722,8 @@ Ejemplos de recursos computacionales necesarios para:
 
 * **Ensamblaje de novo genoma entero**: RAM RAM RAM (>256 GB). Tarda 1 semana a 4 meses (según sp.)
 * **Ensamblaje de novo datos GBS/RAD**: RAM (4-16 GB). Horas a días, pero se hacen varias pruebas.
-* **Mapeo a genoma referencia**: RAM (8 GB ok). Horas a días* **Análisis filogenéticos bayesianos**: proco RAM, pero pueden duarar semanas.
+* **Mapeo a genoma referencia**: RAM (8 GB ok). Horas a días
+* **Análisis filogenéticos bayesianos**: proco RAM, pero pueden duarar semanas.
 * **Análisis de estructura poblacional**: poco RAM, varias horas.
 
 Invertir en estos recursos vale más la pena si se comparten entre varios usuarios, por lo que muchas veces las instituciones tienen un **cluster de super cómputo**. Un cluster es un conjunto de computadoras (procesadores) conectadas entre sí a las que nos conectamos y asignamos trabajos para que corran entre varios procesadores. Los clusters operan con algún sabor de Linux, por lo que nuestra interacción con el es vía la línea de comando.
@@ -755,7 +756,38 @@ Con `squeue` podemos ver cómo está la cola. Y para especificar cuántos recurs
 
 De forma que un script ejemplo queda así:
 
-![]()
+```
+#!/bin/sh
+
+# #SBATCH -p keri 
+# #SBATCH -n 2
+# #SBATCH --mem=32000
+
+# define variable for taxa name
+taxa=LuxuNica
+
+## Run admixture
+# mamke output to put results
+mkdir -p ../data/genetic/admixture_outs/$taxa
+
+### Run admixutre
+
+for K in {1..7};
+
+# run admixture
+do ./admixture --cv ../data/genetic/filtered/bytaxa_${taxa}.bed  $K | tee ../data/genetic/admixture_outs/${taxa}/log${K}.out;
+
+# move output to output folder
+mv bytaxa_${taxa}.$K* ../data/genetic/admixture_outs/$taxa
+done
+
+# move output
+
+# save CV in a single file
+
+#grep -h CV ../data/genetic/admixture_outs/${taxa}/log*.out >  ../data/genetic/admixture_outs/${taxa}/Kerror_${taxa}.txt
+
+```
 
 Luego para correr nuestro script, se hace con el comando `sbatch myscript.sh`.
 
