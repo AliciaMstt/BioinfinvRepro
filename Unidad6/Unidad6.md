@@ -5,4 +5,4 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 
 ### Sesión 1
 
-[Laminas proyectadas en clase](/.Generacion y Análisis de datos NGS - RAV - 2019.pdf)
+[Láminas proyectadas en clase](Generacion_Analisis_de_datosNGS-RAV-2019.pdf)
