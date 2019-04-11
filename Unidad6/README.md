@@ -6,7 +6,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 ### Sesión 1 ###
 
 #### 1. [Láminas proyectadas en clase](Generacion y Análisis de datos NGS - RAV - 2019.pdf)
-#### 2. Video sobre secuenciación por síntesis mmostrado en clase: [link](https://www.youtube.com/watch?v=fCd6B5HRaZ8) 
+#### 2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=fCd6B5HRaZ8) 
 
 #### 3. Control de calidad de lecturas ####
 Las lecturas crudas obtenidas del secuenciador en Next Generation Sequencing (NGS) pueden contener secuencias de adaptadores usados en la secuenciación, contaminantes y sitios con bajas calidades.
