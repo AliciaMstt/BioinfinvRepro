@@ -161,6 +161,12 @@ Ejemplo:
 ```sh
 samtools index S10_sorted_RG.bam
 ```
+### 2.6 Generar un reporte de calidad
+
+Comando:
+```sh
+qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
+```
 
 ## Anexo
 
