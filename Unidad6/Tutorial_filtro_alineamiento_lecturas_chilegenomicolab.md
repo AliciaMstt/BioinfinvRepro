@@ -168,6 +168,19 @@ Comando:
 qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
 ```
 
+
+
+## 2.7 Tarea
+
+1) Realizar el ensamble de las lecturas R1 y R2 del paciente seleccionado para la tarea anterior contra el genoma humano hg19.
+2) Generar un reporte técnico de calidad del ensamble con *qualimap*.
+3) Seleccionar 4 figuras que a su juicio sean las más informativas sobre la calidad de los datos y del ensamble.
+4) Incluir las figuras en la sección de Resultados de un reporte técnico. Describir cada figura con una leyenda descriptiva. Adicionalmente, en el texto de la sección, interpretar los resultados y citar cada figura. Debe referirse a la calidad de los datos y del alineamiento. Enfóquese especialmente en los posibles problemas con los datos o alineamientos. Comente potenciales razones que expliquen lo observado. Incluya una sección con las principales *Conclusiones* para la muestra.
+5) Incluya el reporte completo generado con *qualimap* como anexo.
+6) Envíe el informe mediante Google classroom, al dar por completada esta tarea.
+
+
+
 ## Anexo
 
 Los pasos descritos en este anexo son necesarios previo a la ejecución de los procedimiento descritos en el tutorial y ya fueron realizados para facilitar su desarrollo en nuestro servidor. Si usted realiza estos análisis en otro servidor, necesitará realizar estos pasos previamente.
