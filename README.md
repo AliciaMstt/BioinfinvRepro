@@ -24,7 +24,9 @@ Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U.
 
 Los materiales aquí presentados son de acceso libre. 
 
-Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber). 
+Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber).
+
+Esta [lista](https://www.youtube.com/watch?v=hffIBrCJsMg&list=PLxvX6YVl4RWF5BU_Su8_p2rSHQfMtUNOF) contiene los videos de clases dictadas desde México y desde Chile.
 
 Sala de chat para **anuncios de la clase** y dudas si lo ests viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
 
