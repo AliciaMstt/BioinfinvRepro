@@ -5,7 +5,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 
 ### Sesión 1 ###
 
-#### 1. [Láminas proyectadas en clase]("Generacion_Analisis_de_datosNGS-RAV-2019.pdf")
+#### 1. [Láminas proyectadas en clase](Generacion_Analisis_de_datosNGS-RAV-2019.pdf)
 #### 2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
 
 #### 3. Control de calidad de lecturas ####
