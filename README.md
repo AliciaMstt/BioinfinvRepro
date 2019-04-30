@@ -22,13 +22,12 @@ Estudiante maestría ITAM-CONABIO
 **Ricardo Verdugo Salgado**, PhD.,
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
-Los materiales aquí presentados son de acceso libre. 
+Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en:
+* Unidades 1-5 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
+* Unidades 6-12 en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
+* Lista de reproducción con todas las clases (la mantendremos actualizada pero los nuevos videos están disponibles inmediatamente en los canales) [lista](https://www.youtube.com/watch?v=hffIBrCJsMg&list=PLxvX6YVl4RWF5BU_Su8_p2rSHQfMtUNOF)
 
-Transmisión online y videos de clases anteriores en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber).
-
-Esta [lista](https://www.youtube.com/watch?v=hffIBrCJsMg&list=PLxvX6YVl4RWF5BU_Su8_p2rSHQfMtUNOF) contiene los videos de clases dictadas desde México y desde Chile.
-
-Sala de chat para **anuncios de la clase** y dudas si lo ests viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
+Sala de chat para **anuncios de la clase** y dudas si lo estás viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
 
 ## Objetivos
 
@@ -109,7 +108,7 @@ Algunos ejemplos:
 
 #### Trabajo en casa en proyectos finales y tareas
  Se dará seguimiento online al proyecto final con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
- 
+
 #### Unidad 6 Introducción a la genómica y secuenciación de siguiente generación
 * Genomas: estructura y evolución
 * Proyectos de secuenciación genómica
@@ -145,7 +144,7 @@ Algunos ejemplos:
 * Predicción de la estructura secundaria de ARN
 * Predicción de interacciones moleculares (docking)
 * Predicción de efectos funcionales, nociones
- 
+
 #### Unidad 11 Análisis de expresión
 * Diseño experimental
 * Microarreglos
@@ -172,7 +171,7 @@ Algunos ejemplos:
          * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
      2. Un editor de Markdown    
          * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * Mac o Linux: [Haroopad](http://pad.haroopress.com/)
+         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/) 
      3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
 
 También necesitas abrir una **cuenta de Github**
@@ -204,6 +203,7 @@ Cubriremos ambas herramientas en el curso, pero en resumen:
 	* Unidad 6-11
 	
 	
+
 Porcentaje aprovación: 60 %
 
 
