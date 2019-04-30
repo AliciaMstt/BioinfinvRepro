@@ -1,4 +1,5 @@
-# Tutorial para el  filtro y alineamiento de lecturas
+# Tutorial para el filtro y alineamiento de lecturas
+
 Cristian Yáñez Lara
 Ingeniero Bioinformático
 Abril 2019
@@ -9,11 +10,13 @@ El siguiente protocolo está diseñado para ser implementado en el servidor geno
 ```sh
 ssh -Y bioinfo1@genoma.med.uchile.cl
 ```
-La clave es ‘bioinfo12016’, sin comillas
+Usar la clave entregada en clase.
 ### Acceda al directorio con su nombre:
 ```sh
 cd cyanez/
 ```
+Para la demostración, usaremos el directorio cyanez. Usted debe usar su propio directorio.
+
 ## 1. Filtrado de lecturas
 
 Las lecturas crudas pueden contener secuencias de adaptadores usados en la secuenciación, contaminantes y sitios con bajas calidades. Comúnmente en las técnicas NGS el extremo 3' posee una menor calidad que el extremo 5'. El procesamiento de las lecturas para eliminar las secuencias pertenecientes a adaptadores y los pares de bases con baja calidad se denomina Trimming. Para realizar un trimming adecuado de lecturas se debe hacer un análisis previo de la calidad de la secuenciación mediante el programa FastQC. Una vez realizado este análisis se realiza un trimming de lecturas usando el programa bbduk en 3 pasos:
@@ -30,7 +33,7 @@ out2=muestra_R2_filter1.fastq.gz \
 ref=adapters.fa tpe tbo
 ```
 Ejemplo:
-```sh
+``` sh
 /opt/bbmap/bbduk.sh -Xmx2g threads=1 \
 in1=../181004_curso_calidad_datos_NGS/fastq_raw/S10_R1.fastq.gz \
 in2=../181004_curso_calidad_datos_NGS/fastq_raw/S10_R2.fastq.gz \
@@ -95,12 +98,13 @@ muestra_R2.fastq.gz \
 ```
 Ejemplo:
 ```sh
-bwa mem -t 4 -M /home-old/data/references/genomes/hg19_reference/hg19.fasta 
+bwa mem -t 4 -M /datos/reference/genomes/hg19_reference/hg19.fasta \
 S10_R1_filter3.fastq.gz \
 S10_R2_filter3.fastq.gz \
 > S10.sam
 ```
 Nota 1: Ejecute los siguientes comandos e inspeccione las distintas opciones que entrega bwa y los atributos que puede modificar.
+
 ```sh
 bwa
 man bwa
