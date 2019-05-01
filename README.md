@@ -68,7 +68,7 @@ Algunos ejemplos:
 
 ## Temario
 
-#### Unidad 1 [Introducción a la programación](/Unidad1/Unidad1_Intro_programacion.md)
+#### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
@@ -115,7 +115,7 @@ Algunos ejemplos:
 * Llamado de variantes
 * Metagenomica
 
-#### Unidad 7 [Análisis de transcriptomas](Unidad7_Analisis_de_Transcriptomas.md)
+#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
 * Diseño experimental
 * Microarreglos
 * RNA-seq
