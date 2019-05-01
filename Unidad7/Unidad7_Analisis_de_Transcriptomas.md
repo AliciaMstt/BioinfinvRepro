@@ -5,7 +5,7 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 
 ### Sesión 1: Expresión Diferencial ###
 
-1. [Láminas proyectadas en clase](Unidad7/Sesion1_Analisis_expresion_diferencial_2019.pdf)
+1. [Láminas proyectadas en clase](Sesion1_Analisis_expresion_diferencial_2019.pdf)
 2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=0hXl1gv_dEo)
 3. Tutorial: [Control de calidad de lecturas NGS](Tutorial_Control_de_calidad_de_lecturas_NGS.md)
 
