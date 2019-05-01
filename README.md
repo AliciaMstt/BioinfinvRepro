@@ -112,6 +112,7 @@ Algunos ejemplos:
 #### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
 * Generación de datos NGS
 * Control de calidad de datos NGS
+* Alineamiento contra un genoma de referencia
 * Llamado de variantes
 * Metagenomica
 
