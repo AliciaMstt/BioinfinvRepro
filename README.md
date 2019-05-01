@@ -68,7 +68,7 @@ Algunos ejemplos:
 
 ## Temario
 
-#### Unidad 1 Introducción a la programación
+#### Unidad 1 [Introducción a la programación](/Unidad1/Unidad1_Intro_programacion.md)
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
@@ -78,14 +78,14 @@ Algunos ejemplos:
 * Redirección con bash
 * Loops con bash
 
-#### Unidad 2 Organización de un proyecto bioinformático
+#### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
 * Documentación de scripts y del proyecto
 * Markdown
 * git
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-#### Unidad 3 Introducción a R con un enfoque bioinformático
+#### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Funciones propias: crear funciones y utilizarlas con source
@@ -93,13 +93,13 @@ Algunos ejemplos:
 * Manipulación y limpieza de datos en R
 * Graficar en R
 
-#### Unidad 4 Introducción al software especializado
+#### Unidad 4 [Introducción al software especializado](Unidad4/Unidad4_Intro_software_bioinformatico.md)
 * Utilidad de software especializado
 * Documentación de software especializado
 * El problema de las versiones y OS para la reproducibilidad
 * Docker
 
-#### Unidad 5 Genética de poblaciones con software especializado
+#### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
 * Formatos VCF-tools y plink
 * Paquetes de R
 * Filtrado de individuos y datos perdidos
@@ -109,48 +109,42 @@ Algunos ejemplos:
 #### Trabajo en casa en proyectos finales y tareas
  Se dará seguimiento online al proyecto final con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
 
-#### Unidad 6 Introducción a la genómica y secuenciación de siguiente generación
-* Genomas: estructura y evolución
-* Proyectos de secuenciación genómica
-* Bases de datos
-* Técnicas de secuenciación
-* Aplicación de acuerdo al problema de estudio
-* Análisis básicos de calidad y limpieza de datos crudos
-
-#### Unidad 7 Ensamblaje de genomas
-* Flujo de un proyecto de ensamblaje
-* Teoría de ensamble: grafos de De Bujin y comparativos 
-* Principales algoritmos y software (Celera, AllPaths, Soap, Velvet, etc)
-* Formatos de archivos de datos
-* Métricas
-* BLAST, modelos de genes
-* Algoritmos comparativos y estadísticos de marcación
-
-#### Unidad 8 Resecuenciación de genomas
+#### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
+* Generación de datos NGS
+* Control de calidad de datos NGS
 * Llamado de variantes
-* Predicción funcional de variantes
-* Interpretación y anotación de variantes
+* Metagenomica
 
-#### Unidad 9 Ensamblaje de representación reducida de genomas
-* Metodologías de representación reducida de genomas (RAD, GBS, etc)
-* Ensamblaje de novo vs. sobre una referencia
-* Principales algoritmos y software (Stacks, pyRAD)
-* Uso de replicados para informar el ensamblaje
-* Primera inspección de los datos
+#### Unidad 7 [Análisis de transcriptomas](Unidad7_Analisis_de_Transcriptomas.md)
+* Diseño experimental
+* Microarreglos
+* RNA-seq
+* Expresión diferecial
+* Clustering
 
-#### Unidad 10 Predicción estructural y funcional de Proteínas y ARNs
+#### Unidad 8 Predicción estructural y funcional de Proteínas y ARNs
 * Conceptos básicos de bioinformática estructural
 * Predicción de la estructura secundaria de proteínas
 * Predicción de la estructura secundaria de ARN
 * Predicción de interacciones moleculares (docking)
 * Predicción de efectos funcionales, nociones
 
-#### Unidad 11 Análisis de expresión
-* Diseño experimental
-* Microarreglos
-* RNA-seq
-* Expresión diferecial
-* Clustering
+#### Unidad 9 Ensamblaje de genomas
+* Flujo de un proyecto de ensamblaje
+* Teoría de ensamble: grafos de De Bujin y comparativos 
+* Principales algoritmos y software (Celera, AllPaths, Soap, Velvet, etc)
+* Formatos de archivos de datos y Métricas
+* Ensamblaje de representación reducida de genomas (RAD, GBS, etc)
+* Principales algoritmos y software (Stacks, pyRAD)
+
+#### Unidad 10 Análisis genómicos reproducibles en la nube
+* Mejores prácitocas de GATK
+* workflow GVCF
+* Cromwell
+* WDL
+* Terra
+* Variantes somáticas con Mutect2
+* Variantes en número de copias con GermlineCNVCaller
 
 ## Dinámica del curso
 
