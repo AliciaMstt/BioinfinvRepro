@@ -488,7 +488,8 @@ genes.int <- as.factor(genes.int)
 17 GO:0065008            regulation of biological quality       140          18    10.88
 18 GO:0003008                              system process        72          11     5.60
 19 GO:0048523     negative regulation of cellular process       142          18    11.04
-20 GO:0030154                        cell differentiation       113          15     8.78   Rank in Fisher.classic Fisher.classic Fisher.elim
+20 GO:0030154                        cell differentiation       113          15     8.78
+   Rank in Fisher.classic Fisher.classic Fisher.elim
 1                       1        0.00083     0.00083
 2                       3        0.00126     0.00126
 3                      20        0.00772     0.00772
