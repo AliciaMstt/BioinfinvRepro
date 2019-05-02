@@ -7,7 +7,7 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 
 1. [Láminas proyectadas en clase](Sesion1_Analisis_expresion_diferencial_2019.pdf)
 2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=0hXl1gv_dEo)
-3. Tutorial: [Control de calidad de lecturas NGS](Tutorial_Control_de_calidad_de_lecturas_NGS.md)
+3. Tutorial: [Análisis de expresión diferencial en R](Tutorial_de_expresion_diferencial_en_R.md)
 
 ### Sessión 2: Análisis funcional ###
 *Pronto*
