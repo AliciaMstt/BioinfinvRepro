@@ -72,6 +72,8 @@ detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector of columns with
 # Read probe annotations
 # ==== ===== ===========
 annot     <- read.delim("MouseRef-8_annot.txt")
+# Make sure that probes are in same order as in the dataset
+annot <- annot[match(Data.Raw$ProbeID, annot$IlluminaID), ]
 # Not all probes have the same quality from sequence alignment to the genome.
 table(annot$ProbeQuality)
 # We will group 'Bad' with 'No match' as bad and everything else as good.

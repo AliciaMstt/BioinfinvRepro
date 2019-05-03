@@ -43,7 +43,7 @@
 #   randomization in microarray experimental designs with Illumina platforms. Nucl. Acids Res.
 #   37, no. 17 (September): 5610-8. doi:10.1093/nar/gkp573.
 # 
-# To speed up the tutorial, only the first 3000 of the probes in the microarray
+# To speed up the tutorial, only the first 5000 of the probes in the microarray
 # are included. The full dataset is available from the GEO database by id GSE15354.
 # http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15354
 
@@ -72,6 +72,8 @@ detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector of columns with
 # Read probe annotations
 # ==== ===== ===========
 annot     <- read.delim("MouseRef-8_annot.txt")
+# Make sure that probes are in same order as in the dataset
+annot <- annot[match(Data.Raw$ProbeID, annot$IlluminaID), ]
 # Not all probes have the same quality from sequence alignment to the genome.
 table(annot$ProbeQuality)
 # We will group 'Bad' with 'No match' as bad and everything else as good.
@@ -223,7 +225,7 @@ logDiffs  <- Means %*% t(cmat)
 # Transform log differences to FC scale
 FC <- apply(logDiffs, 2, logdiff2FC)
 
-# Test test each contrasts using 200 permutations of sample labels
+# Test each contrast using 200 permutations of sample labels
 test.cmat <- matest(madata, fit.fix, term="Group", Contrast=cmat, n.perm=200, test.type = "ttest",
                  shuffle.method="sample", verbose=TRUE)
 
