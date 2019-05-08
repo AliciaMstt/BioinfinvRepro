@@ -12,7 +12,7 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 ### Sessión 2: Análisis funcional ###
 1. [Láminas proyectadas en clase](Sesion2_Analisis_funcional_RAV_2019.pdf)
 2. Video sobre secuenciación por síntesis mostrado en clase: [Parte 1](https://youtu.be/KbbAK0YhRiM) [Parte 2](https://youtu.be/H7oC8fQMzbY) [Parte 3](https://youtu.be/RN6hn21oS68)
-3. Tutorial: [Analisis funcional de datos de microarreglos](Tutorial_de_expresion_diferencial_en_R.md)
+3. Tutorial: [Analisis funcional de datos de microarreglos](Tutorial_Analisis_funcional_de_datos_de_microarreglos.md)
 
 ### Sessión 3: RNA-seq ###
 *Pronto*
