@@ -35,7 +35,7 @@ Date		: 2019-05-01
 **Figura 1**. Diseño de las hibridaciones de muestras por chip y dentro de chip.  Los colores representan el genotipo [azul = C57BL/6J (B);  verde = C57BL/6J-chrY<A/J/NaJ> (BY) y tratamiento de castración [amarillo = intacto (I);  rojo = castrado (C)]. 
 
 ### Ubicación de los archivos del tutorial
-Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran disponibles en [DE_tutorial.zip](DE_tutorial). Si ejecuta el tutorial en el servidor `genoma`, podrá encontrar el tutorial descomprimido en el directorio `DE_tutorial` del `home`.
+Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran disponibles en [DE_tutorial](DE_tutorial). Si ejecuta el tutorial en el servidor `genoma`, podrá encontrar el tutorial descomprimido en el directorio `DE_tutorial` del `home`.
 
 ### Antes de ejecutar el tutorial
 
