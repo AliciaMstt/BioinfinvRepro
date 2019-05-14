@@ -66,5 +66,5 @@ cat mutant_R1.fasta mutant_R2.fasta > mutant_R1-2.fasta
 11. Ejecutar QUAST:
 
 ```
-opt/miniconda2/lib/python2.7/site-packages/quast-5.0.2-py2.7.egg/EGG-INFO/scripts/quast.py  -o QUAST-3-assemblers -r wildtype.fna mutant_R1-2.fasta.cap.contigs spades-assembly/scaffolds.fasta A5_assembly/A5-assembly-mutant.contigs.fasta
+opt/miniconda2/lib/python2.7/site-packages/quast-5.0.2-py2.7.egg/EGG-INFO/scripts/quast.py  -o QUAST-3-assemblers -r wildtype.fna mutant_R1-2.fasta.cap.contigs spades/scaffolds.fasta A5-assembly-mutant.contigs.fasta
 ```
