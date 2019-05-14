@@ -8,6 +8,8 @@ Alan Michael Torres Calderón - LANGEBIO
 
 2. [Tutorial hands on](ensamblado_genomas_handson.md)
 
+3. [Video de la clase](http://youtu.be/J5aWNiUZfEE)
+
 
 ## Sesión 2 - Ensamblaje de representación reducida de genomas
 
