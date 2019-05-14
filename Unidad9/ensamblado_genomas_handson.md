@@ -47,8 +47,8 @@ spades.py -o spades -t 4 -1 mutant_R1.fastq.gz -2 mutant_R2.fastq.gz
 9. Transformar archivos fastq a fasta
 
 ```
-/d2p10tb/databases/db/viromescan/seqtk seq -a mutant_R1.fastq.gz > mutant_R1.fasta
-/d2p10tb/databases/db/viromescan/seqtk seq -a mutant_R2.fastq.gz > mutant_R2.fasta
+/d2p10tb/databases/db/viromescan/seqtk/seqtk seq -a mutant_R1.fastq.gz > mutant_R1.fasta
+/d2p10tb/databases/db/viromescan/seqtk/seqtk seq -a mutant_R2.fastq.gz > mutant_R2.fasta
 cat mutant_R1.fasta mutant_R2.fasta > mutant_R1-2.fasta
 /opt/iassembler/iAssembler-v1.3.2.x64/bin/cap3 mutant_R1-2.fasta
 ```
