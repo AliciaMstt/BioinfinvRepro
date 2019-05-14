@@ -53,7 +53,17 @@ cat mutant_R1.fasta mutant_R2.fasta > mutant_R1-2.fasta
 /opt/iassembler/iAssembler-v1.3.2.x64/bin/cap3 mutant_R1-2.fasta
 ```
 
-10. Ejecutar QUAST:
+9. Evaluar la calidad con seqstats de cada ensamblado:
+
+```
+/opt/hmmer-2.3/squid/seqstat spades/scaffolds.fasta
+/opt/hmmer-2.3/squid/seqstat A5-assembly-mutant.contigs.fasta
+/opt/hmmer-2.3/squid/seqstat mutant_R1-2.fasta.cap.contigs
+```
+
+10. En la carpeta del usuario buscar un archivo `wildtype.fna` y copiarlo a `PAIRED`. 
+
+11. Ejecutar QUAST:
 
 ```
 opt/miniconda2/lib/python2.7/site-packages/quast-5.0.2-py2.7.egg/EGG-INFO/scripts/quast.py  -o QUAST-3-assemblers -r wildtype.fna mutant_R1-2.fasta.cap.contigs spades-assembly/scaffolds.fasta A5_assembly/A5-assembly-mutant.contigs.fasta
