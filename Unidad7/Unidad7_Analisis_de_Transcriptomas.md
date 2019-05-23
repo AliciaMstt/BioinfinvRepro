@@ -16,6 +16,6 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 
 ### Sessión 3: RNA-seq ###
 1. [Láminas proyectadas en clase]
-2. Video sobre secuenciación por síntesis mostrado en clase: (https://www.youtube.com/watch?v=zeyHRMlQ4qQ)
+2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=zeyHRMlQ4qQ)
 3. Tutorial: [Analisis de datos de RNA-seq](Tutorial_RNAseq.md)
 
