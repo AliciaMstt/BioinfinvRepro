@@ -90,5 +90,5 @@ Los resultados de la actividad corresponden a las respuestas a las preguntas de 
 
 12.- Discuta los resultados obtenidos en la figura anterior en base a la conformaciones obtenidas, las inter- acciones observadas y el background biológico del sistema.
 
-###4 Evaluación
+### 4 Evaluación
 El desarrollo de esta actividad se evaluará de acuerdo a las respuestas a las preguntas y a la calidad y pertinencia de las figuras/gráficos/esquemas incluidos para apoyar las respuestas.
