@@ -13,8 +13,7 @@ INSTRUCTORES:
 
 **Alicia Mastretta Yanes**, PhD.,
 Catedrática CONACYT-CONABIO,
-[www.mastrettayanes-lab.org](www.mastrettayanes-lab.org
-)
+[www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
 
 **Lorena Malpica**
 Estudiante maestría ITAM-CONABIO
@@ -23,7 +22,7 @@ Estudiante maestría ITAM-CONABIO
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
 Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en:
-* Unidades 1-5 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
+* Unidades 1-5 y 9 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
 * Unidades 6-12 en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
 * Lista de reproducción con todas las clases (la mantendremos actualizada pero los nuevos videos están disponibles inmediatamente en los canales) [lista](https://www.youtube.com/watch?v=hffIBrCJsMg&list=PLxvX6YVl4RWF5BU_Su8_p2rSHQfMtUNOF)
 
@@ -35,9 +34,9 @@ El **objetivo general es** brindar a los y las alumnas las herramientas computac
 
 Los **objetivos particulares** son:
 
-1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos 
+1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos
 2.	Introducir a los alumnos a bash, R, git y Docker
-3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación 
+3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación
 4.	Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos
 5.	Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas
 6.	Asesorar a los alumnos en la realización de sus propios proyectos bioinformáticos
@@ -55,7 +54,7 @@ Los **objetivos particulares** son:
 
 ### Que NO es este curso
 
-* La respuesta a qué tienes que hacer en tu proyecto de tesis. 
+* La respuesta a qué tienes que hacer en tu proyecto de tesis.
 * Una discusión profunda de los diferentes softwares para analizar datos GBS, RAD, genomas, transcriptomas, metabarcoding, etc.
 
 En otras palabras en este curso no te vamos a decir qué programa utilizar ni discutir a profundidad métodos de ensamblado etc. Para eso hay cursos especializados intensivos de un par de días que asumen ya sabes usar chido la terminal.
@@ -130,9 +129,9 @@ Algunos ejemplos:
 * Predicción de interacciones moleculares (docking)
 * Predicción de efectos funcionales, nociones
 
-#### Unidad 9 Ensamblaje de genomas
+#### Unidad 9 [Ensamblaje de genomas](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
 * Flujo de un proyecto de ensamblaje
-* Teoría de ensamble: grafos de De Bujin y comparativos 
+* Teoría de ensamble: grafos de De Bujin y comparativos
 * Principales algoritmos y software (Celera, AllPaths, Soap, Velvet, etc)
 * Formatos de archivos de datos y Métricas
 * Ensamblaje de representación reducida de genomas (RAD, GBS, etc)
@@ -154,7 +153,7 @@ Algunos ejemplos:
 * Todos los materiales de la clase los iremos subiendo a GitHub conforme avance el semestre
 * Dejaremos **lecturas** a casa antes o después de algunos temas. Es una muy buena idea sí leerlas.
 
-* **¿Necesito una computadora?** 
+* **¿Necesito una computadora?**
     * El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
 
   -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
@@ -166,20 +165,20 @@ Algunos ejemplos:
          * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
      2. Un editor de Markdown    
          * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/) 
+         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/)
      3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
 
 También necesitas abrir una **cuenta de Github**
 
  **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
-     
+
 ### Este repositorio
 
-El repositorio está dividido en un folder por Unidad. Dentro de cada folder subiremos los apuntes y código utilizado en cada clase conforme los vayamos viendo en el semestre, así como los enlaces a las tareas. 
+El repositorio está dividido en un folder por Unidad. Dentro de cada folder subiremos los apuntes y código utilizado en cada clase conforme los vayamos viendo en el semestre, así como los enlaces a las tareas.
 
-Las notas de este repositorio están escritas en formato **Markdown** y, como notarás, el repositorio se encuentra hospedado en **GitHub**. 
+Las notas de este repositorio están escritas en formato **Markdown** y, como notarás, el repositorio se encuentra hospedado en **GitHub**.
 
-Cubriremos ambas herramientas en el curso, pero en resumen: 
+Cubriremos ambas herramientas en el curso, pero en resumen:
 
 * Markdown es un procesador texto-a-HTML que de forma sencilla permite formatear texto `así`. Esto es útil para resaltar los los comandos y los resultados de la terminal del resto del texto en los documentos de clase (y en foros de ayuda).
 
@@ -196,13 +195,12 @@ Cubriremos ambas herramientas en el curso, pero en resumen:
 	* Unidad 5
 
 	* Unidad 6-11
-	
-	
+
+
 
 Porcentaje aprovación: 60 %
 
 
-### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión. 
+### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.
 
 ![](truestory.png)
-
