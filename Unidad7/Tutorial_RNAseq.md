@@ -20,13 +20,14 @@ Los datos utilizados en este tutorial corresponden a cuatro librerías de lectur
 
 4. Organismo mutado y cultivado en biopelícula, denominado Mutant_B.
 
-## Desarrollo
 
- ##1.    Preliminar
+
+## 1.    Preliminar
 
 Puede realizar este tutorial necesitará los paquetes:
-* [HTSeq-0.6.1]("https://github.com/simon-anders/htseq")
-* [edgeR (R)]("https://bioconductor.org/packages/3.8/bioc/html/edgeR.html")
+* [NGSQC Toolkit](http://www.nipgr.ac.in/ngsqctoolkit.html)
+* [HTSeq](https://github.com/simon-anders/htseq)
+* [edgeR](https://bioconductor.org/packages/3.8/bioc/html/edgeR.html)
 
 Para su conveniencia, estos paquetes, así como los datos necesarios, ya fueron instalados en el servidor ‘genoma.med.uchile.cl’. Utilizando la cuenta ya entregada, haga login al servidor. Se encontrará en la carpeta principal de la cuenta ‘/shared/bioinfo1’, donde verá los siguiente directorios:
 
@@ -247,7 +248,8 @@ ids_genotype <- rownames(results_genotype[results_genotype$FDR < 0.1,])
 ### 8.5           Generar Resultados
 Definir vectores del tipo Booleano que, a partir del set completo de genes, etiquetará aquellos que presentan expresión diferencial.
 ```R
-de_genes_culture <- rownames(rawcounts) %in% ids_culture de_genes_genotype <- rownames(rawcounts) %in% ids_genotype
+de_genes_culture  <- rownames(rawcounts) %in% ids_culture
+de_genes_genotype <- rownames(rawcounts) %in% ids_genotype
 ```
 
 Obtener pseudoconteos y transformarlos a escala logarítmica. Estos valores corresponden a los conteos normalizados por el tamaño de cada librería y fueron calculados en la etapa donde se aplicó la función ‘exactTest’.
