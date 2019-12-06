@@ -11,12 +11,16 @@ Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Unive
 
 INSTRUCTORES:
 
-**Alicia Mastretta Yanes**, PhD.,
+**Dra. Alicia Mastretta Yanes**
 Catedrática CONACYT-CONABIO,
 [www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
 
-**Lorena Malpica**
-Estudiante maestría ITAM-CONABIO
+**Dra. Camille Truong**
+Investigadora Instituto de Biología, UNAM
+[camilletruong.wixsite.com](https://camilletruong.wixsite.com/home#!)
+
+**Verónica Reyes Galindo**
+Estudiante doctorado Intituto de Ecología UNAM - CONABIO
 
 **Ricardo Verdugo Salgado**, PhD.,
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
