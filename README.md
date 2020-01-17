@@ -71,7 +71,7 @@ Algunos ejemplos:
 
 ## Temario
 
-[Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
+[Video de Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
 
@@ -79,7 +79,7 @@ Algunos ejemplos:
 
 [Video 14 Ene: Sesion U1.2. Bash, grep y redirección](https://www.youtube.com/watch?v=ppqsw1OVw_0)
 
-[Video Video 15 Ene: Sesion U1.3. Loops en bash e intro a scripts](https://www.youtube.com/watch?v=OhCBraaRfKs)
+[Video 15 Ene: Sesion U1.3. Loops en bash e intro a scripts](https://www.youtube.com/watch?v=OhCBraaRfKs)
 
 [Video Extra: Volver ejecutable un script](https://www.youtube.com/watch?v=wp3eC7FVANg)
 
